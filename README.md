@@ -1,7483 +1,4094 @@
 # AI Model Prices
 
-AI model API prices across providers, updated daily.
+Daily-updated AI model API prices across OpenAI, Anthropic, Google Gemini, DeepSeek, xAI, Mistral, and many more providers. Browse LLM token pricing or download open JSON and CSV datasets.
 
-**3290 model offerings** · **USD per 1 million tokens** · Updated: 2026-10-11 20:41 UTC
+**AI model API pricing** for LLMs, reasoning models, and other hosted AI models. Compare input, output, and cached-token costs across providers, with free machine-readable **JSON and CSV** downloads. This catalog is generated automatically from the latest collected pricing data.
 
-[Download CSV](prices.csv) · [Download JSON](prices.json)
+**3,290 model offerings** · **142 providers** · **2,272 distinct model names**  
+**Prices:** USD per 1 million tokens · **Catalog generated:** 2026-10-11 22:30 UTC
+
+[**Download JSON**](prices.json) · [**Download CSV**](prices.csv) · [**Browse providers**](#providers)
+
+## Get the data
+
+No API key or account is required to use the published data files. Both exports contain the same pricing records; JSON includes dataset metadata and CSV is spreadsheet-friendly.
+
+```bash
+curl -L -o prices.json https://raw.githubusercontent.com/jessejones/ai-model-prices/main/prices.json
+curl -L -o prices.csv https://raw.githubusercontent.com/jessejones/ai-model-prices/main/prices.csv
+```
+
+**JSON shape:** `metadata` (generation time, counts, units) and `models` (individual model offerings). Prices are in USD per 1 million tokens; very small rates retain their precision.
 
 ## Providers
 
-- [ai21](#ai21) (12)
-
-- [aihubmix](#aihubmix) (72)
-
-- [aion-labs](#aion-labs) (6)
-
-- [amazon](#amazon) (5)
-
-- [amazon_nova](#amazon_nova) (4)
-
-- [anthracite-org](#anthracite-org) (1)
-
-- [anthropic](#anthropic) (39)
-
-- [anyscale](#anyscale) (12)
-
-- [apodex](#apodex) (1)
-
-- [arcee-ai](#arcee-ai) (1)
-
-- [azure](#azure) (139)
-
-- [azure_ai](#azure_ai) (133)
-
-- [azure_text](#azure_text) (3)
-
-- [baseten](#baseten) (27)
-
-- [bedrock](#bedrock) (107)
-
-- [bedrock_converse](#bedrock_converse) (230)
-
-- [bedrock_mantle](#bedrock_mantle) (32)
-
-- [bespoke](#bespoke) (3)
-
-- [bytedance](#bytedance) (1)
-
-- [bytedance-seed](#bytedance-seed) (6)
-
-- [cerebras](#cerebras) (7)
-
-- [cloudflare](#cloudflare) (32)
-
-- [codestral](#codestral) (2)
-
-- [cognition](#cognition) (3)
-
-- [cognitivecomputations](#cognitivecomputations) (1)
-
-- [cohere](#cohere) (25)
-
-- [crusoe](#crusoe) (7)
-
-- [darkbloom](#darkbloom) (2)
-
-- [dashscope](#dashscope) (27)
-
-- [databricks](#databricks) (60)
-
-- [deepinfra](#deepinfra) (134)
-
-- [deepseek](#deepseek) (19)
-
-- [dots-studio](#dots-studio) (1)
-
-- [fal_ai](#fal_ai) (1)
-
-- [fireworks_ai](#fireworks_ai) (297)
-
-- [fireworks_ai-embedding-models](#fireworks_ai-embedding-models) (7)
-
-- [friendliai](#friendliai) (7)
-
-- [gemini](#gemini) (65)
-
-- [gigachat](#gigachat) (7)
-
-- [github_copilot](#github_copilot) (4)
-
-- [gmi](#gmi) (16)
-
-- [google](#google) (42)
-
-- [gradient_ai](#gradient_ai) (10)
-
-- [groq](#groq) (7)
-
-- [gryphe](#gryphe) (1)
-
-- [hyperbolic](#hyperbolic) (16)
-
-- [ibm-granite](#ibm-granite) (2)
-
-- [inception](#inception) (2)
-
-- [inclusionai](#inclusionai) (5)
-
-- [inference-net](#inference-net) (2)
-
-- [jina_ai](#jina_ai) (1)
-
-- [lambda_ai](#lambda_ai) (20)
-
-- [laya](#laya) (3)
-
-- [lemonade](#lemonade) (5)
-
-- [libertai](#libertai) (12)
-
-- [liquid](#liquid) (1)
-
-- [llamagate](#llamagate) (16)
-
-- [mancer](#mancer) (1)
-
-- [meituan](#meituan) (1)
-
-- [meta](#meta) (6)
-
-- [meta-llama](#meta-llama) (8)
-
-- [microsoft](#microsoft) (2)
-
-- [microsoft_365_copilot](#microsoft_365_copilot) (1)
-
-- [minimax](#minimax) (10)
-
-- [mistral](#mistral) (79)
-
-- [moonshotai](#moonshotai) (19)
-
-- [morph](#morph) (2)
-
-- [nebius](#nebius) (60)
-
-- [nex-agi](#nex-agi) (2)
-
-- [nlp_cloud](#nlp_cloud) (2)
-
-- [nousresearch](#nousresearch) (3)
-
-- [novita](#novita) (134)
-
-- [nscale](#nscale) (14)
-
-- [nvidia](#nvidia) (10)
-
-- [nvidia_nim](#nvidia_nim) (2)
-
-- [oci](#oci) (44)
-
-- [ollama](#ollama) (29)
-
-- [openai](#openai) (206)
-
-- [openrouter](#openrouter) (1)
-
-- [ovhcloud](#ovhcloud) (15)
-
-- [perceptron](#perceptron) (2)
-
-- [perplexity](#perplexity) (81)
-
-- [pinstripes](#pinstripes) (6)
-
-- [poolside](#poolside) (4)
-
-- [prism](#prism) (2)
-
-- [prism-ml](#prism-ml) (1)
-
-- [publicai](#publicai) (9)
-
-- [qwen](#qwen) (42)
-
-- [qwen_ai_platform](#qwen_ai_platform) (27)
-
-- [qwencloud](#qwencloud) (25)
-
-- [rekaai](#rekaai) (2)
-
-- [relace](#relace) (2)
-
-- [replicate](#replicate) (40)
-
-- [sagemaker](#sagemaker) (6)
-
-- [sail](#sail) (12)
-
-- [sakana](#sakana) (4)
-
-- [sambanova](#sambanova) (8)
-
-- [sao10k](#sao10k) (3)
-
-- [sarvam](#sarvam) (1)
-
-- [scaledown](#scaledown) (5)
-
-- [scaleway](#scaleway) (15)
-
-- [scx-ai](#scx-ai) (2)
-
-- [snowflake](#snowflake) (21)
-
-- [stepfun](#stepfun) (3)
-
-- [strands_decider](#strands_decider) (1)
-
-- [tencent](#tencent) (10)
-
-- [tensormesh](#tensormesh) (10)
-
-- [text-completion-codestral](#text-completion-codestral) (2)
-
-- [text-completion-inception](#text-completion-inception) (1)
-
-- [text-completion-openai](#text-completion-openai) (6)
-
-- [thedrummer](#thedrummer) (3)
-
-- [thinkingmachines](#thinkingmachines) (4)
-
-- [together_ai](#together_ai) (88)
-
-- [typesafe](#typesafe) (3)
-
-- [unbiased](#unbiased) (2)
-
-- [undi95](#undi95) (1)
-
-- [upstage](#upstage) (3)
-
-- [v0](#v0) (3)
-
-- [vercel_ai_gateway](#vercel_ai_gateway) (97)
-
-- [vertex_ai](#vertex_ai) (39)
-
-- [vertex_ai-ai21_models](#vertex_ai-ai21_models) (5)
-
-- [vertex_ai-anthropic_models](#vertex_ai-anthropic_models) (38)
-
-- [vertex_ai-deepseek_models](#vertex_ai-deepseek_models) (3)
-
-- [vertex_ai-embedding-models](#vertex_ai-embedding-models) (10)
-
-- [vertex_ai-language-models](#vertex_ai-language-models) (31)
-
-- [vertex_ai-llama_models](#vertex_ai-llama_models) (12)
-
-- [vertex_ai-minimax_models](#vertex_ai-minimax_models) (1)
-
-- [vertex_ai-mistral_models](#vertex_ai-mistral_models) (15)
-
-- [vertex_ai-moonshot_models](#vertex_ai-moonshot_models) (1)
-
-- [vertex_ai-openai_models](#vertex_ai-openai_models) (3)
-
-- [vertex_ai-qwen_models](#vertex_ai-qwen_models) (4)
-
-- [vertex_ai-text-models](#vertex_ai-text-models) (2)
-
-- [vertex_ai-zai_models](#vertex_ai-zai_models) (3)
-
-- [volcengine](#volcengine) (10)
-
-- [voyage](#voyage) (31)
-
-- [wandb](#wandb) (30)
-
-- [watsonx](#watsonx) (30)
-
-- [writer](#writer) (1)
-
-- [xai](#xai) (51)
-
-- [xiaomi](#xiaomi) (5)
-
-- [xiaomi_mimo](#xiaomi_mimo) (2)
-
-- [zai](#zai) (34)
-
-- [~anthropic](#~anthropic) (4)
-
-- [~deepseek](#~deepseek) (3)
-
-- [~google](#~google) (2)
-
-- [~moonshotai](#~moonshotai) (1)
-
-- [~openai](#~openai) (5)
-
-- [~x-ai](#~x-ai) (1)
-
-- [~z-ai](#~z-ai) (2)
+Browse the complete pricing tables for **142 providers**. Provider names are normalized for easier discovery; different billing platforms may remain separate.
+
+<details>
+<summary>View provider index (142)</summary>
+
+| Provider | Provider | Provider |
+| --- | --- | --- |
+| [ai21](#ai21) (12) | [aihubmix](#aihubmix) (72) | [aion-labs](#aion-labs) (6) |
+| [amazon](#amazon) (5) | [amazon_nova](#amazon_nova) (4) | [anthracite-org](#anthracite-org) (1) |
+| [anthropic](#anthropic) (43) | [anyscale](#anyscale) (12) | [apodex](#apodex) (1) |
+| [arcee-ai](#arcee-ai) (1) | [azure](#azure) (139) | [azure_ai](#azure_ai) (133) |
+| [azure_text](#azure_text) (3) | [baseten](#baseten) (27) | [bedrock](#bedrock) (107) |
+| [bedrock_converse](#bedrock_converse) (230) | [bedrock_mantle](#bedrock_mantle) (32) | [bespoke](#bespoke) (3) |
+| [bytedance](#bytedance) (1) | [bytedance-seed](#bytedance-seed) (6) | [cerebras](#cerebras) (7) |
+| [cloudflare](#cloudflare) (32) | [codestral](#codestral) (2) | [cognition](#cognition) (3) |
+| [cognitivecomputations](#cognitivecomputations) (1) | [cohere](#cohere) (25) | [crusoe](#crusoe) (7) |
+| [darkbloom](#darkbloom) (2) | [dashscope](#dashscope) (27) | [databricks](#databricks) (60) |
+| [deepinfra](#deepinfra) (134) | [deepseek](#deepseek) (22) | [dots-studio](#dots-studio) (1) |
+| [fal_ai](#fal_ai) (1) | [fireworks_ai](#fireworks_ai) (297) | [fireworks_ai-embedding-models](#fireworks_ai-embedding-models) (7) |
+| [friendliai](#friendliai) (7) | [gemini](#gemini) (65) | [gigachat](#gigachat) (7) |
+| [github_copilot](#github_copilot) (4) | [gmi](#gmi) (16) | [google](#google) (44) |
+| [gradient_ai](#gradient_ai) (10) | [groq](#groq) (7) | [gryphe](#gryphe) (1) |
+| [hyperbolic](#hyperbolic) (16) | [ibm-granite](#ibm-granite) (2) | [inception](#inception) (2) |
+| [inclusionai](#inclusionai) (5) | [inference-net](#inference-net) (2) | [jina_ai](#jina_ai) (1) |
+| [lambda_ai](#lambda_ai) (20) | [laya](#laya) (3) | [lemonade](#lemonade) (5) |
+| [libertai](#libertai) (12) | [liquid](#liquid) (1) | [llamagate](#llamagate) (16) |
+| [mancer](#mancer) (1) | [meituan](#meituan) (1) | [meta](#meta) (6) |
+| [meta-llama](#meta-llama) (8) | [microsoft](#microsoft) (2) | [microsoft_365_copilot](#microsoft_365_copilot) (1) |
+| [minimax](#minimax) (10) | [mistral](#mistral) (79) | [moonshotai](#moonshotai) (20) |
+| [morph](#morph) (2) | [nebius](#nebius) (60) | [nex-agi](#nex-agi) (2) |
+| [nlp_cloud](#nlp_cloud) (2) | [nousresearch](#nousresearch) (3) | [novita](#novita) (134) |
+| [nscale](#nscale) (14) | [nvidia](#nvidia) (10) | [nvidia_nim](#nvidia_nim) (2) |
+| [oci](#oci) (44) | [ollama](#ollama) (29) | [openai](#openai) (211) |
+| [openrouter](#openrouter) (1) | [ovhcloud](#ovhcloud) (15) | [perceptron](#perceptron) (2) |
+| [perplexity](#perplexity) (81) | [pinstripes](#pinstripes) (6) | [poolside](#poolside) (4) |
+| [prism](#prism) (2) | [prism-ml](#prism-ml) (1) | [publicai](#publicai) (9) |
+| [qwen](#qwen) (42) | [qwen_ai_platform](#qwen_ai_platform) (27) | [qwencloud](#qwencloud) (25) |
+| [rekaai](#rekaai) (2) | [relace](#relace) (2) | [replicate](#replicate) (40) |
+| [sagemaker](#sagemaker) (6) | [sail](#sail) (12) | [sakana](#sakana) (4) |
+| [sambanova](#sambanova) (8) | [sao10k](#sao10k) (3) | [sarvam](#sarvam) (1) |
+| [scaledown](#scaledown) (5) | [scaleway](#scaleway) (15) | [scx-ai](#scx-ai) (2) |
+| [snowflake](#snowflake) (21) | [stepfun](#stepfun) (3) | [strands_decider](#strands_decider) (1) |
+| [tencent](#tencent) (10) | [tensormesh](#tensormesh) (10) | [text-completion-codestral](#text-completion-codestral) (2) |
+| [text-completion-inception](#text-completion-inception) (1) | [text-completion-openai](#text-completion-openai) (6) | [thedrummer](#thedrummer) (3) |
+| [thinkingmachines](#thinkingmachines) (4) | [together_ai](#together_ai) (88) | [typesafe](#typesafe) (3) |
+| [unbiased](#unbiased) (2) | [undi95](#undi95) (1) | [upstage](#upstage) (3) |
+| [v0](#v0) (3) | [vercel_ai_gateway](#vercel_ai_gateway) (97) | [vertex_ai](#vertex_ai) (39) |
+| [vertex_ai-ai21_models](#vertex_ai-ai21_models) (5) | [vertex_ai-anthropic_models](#vertex_ai-anthropic_models) (38) | [vertex_ai-deepseek_models](#vertex_ai-deepseek_models) (3) |
+| [vertex_ai-embedding-models](#vertex_ai-embedding-models) (10) | [vertex_ai-language-models](#vertex_ai-language-models) (31) | [vertex_ai-llama_models](#vertex_ai-llama_models) (12) |
+| [vertex_ai-minimax_models](#vertex_ai-minimax_models) (1) | [vertex_ai-mistral_models](#vertex_ai-mistral_models) (15) | [vertex_ai-moonshot_models](#vertex_ai-moonshot_models) (1) |
+| [vertex_ai-openai_models](#vertex_ai-openai_models) (3) | [vertex_ai-qwen_models](#vertex_ai-qwen_models) (4) | [vertex_ai-text-models](#vertex_ai-text-models) (2) |
+| [vertex_ai-zai_models](#vertex_ai-zai_models) (3) | [volcengine](#volcengine) (10) | [voyage](#voyage) (31) |
+| [wandb](#wandb) (30) | [watsonx](#watsonx) (30) | [writer](#writer) (1) |
+| [xai](#xai) (52) | [xiaomi](#xiaomi) (5) | [xiaomi_mimo](#xiaomi_mimo) (2) |
+| [zai](#zai) (36) |  |  |
+
+</details>
+
+## All AI model prices
+
+Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached input** prices are in USD per 1 million tokens. A dash indicates unavailable data, not a free price.
 
 ## ai21
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| jamba-large-1.6 | 2.000000 | 8.000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-1.5-large | 2.000000 | 8.000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-1.5-large@001 | 2.000000 | 8.000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| j2-mid | 10.00000 | 10.00000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-large-1.7 | 2.000000 | 8.000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| j2-light | 3.000000 | 3.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-mini-1.7 | 0.2000000 | 0.4000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-1.5-mini@001 | 0.2000000 | 0.4000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-mini-1.6 | 0.2000000 | 0.4000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| j2-ultra | 15.000000 | 15.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-1.5 | 0.2000000 | 0.4000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-1.5-mini | 0.2000000 | 0.4000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| j2-light | $3.00 | $3.00 | — | 8.19K |
+| j2-mid | $10.00 | $10.00 | — | 8.19K |
+| j2-ultra | $15.00 | $15.00 | — | 8.19K |
+| jamba-1.5 | $0.20 | $0.40 | — | 256K |
+| jamba-1.5-large | $2.00 | $8.00 | — | 256K |
+| jamba-1.5-large@001 | $2.00 | $8.00 | — | 256K |
+| jamba-1.5-mini | $0.20 | $0.40 | — | 256K |
+| jamba-1.5-mini@001 | $0.20 | $0.40 | — | 256K |
+| jamba-large-1.6 | $2.00 | $8.00 | — | 256K |
+| jamba-large-1.7 | $2.00 | $8.00 | — | 256K |
+| jamba-mini-1.6 | $0.20 | $0.40 | — | 256K |
+| jamba-mini-1.7 | $0.20 | $0.40 | — | 256K |
 
 ## aihubmix
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| coding-xiaomi-mimo-v2.5 | 0.08000000 | 0.16000000 | 0.0016000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-4-5 | 1.1000000 | 5.5000000 | 0.11000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| coding-glm-5.3 | 0.06000000 | 0.22000000 | 0.015000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5 | 2.000000 | 10.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cc-glm-5.1 | 0.06000000 | 0.22000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-8-think | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| coding-kimi-k3 | 0.44000000 | 1.61333000000 | 0.066000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| agnes-2.5-flash | 0.03000000 | 0.15000000 | — | 512000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| command-a-plus-05-2026 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| coding-xiaomi-mimo-v2.5-pro | 0.2000000 | 0.4000000 | 0.0016000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| agnes-2.5-pro | 0.45000000 | 0.9000000 | 0.00378000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| coding-xiaomi-mimo-v2-omni | 0.08000000 | 0.4000000 | 0.016000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5 | 11.000000 | 55.000000 | 1.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-5 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4-20-reasoning | 2.000000 | 6.000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-flash-preview | 0.5000000 | 3.000000 | 0.05000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-luna | 0.2000000 | 1.2000000 | 0.02000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.7-flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4-20-non-reasoning | 2.000000 | 6.000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| doubao-seed-2-1-turbo | 0.46475000000 | 2.32375000000 | 0.09295000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-flash-preview-search | 0.5000000 | 3.000000 | 0.05000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.3-codex | 1.75000000 | 14.000000 | 0.175000000 | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.3 | 1.1268000000 | 3.9438000000 | 0.2817000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.2-fast-preview | 2.254000000 | 7.889000000 | 0.5635000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ernie-5.1 | 0.5634000000 | 2.5353000000 | 0.5634000000 | 119000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash | 0.142000000 | 0.284000000 | 0.0284000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-flash-lite | 0.3000000 | 2.499999000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-high | 2.5000000 | 15.000000 | 0.25000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-pro-preview-customtools | 2.000000 | 12.000000 | 0.2000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-low | 2.5000000 | 15.000000 | 0.25000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5-pro | 30.00000 | 180.00000 | — | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| doubao-seed-2-0-mini | 0.030136000000 | 0.30136000000 | 0.006027000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-build-0.1 | 1.000000 | 2.000000 | 0.2000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| hy3 | 0.1562000000 | 0.6248000000 | 0.03905000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-pro-preview | 2.000000 | 12.000000 | 0.2000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-sol-disc | 4.000000 | 20.00000 | 0.4000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5v-turbo | 0.7042000000 | 3.09848000000 | 0.169008000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.3-flash | 0.11268000000 | 0.39438000000 | 0.02817000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5 | 5.000000 | 30.00000 | 0.5000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-26b-a4b-it | 0.14000000 | 0.39998000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| doubao-seed-2-0-lite-260428 | 0.09041000000 | 0.54246000000 | 0.018082000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31b-it | 0.14000000 | 0.39998000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| doubao-seed-2-0-pro | 0.4822000000 | 2.411000000 | 0.09644000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-chat-latest | 5.000000 | 30.00000 | 0.5000000 | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-mini | 0.75000000 | 4.5000000 | 0.075000000 | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.6 | 2.000000 | 6.000000 | 0.5000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro | 1.69000000 | 3.38000000 | 0.14027000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-nano | 0.2000000 | 1.25000000 | 0.02000000 | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-terra | 2.000000 | 12.000000 | 0.2000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| doubao-seed-2-0-code-preview | 0.4822000000 | 2.411000000 | 0.09644000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.5-122b-a10b | 0.1126000000 | 0.9008000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| longcat-2.0 | 0.7746000000 | 3.0984000000 | 0.015492000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k3 | 3.000000 | 15.000000 | 0.3000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.5-397b-a17b | 0.1644000000 | 0.9864000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m2.7 | 0.2958000000 | 1.1832000000 | 0.05916000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| muse-spark-1.2 | 1.375000000 | 4.675000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mimo-v2-pro | 1.1000000 | 3.3000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.7-plus | 0.282000000 | 1.128000000 | 0.0564000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-2.4t-a95b | 2.000000 | 6.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| step-3.7-flash | 0.22000000 | 1.32000000 | 0.044000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mai-thinking-1 | 2.000000 | 8.000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.6-max-preview | 1.268000000 | 7.608000000 | 0.1268000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-max | 1.69000000 | 5.07000000 | 0.169000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.6-35b-a3b | 0.254000000 | 1.524000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.6-27b | 0.422000000 | 2.532000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder-next | 0.137000000 | 0.548000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.6 | 0.95000000 | 3.9995000000 | 0.160835000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mimo-v2-omni | 0.44000000 | 2.2000000 | 0.088000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-flash | 0.1126000000 | 0.380025000000 | 0.014075000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m3 | 0.288000000 | 1.152000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| hy4-preview | 0.845000000 | 2.535000000 | 0.04225000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.7-code-highspeed | 1.9000000 | 7.999000000 | 0.32167000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| agnes-2.5-flash | $0.03 | $0.15 | — | 512K |
+| agnes-2.5-pro | $0.45 | $0.90 | $0.00378 | 1M |
+| cc-glm-5.1 | $0.06 | $0.22 | — | 200K |
+| claude-fable-5 | $11.00 | $55.00 | $1.10 | 1M |
+| claude-haiku-4-5 | $1.10 | $5.50 | $0.11 | 200K |
+| claude-opus-4-8-think | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-5 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-sonnet-5 | $2.00 | $10.00 | $0.20 | 1M |
+| coding-glm-5.3 | $0.06 | $0.22 | $0.02 | 1.05M |
+| coding-kimi-k3 | $0.44 | $1.61 | $0.07 | 1.05M |
+| coding-xiaomi-mimo-v2-omni | $0.08 | $0.40 | $0.02 | — |
+| coding-xiaomi-mimo-v2.5 | $0.08 | $0.16 | $0.0016 | 1.05M |
+| coding-xiaomi-mimo-v2.5-pro | $0.20 | $0.40 | $0.0016 | 1.05M |
+| command-a-plus-05-2026 | $2.50 | $10.00 | — | 128K |
+| deepseek-v4-flash | $0.14 | $0.28 | $0.03 | 1M |
+| deepseek-v4-pro | $1.69 | $3.38 | $0.14 | 1M |
+| doubao-seed-2-0-code-preview | $0.48 | $2.41 | $0.10 | 256K |
+| doubao-seed-2-0-lite-260428 | $0.09 | $0.54 | $0.02 | 256K |
+| doubao-seed-2-0-mini | $0.03 | $0.30 | $0.006027 | 256K |
+| doubao-seed-2-0-pro | $0.48 | $2.41 | $0.10 | 256K |
+| doubao-seed-2-1-turbo | $0.46 | $2.32 | $0.09 | 256K |
+| ernie-5.1 | $0.56 | $2.54 | $0.56 | 119K |
+| gemini-3-flash-preview | $0.50 | $3.00 | $0.05 | 1.05M |
+| gemini-3-flash-preview-search | $0.50 | $3.00 | $0.05 | 1.05M |
+| gemini-3.1-pro-preview | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini-3.1-pro-preview-customtools | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini-3.5-flash-lite | $0.30 | $2.50 | $0.03 | 1.05M |
+| gemini-3.7-flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemma-4-26b-a4b-it | $0.14 | $0.40 | — | 262.14K |
+| gemma-4-31b-it | $0.14 | $0.40 | — | 262.14K |
+| glm-5.2-fast-preview | $2.25 | $7.89 | $0.56 | 1M |
+| glm-5.3 | $1.13 | $3.94 | $0.28 | 1.05M |
+| glm-5.3-flash | $0.11 | $0.39 | $0.03 | 1.05M |
+| glm-5v-turbo | $0.70 | $3.10 | $0.17 | 200K |
+| gpt-5.3-codex | $1.75 | $14.00 | $0.18 | 400K |
+| gpt-5.4-high | $2.50 | $15.00 | $0.25 | 1.05M |
+| gpt-5.4-low | $2.50 | $15.00 | $0.25 | 1.05M |
+| gpt-5.4-mini | $0.75 | $4.50 | $0.08 | 400K |
+| gpt-5.4-nano | $0.20 | $1.25 | $0.02 | 400K |
+| gpt-5.5 | $5.00 | $30.00 | $0.50 | 1.05M |
+| gpt-5.5-pro | $30.00 | $180.00 | — | 1.05M |
+| gpt-5.6-luna | $0.20 | $1.20 | $0.02 | 1.05M |
+| gpt-5.6-sol-disc | $4.00 | $20.00 | $0.40 | 1.05M |
+| gpt-5.6-terra | $2.00 | $12.00 | $0.20 | 1.05M |
+| gpt-chat-latest | $5.00 | $30.00 | $0.50 | 400K |
+| grok-4-20-non-reasoning | $2.00 | $6.00 | $0.20 | 1M |
+| grok-4-20-reasoning | $2.00 | $6.00 | $0.20 | 1M |
+| grok-4.6 | $2.00 | $6.00 | $0.50 | 500K |
+| grok-build-0.1 | $1.00 | $2.00 | $0.20 | 256K |
+| hy3 | $0.16 | $0.62 | $0.04 | 256K |
+| hy4-preview | $0.84 | $2.54 | $0.04 | 1.05M |
+| kimi-k2.6 | $0.95 | $4.00 | $0.16 | 262.14K |
+| kimi-k2.7-code-highspeed | $1.90 | $8.00 | $0.32 | 262.14K |
+| kimi-k3 | $3.00 | $15.00 | $0.30 | 1.05M |
+| longcat-2.0 | $0.77 | $3.10 | $0.02 | 1M |
+| mai-thinking-1 | $2.00 | $8.00 | — | 256K |
+| mimo-v2-omni | $0.44 | $2.20 | $0.09 | 256K |
+| mimo-v2-pro | $1.10 | $3.30 | $0.22 | 1M |
+| minimax-m2.7 | $0.30 | $1.18 | $0.06 | 204.8K |
+| minimax-m3 | $0.29 | $1.15 | — | 1M |
+| muse-spark-1.2 | $1.38 | $4.68 | — | 1.05M |
+| qwen3-coder-next | $0.14 | $0.55 | — | 262.14K |
+| qwen3.5-122b-a10b | $0.11 | $0.90 | — | 262.14K |
+| qwen3.5-397b-a17b | $0.16 | $0.99 | — | 262.14K |
+| qwen3.6-27b | $0.42 | $2.53 | — | 262.14K |
+| qwen3.6-35b-a3b | $0.25 | $1.52 | — | 262.14K |
+| qwen3.6-max-preview | $1.27 | $7.61 | $0.13 | 262.14K |
+| qwen3.7-plus | $0.28 | $1.13 | $0.06 | 1M |
+| qwen3.8-2.4t-a95b | $2.00 | $6.00 | $0.50 | 1M |
+| qwen3.8-flash | $0.11 | $0.38 | $0.01 | 1M |
+| qwen3.8-max | $1.69 | $5.07 | $0.17 | 1M |
+| step-3.7-flash | $0.22 | $1.32 | $0.04 | 256K |
 
 ## aion-labs
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| AionLabs: Aion-3.0 | 3.000000 | 6.000000 | 0.75000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| AionLabs: Aion-3.0-Mini | 0.7000000 | 1.4000000 | 0.18000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| AionLabs: Aion 3.5 | 3.000000 | 6.000000 | 0.75000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| AionLabs: Aion 3.5 Mini | 0.7000000 | 1.4000000 | 0.18000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| AionLabs: Aion-2.0 | 0.8000000 | 1.6000000 | 0.2000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| AionLabs: Aion-RP 1.0 (8B) | 0.8000000 | 1.6000000 | — | 32768 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| aionlabs: aion 3.5 | $3.00 | $6.00 | $0.75 | 262.14K |
+| aionlabs: aion 3.5 mini | $0.70 | $1.40 | $0.18 | 262.14K |
+| aionlabs: aion-2.0 | $0.80 | $1.60 | $0.20 | 131.07K |
+| aionlabs: aion-3.0 | $3.00 | $6.00 | $0.75 | 131.07K |
+| aionlabs: aion-3.0-mini | $0.70 | $1.40 | $0.18 | 131.07K |
+| aionlabs: aion-rp 1.0 (8b) | $0.80 | $1.60 | — | 32.77K |
 
 ## amazon
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Amazon: Nova Micro 1.0 | 0.035000000 | 0.14000000 | — | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Amazon: Nova Premier 1.0 | 2.5000000 | 12.5000000 | 0.625000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Amazon: Nova 2 Lite | 0.3000000 | 2.5000000 | — | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Amazon: Nova Lite 1.0 | 0.06000000 | 0.24000000 | — | 300000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Amazon: Nova Pro 1.0 | 0.8000000 | 3.2000000 | — | 300000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| nova 2 lite | $0.30 | $2.50 | — | 1M |
+| nova lite 1.0 | $0.06 | $0.24 | — | 300K |
+| nova micro 1.0 | $0.04 | $0.14 | — | 128K |
+| nova premier 1.0 | $2.50 | $12.50 | $0.62 | 1M |
+| nova pro 1.0 | $0.80 | $3.20 | — | 300K |
 
 ## amazon_nova
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| nova-premier-v1 | 2.5000000 | 12.5000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nova-lite-v1 | 0.06000000 | 0.24000000 | — | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nova-micro-v1 | 0.035000000 | 0.14000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nova-pro-v1 | 0.8000000 | 3.2000000 | — | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| nova-lite-v1 | $0.06 | $0.24 | — | 300K |
+| nova-micro-v1 | $0.04 | $0.14 | — | 128K |
+| nova-premier-v1 | $2.50 | $12.50 | — | 1M |
+| nova-pro-v1 | $0.80 | $3.20 | — | 300K |
 
 ## anthracite-org
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Magnum v4 72B | 2.5000000 | 5.000000 | — | 32768 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| magnum v4 72b | $2.50 | $5.00 | — | 32.77K |
 
 ## anthropic
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| claude-opus-4-6-20260205 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-5-20251101 | 5.000000 | 25.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Fable 5.1 (batch) | 5.000000 | 25.000000 | 0.125000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Sonnet 4 | 3.000000 | 15.000000 | 0.3000000 | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-5-5 | 0.1000000 | 0.5000000 | 0.01000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-5-5 | 4.000000 | 20.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5-1 | 10.00000 | 50.00000 | 0.25000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-4-5 | 1.000000 | 5.000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-8 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-mythos-5 | 10.00000 | 50.00000 | 1.000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-7-20260416 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Opus 4.7 (batch) | 2.5000000 | 12.5000000 | 0.25000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Haiku 5.5 (batch) | 0.05000000 | 0.25000000 | 0.005000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Opus 5 (batch) | 2.5000000 | 12.5000000 | 0.25000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Opus 4.1 (batch) | 7.5000000 | 37.5000000 | 0.75000000 | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Opus 4.1 | 15.000000 | 75.000000 | 1.5000000 | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Opus 4.5 (batch) | 2.5000000 | 12.5000000 | 0.25000000 | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-mythos-preview | 10.00000 | 50.00000 | 1.000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-7 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-6 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-5 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5 | 10.00000 | 50.00000 | 1.000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Opus 5.5 (batch) | 2.000000 | 10.00000 | 0.1000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-5 | 5.000000 | 25.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Haiku 4.5 (batch) | 0.5000000 | 2.5000000 | 0.05000000 | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Opus 4.6 (batch) | 2.5000000 | 12.5000000 | 0.25000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Fable 5 (batch) | 5.000000 | 25.000000 | 0.5000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-mythos-5-1 | 10.00000 | 50.00000 | 0.25000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-4-5-20251001 | 1.000000 | 5.000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Opus 4.8 (batch) | 2.5000000 | 12.5000000 | 0.25000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Sonnet 4.6 (batch) | 1.5000000 | 7.5000000 | 0.15000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Sonnet 4.5 (batch) | 1.5000000 | 7.5000000 | 0.15000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Sonnet 5.5 (batch) | 1.000000 | 5.000000 | 0.05000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-5 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5 | 2.000000 | 10.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5-5 | 2.000000 | 10.00000 | 0.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-5-20250929 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Sonnet 5 (batch) | 1.000000 | 5.000000 | 0.1000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-6 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| claude fable 5 (batch) | $5.00 | $25.00 | $0.50 | 1M |
+| claude fable 5.1 (batch) | $5.00 | $25.00 | $0.12 | 1M |
+| claude fable latest | $10.00 | $50.00 | $0.25 | 1M |
+| claude haiku 4.5 (batch) | $0.50 | $2.50 | $0.05 | 200K |
+| claude haiku 5.5 (batch) | $0.05 | $0.25 | $0.005 | 1M |
+| claude haiku latest | $0.10 | $0.50 | $0.01 | 1M |
+| claude opus 4.1 | $15.00 | $75.00 | $1.50 | 200K |
+| claude opus 4.1 (batch) | $7.50 | $37.50 | $0.75 | 200K |
+| claude opus 4.5 (batch) | $2.50 | $12.50 | $0.25 | 200K |
+| claude opus 4.6 (batch) | $2.50 | $12.50 | $0.25 | 1M |
+| claude opus 4.7 (batch) | $2.50 | $12.50 | $0.25 | 1M |
+| claude opus 4.8 (batch) | $2.50 | $12.50 | $0.25 | 1M |
+| claude opus 5 (batch) | $2.50 | $12.50 | $0.25 | 1M |
+| claude opus 5.5 (batch) | $2.00 | $10.00 | $0.10 | 1M |
+| claude opus latest | $4.00 | $20.00 | $0.20 | 1M |
+| claude sonnet 4 | $3.00 | $15.00 | $0.30 | 200K |
+| claude sonnet 4.5 (batch) | $1.50 | $7.50 | $0.15 | 1M |
+| claude sonnet 4.6 (batch) | $1.50 | $7.50 | $0.15 | 1M |
+| claude sonnet 5 (batch) | $1.00 | $5.00 | $0.10 | 1M |
+| claude sonnet 5.5 (batch) | $1.00 | $5.00 | $0.05 | 1M |
+| claude sonnet latest | $2.00 | $10.00 | $0.10 | 1M |
+| claude-fable-5 | $10.00 | $50.00 | $1.00 | 1M |
+| claude-fable-5-1 | $10.00 | $50.00 | $0.25 | 1M |
+| claude-haiku-4-5 | $1.00 | $5.00 | $0.10 | 200K |
+| claude-haiku-4-5-20251001 | $1.00 | $5.00 | $0.10 | 200K |
+| claude-haiku-5-5 | $0.10 | $0.50 | $0.01 | 1M |
+| claude-mythos-5 | $10.00 | $50.00 | $1.00 | 1M |
+| claude-mythos-5-1 | $10.00 | $50.00 | $0.25 | 1M |
+| claude-mythos-preview | $10.00 | $50.00 | $1.00 | 1M |
+| claude-opus-4-5 | $5.00 | $25.00 | $0.50 | 200K |
+| claude-opus-4-5-20251101 | $5.00 | $25.00 | $0.50 | 200K |
+| claude-opus-4-6 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-4-6-20260205 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-4-7 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-4-7-20260416 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-4-8 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-5 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-5-5 | $4.00 | $20.00 | $0.20 | 1M |
+| claude-sonnet-4-5 | $3.00 | $15.00 | $0.30 | 200K |
+| claude-sonnet-4-5-20250929 | $3.00 | $15.00 | $0.30 | 200K |
+| claude-sonnet-4-6 | $3.00 | $15.00 | $0.30 | 1M |
+| claude-sonnet-5 | $2.00 | $10.00 | $0.20 | 1M |
+| claude-sonnet-5-5 | $2.00 | $10.00 | $0.10 | 1M |
 
 ## anyscale
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Mistral-7B-Instruct-v0.1 | 0.15000000 | 0.15000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-2-13b-chat-hf | 0.25000000 | 0.25000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| CodeLlama-70b-Instruct-hf | 1.000000 | 1.000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3-70B-Instruct | 1.000000 | 1.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3-8B-Instruct | 0.15000000 | 0.15000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| zephyr-7b-beta | 0.15000000 | 0.15000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-2-7b-chat-hf | 0.15000000 | 0.15000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mixtral-8x7B-Instruct-v0.1 | 0.15000000 | 0.15000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-2-70b-chat-hf | 1.000000 | 1.000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mixtral-8x22B-Instruct-v0.1 | 0.9000000 | 0.9000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| CodeLlama-34b-Instruct-hf | 1.000000 | 1.000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-7b-it | 0.15000000 | 0.15000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| codellama-34b-instruct-hf | $1.00 | $1.00 | — | 4.1K |
+| codellama-70b-instruct-hf | $1.00 | $1.00 | — | 4.1K |
+| gemma-7b-it | $0.15 | $0.15 | — | 8.19K |
+| llama-2-7b-chat-hf | $0.15 | $0.15 | — | 4.1K |
+| llama-2-13b-chat-hf | $0.25 | $0.25 | — | 4.1K |
+| llama-2-70b-chat-hf | $1.00 | $1.00 | — | 4.1K |
+| meta-llama-3-8b-instruct | $0.15 | $0.15 | — | 8.19K |
+| meta-llama-3-70b-instruct | $1.00 | $1.00 | — | 8.19K |
+| mistral-7b-instruct-v0.1 | $0.15 | $0.15 | — | 16.38K |
+| mixtral-8x7b-instruct-v0.1 | $0.15 | $0.15 | — | 16.38K |
+| mixtral-8x22b-instruct-v0.1 | $0.90 | $0.90 | — | 65.54K |
+| zephyr-7b-beta | $0.15 | $0.15 | — | 16.38K |
 
 ## apodex
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Apodex: Apodex 1.1 Mini (free) | 0 | 0 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| apodex 1.1 mini (free) | $0.00 | $0.00 | — | 262.14K |
 
 ## arcee-ai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Arcee AI: Trinity Large Thinking | 0.25000000 | 0.8000000 | 0.06000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| arcee ai: trinity large thinking | $0.25 | $0.80 | $0.06 | 262.14K |
 
 ## azure
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gpt-35-turbo-16k | 3.000000 | 4.000000 | — | 16385 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-0125-preview | 10.00000 | 30.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-mini-2025-04-14 | 0.4000000 | 1.6000000 | 0.1000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-35-turbo-16k-0613 | 3.000000 | 4.000000 | — | 16385 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-35-turbo | 0.5000000 | 1.5000000 | — | 4097 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1 | 2.2000000 | 8.8000000 | 0.55000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-mini | 0.44000000 | 1.76000000 | 0.11000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| dall-e-2 | — | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-3.5-turbo | 0.5000000 | 1.5000000 | — | 4097 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-2025-04-14 | 2.000000 | 8.000000 | 0.5000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| dall-e-3 | — | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-0613 | 30.00000 | 60.00000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4 | 30.00000 | 60.00000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| chat-latest | 5.000000 | 30.00000 | 0.5000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codex-mini | 1.5000000 | 6.000000 | 0.375000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| computer-use-preview | 3.000000 | 12.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ada | 0.1000000 | 0.0 | — | 8191 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| command-r-plus | 3.000000 | 15.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-2025-11-13 | 1.25000000 | 10.00000 | 0.125000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-2024-11-20 | 2.75000000 | 11.000000 | 1.375000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-realtime-preview-2024-12-17 | 5.5000000 | 22.000000 | 2.75000000 | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini | 0.15000000 | 0.6000000 | 0.075000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-2024-08-06 | 2.75000000 | 11.000000 | 1.375000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-transcribe | 1.25000000 | 5.000000 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-nano | 0.11000000 | 0.44000000 | 0.028000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-32k | 60.00000 | 120.00000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-codex | 1.375000000 | 11.000000 | 0.1375000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-realtime-preview-2024-12-17 | 0.66000000 | 2.64000000 | 0.33000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2-2025-12-11 | 1.75000000 | 14.000000 | 0.175000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-1106-preview | 10.00000 | 30.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-codex-2025-11-13 | 1.25000000 | 10.00000 | 0.125000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-turbo | 10.00000 | 30.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-codex-mini-2025-11-13 | 0.25000000 | 2.000000 | 0.025000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-2024-05-13 | 5.5000000 | 16.5000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5 | 1.375000000 | 11.000000 | 0.1375000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2 | 1.925000000 | 15.4000000 | 0.1925000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-codex-max | 1.375000000 | 11.000000 | 0.1375000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o | 2.5000000 | 10.00000 | 1.25000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-nano-2025-04-14 | 0.1000000 | 0.4000000 | 0.025000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.5-preview | 75.000000 | 150.00000 | 37.5000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-32k-0613 | 60.00000 | 120.00000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-audio-preview-2024-12-17 | 0.15000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-realtime-preview-2024-10-01 | 5.5000000 | 22.000000 | 2.75000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-transcribe | 2.5000000 | 10.00000 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-turbo-2024-04-09 | 10.00000 | 30.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-codex-mini | 0.275000000 | 2.2000000 | 0.0275000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-transcribe-diarize | 2.5000000 | 10.00000 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-tts | 0.6000000 | 10.00000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-audio-preview-2024-12-17 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1 | 1.375000000 | 11.000000 | 0.1375000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-chat | 1.375000000 | 11.000000 | 0.1375000000 | 111616 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-2024-07-18 | 0.165000000 | 0.66000000 | 0.083000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-turbo-vision-preview | 10.00000 | 30.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-sol | 4.4000000 | 22.000000 | 0.44000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.3-codex | 1.925000000 | 15.4000000 | 0.1925000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-codex | 1.375000000 | 11.000000 | 0.138000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.3-chat | 1.925000000 | 15.4000000 | 0.1925000000 | 111616 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-luna-2026-07-09 | 0.2000000 | 1.2000000 | 0.02000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5-2026-04-24 | 5.5000000 | 33.000000 | 0.55000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-terra | 2.2000000 | 13.2000000 | 0.22000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2-pro | 23.1000000 | 184.8000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2-pro-2025-12-11 | 21.000000 | 168.000000 | — | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-2026-03-05 | 2.75000000 | 16.5000000 | 0.275000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-nano | 0.22000000 | 1.375000000 | 0.022000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5-pro | 30.00000 | 180.00000 | 3.000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-mini | 0.275000000 | 2.2000000 | 0.0275000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-nano | 0.055000000 | 0.44000000 | 0.0055000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-pro | 16.5000000 | 132.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2-chat | 1.925000000 | 15.4000000 | 0.1925000000 | 111616 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4 | 2.75000000 | 16.5000000 | 0.275000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6 | 4.4000000 | 22.000000 | 0.44000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-mini-2026-03-17 | 0.75000000 | 4.5000000 | 0.075000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-mini | 0.825000000 | 4.95000000 | 0.0825000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5-pro-2026-04-23 | 30.00000 | 180.00000 | 3.000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-luna | 0.22000000 | 1.32000000 | 0.022000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-terra-2026-07-09 | 2.000000 | 12.000000 | 0.2000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2-codex | 1.925000000 | 15.4000000 | 0.1925000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-pro-2026-03-05 | 30.00000 | 180.00000 | 3.000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5 | 5.5000000 | 33.000000 | 0.55000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-sol-2026-07-09 | 4.000000 | 20.00000 | 0.4000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5-2026-04-23 | 5.5000000 | 33.000000 | 0.55000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-mini-2025-08-07 | 0.275000000 | 2.2000000 | 0.0275000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-chat | 1.25000000 | 10.00000 | 0.125000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-nano-2025-08-07 | 0.055000000 | 0.44000000 | 0.0055000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-nano-2026-03-17 | 0.2000000 | 1.25000000 | 0.02000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-2025-08-07 | 1.375000000 | 11.000000 | 0.1375000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-pro | 30.00000 | 180.00000 | 3.000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-audio-mini-2025-10-06 | 0.6000000 | 2.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-luna | 0.12000000 | 0.6000000 | 0.012000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-audio-2025-08-28 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-audio-mini | 0.6000000 | 2.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-sol | 2.4000000 | 12.000000 | 0.24000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-chat-latest | 5.000000 | 30.00000 | 0.5000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-2.1 | 4.000000 | 24.000000 | 0.4000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-mini | 0.6000000 | 2.4000000 | 0.06000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-1.5-2026-02-23 | 4.000000 | 16.000000 | 0.4000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-1.5 | 4.000000 | 16.000000 | 0.4000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-astra | 12.000000 | 60.00000 | 1.2000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-astra-2026-09-03 | 10.00000 | 50.00000 | 1.000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-2.5-flare | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-2 | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1-2024-12-17 | 16.5000000 | 66.000000 | 8.25000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-1 | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-audio | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-audio-1.5-2026-02-23 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime | 4.000000 | 16.000000 | 0.4000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-2 | 4.000000 | 24.000000 | 0.4000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-luna-2026-09-22 | 0.1000000 | 0.5000000 | 0.01000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1 | 15.000000 | 60.00000 | 7.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-2402 | 8.000000 | 24.000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-audio-1.5 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6.1-sol | 2.4000000 | 12.000000 | 0.12000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-1-mini | 2.000000 | — | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-sol-2026-09-22 | 2.000000 | 10.00000 | 0.2000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-2025-08-28 | 4.000000 | 16.000000 | 0.4000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| model-router | 0.14000000 | 0.0 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-2.1-mini | 0.6000000 | 2.4000000 | 0.06000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-2-2026-04-21 | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-1.5 | 5.000000 | 10.00000 | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-2.5-sunburst | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-1.5-2025-12-16 | 5.000000 | 10.00000 | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6.1-sol-2026-09-29 | 2.000000 | 10.00000 | 0.1000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-mini-2025-10-06 | 0.6000000 | 2.4000000 | 0.06000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-latest | 8.000000 | 24.000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1-preview | 16.5000000 | 66.000000 | 8.25000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3 | 2.000000 | 8.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-mini | 1.1000000 | 4.4000000 | 0.55000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1-mini | 1.21000000 | 4.84000000 | 0.605000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-deep-research | 11.000000 | 44.000000 | 2.75000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-3-large | 0.13000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-pro-2025-06-10 | 20.00000 | 80.00000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-pro | 20.00000 | 80.00000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-ada-002 | 0.1000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o4-mini-2025-04-16 | 1.21000000 | 4.84000000 | 0.303000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1-mini-2024-09-12 | 1.21000000 | 4.84000000 | 0.605000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-3-small | 0.02000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-2025-04-16 | 2.2000000 | 8.8000000 | 0.55000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-mini-2025-01-31 | 1.21000000 | 4.84000000 | 0.605000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o4-mini | 1.1000000 | 4.4000000 | 0.275000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| ada | $0.10 | $0.00 | — | 8.19K |
+| chat-latest | $5.00 | $30.00 | $0.50 | 272K |
+| codex-mini | $1.50 | $6.00 | $0.38 | 200K |
+| command-r-plus | $3.00 | $15.00 | — | 128K |
+| computer-use-preview | $3.00 | $12.00 | — | 8.19K |
+| dall-e-2 | — | $0.00 | — | — |
+| dall-e-3 | — | $0.00 | — | — |
+| gpt-3.5-turbo | $0.50 | $1.50 | — | 4.1K |
+| gpt-4 | $30.00 | $60.00 | — | 8.19K |
+| gpt-4-32k | $60.00 | $120.00 | — | 32.77K |
+| gpt-4-32k-0613 | $60.00 | $120.00 | — | 32.77K |
+| gpt-4-0125-preview | $10.00 | $30.00 | — | 128K |
+| gpt-4-0613 | $30.00 | $60.00 | — | 8.19K |
+| gpt-4-1106-preview | $10.00 | $30.00 | — | 128K |
+| gpt-4-turbo | $10.00 | $30.00 | — | 128K |
+| gpt-4-turbo-2024-04-09 | $10.00 | $30.00 | — | 128K |
+| gpt-4-turbo-vision-preview | $10.00 | $30.00 | — | 128K |
+| gpt-4.1 | $2.20 | $8.80 | $0.55 | — |
+| gpt-4.1-2025-04-14 | $2.00 | $8.00 | $0.50 | 1.05M |
+| gpt-4.1-mini | $0.44 | $1.76 | $0.11 | — |
+| gpt-4.1-mini-2025-04-14 | $0.40 | $1.60 | $0.10 | 1.05M |
+| gpt-4.1-nano | $0.11 | $0.44 | $0.03 | — |
+| gpt-4.1-nano-2025-04-14 | $0.10 | $0.40 | $0.02 | 1.05M |
+| gpt-4.5-preview | $75.00 | $150.00 | $37.50 | 128K |
+| gpt-4o | $2.50 | $10.00 | $1.25 | 128K |
+| gpt-4o-2024-05-13 | $5.50 | $16.50 | — | 128K |
+| gpt-4o-2024-08-06 | $2.75 | $11.00 | $1.38 | 128K |
+| gpt-4o-2024-11-20 | $2.75 | $11.00 | $1.38 | 128K |
+| gpt-4o-audio-preview-2024-12-17 | $2.50 | $10.00 | — | 128K |
+| gpt-4o-mini | $0.15 | $0.60 | $0.08 | 128K |
+| gpt-4o-mini-2024-07-18 | $0.16 | $0.66 | $0.08 | 128K |
+| gpt-4o-mini-audio-preview-2024-12-17 | $0.15 | $0.60 | — | 128K |
+| gpt-4o-mini-realtime-preview-2024-12-17 | $0.66 | $2.64 | $0.33 | 128K |
+| gpt-4o-mini-transcribe | $1.25 | $5.00 | — | 16K |
+| gpt-4o-mini-tts | $0.60 | $10.00 | — | — |
+| gpt-4o-realtime-preview-2024-10-01 | $5.50 | $22.00 | $2.75 | 128K |
+| gpt-4o-realtime-preview-2024-12-17 | $5.50 | $22.00 | $2.75 | 16K |
+| gpt-4o-transcribe | $2.50 | $10.00 | — | 16K |
+| gpt-4o-transcribe-diarize | $2.50 | $10.00 | — | 16K |
+| gpt-5 | $1.38 | $11.00 | $0.14 | — |
+| gpt-5-2025-08-07 | $1.38 | $11.00 | $0.14 | 272K |
+| gpt-5-chat | $1.25 | $10.00 | $0.12 | 128K |
+| gpt-5-codex | $1.38 | $11.00 | $0.14 | — |
+| gpt-5-mini | $0.28 | $2.20 | $0.03 | — |
+| gpt-5-mini-2025-08-07 | $0.28 | $2.20 | $0.03 | 272K |
+| gpt-5-nano | $0.06 | $0.44 | $0.0055 | — |
+| gpt-5-nano-2025-08-07 | $0.06 | $0.44 | $0.0055 | 272K |
+| gpt-5-pro | $16.50 | $132.00 | — | — |
+| gpt-5.1 | $1.38 | $11.00 | $0.14 | 272K |
+| gpt-5.1-2025-11-13 | $1.25 | $10.00 | $0.12 | 272K |
+| gpt-5.1-chat | $1.38 | $11.00 | $0.14 | 111.62K |
+| gpt-5.1-codex | $1.38 | $11.00 | $0.14 | 272K |
+| gpt-5.1-codex-2025-11-13 | $1.25 | $10.00 | $0.12 | 272K |
+| gpt-5.1-codex-max | $1.38 | $11.00 | $0.14 | — |
+| gpt-5.1-codex-mini | $0.28 | $2.20 | $0.03 | 272K |
+| gpt-5.1-codex-mini-2025-11-13 | $0.25 | $2.00 | $0.02 | 272K |
+| gpt-5.2 | $1.92 | $15.40 | $0.19 | — |
+| gpt-5.2-2025-12-11 | $1.75 | $14.00 | $0.18 | 272K |
+| gpt-5.2-chat | $1.92 | $15.40 | $0.19 | 111.62K |
+| gpt-5.2-codex | $1.92 | $15.40 | $0.19 | — |
+| gpt-5.2-pro | $23.10 | $184.80 | — | — |
+| gpt-5.2-pro-2025-12-11 | $21.00 | $168.00 | — | 272K |
+| gpt-5.3-chat | $1.92 | $15.40 | $0.19 | 111.62K |
+| gpt-5.3-codex | $1.92 | $15.40 | $0.19 | — |
+| gpt-5.4 | $2.75 | $16.50 | $0.28 | 922K |
+| gpt-5.4-2026-03-05 | $2.75 | $16.50 | $0.28 | 922K |
+| gpt-5.4-mini | $0.82 | $4.95 | $0.08 | — |
+| gpt-5.4-mini-2026-03-17 | $0.75 | $4.50 | $0.08 | 272K |
+| gpt-5.4-nano | $0.22 | $1.38 | $0.02 | — |
+| gpt-5.4-nano-2026-03-17 | $0.20 | $1.25 | $0.02 | 272K |
+| gpt-5.4-pro | $30.00 | $180.00 | $3.00 | 922K |
+| gpt-5.4-pro-2026-03-05 | $30.00 | $180.00 | $3.00 | 922K |
+| gpt-5.5 | $5.50 | $33.00 | $0.55 | 922K |
+| gpt-5.5-2026-04-23 | $5.50 | $33.00 | $0.55 | 922K |
+| gpt-5.5-2026-04-24 | $5.50 | $33.00 | $0.55 | 922K |
+| gpt-5.5-pro | $30.00 | $180.00 | $3.00 | 1.05M |
+| gpt-5.5-pro-2026-04-23 | $30.00 | $180.00 | $3.00 | 1.05M |
+| gpt-5.6 | $4.40 | $22.00 | $0.44 | 922K |
+| gpt-5.6-luna | $0.22 | $1.32 | $0.02 | 922K |
+| gpt-5.6-luna-2026-07-09 | $0.20 | $1.20 | $0.02 | 922K |
+| gpt-5.6-sol | $4.40 | $22.00 | $0.44 | 922K |
+| gpt-5.6-sol-2026-07-09 | $4.00 | $20.00 | $0.40 | 922K |
+| gpt-5.6-terra | $2.20 | $13.20 | $0.22 | 922K |
+| gpt-5.6-terra-2026-07-09 | $2.00 | $12.00 | $0.20 | 922K |
+| gpt-6-astra | $12.00 | $60.00 | $1.20 | 922K |
+| gpt-6-astra-2026-09-03 | $10.00 | $50.00 | $1.00 | 922K |
+| gpt-6-luna | $0.12 | $0.60 | $0.01 | 922K |
+| gpt-6-luna-2026-09-22 | $0.10 | $0.50 | $0.01 | 922K |
+| gpt-6-sol | $2.40 | $12.00 | $0.24 | 922K |
+| gpt-6-sol-2026-09-22 | $2.00 | $10.00 | $0.20 | 922K |
+| gpt-6.1-sol | $2.40 | $12.00 | $0.12 | 922K |
+| gpt-6.1-sol-2026-09-29 | $2.00 | $10.00 | $0.10 | 922K |
+| gpt-35-turbo | $0.50 | $1.50 | — | 4.1K |
+| gpt-35-turbo-16k | $3.00 | $4.00 | — | 16.39K |
+| gpt-35-turbo-16k-0613 | $3.00 | $4.00 | — | 16.39K |
+| gpt-audio | $2.50 | $10.00 | — | 128K |
+| gpt-audio-1.5 | $2.50 | $10.00 | — | 128K |
+| gpt-audio-1.5-2026-02-23 | $2.50 | $10.00 | — | 128K |
+| gpt-audio-2025-08-28 | $2.50 | $10.00 | — | 128K |
+| gpt-audio-mini | $0.60 | $2.40 | — | 128K |
+| gpt-audio-mini-2025-10-06 | $0.60 | $2.40 | — | 128K |
+| gpt-chat-latest | $5.00 | $30.00 | $0.50 | 272K |
+| gpt-image-1 | $5.00 | — | $1.25 | — |
+| gpt-image-1-mini | $2.00 | — | $0.20 | — |
+| gpt-image-1.5 | $5.00 | $10.00 | $1.25 | — |
+| gpt-image-1.5-2025-12-16 | $5.00 | $10.00 | $1.25 | — |
+| gpt-image-2 | $5.00 | — | $1.25 | — |
+| gpt-image-2-2026-04-21 | $5.00 | — | $1.25 | — |
+| gpt-image-2.5-flare | $5.00 | — | $1.25 | — |
+| gpt-image-2.5-sunburst | $5.00 | — | $1.25 | — |
+| gpt-realtime | $4.00 | $16.00 | $0.40 | 32K |
+| gpt-realtime-1.5 | $4.00 | $16.00 | $0.40 | 32K |
+| gpt-realtime-1.5-2026-02-23 | $4.00 | $16.00 | $0.40 | 32K |
+| gpt-realtime-2 | $4.00 | $24.00 | $0.40 | 32K |
+| gpt-realtime-2.1 | $4.00 | $24.00 | $0.40 | 32K |
+| gpt-realtime-2.1-mini | $0.60 | $2.40 | $0.06 | 32K |
+| gpt-realtime-2025-08-28 | $4.00 | $16.00 | $0.40 | 32K |
+| gpt-realtime-mini | $0.60 | $2.40 | $0.06 | 32K |
+| gpt-realtime-mini-2025-10-06 | $0.60 | $2.40 | $0.06 | 32K |
+| mistral-large-2402 | $8.00 | $24.00 | — | 32K |
+| mistral-large-latest | $8.00 | $24.00 | — | 32K |
+| model-router | $0.14 | $0.00 | — | 200K |
+| o1 | $15.00 | $60.00 | $7.50 | 200K |
+| o1-2024-12-17 | $16.50 | $66.00 | $8.25 | 200K |
+| o1-mini | $1.21 | $4.84 | $0.60 | — |
+| o1-mini-2024-09-12 | $1.21 | $4.84 | $0.60 | 128K |
+| o1-preview | $16.50 | $66.00 | $8.25 | 128K |
+| o3 | $2.00 | $8.00 | $0.50 | 200K |
+| o3-2025-04-16 | $2.20 | $8.80 | $0.55 | 200K |
+| o3-deep-research | $11.00 | $44.00 | $2.75 | — |
+| o3-mini | $1.10 | $4.40 | $0.55 | 200K |
+| o3-mini-2025-01-31 | $1.21 | $4.84 | $0.60 | 200K |
+| o3-pro | $20.00 | $80.00 | — | 200K |
+| o3-pro-2025-06-10 | $20.00 | $80.00 | — | 200K |
+| o4-mini | $1.10 | $4.40 | $0.28 | 200K |
+| o4-mini-2025-04-16 | $1.21 | $4.84 | $0.30 | 200K |
+| text-embedding-3-large | $0.13 | $0.00 | — | 8.19K |
+| text-embedding-3-small | $0.02 | $0.00 | — | 8.19K |
+| text-embedding-ada-002 | $0.10 | $0.00 | — | 8.19K |
 
 ## azure_ai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| claude-haiku-4-5 | 1.000000 | 5.000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5 | 10.00000 | 50.00000 | 1.000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-5 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5-1 | 10.00000 | 50.00000 | 0.25000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-5 | 5.000000 | 25.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5 | 2.000000 | 10.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-5-5 | 0.1000000 | 0.5000000 | 0.01000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-5 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-7 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-8 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-6 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-5-5 | 4.000000 | 20.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-6 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere-rerank-v3-multilingual | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cohere-embed-v3-english | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-DeepSeek-V3.2 | 0.62000000 | 1.85000000 | 0.31000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Codestral-2501 | 0.3000000 | 0.9000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cohere-embed-v3-multilingual | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codex-mini | 1.5000000 | 6.000000 | 0.375000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro | 1.74000000 | 3.48000000 | 0.145000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere-rerank-v4.0-pro | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash | 0.19000000 | 0.51000000 | 0.028000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3.1 | 1.23000000 | 4.94000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere-rerank-v3-english | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere-command-a | 2.5000000 | 10.00000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cohere-Embed-V5-Fast | 0.08000000 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3 | 1.14000000 | 4.56000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| embed-v-4-0 | 0.12000000 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3-0324 | 1.14000000 | 4.56000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-DeepSeek-V4.1-Flash | 0.375000000 | 1.5000000 | 0.008000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere-rerank-v4.0-fast | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4.1-flash | 0.3000000 | 1.2000000 | 0.006000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3.2 | 0.58000000 | 1.68000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Flash-0731 | 0.44000000 | 1.32000000 | 0.014000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cohere-command-a-plus-05-2026 | 0.8000000 | 3.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1 | 1.35000000 | 5.4000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3.2-speciale | 0.58000000 | 1.68000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5-5 | 2.000000 | 10.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cohere-Embed-V5-Pro | 0.12000000 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-3-mini | 0.25000000 | 1.27000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-luna | 0.1000000 | 0.5000000 | 0.01000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-3 | 3.000000 | 15.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6.1-sol | 2.000000 | 10.00000 | 0.1000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-GLM-5.2-Fast | 2.31000000 | 7.26000000 | 0.231000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-mini | 0.75000000 | 4.5000000 | 0.075000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-Inkling | 1.1000000 | 4.46000000 | 0.19000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-GLM-5 | 1.1000000 | 3.52000000 | 0.22000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-chat-latest | 5.000000 | 30.00000 | 0.5000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-pro-2026-03-05 | 30.00000 | 180.00000 | 3.000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-Nemotron-3-Ultra-NVFP4 | 0.66000000 | 2.64000000 | 0.13000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-pro | 30.00000 | 180.00000 | 3.000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-GLM-5.3-Flash | 0.188000000 | 0.625000000 | 0.038000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-MiniMax-M2.5 | 0.33000000 | 1.32000000 | 0.033000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-astra | 10.00000 | 50.00000 | 1.000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4 | 3.000000 | 15.000000 | — | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-DeepSeek-V4-Pro | 1.925000000 | 3.828000000 | 0.165000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-Kimi-K3 | 3.000000 | 15.000000 | 0.3000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-DeepSeek-V4-Flash | 0.15000000 | 0.31000000 | 0.03000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-Kimi-K2.5 | 0.66000000 | 3.3000000 | 0.11000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.15000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-GLM-5.2 | 1.54000000 | 4.84000000 | 0.15000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-Kimi-K2.6 | 1.045000000 | 4.4000000 | 0.176000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5 | 5.000000 | 30.00000 | 0.5000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5-2026-04-24 | 5.000000 | 30.00000 | 0.5000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-MiniMax-M3 | 0.33000000 | 1.32000000 | 0.066000000 | 512000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-2026-03-05 | 2.5000000 | 15.000000 | 0.25000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-Nemotron-Lightning-3.5-30B-A3B | 0.06000000 | 0.22000000 | 0.01000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5-2026-04-23 | 5.000000 | 30.00000 | 0.5000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4 | 2.5000000 | 15.000000 | 0.25000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-nano | 0.2000000 | 1.25000000 | 0.02000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-nano-2026-03-17 | 0.2000000 | 1.25000000 | 0.02000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-GPT-OSS-120B | 0.165000000 | 0.66000000 | 0.082000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-sol | 2.000000 | 10.00000 | 0.2000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-2 | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-GLM-5.1 | 1.54000000 | 4.84000000 | 0.286000000 | 202800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-GLM-5.3 | 1.75000000 | 5.5000000 | 0.325000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-mini-2026-03-17 | 0.75000000 | 4.5000000 | 0.075000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| FW-Kimi-K2.7-Code | 1.05000000 | 4.4000000 | 0.21000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4-fast-reasoning | 0.2000000 | 0.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MAI-Image-2.5-Flash | 1.75000000 | — | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Microsoft-Decision-1 | 0.042000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4-20-reasoning | 1.25000000 | 2.5000000 | 1.25000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MAI-Image-2.5 | 5.000000 | — | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4-1-fast-reasoning | 0.2000000 | 0.5000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-latest | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jais-30b-chat | 3200.0000 | 9710.00000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4-fast-non-reasoning | 0.2000000 | 0.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-code-fast-1 | 0.2000000 | 1.5000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-4-Scout-17B-16E-Instruct | 0.2000000 | 0.78000000 | — | 10000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-4-Maverick-17B-128E-Instruct-FP8 | 0.25000000 | 1.000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-3 | 0.5000000 | 1.5000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MAI-Image-2.6-Flash | 1.75000000 | — | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.3-70B-Instruct | 0.71000000 | 0.71000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MAI-Image-2.5-Pro | 5.000000 | — | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4-1-fast-non-reasoning | 0.2000000 | 0.5000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.7 | 2.000000 | 6.000000 | 0.5000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.6 | 2.000000 | 6.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-nemo | 0.15000000 | 0.15000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MAI-Cyber-1-Flash | 0.6000000 | 3.5000000 | 0.06000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-70B-Instruct | 2.68000000 | 3.54000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.5 | 0.6000000 | 3.000000 | 0.1000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3-70B-Instruct | 1.1000000 | 0.37000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-3b | 0.04000000 | 0.04000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2-thinking | 0.6000000 | 2.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MAI-Thinking-1 | 2.000000 | 8.000000 | 0.2000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-medium-2505 | 0.4000000 | 2.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4-20-non-reasoning | 1.25000000 | 2.5000000 | 1.25000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.3 | 1.25000000 | 2.5000000 | 0.2000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-2407 | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-instruct | 0.5000000 | 0.7000000 | — | 70000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-medium-3-5 | 1.5000000 | 7.5000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MAI-Image-2.6 | 5.000000 | — | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small | 1.000000 | 3.000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.6 | 0.95000000 | 4.000000 | 0.16000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large | 4.000000 | 12.000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MAI-DS-R1 | 1.35000000 | 5.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.7-code | 0.95000000 | 4.000000 | 0.19000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-3.5-mini-instruct | 0.13000000 | 0.52000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-3-medium-4k-instruct | 0.17000000 | 0.68000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small-2503 | 0.1000000 | 0.3000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-4-mini-instruct | 0.075000000 | 0.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-4 | 0.125000000 | 0.5000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-4-reasoning | 0.125000000 | 0.5000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-3-mini-128k-instruct | 0.13000000 | 0.52000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| model-router | 0.14000000 | 0 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-4-multimodal-instruct | 0.08000000 | 0.32000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-3-small-8k-instruct | 0.15000000 | 0.6000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-3-small-128k-instruct | 0.15000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-3.5-vision-instruct | 0.13000000 | 0.52000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-3.5-MoE-instruct | 0.16000000 | 0.64000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-3-medium-128k-instruct | 0.17000000 | 0.68000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-3-mini-4k-instruct | 0.13000000 | 0.52000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Phi-4-mini-reasoning | 0.075000000 | 0.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| claude-fable-5 | $10.00 | $50.00 | $1.00 | 1M |
+| claude-fable-5-1 | $10.00 | $50.00 | $0.25 | 1M |
+| claude-haiku-4-5 | $1.00 | $5.00 | $0.10 | 200K |
+| claude-haiku-5-5 | $0.10 | $0.50 | $0.01 | 1M |
+| claude-opus-4-5 | $5.00 | $25.00 | $0.50 | 200K |
+| claude-opus-4-6 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-4-7 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-4-8 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-5 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-5-5 | $4.00 | $20.00 | $0.20 | 1M |
+| claude-sonnet-4-5 | $3.00 | $15.00 | $0.30 | 200K |
+| claude-sonnet-4-6 | $3.00 | $15.00 | $0.30 | 1M |
+| claude-sonnet-5 | $2.00 | $10.00 | $0.20 | 1M |
+| claude-sonnet-5-5 | $2.00 | $10.00 | $0.20 | 1M |
+| codestral-2501 | $0.30 | $0.90 | — | 256K |
+| codex-mini | $1.50 | $6.00 | $0.38 | 200K |
+| cohere-command-a | $2.50 | $10.00 | — | 131.07K |
+| cohere-command-a-plus-05-2026 | $0.80 | $3.20 | — | 128K |
+| cohere-embed-v3-english | $0.10 | $0.00 | — | 512 |
+| cohere-embed-v3-multilingual | $0.10 | $0.00 | — | 512 |
+| cohere-embed-v5-fast | $0.08 | $0.00 | — | 128K |
+| cohere-embed-v5-pro | $0.12 | $0.00 | — | 128K |
+| cohere-rerank-v3-english | $0.00 | $0.00 | — | 4.1K |
+| cohere-rerank-v3-multilingual | $0.00 | $0.00 | — | 4.1K |
+| cohere-rerank-v4.0-fast | $0.00 | $0.00 | — | 32.77K |
+| cohere-rerank-v4.0-pro | $0.00 | $0.00 | — | 32.77K |
+| deepseek-r1 | $1.35 | $5.40 | — | — |
+| deepseek-v3 | $1.14 | $4.56 | — | 128K |
+| deepseek-v3-0324 | $1.14 | $4.56 | — | — |
+| deepseek-v3.1 | $1.23 | $4.94 | — | — |
+| deepseek-v3.2 | $0.58 | $1.68 | — | 128K |
+| deepseek-v3.2-speciale | $0.58 | $1.68 | — | 128K |
+| deepseek-v4-flash | $0.19 | $0.51 | $0.03 | 1M |
+| deepseek-v4-flash-0731 | $0.44 | $1.32 | $0.01 | 1M |
+| deepseek-v4-pro | $1.74 | $3.48 | $0.14 | 1M |
+| deepseek-v4.1-flash | $0.30 | $1.20 | $0.006 | 1M |
+| embed-v-4-0 | $0.12 | $0.00 | — | 128K |
+| fw-deepseek-v3.2 | $0.62 | $1.85 | $0.31 | 163.84K |
+| fw-deepseek-v4-flash | $0.15 | $0.31 | $0.03 | 1M |
+| fw-deepseek-v4-pro | $1.92 | $3.83 | $0.16 | 1M |
+| fw-deepseek-v4.1-flash | $0.38 | $1.50 | $0.008 | 1M |
+| fw-glm-5 | $1.10 | $3.52 | $0.22 | 200K |
+| fw-glm-5.1 | $1.54 | $4.84 | $0.29 | 202.8K |
+| fw-glm-5.2 | $1.54 | $4.84 | $0.15 | 1.05M |
+| fw-glm-5.2-fast | $2.31 | $7.26 | $0.23 | 1.05M |
+| fw-glm-5.3 | $1.75 | $5.50 | $0.32 | 1.05M |
+| fw-glm-5.3-flash | $0.19 | $0.62 | $0.04 | 1.05M |
+| fw-gpt-oss-120b | $0.16 | $0.66 | $0.08 | 131.07K |
+| fw-inkling | $1.10 | $4.46 | $0.19 | 1.05M |
+| fw-kimi-k2.5 | $0.66 | $3.30 | $0.11 | 262.14K |
+| fw-kimi-k2.6 | $1.04 | $4.40 | $0.18 | 262.14K |
+| fw-kimi-k2.7-code | $1.05 | $4.40 | $0.21 | 262.14K |
+| fw-kimi-k3 | $3.00 | $15.00 | $0.30 | 1.05M |
+| fw-minimax-m2.5 | $0.33 | $1.32 | $0.03 | 1M |
+| fw-minimax-m3 | $0.33 | $1.32 | $0.07 | 512K |
+| fw-nemotron-3-ultra-nvfp4 | $0.66 | $2.64 | $0.13 | 262.14K |
+| fw-nemotron-lightning-3.5-30b-a3b | $0.06 | $0.22 | $0.01 | 262.14K |
+| gpt-5.4 | $2.50 | $15.00 | $0.25 | 922K |
+| gpt-5.4-2026-03-05 | $2.50 | $15.00 | $0.25 | 922K |
+| gpt-5.4-mini | $0.75 | $4.50 | $0.08 | 272K |
+| gpt-5.4-mini-2026-03-17 | $0.75 | $4.50 | $0.08 | 272K |
+| gpt-5.4-nano | $0.20 | $1.25 | $0.02 | 272K |
+| gpt-5.4-nano-2026-03-17 | $0.20 | $1.25 | $0.02 | 272K |
+| gpt-5.4-pro | $30.00 | $180.00 | $3.00 | 922K |
+| gpt-5.4-pro-2026-03-05 | $30.00 | $180.00 | $3.00 | 922K |
+| gpt-5.5 | $5.00 | $30.00 | $0.50 | 922K |
+| gpt-5.5-2026-04-23 | $5.00 | $30.00 | $0.50 | 922K |
+| gpt-5.5-2026-04-24 | $5.00 | $30.00 | $0.50 | 922K |
+| gpt-6-astra | $10.00 | $50.00 | $1.00 | 922K |
+| gpt-6-luna | $0.10 | $0.50 | $0.01 | 922K |
+| gpt-6-sol | $2.00 | $10.00 | $0.20 | 922K |
+| gpt-6.1-sol | $2.00 | $10.00 | $0.10 | 922K |
+| gpt-chat-latest | $5.00 | $30.00 | $0.50 | 272K |
+| gpt-image-2 | $5.00 | — | $1.25 | — |
+| gpt-oss-120b | $0.15 | $0.60 | — | 131.07K |
+| grok-3 | $3.00 | $15.00 | — | — |
+| grok-3-mini | $0.25 | $1.27 | — | — |
+| grok-4 | $3.00 | $15.00 | — | 262K |
+| grok-4-1-fast-non-reasoning | $0.20 | $0.50 | — | 128K |
+| grok-4-1-fast-reasoning | $0.20 | $0.50 | — | 128K |
+| grok-4-20-non-reasoning | $1.25 | $2.50 | $1.25 | 262K |
+| grok-4-20-reasoning | $1.25 | $2.50 | $1.25 | 262K |
+| grok-4-fast-non-reasoning | $0.20 | $0.50 | — | — |
+| grok-4-fast-reasoning | $0.20 | $0.50 | — | — |
+| grok-4.3 | $1.25 | $2.50 | $0.20 | 200K |
+| grok-4.6 | $2.00 | $6.00 | $0.50 | 200K |
+| grok-4.7 | $2.00 | $6.00 | $0.50 | 500K |
+| grok-code-fast-1 | $0.20 | $1.50 | — | 256K |
+| jais-30b-chat | $3,200.00 | $9,710.00 | — | 8.19K |
+| jamba-instruct | $0.50 | $0.70 | — | 70K |
+| kimi-k2-thinking | $0.60 | $2.50 | — | 262.14K |
+| kimi-k2.5 | $0.60 | $3.00 | $0.10 | 262.14K |
+| kimi-k2.6 | $0.95 | $4.00 | $0.16 | 262.14K |
+| kimi-k2.7-code | $0.95 | $4.00 | $0.19 | 262.14K |
+| llama-3.3-70b-instruct | $0.71 | $0.71 | — | 128K |
+| llama-4-maverick-17b-128e-instruct-fp8 | $0.25 | $1.00 | — | 1M |
+| llama-4-scout-17b-16e-instruct | $0.20 | $0.78 | — | 10M |
+| mai-cyber-1-flash | $0.60 | $3.50 | $0.06 | 256K |
+| mai-ds-r1 | $1.35 | $5.40 | — | 128K |
+| mai-image-2.5 | $5.00 | — | — | 32K |
+| mai-image-2.5-flash | $1.75 | — | — | 32K |
+| mai-image-2.5-pro | $5.00 | — | — | 32K |
+| mai-image-2.6 | $5.00 | — | — | 32K |
+| mai-image-2.6-flash | $1.75 | — | — | 32K |
+| mai-thinking-1 | $2.00 | $8.00 | $0.20 | 256K |
+| meta-llama-3-70b-instruct | $1.10 | $0.37 | — | 8.19K |
+| meta-llama-3.1-70b-instruct | $2.68 | $3.54 | — | 128K |
+| microsoft-decision-1 | $0.04 | $0.00 | — | — |
+| ministral-3b | $0.04 | $0.04 | — | 128K |
+| mistral-large | $4.00 | $12.00 | — | 32K |
+| mistral-large-3 | $0.50 | $1.50 | — | 256K |
+| mistral-large-2407 | $2.00 | $6.00 | — | 128K |
+| mistral-large-latest | $2.00 | $6.00 | — | 128K |
+| mistral-medium-3-5 | $1.50 | $7.50 | — | 128K |
+| mistral-medium-2505 | $0.40 | $2.00 | — | 131.07K |
+| mistral-nemo | $0.15 | $0.15 | — | 131.07K |
+| mistral-small | $1.00 | $3.00 | — | 32K |
+| mistral-small-2503 | $0.10 | $0.30 | — | 128K |
+| model-router | $0.14 | $0.00 | — | 200K |
+| phi-3-medium-4k-instruct | $0.17 | $0.68 | — | 4.1K |
+| phi-3-medium-128k-instruct | $0.17 | $0.68 | — | 128K |
+| phi-3-mini-4k-instruct | $0.13 | $0.52 | — | 4.1K |
+| phi-3-mini-128k-instruct | $0.13 | $0.52 | — | 128K |
+| phi-3-small-8k-instruct | $0.15 | $0.60 | — | 8.19K |
+| phi-3-small-128k-instruct | $0.15 | $0.60 | — | 128K |
+| phi-3.5-mini-instruct | $0.13 | $0.52 | — | 128K |
+| phi-3.5-moe-instruct | $0.16 | $0.64 | — | 128K |
+| phi-3.5-vision-instruct | $0.13 | $0.52 | — | 128K |
+| phi-4 | $0.12 | $0.50 | — | 16.38K |
+| phi-4-mini-instruct | $0.08 | $0.30 | — | 131.07K |
+| phi-4-mini-reasoning | $0.08 | $0.30 | — | 131.07K |
+| phi-4-multimodal-instruct | $0.08 | $0.32 | — | 131.07K |
+| phi-4-reasoning | $0.12 | $0.50 | — | 32.77K |
 
 ## azure_text
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gpt-35-turbo-instruct-0914 | 1.5000000 | 2.000000 | — | 4097 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-35-turbo-instruct | 1.5000000 | 2.000000 | — | 4097 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-3.5-turbo-instruct-0914 | 1.5000000 | 2.000000 | — | 4097 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| gpt-3.5-turbo-instruct-0914 | $1.50 | $2.00 | — | 4.1K |
+| gpt-35-turbo-instruct | $1.50 | $2.00 | — | 4.1K |
+| gpt-35-turbo-instruct-0914 | $1.50 | $2.00 | — | 4.1K |
 
 ## baseten
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| GLM-4.7 | 0.6000000 | 2.2000000 | 0.12000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.3-Fast | 2.1000000 | 6.6000000 | 0.21000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| inkling | 1.000000 | 4.05000000 | 0.17000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.2-Fast | 2.1000000 | 6.6000000 | 0.21000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4.1-Flash-Fast | 0.6000000 | 2.4000000 | 0.014000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-4.6 | 0.6000000 | 2.2000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.1000000 | 0.5000000 | 0.1000000 | 128072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.2 | 1.4000000 | 4.4000000 | 0.14000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.3-Flash | 0.15000000 | 0.5000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Flash-0731 | 0.13000000 | 0.26000000 | 0.028000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5 | 0.95000000 | 3.15000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4.1-Flash | 0.3000000 | 1.2000000 | 0.007000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3.1 | 0.5000000 | 1.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| inkling-small | 0.5000000 | 1.2000000 | 0.1000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3-0324 | 0.77000000 | 0.77000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.3 | 1.4000000 | 4.4000000 | 0.14000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Pro | 1.74000000 | 3.48000000 | 0.145000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Pro-0813 | 1.32000000 | 3.96000000 | 0.132000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.6 | 0.95000000 | 4.000000 | 0.16000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA-Nemotron-3-Ultra-550B-A55B | 0.6000000 | 2.4000000 | 0.12000000 | 202800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.5 | 0.6000000 | 3.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Nemotron-120B-A12B | 0.3000000 | 0.75000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.7-Code | 0.95000000 | 4.000000 | 0.16000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2-Instruct-0905 | 0.6000000 | 2.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2-Thinking | 0.6000000 | 2.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K3 | 3.000000 | 15.000000 | 0.3000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.5 | 0.3000000 | 1.2000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v3-0324 | $0.77 | $0.77 | — | — |
+| deepseek-v3.1 | $0.50 | $1.50 | — | — |
+| deepseek-v4-flash-0731 | $0.13 | $0.26 | $0.03 | 1.05M |
+| deepseek-v4-pro | $1.74 | $3.48 | $0.14 | 1.05M |
+| deepseek-v4-pro-0813 | $1.32 | $3.96 | $0.13 | 1.05M |
+| deepseek-v4.1-flash | $0.30 | $1.20 | $0.007 | 1.05M |
+| deepseek-v4.1-flash-fast | $0.60 | $2.40 | $0.01 | 1.05M |
+| glm-4.6 | $0.60 | $2.20 | — | — |
+| glm-4.7 | $0.60 | $2.20 | $0.12 | 200K |
+| glm-5 | $0.95 | $3.15 | — | — |
+| glm-5.2 | $1.40 | $4.40 | $0.14 | 1.05M |
+| glm-5.2-fast | $2.10 | $6.60 | $0.21 | 1.05M |
+| glm-5.3 | $1.40 | $4.40 | $0.14 | 1.05M |
+| glm-5.3-fast | $2.10 | $6.60 | $0.21 | 1.05M |
+| glm-5.3-flash | $0.15 | $0.50 | $0.03 | 1.05M |
+| gpt-oss-120b | $0.10 | $0.50 | $0.10 | 128.07K |
+| inkling | $1.00 | $4.05 | $0.17 | 1.05M |
+| inkling-small | $0.50 | $1.20 | $0.10 | 1.05M |
+| kimi-k2-instruct-0905 | $0.60 | $2.50 | — | — |
+| kimi-k2-thinking | $0.60 | $2.50 | — | — |
+| kimi-k2.5 | $0.60 | $3.00 | — | — |
+| kimi-k2.6 | $0.95 | $4.00 | $0.16 | 262K |
+| kimi-k2.7-code | $0.95 | $4.00 | $0.16 | 262K |
+| kimi-k3 | $3.00 | $15.00 | $0.30 | 1.05M |
+| minimax-m2.5 | $0.30 | $1.20 | — | — |
+| nemotron-120b-a12b | $0.30 | $0.75 | — | — |
+| nvidia-nemotron-3-ultra-550b-a55b | $0.60 | $2.40 | $0.12 | 202.8K |
 
 ## bedrock
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| amazon.nova-micro-v1:0 | 0.042000000 | 0.168000000 | 0.0105000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.nova-2-sonic-v1:0 | 0.33000000 | 2.75000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ai21.j2-ultra-v1 | 18.8000000 | 18.8000000 | — | 8191 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.nova-lite-v1:0 | 0.072000000 | 0.288000000 | 0.018000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ai21.jamba-1-5-mini-v1:0 | 0.2000000 | 0.4000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ai21.jamba-1-5-large-v1:0 | 2.000000 | 8.000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.nova-2-5-sonic | 0.33000000 | 2.75000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.rerank-v1:0 | 0.0 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.nova-pro-v1:0 | 0.96000000 | 3.84000000 | 0.24000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ai21.j2-mid-v1 | 12.5000000 | 12.5000000 | — | 8191 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.titan-embed-image-v1 | 0.8000000 | 0.0 | — | 128 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.nova-2-multimodal-embeddings-v1:0 | 0.135000000 | 0.0 | — | 8172 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ai21.jamba-instruct-v1:0 | 0.5000000 | 0.7000000 | — | 70000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.titan-embed-g1-text-02 | 0.1000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-v1 | 8.000000 | 24.000000 | — | 100000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-mythos-preview | 27.5000000 | 137.5000000 | 2.75000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-multilingual-v3 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-3-5-sonnet-20241022-v2:0 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-5-20250929-v1:0 | 3.6000000 | 18.000000 | 0.36000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-3-5-sonnet-20241022-v2:0 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.titan-embed-text-v2:0 | 0.02000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-3-opus-20240229-v1:0 | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-4-8 | 6.000000 | 30.00000 | 0.6000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.titan-text-premier-v1:0 | 0.5000000 | 1.5000000 | — | 42000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.meta.llama3-2-1b-instruct-v1:0 | 0.13000000 | 0.13000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-3-opus-20240229-v1:0 | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-haiku-4-5-20251001-v1:0 | 1.2000000 | 6.000000 | 0.12000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-3-5-haiku-20241022-v1:0 | 0.8000000 | 4.000000 | 0.08000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-haiku-5-5 | 0.12000000 | 0.6000000 | 0.012000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-3-7-sonnet-20240620-v1:0 | 3.6000000 | 18.000000 | 0.36000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-v2:1 | 8.000000 | 24.000000 | — | 100000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-instant-v1 | 0.8000000 | 2.4000000 | — | 100000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-sonnet-4-5-20250929-v1:0 | 3.6000000 | 18.000000 | 0.36000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-5-5 | 4.8000000 | 24.000000 | 0.24000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.rerank-v3-5:0 | 0.0 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.titan-text-express-v1 | 0.2000000 | 0.6000000 | — | 42000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-5 | 6.000000 | 30.00000 | 0.6000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.command-light-text-v14 | 0.3000000 | 0.6000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-v4:0 | 0.12000000 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-3-5-sonnet-20240620-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-3-7-sonnet-20250219-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-sonnet-5 | 2.4000000 | 12.000000 | 0.24000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-3-5-haiku-20241022-v1:0 | 0.8000000 | 4.000000 | 0.08000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-english-v3 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek.v3.2 | 0.74000000 | 2.22000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.titan-text-lite-v1 | 0.15000000 | 0.2000000 | — | 42000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.meta.llama3-2-3b-instruct-v1:0 | 0.19000000 | 0.19000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.command-text-v14 | 1.000000 | 2.000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-sonnet-5-5 | 2.4000000 | 12.000000 | 0.12000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.titan-embed-text-v1 | 0.1000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-3-5-sonnet-20240620-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-fable-5-1 | 12.000000 | 60.00000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.mistral-large-2402-v1:0 | 5.2000000 | 15.6000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-oss-120b-1:0 | 0.18000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nvidia.nemotron-nano-12b-v2 | 0.24000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.twelvelabs.marengo-embed-3-0-v1:0 | — | 0.0 | — | 500 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nvidia.nemotron-nano-3-30b | 0.072000000 | 0.288000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.mixtral-8x7b-instruct-v0:1 | 0.59000000 | 0.91000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama3-2-3b-instruct-v1:0 | 0.15000000 | 0.15000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama3-2-1b-instruct-v1:0 | 0.1000000 | 0.1000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.mistral-large-2407-v1:0 | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama2-13b-chat-v1 | 0.75000000 | 1.000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama3-70b-instruct-v1:0 | 3.18000000 | 4.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-coder-next | 0.6000000 | 1.44000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.twelvelabs.pegasus-1-2-v1:0 | — | 7.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshotai.kimi-k2.5 | 0.72000000 | 3.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama3-2-11b-instruct-v1:0 | 0.16000000 | 0.16000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama3-1-70b-instruct-v1:0 | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.twelvelabs.marengo-embed-2-7-v1:0 | — | 0.0 | — | 77 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax.minimax-m2.5 | 0.36000000 | 1.44000000 | — | 196000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama3-2-90b-instruct-v1:0 | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax.minimax-m2.1 | 0.36000000 | 1.44000000 | — | 196000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama3-8b-instruct-v1:0 | 0.36000000 | 0.72000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nvidia.nemotron-nano-9b-v2 | 0.072000000 | 0.276000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama3-1-8b-instruct-v1:0 | 0.22000000 | 0.22000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama2-70b-chat-v1 | 1.95000000 | 2.56000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nvidia.nemotron-super-3-120b | 0.23000000 | 1.01000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-oss-20b-1:0 | 0.084000000 | 0.36000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.twelvelabs.pegasus-1-5-v1:0 | — | 7.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.mistral-small-2402-v1:0 | 1.000000 | 3.000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama3-1-405b-instruct-v1:0 | 2.4000000 | 2.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.mistral-7b-instruct-v0:2 | 0.2000000 | 0.26000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.cohere.embed-v4:0 | 0.12000000 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshotai.kimi-k2-thinking | 0.73000000 | 3.03000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.twelvelabs.pegasus-1-2-v1:0 | — | 7.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-next-80b-a3b | 0.18000000 | 1.45000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.meta.llama3-1-70b-instruct-v1:0 | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| zai.glm-5 | 1.000000 | 3.2000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-3-5-haiku-20241022-v1:0 | 0.8000000 | 4.000000 | 0.08000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| twelvelabs.pegasus-1-2-v1:0 | — | 7.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.meta.llama3-2-3b-instruct-v1:0 | 0.15000000 | 0.15000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-3-opus-20240229-v1:0 | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.twelvelabs.marengo-embed-2-7-v1:0 | — | 0.0 | — | 77 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.meta.llama3-1-405b-instruct-v1:0 | 2.4000000 | 2.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| twelvelabs.marengo-embed-3-0-v1:0 | — | 0.0 | — | 500 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| twelvelabs.pegasus-1-5-v1:0 | — | 7.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.meta.llama3-2-1b-instruct-v1:0 | 0.1000000 | 0.1000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.meta.llama3-1-8b-instruct-v1:0 | 0.22000000 | 0.22000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-3-5-sonnet-20240620-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.cohere.embed-v4:0 | 0.12000000 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| twelvelabs.marengo-embed-2-7-v1:0 | — | 0.0 | — | 77 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.twelvelabs.pegasus-1-2-v1:0 | — | 7.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.meta.llama3-2-11b-instruct-v1:0 | 0.16000000 | 0.16000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.meta.llama3-2-90b-instruct-v1:0 | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-3-5-sonnet-20241022-v2:0 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.twelvelabs.marengo-embed-3-0-v1:0 | — | 0.0 | — | 500 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.twelvelabs.pegasus-1-5-v1:0 | — | 7.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| ai21.j2-mid-v1 | $12.50 | $12.50 | — | 8.19K |
+| ai21.j2-ultra-v1 | $18.80 | $18.80 | — | 8.19K |
+| ai21.jamba-1-5-large-v1:0 | $2.00 | $8.00 | — | 256K |
+| ai21.jamba-1-5-mini-v1:0 | $0.20 | $0.40 | — | 256K |
+| ai21.jamba-instruct-v1:0 | $0.50 | $0.70 | — | 70K |
+| amazon.nova-2-5-sonic | $0.33 | $2.75 | — | — |
+| amazon.nova-2-multimodal-embeddings-v1:0 | $0.14 | $0.00 | — | 8.17K |
+| amazon.nova-2-sonic-v1:0 | $0.33 | $2.75 | — | — |
+| amazon.nova-lite-v1:0 | $0.07 | $0.29 | $0.02 | 300K |
+| amazon.nova-micro-v1:0 | $0.04 | $0.17 | $0.01 | 128K |
+| amazon.nova-pro-v1:0 | $0.96 | $3.84 | $0.24 | 300K |
+| amazon.rerank-v1:0 | $0.00 | $0.00 | — | 32K |
+| amazon.titan-embed-g1-text-02 | $0.10 | $0.00 | — | 8.19K |
+| amazon.titan-embed-image-v1 | $0.80 | $0.00 | — | 128 |
+| amazon.titan-embed-text-v1 | $0.10 | $0.00 | — | 8.19K |
+| amazon.titan-embed-text-v2:0 | $0.02 | $0.00 | — | 8.19K |
+| amazon.titan-text-express-v1 | $0.20 | $0.60 | — | 42K |
+| amazon.titan-text-lite-v1 | $0.15 | $0.20 | — | 42K |
+| amazon.titan-text-premier-v1:0 | $0.50 | $1.50 | — | 42K |
+| anthropic.claude-3-5-haiku-20241022-v1:0 | $0.80 | $4.00 | $0.08 | 200K |
+| anthropic.claude-3-5-sonnet-20240620-v1:0 | $3.00 | $15.00 | $0.30 | 1M |
+| anthropic.claude-3-5-sonnet-20241022-v2:0 | $3.00 | $15.00 | $0.30 | 1M |
+| anthropic.claude-3-7-sonnet-20240620-v1:0 | $3.60 | $18.00 | $0.36 | 200K |
+| anthropic.claude-3-opus-20240229-v1:0 | $15.00 | $75.00 | $1.50 | 200K |
+| anthropic.claude-fable-5-1 | $12.00 | $60.00 | $0.30 | 1M |
+| anthropic.claude-haiku-4-5-20251001-v1:0 | $1.20 | $6.00 | $0.12 | 200K |
+| anthropic.claude-haiku-5-5 | $0.12 | $0.60 | $0.01 | 1M |
+| anthropic.claude-instant-v1 | $0.80 | $2.40 | — | 100K |
+| anthropic.claude-mythos-preview | $27.50 | $137.50 | $2.75 | 1M |
+| anthropic.claude-opus-4-8 | $6.00 | $30.00 | $0.60 | 1M |
+| anthropic.claude-opus-5 | $6.00 | $30.00 | $0.60 | 1M |
+| anthropic.claude-opus-5-5 | $4.80 | $24.00 | $0.24 | 1M |
+| anthropic.claude-sonnet-4-5-20250929-v1:0 | $3.60 | $18.00 | $0.36 | 200K |
+| anthropic.claude-sonnet-5 | $2.40 | $12.00 | $0.24 | 1M |
+| anthropic.claude-sonnet-5-5 | $2.40 | $12.00 | $0.12 | 1M |
+| anthropic.claude-v1 | $8.00 | $24.00 | — | 100K |
+| anthropic.claude-v2:1 | $8.00 | $24.00 | — | 100K |
+| claude-sonnet-4-5-20250929-v1:0 | $3.60 | $18.00 | $0.36 | 200K |
+| cohere.command-light-text-v14 | $0.30 | $0.60 | — | 4.1K |
+| cohere.command-text-v14 | $1.00 | $2.00 | — | 4.1K |
+| cohere.embed-english-v3 | $0.10 | $0.00 | — | 512 |
+| cohere.embed-multilingual-v3 | $0.10 | $0.00 | — | 512 |
+| cohere.embed-v4:0 | $0.12 | $0.00 | — | 128K |
+| cohere.rerank-v3-5:0 | $0.00 | $0.00 | — | 4.1K |
+| deepseek.v3.2 | $0.74 | $2.22 | — | 163.84K |
+| eu.anthropic.claude-3-5-haiku-20241022-v1:0 | $0.80 | $4.00 | $0.08 | 200K |
+| eu.anthropic.claude-3-5-sonnet-20240620-v1:0 | $3.00 | $15.00 | $0.30 | 200K |
+| eu.anthropic.claude-3-5-sonnet-20241022-v2:0 | $3.00 | $15.00 | $0.30 | 200K |
+| eu.anthropic.claude-3-7-sonnet-20250219-v1:0 | $3.00 | $15.00 | $0.30 | 200K |
+| eu.anthropic.claude-3-opus-20240229-v1:0 | $15.00 | $75.00 | $1.50 | 200K |
+| eu.meta.llama3-2-1b-instruct-v1:0 | $0.13 | $0.13 | — | 128K |
+| eu.meta.llama3-2-3b-instruct-v1:0 | $0.19 | $0.19 | — | 128K |
+| eu.twelvelabs.marengo-embed-2-7-v1:0 | — | $0.00 | — | 77 |
+| eu.twelvelabs.marengo-embed-3-0-v1:0 | — | $0.00 | — | 500 |
+| eu.twelvelabs.pegasus-1-2-v1:0 | — | $7.50 | — | — |
+| global.cohere.embed-v4:0 | $0.12 | $0.00 | — | 128K |
+| global.twelvelabs.pegasus-1-2-v1:0 | — | $7.50 | — | — |
+| global.twelvelabs.pegasus-1-5-v1:0 | — | $7.50 | — | — |
+| meta.llama2-13b-chat-v1 | $0.75 | $1.00 | — | 4.1K |
+| meta.llama2-70b-chat-v1 | $1.95 | $2.56 | — | 4.1K |
+| meta.llama3-1-8b-instruct-v1:0 | $0.22 | $0.22 | — | 128K |
+| meta.llama3-1-70b-instruct-v1:0 | $0.72 | $0.72 | — | 128K |
+| meta.llama3-1-405b-instruct-v1:0 | $2.40 | $2.40 | — | 128K |
+| meta.llama3-2-1b-instruct-v1:0 | $0.10 | $0.10 | — | 128K |
+| meta.llama3-2-3b-instruct-v1:0 | $0.15 | $0.15 | — | 128K |
+| meta.llama3-2-11b-instruct-v1:0 | $0.16 | $0.16 | — | 128K |
+| meta.llama3-2-90b-instruct-v1:0 | $0.72 | $0.72 | — | 128K |
+| meta.llama3-8b-instruct-v1:0 | $0.36 | $0.72 | — | 8.19K |
+| meta.llama3-70b-instruct-v1:0 | $3.18 | $4.20 | — | 8.19K |
+| minimax.minimax-m2.1 | $0.36 | $1.44 | — | 196K |
+| minimax.minimax-m2.5 | $0.36 | $1.44 | — | 196K |
+| mistral.mistral-7b-instruct-v0:2 | $0.20 | $0.26 | — | 32K |
+| mistral.mistral-large-2402-v1:0 | $5.20 | $15.60 | — | 32K |
+| mistral.mistral-large-2407-v1:0 | $2.00 | $6.00 | — | 128K |
+| mistral.mistral-small-2402-v1:0 | $1.00 | $3.00 | — | 32K |
+| mistral.mixtral-8x7b-instruct-v0:1 | $0.59 | $0.91 | — | 32K |
+| moonshotai.kimi-k2-thinking | $0.73 | $3.03 | — | 262.14K |
+| moonshotai.kimi-k2.5 | $0.72 | $3.60 | — | 262.14K |
+| nvidia.nemotron-nano-3-30b | $0.07 | $0.29 | — | 262.14K |
+| nvidia.nemotron-nano-9b-v2 | $0.07 | $0.28 | — | 128K |
+| nvidia.nemotron-nano-12b-v2 | $0.24 | $0.72 | — | 128K |
+| nvidia.nemotron-super-3-120b | $0.23 | $1.01 | — | 256K |
+| openai.gpt-oss-20b-1:0 | $0.08 | $0.36 | — | 128K |
+| openai.gpt-oss-120b-1:0 | $0.18 | $0.72 | — | 128K |
+| qwen.qwen3-coder-next | $0.60 | $1.44 | — | 262.14K |
+| qwen.qwen3-next-80b-a3b | $0.18 | $1.45 | — | 262.14K |
+| twelvelabs.marengo-embed-2-7-v1:0 | — | $0.00 | — | 77 |
+| twelvelabs.marengo-embed-3-0-v1:0 | — | $0.00 | — | 500 |
+| twelvelabs.pegasus-1-2-v1:0 | — | $7.50 | — | — |
+| twelvelabs.pegasus-1-5-v1:0 | — | $7.50 | — | — |
+| us.anthropic.claude-3-5-haiku-20241022-v1:0 | $0.80 | $4.00 | $0.08 | 200K |
+| us.anthropic.claude-3-5-sonnet-20240620-v1:0 | $3.00 | $15.00 | $0.30 | 200K |
+| us.anthropic.claude-3-5-sonnet-20241022-v2:0 | $3.00 | $15.00 | $0.30 | 200K |
+| us.anthropic.claude-3-opus-20240229-v1:0 | $15.00 | $75.00 | $1.50 | 200K |
+| us.cohere.embed-v4:0 | $0.12 | $0.00 | — | 128K |
+| us.meta.llama3-1-8b-instruct-v1:0 | $0.22 | $0.22 | — | 128K |
+| us.meta.llama3-1-70b-instruct-v1:0 | $0.72 | $0.72 | — | 128K |
+| us.meta.llama3-1-405b-instruct-v1:0 | $2.40 | $2.40 | — | 128K |
+| us.meta.llama3-2-1b-instruct-v1:0 | $0.10 | $0.10 | — | 128K |
+| us.meta.llama3-2-3b-instruct-v1:0 | $0.15 | $0.15 | — | 128K |
+| us.meta.llama3-2-11b-instruct-v1:0 | $0.16 | $0.16 | — | 128K |
+| us.meta.llama3-2-90b-instruct-v1:0 | $0.72 | $0.72 | — | 128K |
+| us.twelvelabs.marengo-embed-2-7-v1:0 | — | $0.00 | — | 77 |
+| us.twelvelabs.marengo-embed-3-0-v1:0 | — | $0.00 | — | 500 |
+| us.twelvelabs.pegasus-1-2-v1:0 | — | $7.50 | — | — |
+| us.twelvelabs.pegasus-1-5-v1:0 | — | $7.50 | — | — |
+| zai.glm-5 | $1.00 | $3.20 | — | 200K |
 
 ## bedrock_converse
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| amazon.nova-2-lite-v1:0 | 0.3000000 | 2.5000000 | 0.075000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.nova-lite-v1:0 | 0.06000000 | 0.24000000 | 0.015000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-3-7-sonnet-20250219-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.nova-micro-v1:0 | 0.035000000 | 0.14000000 | 0.00875000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.nova-2-pro-preview-20251202-v1:0 | 1.25000000 | 10.00000 | 0.3125000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.nova-premier-v1:0 | 2.5000000 | 12.5000000 | 0.625000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| amazon.nova-pro-v1:0 | 0.8000000 | 3.2000000 | 0.2000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.amazon.nova-micro-v1:0 | 0.037000000 | 0.148000000 | 0.00925000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-mythos-5-1 | 10.00000 | 50.00000 | 0.25000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.amazon.nova-2-lite-v1:0 | 0.396000000 | 3.311000000 | 0.099000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-sonnet-5-5 | 2.000000 | 10.00000 | 0.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-5 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-opus-4-7 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-haiku-5-5 | 0.11000000 | 0.55000000 | 0.011000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-fable-5 | 10.00000 | 50.00000 | 1.000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.amazon.nova-2-pro-preview-20251202-v1:0 | 1.375000000 | 11.000000 | 0.34375000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-4-7 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-4-8 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.amazon.nova-pro-v1:0 | 0.84000000 | 3.36000000 | 0.21000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-sonnet-4-20250514-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-5-5 | 4.000000 | 20.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-sonnet-4-6 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-fable-5-1 | 10.00000 | 50.00000 | 0.25000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-mythos-preview | 27.5000000 | 137.5000000 | 2.75000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-4-20250514-v1:0 | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-opus-4-8 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-haiku-4-5@20251001 | 1.000000 | 5.000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-4-6-v1 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-haiku-4-5-20251001-v1:0 | 1.000000 | 5.000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-sonnet-5 | 2.000000 | 10.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-4-1-20250805-v1:0 | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.amazon.nova-lite-v1:0 | 0.063000000 | 0.252000000 | 0.01575000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-fable-5 | 11.000000 | 55.000000 | 1.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-haiku-4-5-20251001-v1:0 | 1.1000000 | 5.5000000 | 0.11000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-sonnet-4-20250514-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-opus-5-5 | 4.4000000 | 22.000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-4-5-20251101-v1:0 | 5.000000 | 25.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-haiku-5-5 | 0.1000000 | 0.5000000 | 0.01000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-opus-5 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-sonnet-4-5-20250929-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-opus-5-5 | 4.4000000 | 22.000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek.r1-v1:0 | 1.35000000 | 5.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-sonnet-5 | 2.2000000 | 11.000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-opus-4-8 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-sonnet-4-6 | 3.3000000 | 16.5000000 | 0.33000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.amazon.nova-2-pro-preview-20251202-v1:0 | 1.375000000 | 11.000000 | 0.34375000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek.v3-v1:0 | 0.58000000 | 1.68000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.amazon.nova-lite-v1:0 | 0.078000000 | 0.312000000 | 0.0195000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-opus-4-7 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-opus-5 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-sonnet-5-5 | 2.2000000 | 11.000000 | 0.11000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-opus-4-8 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-opus-4-6-v1 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-opus-4-5-20251101-v1:0 | 5.5000000 | 27.5000000 | 0.55000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-opus-4-1-20250805-v1:0 | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-opus-4-6-v1 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-mythos-preview | 27.5000000 | 137.5000000 | 2.75000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.amazon.nova-2-lite-v1:0 | 0.429000000 | 3.597000000 | 0.10725000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-sonnet-4-6 | 3.3000000 | 16.5000000 | 0.33000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-sonnet-4-5-20250929-v1:0 | 3.3000000 | 16.5000000 | 0.33000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-opus-4-7 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-opus-5-5 | 4.4000000 | 22.000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-fable-5-1 | 11.000000 | 55.000000 | 0.275000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-sonnet-4-5-20250929-v1:0 | 3.3000000 | 16.5000000 | 0.33000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-haiku-5-5 | 0.11000000 | 0.55000000 | 0.011000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-sonnet-5 | 2.2000000 | 11.000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apac.anthropic.claude-sonnet-5-5 | 2.2000000 | 11.000000 | 0.11000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-fable-5 | 11.000000 | 55.000000 | 1.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.amazon.nova-micro-v1:0 | 0.046000000 | 0.184000000 | 0.0115000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-opus-5 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.amazon.nova-pro-v1:0 | 1.05000000 | 4.2000000 | 0.2625000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-haiku-4-5-20251001-v1:0 | 1.1000000 | 5.5000000 | 0.11000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| au.anthropic.claude-haiku-5-5 | 0.11000000 | 0.55000000 | 0.011000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-haiku-4-5-20251001-v1:0 | 1.1000000 | 5.5000000 | 0.11000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-opus-4-20250514-v1:0 | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-sonnet-4-20250514-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek.v3.2 | 0.62000000 | 1.85000000 | — | 164000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-fable-5 | 11.000000 | 55.000000 | 1.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| google.gemma-3-12b-it | 0.09000000 | 0.29000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.zai.glm-5.3 | 1.68000000 | 5.28000000 | 0.312000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-opus-4-7 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-opus-4-8 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.openai.gpt-5.6-luna | 0.2000000 | 1.2000000 | 0.02000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-sonnet-4-6 | 3.3000000 | 16.5000000 | 0.33000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| in.moonshotai.kimi-k3 | 3.3000000 | 16.5000000 | 0.33000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-fable-5 | 10.00000 | 50.00000 | 1.000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-sonnet-5 | 2.2000000 | 11.000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.anthropic.claude-sonnet-5-5 | 2.2000000 | 11.000000 | 0.11000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-fable-5-1 | 10.00000 | 50.00000 | 0.25000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.xai.grok-4.6 | 2.000000 | 6.000000 | 0.5000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| google.gemma-3-27b-it | 0.23000000 | 0.38000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jp.anthropic.claude-haiku-5-5 | 0.11000000 | 0.55000000 | 0.011000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.openai.gpt-6-luna | 0.1000000 | 0.5000000 | 0.01000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.openai.gpt-5.4 | 2.5000000 | 15.000000 | 0.25000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.moonshotai.kimi-k3 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-haiku-4-5-20251001-v1:0 | 1.000000 | 5.000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-sonnet-4-5-20250929-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.openai.gpt-5.5 | 5.000000 | 30.00000 | 0.5000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-opus-4-6-v1 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-opus-5-5 | 4.000000 | 20.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.openai.gpt-6-astra | 10.00000 | 50.00000 | 1.000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jp.anthropic.claude-haiku-4-5-20251001-v1:0 | 1.1000000 | 5.5000000 | 0.11000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.openai.gpt-6.1-sol | 2.000000 | 10.00000 | 0.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-opus-4-5-20251101-v1:0 | 5.000000 | 25.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-sonnet-5 | 2.000000 | 10.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.amazon.nova-2-lite-v1:0 | 0.3000000 | 2.5000000 | 0.075000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-haiku-5-5 | 0.1000000 | 0.5000000 | 0.01000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-opus-5 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.openai.gpt-5.6-sol | 4.000000 | 20.00000 | 0.4000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.openai.gpt-5.6-terra | 2.000000 | 12.000000 | 0.2000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| google.gemma-3-4b-it | 0.04000000 | 0.08000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.mistral.pixtral-large-2502-v1:0 | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| eu.deepseek.v3.2 | 0.74000000 | 2.22000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.openai.gpt-6-sol | 2.000000 | 10.00000 | 0.2000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.xai.grok-4.7 | 2.000000 | 6.000000 | 0.5000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-mythos-5-1 | 10.00000 | 50.00000 | 0.25000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-sonnet-4-20250514-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-sonnet-5-5 | 2.000000 | 10.00000 | 0.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| global.anthropic.claude-sonnet-4-6 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-vl-235b-a22b | 0.53000000 | 2.66000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jp.anthropic.claude-sonnet-4-5-20250929-v1:0 | 3.3000000 | 16.5000000 | 0.33000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshot.kimi-k2-thinking | 0.6000000 | 2.5000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-235b-a22b-2507-v1:0 | 0.22000000 | 0.88000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.ministral-3-14b-instruct | 0.2000000 | 0.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nvidia.nemotron-nano-9b-v2 | 0.06000000 | 0.23000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.magistral-small-2509 | 0.5000000 | 1.5000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.devstral-2-123b | 0.4000000 | 2.000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nvidia.nemotron-nano-3-30b | 0.06000000 | 0.24000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jp.anthropic.claude-opus-5-5 | 4.4000000 | 22.000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.voxtral-mini-3b-2507 | 0.04000000 | 0.04000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax.minimax-m2.1 | 0.3000000 | 1.2000000 | — | 196000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-32b-v1:0 | 0.15000000 | 0.6000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nvidia.nemotron-super-3-120b | 0.15000000 | 0.65000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-oss-safeguard-20b | 0.07000000 | 0.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jp.anthropic.claude-sonnet-4-6 | 3.3000000 | 16.5000000 | 0.33000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama4-scout-17b-instruct-v1:0 | 0.17000000 | 0.66000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshotai.kimi-k3 | 3.3000000 | 16.5000000 | 0.33000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jp.anthropic.claude-opus-4-8 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-oss-20b-1:0 | 0.07000000 | 0.3000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-oss-120b-1:0 | 0.15000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-oss-safeguard-120b | 0.15000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama4-maverick-17b-instruct-v1:0 | 0.24000000 | 0.97000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.mistral-large-3-675b-instruct | 0.5000000 | 1.5000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.voxtral-small-24b-2507 | 0.1000000 | 0.3000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nvidia.nemotron-nano-12b-v2 | 0.2000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama3-3-70b-instruct-v1:0 | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-6-sol | 2.000000 | 10.00000 | 0.2000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-next-80b-a3b | 0.15000000 | 1.2000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshotai.kimi-k2.5 | 0.6000000 | 3.000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jp.anthropic.claude-sonnet-5-5 | 2.2000000 | 11.000000 | 0.11000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-coder-next | 0.5000000 | 1.2000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax.minimax-m2 | 0.3000000 | 1.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax.minimax-m2.5 | 0.3000000 | 1.2000000 | — | 196000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jp.anthropic.claude-opus-5 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.ministral-3-8b-instruct | 0.15000000 | 0.15000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.pixtral-large-2502-v1:0 | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral.ministral-3-3b-instruct | 0.1000000 | 0.1000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jp.anthropic.claude-opus-4-7 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-coder-480b-a35b-v1:0 | 0.45000000 | 1.8000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-6-luna | 0.1000000 | 0.5000000 | 0.01000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jp.anthropic.claude-sonnet-5 | 2.2000000 | 11.000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-coder-30b-a3b-v1:0 | 0.15000000 | 0.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.amazon.nova-2-lite-v1:0 | 0.33000000 | 2.75000000 | 0.0825000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-sonnet-5-5 | 2.2000000 | 11.000000 | 0.11000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.deepseek.v3.2 | 0.62000000 | 1.85000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.nvidia.nemotron-super-3-120b | 0.18000000 | 0.78000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.openai.gpt-oss-20b-1:0 | 0.084000000 | 0.36000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.nvidia.nemotron-nano-12b-v2 | 0.24000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-opus-5-5 | 4.4000000 | 22.000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-opus-4-6-v1 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.anthropic.claude-haiku-5-5 | 0.12000000 | 0.6000000 | 0.012000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-fable-5 | 11.000000 | 55.000000 | 1.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-sonnet-5 | 2.2000000 | 11.000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-opus-4-7 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-opus-4-5-20251101-v1:0 | 5.5000000 | 27.5000000 | 0.55000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.anthropic.claude-opus-4-8 | 6.000000 | 30.00000 | 0.6000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-fable-5-1 | 11.000000 | 55.000000 | 0.275000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.nvidia.nemotron-nano-3-30b | 0.072000000 | 0.288000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-opus-5 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.anthropic.claude-opus-5-5 | 4.8000000 | 24.000000 | 0.24000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-sonnet-4-5-20250929-v1:0 | 3.3000000 | 16.5000000 | 0.33000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.amazon.nova-micro-v1:0 | 0.035000000 | 0.14000000 | 0.00875000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.anthropic.claude-sonnet-5 | 2.4000000 | 12.000000 | 0.24000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-opus-4-8 | 5.5000000 | 27.5000000 | 0.55000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-sonnet-4-20250514-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-mythos-5-1 | 11.000000 | 55.000000 | 0.275000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-opus-4-1-20250805-v1:0 | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-haiku-5-5 | 0.11000000 | 0.55000000 | 0.011000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.xai.grok-4.6 | 2.64000000 | 7.92000000 | 0.66000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.amazon.nova-2-pro-preview-20251202-v1:0 | 1.375000000 | 11.000000 | 0.34375000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.amazon.nova-lite-v1:0 | 0.06000000 | 0.24000000 | 0.015000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-haiku-4-5-20251001-v1:0 | 1.1000000 | 5.5000000 | 0.11000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.anthropic.claude-fable-5-1 | 12.000000 | 60.00000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.amazon.nova-pro-v1:0 | 0.8000000 | 3.2000000 | 0.2000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.anthropic.claude-sonnet-5-5 | 2.4000000 | 12.000000 | 0.12000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-3-7-sonnet-20250219-v1:0 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.anthropic.claude-opus-5 | 6.000000 | 30.00000 | 0.6000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-mythos-preview | 27.5000000 | 137.5000000 | 2.75000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.deepseek.r1-v1:0 | 1.35000000 | 5.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.nvidia.nemotron-nano-9b-v2 | 0.072000000 | 0.276000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.anthropic.claude-sonnet-4-5-20250929-v1:0 | 3.6000000 | 18.000000 | 0.36000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us-gov.openai.gpt-oss-120b-1:0 | 0.18000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-opus-4-20250514-v1:0 | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-mythos-5 | 11.000000 | 55.000000 | 1.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.anthropic.claude-sonnet-4-6 | 3.3000000 | 16.5000000 | 0.33000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.writer.palmyra-x5-v1:0 | 0.6000000 | 6.000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.meta.llama3-3-70b-instruct-v1:0 | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.meta.llama4-maverick-17b-instruct-v1:0 | 0.24000000 | 0.97000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| writer.palmyra-vision-7b | 0.15000000 | 0.6000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.openai.gpt-5.6-terra | 2.2000000 | 13.2000000 | 0.22000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.moonshotai.kimi-k3 | 3.3000000 | 16.5000000 | 0.33000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.xai.grok-4.7 | 2.2000000 | 6.6000000 | 0.55000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| zai.glm-4.7 | 0.6000000 | 2.2000000 | — | 203000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.openai.gpt-5.4 | 2.75000000 | 16.5000000 | 0.275000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.openai.gpt-6-luna | 0.11000000 | 0.55000000 | 0.011000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| zai.glm-5 | 1.000000 | 3.2000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.openai.gpt-5.6-sol | 4.4000000 | 22.000000 | 0.44000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.meta.llama4-scout-17b-instruct-v1:0 | 0.17000000 | 0.66000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.writer.palmyra-x4-v1:0 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.openai.gpt-6.1-sol | 2.2000000 | 11.000000 | 0.11000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.zai.glm-5.3 | 1.848000000 | 5.808000000 | 0.3432000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| writer.palmyra-x5-v1:0 | 0.6000000 | 6.000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| writer.palmyra-x4-v1:0 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.openai.gpt-6-sol | 2.2000000 | 11.000000 | 0.22000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.mistral.pixtral-large-2502-v1:0 | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.xai.grok-4.6 | 2.2000000 | 6.6000000 | 0.55000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.openai.gpt-5.6-luna | 0.22000000 | 1.32000000 | 0.022000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.openai.gpt-6-astra | 11.000000 | 55.000000 | 1.1000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| zai.glm-4.7-flash | 0.07000000 | 0.4000000 | — | 203000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| us.openai.gpt-5.5 | 5.5000000 | 33.000000 | 0.55000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| amazon.nova-2-lite-v1:0 | $0.30 | $2.50 | $0.08 | 1M |
+| amazon.nova-2-pro-preview-20251202-v1:0 | $1.25 | $10.00 | $0.31 | 1M |
+| amazon.nova-lite-v1:0 | $0.06 | $0.24 | $0.02 | 300K |
+| amazon.nova-micro-v1:0 | $0.04 | $0.14 | $0.00875 | 128K |
+| amazon.nova-premier-v1:0 | $2.50 | $12.50 | $0.62 | 1M |
+| amazon.nova-pro-v1:0 | $0.80 | $3.20 | $0.20 | 300K |
+| anthropic.claude-3-7-sonnet-20250219-v1:0 | $3.00 | $15.00 | $0.30 | 200K |
+| anthropic.claude-fable-5 | $10.00 | $50.00 | $1.00 | 1M |
+| anthropic.claude-fable-5-1 | $10.00 | $50.00 | $0.25 | 1M |
+| anthropic.claude-haiku-4-5-20251001-v1:0 | $1.00 | $5.00 | $0.10 | 200K |
+| anthropic.claude-haiku-4-5@20251001 | $1.00 | $5.00 | $0.10 | 200K |
+| anthropic.claude-haiku-5-5 | $0.10 | $0.50 | $0.01 | 1M |
+| anthropic.claude-mythos-5-1 | $10.00 | $50.00 | $0.25 | 1M |
+| anthropic.claude-opus-4-1-20250805-v1:0 | $15.00 | $75.00 | $1.50 | 200K |
+| anthropic.claude-opus-4-5-20251101-v1:0 | $5.00 | $25.00 | $0.50 | 200K |
+| anthropic.claude-opus-4-6-v1 | $5.00 | $25.00 | $0.50 | 1M |
+| anthropic.claude-opus-4-7 | $5.00 | $25.00 | $0.50 | 1M |
+| anthropic.claude-opus-4-8 | $5.00 | $25.00 | $0.50 | 1M |
+| anthropic.claude-opus-4-20250514-v1:0 | $15.00 | $75.00 | $1.50 | 200K |
+| anthropic.claude-opus-5 | $5.00 | $25.00 | $0.50 | 1M |
+| anthropic.claude-opus-5-5 | $4.00 | $20.00 | $0.20 | 1M |
+| anthropic.claude-sonnet-4-5-20250929-v1:0 | $3.00 | $15.00 | $0.30 | 200K |
+| anthropic.claude-sonnet-4-6 | $3.00 | $15.00 | $0.30 | 1M |
+| anthropic.claude-sonnet-4-20250514-v1:0 | $3.00 | $15.00 | $0.30 | 1M |
+| anthropic.claude-sonnet-5 | $2.00 | $10.00 | $0.20 | 1M |
+| anthropic.claude-sonnet-5-5 | $2.00 | $10.00 | $0.10 | 1M |
+| apac.amazon.nova-2-lite-v1:0 | $0.40 | $3.31 | $0.10 | 1M |
+| apac.amazon.nova-2-pro-preview-20251202-v1:0 | $1.38 | $11.00 | $0.34 | 1M |
+| apac.amazon.nova-lite-v1:0 | $0.06 | $0.25 | $0.02 | 300K |
+| apac.amazon.nova-micro-v1:0 | $0.04 | $0.15 | $0.00925 | 128K |
+| apac.amazon.nova-pro-v1:0 | $0.84 | $3.36 | $0.21 | 300K |
+| apac.anthropic.claude-fable-5 | $11.00 | $55.00 | $1.10 | 1M |
+| apac.anthropic.claude-haiku-4-5-20251001-v1:0 | $1.10 | $5.50 | $0.11 | 200K |
+| apac.anthropic.claude-haiku-5-5 | $0.11 | $0.55 | $0.01 | 1M |
+| apac.anthropic.claude-mythos-preview | $27.50 | $137.50 | $2.75 | 1M |
+| apac.anthropic.claude-opus-4-7 | $5.50 | $27.50 | $0.55 | 1M |
+| apac.anthropic.claude-opus-4-8 | $5.50 | $27.50 | $0.55 | 1M |
+| apac.anthropic.claude-opus-5 | $5.50 | $27.50 | $0.55 | 1M |
+| apac.anthropic.claude-opus-5-5 | $4.40 | $22.00 | $0.22 | 1M |
+| apac.anthropic.claude-sonnet-4-6 | $3.30 | $16.50 | $0.33 | 1M |
+| apac.anthropic.claude-sonnet-4-20250514-v1:0 | $3.00 | $15.00 | $0.30 | 1M |
+| apac.anthropic.claude-sonnet-5 | $2.20 | $11.00 | $0.22 | 1M |
+| apac.anthropic.claude-sonnet-5-5 | $2.20 | $11.00 | $0.11 | 1M |
+| au.anthropic.claude-fable-5 | $11.00 | $55.00 | $1.10 | 1M |
+| au.anthropic.claude-haiku-4-5-20251001-v1:0 | $1.10 | $5.50 | $0.11 | 200K |
+| au.anthropic.claude-haiku-5-5 | $0.11 | $0.55 | $0.01 | 1M |
+| au.anthropic.claude-mythos-preview | $27.50 | $137.50 | $2.75 | 1M |
+| au.anthropic.claude-opus-4-6-v1 | $5.50 | $27.50 | $0.55 | 1M |
+| au.anthropic.claude-opus-4-7 | $5.50 | $27.50 | $0.55 | 1M |
+| au.anthropic.claude-opus-4-8 | $5.50 | $27.50 | $0.55 | 1M |
+| au.anthropic.claude-opus-5 | $5.50 | $27.50 | $0.55 | 1M |
+| au.anthropic.claude-opus-5-5 | $4.40 | $22.00 | $0.22 | 1M |
+| au.anthropic.claude-sonnet-4-5-20250929-v1:0 | $3.30 | $16.50 | $0.33 | 200K |
+| au.anthropic.claude-sonnet-4-6 | $3.30 | $16.50 | $0.33 | 1M |
+| au.anthropic.claude-sonnet-5 | $2.20 | $11.00 | $0.22 | 1M |
+| au.anthropic.claude-sonnet-5-5 | $2.20 | $11.00 | $0.11 | 1M |
+| deepseek.r1-v1:0 | $1.35 | $5.40 | — | 128K |
+| deepseek.v3-v1:0 | $0.58 | $1.68 | — | 128K |
+| deepseek.v3.2 | $0.62 | $1.85 | — | 164K |
+| eu.amazon.nova-2-lite-v1:0 | $0.43 | $3.60 | $0.11 | 1M |
+| eu.amazon.nova-2-pro-preview-20251202-v1:0 | $1.38 | $11.00 | $0.34 | 1M |
+| eu.amazon.nova-lite-v1:0 | $0.08 | $0.31 | $0.02 | 300K |
+| eu.amazon.nova-micro-v1:0 | $0.05 | $0.18 | $0.01 | 128K |
+| eu.amazon.nova-pro-v1:0 | $1.05 | $4.20 | $0.26 | 300K |
+| eu.anthropic.claude-fable-5 | $11.00 | $55.00 | $1.10 | 1M |
+| eu.anthropic.claude-fable-5-1 | $11.00 | $55.00 | $0.28 | 1M |
+| eu.anthropic.claude-haiku-4-5-20251001-v1:0 | $1.10 | $5.50 | $0.11 | 200K |
+| eu.anthropic.claude-haiku-5-5 | $0.11 | $0.55 | $0.01 | 1M |
+| eu.anthropic.claude-opus-4-1-20250805-v1:0 | $15.00 | $75.00 | $1.50 | 200K |
+| eu.anthropic.claude-opus-4-5-20251101-v1:0 | $5.50 | $27.50 | $0.55 | 200K |
+| eu.anthropic.claude-opus-4-6-v1 | $5.50 | $27.50 | $0.55 | 1M |
+| eu.anthropic.claude-opus-4-7 | $5.50 | $27.50 | $0.55 | 1M |
+| eu.anthropic.claude-opus-4-8 | $5.50 | $27.50 | $0.55 | 1M |
+| eu.anthropic.claude-opus-4-20250514-v1:0 | $15.00 | $75.00 | $1.50 | 200K |
+| eu.anthropic.claude-opus-5 | $5.50 | $27.50 | $0.55 | 1M |
+| eu.anthropic.claude-opus-5-5 | $4.40 | $22.00 | $0.22 | 1M |
+| eu.anthropic.claude-sonnet-4-5-20250929-v1:0 | $3.30 | $16.50 | $0.33 | 200K |
+| eu.anthropic.claude-sonnet-4-6 | $3.30 | $16.50 | $0.33 | 1M |
+| eu.anthropic.claude-sonnet-4-20250514-v1:0 | $3.00 | $15.00 | $0.30 | 1M |
+| eu.anthropic.claude-sonnet-5 | $2.20 | $11.00 | $0.22 | 1M |
+| eu.anthropic.claude-sonnet-5-5 | $2.20 | $11.00 | $0.11 | 1M |
+| eu.deepseek.v3.2 | $0.74 | $2.22 | — | 163.84K |
+| eu.mistral.pixtral-large-2502-v1:0 | $2.00 | $6.00 | — | 128K |
+| global.amazon.nova-2-lite-v1:0 | $0.30 | $2.50 | $0.08 | 1M |
+| global.anthropic.claude-fable-5 | $10.00 | $50.00 | $1.00 | 1M |
+| global.anthropic.claude-fable-5-1 | $10.00 | $50.00 | $0.25 | 1M |
+| global.anthropic.claude-haiku-4-5-20251001-v1:0 | $1.00 | $5.00 | $0.10 | 200K |
+| global.anthropic.claude-haiku-5-5 | $0.10 | $0.50 | $0.01 | 1M |
+| global.anthropic.claude-mythos-5-1 | $10.00 | $50.00 | $0.25 | 1M |
+| global.anthropic.claude-opus-4-5-20251101-v1:0 | $5.00 | $25.00 | $0.50 | 200K |
+| global.anthropic.claude-opus-4-6-v1 | $5.00 | $25.00 | $0.50 | 1M |
+| global.anthropic.claude-opus-4-7 | $5.00 | $25.00 | $0.50 | 1M |
+| global.anthropic.claude-opus-4-8 | $5.00 | $25.00 | $0.50 | 1M |
+| global.anthropic.claude-opus-5 | $5.00 | $25.00 | $0.50 | 1M |
+| global.anthropic.claude-opus-5-5 | $4.00 | $20.00 | $0.20 | 1M |
+| global.anthropic.claude-sonnet-4-5-20250929-v1:0 | $3.00 | $15.00 | $0.30 | 200K |
+| global.anthropic.claude-sonnet-4-6 | $3.00 | $15.00 | $0.30 | 1M |
+| global.anthropic.claude-sonnet-4-20250514-v1:0 | $3.00 | $15.00 | $0.30 | 1M |
+| global.anthropic.claude-sonnet-5 | $2.00 | $10.00 | $0.20 | 1M |
+| global.anthropic.claude-sonnet-5-5 | $2.00 | $10.00 | $0.10 | 1M |
+| global.moonshotai.kimi-k3 | $3.00 | $15.00 | $0.30 | 1M |
+| global.openai.gpt-5.4 | $2.50 | $15.00 | $0.25 | 1.05M |
+| global.openai.gpt-5.5 | $5.00 | $30.00 | $0.50 | 1.05M |
+| global.openai.gpt-5.6-luna | $0.20 | $1.20 | $0.02 | 1.05M |
+| global.openai.gpt-5.6-sol | $4.00 | $20.00 | $0.40 | 1.05M |
+| global.openai.gpt-5.6-terra | $2.00 | $12.00 | $0.20 | 1.05M |
+| global.openai.gpt-6-astra | $10.00 | $50.00 | $1.00 | 1.05M |
+| global.openai.gpt-6-luna | $0.10 | $0.50 | $0.01 | 1.05M |
+| global.openai.gpt-6-sol | $2.00 | $10.00 | $0.20 | 1.05M |
+| global.openai.gpt-6.1-sol | $2.00 | $10.00 | $0.10 | 1M |
+| global.xai.grok-4.6 | $2.00 | $6.00 | $0.50 | 500K |
+| global.xai.grok-4.7 | $2.00 | $6.00 | $0.50 | 500K |
+| global.zai.glm-5.3 | $1.68 | $5.28 | $0.31 | 1M |
+| google.gemma-3-4b-it | $0.04 | $0.08 | — | 128K |
+| google.gemma-3-12b-it | $0.09 | $0.29 | — | 128K |
+| google.gemma-3-27b-it | $0.23 | $0.38 | — | 128K |
+| in.moonshotai.kimi-k3 | $3.30 | $16.50 | $0.33 | 1M |
+| jp.anthropic.claude-haiku-4-5-20251001-v1:0 | $1.10 | $5.50 | $0.11 | 200K |
+| jp.anthropic.claude-haiku-5-5 | $0.11 | $0.55 | $0.01 | 1M |
+| jp.anthropic.claude-opus-4-7 | $5.50 | $27.50 | $0.55 | 1M |
+| jp.anthropic.claude-opus-4-8 | $5.50 | $27.50 | $0.55 | 1M |
+| jp.anthropic.claude-opus-5 | $5.50 | $27.50 | $0.55 | 1M |
+| jp.anthropic.claude-opus-5-5 | $4.40 | $22.00 | $0.22 | 1M |
+| jp.anthropic.claude-sonnet-4-5-20250929-v1:0 | $3.30 | $16.50 | $0.33 | 200K |
+| jp.anthropic.claude-sonnet-4-6 | $3.30 | $16.50 | $0.33 | 1M |
+| jp.anthropic.claude-sonnet-5 | $2.20 | $11.00 | $0.22 | 1M |
+| jp.anthropic.claude-sonnet-5-5 | $2.20 | $11.00 | $0.11 | 1M |
+| meta.llama3-3-70b-instruct-v1:0 | $0.72 | $0.72 | — | 128K |
+| meta.llama4-maverick-17b-instruct-v1:0 | $0.24 | $0.97 | — | 1M |
+| meta.llama4-scout-17b-instruct-v1:0 | $0.17 | $0.66 | — | 10M |
+| minimax.minimax-m2 | $0.30 | $1.20 | — | 1M |
+| minimax.minimax-m2.1 | $0.30 | $1.20 | — | 196K |
+| minimax.minimax-m2.5 | $0.30 | $1.20 | — | 196K |
+| mistral.devstral-2-123b | $0.40 | $2.00 | — | 256K |
+| mistral.magistral-small-2509 | $0.50 | $1.50 | — | 128K |
+| mistral.ministral-3-3b-instruct | $0.10 | $0.10 | — | 128K |
+| mistral.ministral-3-8b-instruct | $0.15 | $0.15 | — | 128K |
+| mistral.ministral-3-14b-instruct | $0.20 | $0.20 | — | 128K |
+| mistral.mistral-large-3-675b-instruct | $0.50 | $1.50 | — | 256K |
+| mistral.pixtral-large-2502-v1:0 | $2.00 | $6.00 | — | 128K |
+| mistral.voxtral-mini-3b-2507 | $0.04 | $0.04 | — | 32.77K |
+| mistral.voxtral-small-24b-2507 | $0.10 | $0.30 | — | 32.77K |
+| moonshot.kimi-k2-thinking | $0.60 | $2.50 | — | 256K |
+| moonshotai.kimi-k2.5 | $0.60 | $3.00 | — | 256K |
+| moonshotai.kimi-k3 | $3.30 | $16.50 | $0.33 | 1M |
+| nvidia.nemotron-nano-3-30b | $0.06 | $0.24 | — | 256K |
+| nvidia.nemotron-nano-9b-v2 | $0.06 | $0.23 | — | 128K |
+| nvidia.nemotron-nano-12b-v2 | $0.20 | $0.60 | — | 128K |
+| nvidia.nemotron-super-3-120b | $0.15 | $0.65 | — | 256K |
+| openai.gpt-6-luna | $0.10 | $0.50 | $0.01 | 1.05M |
+| openai.gpt-6-sol | $2.00 | $10.00 | $0.20 | 1.05M |
+| openai.gpt-oss-20b-1:0 | $0.07 | $0.30 | — | 128K |
+| openai.gpt-oss-120b-1:0 | $0.15 | $0.60 | — | 128K |
+| openai.gpt-oss-safeguard-20b | $0.07 | $0.20 | — | 128K |
+| openai.gpt-oss-safeguard-120b | $0.15 | $0.60 | — | 128K |
+| qwen.qwen3-32b-v1:0 | $0.15 | $0.60 | — | 32.77K |
+| qwen.qwen3-235b-a22b-2507-v1:0 | $0.22 | $0.88 | — | 262.14K |
+| qwen.qwen3-coder-30b-a3b-v1:0 | $0.15 | $0.60 | — | 262.14K |
+| qwen.qwen3-coder-480b-a35b-v1:0 | $0.45 | $1.80 | — | 131.07K |
+| qwen.qwen3-coder-next | $0.50 | $1.20 | — | 256K |
+| qwen.qwen3-next-80b-a3b | $0.15 | $1.20 | — | 256K |
+| qwen.qwen3-vl-235b-a22b | $0.53 | $2.66 | — | 256K |
+| us-gov.anthropic.claude-fable-5-1 | $12.00 | $60.00 | $0.30 | 1M |
+| us-gov.anthropic.claude-haiku-5-5 | $0.12 | $0.60 | $0.01 | 1M |
+| us-gov.anthropic.claude-opus-4-8 | $6.00 | $30.00 | $0.60 | 1M |
+| us-gov.anthropic.claude-opus-5 | $6.00 | $30.00 | $0.60 | 1M |
+| us-gov.anthropic.claude-opus-5-5 | $4.80 | $24.00 | $0.24 | 1M |
+| us-gov.anthropic.claude-sonnet-4-5-20250929-v1:0 | $3.60 | $18.00 | $0.36 | 200K |
+| us-gov.anthropic.claude-sonnet-5 | $2.40 | $12.00 | $0.24 | 1M |
+| us-gov.anthropic.claude-sonnet-5-5 | $2.40 | $12.00 | $0.12 | 1M |
+| us-gov.nvidia.nemotron-nano-3-30b | $0.07 | $0.29 | — | 262.14K |
+| us-gov.nvidia.nemotron-nano-9b-v2 | $0.07 | $0.28 | — | 128K |
+| us-gov.nvidia.nemotron-nano-12b-v2 | $0.24 | $0.72 | — | 128K |
+| us-gov.nvidia.nemotron-super-3-120b | $0.18 | $0.78 | — | 256K |
+| us-gov.openai.gpt-oss-20b-1:0 | $0.08 | $0.36 | — | 128K |
+| us-gov.openai.gpt-oss-120b-1:0 | $0.18 | $0.72 | — | 128K |
+| us-gov.xai.grok-4.6 | $2.64 | $7.92 | $0.66 | 500K |
+| us.amazon.nova-2-lite-v1:0 | $0.33 | $2.75 | $0.08 | 1M |
+| us.amazon.nova-2-pro-preview-20251202-v1:0 | $1.38 | $11.00 | $0.34 | 1M |
+| us.amazon.nova-lite-v1:0 | $0.06 | $0.24 | $0.02 | 300K |
+| us.amazon.nova-micro-v1:0 | $0.04 | $0.14 | $0.00875 | 128K |
+| us.amazon.nova-pro-v1:0 | $0.80 | $3.20 | $0.20 | 300K |
+| us.anthropic.claude-3-7-sonnet-20250219-v1:0 | $3.00 | $15.00 | $0.30 | 200K |
+| us.anthropic.claude-fable-5 | $11.00 | $55.00 | $1.10 | 1M |
+| us.anthropic.claude-fable-5-1 | $11.00 | $55.00 | $0.28 | 1M |
+| us.anthropic.claude-haiku-4-5-20251001-v1:0 | $1.10 | $5.50 | $0.11 | 200K |
+| us.anthropic.claude-haiku-5-5 | $0.11 | $0.55 | $0.01 | 1M |
+| us.anthropic.claude-mythos-5 | $11.00 | $55.00 | $1.10 | 1M |
+| us.anthropic.claude-mythos-5-1 | $11.00 | $55.00 | $0.28 | 1M |
+| us.anthropic.claude-mythos-preview | $27.50 | $137.50 | $2.75 | 1M |
+| us.anthropic.claude-opus-4-1-20250805-v1:0 | $15.00 | $75.00 | $1.50 | 200K |
+| us.anthropic.claude-opus-4-5-20251101-v1:0 | $5.50 | $27.50 | $0.55 | 200K |
+| us.anthropic.claude-opus-4-6-v1 | $5.50 | $27.50 | $0.55 | 1M |
+| us.anthropic.claude-opus-4-7 | $5.50 | $27.50 | $0.55 | 1M |
+| us.anthropic.claude-opus-4-8 | $5.50 | $27.50 | $0.55 | 1M |
+| us.anthropic.claude-opus-4-20250514-v1:0 | $15.00 | $75.00 | $1.50 | 200K |
+| us.anthropic.claude-opus-5 | $5.50 | $27.50 | $0.55 | 1M |
+| us.anthropic.claude-opus-5-5 | $4.40 | $22.00 | $0.22 | 1M |
+| us.anthropic.claude-sonnet-4-5-20250929-v1:0 | $3.30 | $16.50 | $0.33 | 200K |
+| us.anthropic.claude-sonnet-4-6 | $3.30 | $16.50 | $0.33 | 1M |
+| us.anthropic.claude-sonnet-4-20250514-v1:0 | $3.00 | $15.00 | $0.30 | 1M |
+| us.anthropic.claude-sonnet-5 | $2.20 | $11.00 | $0.22 | 1M |
+| us.anthropic.claude-sonnet-5-5 | $2.20 | $11.00 | $0.11 | 1M |
+| us.deepseek.r1-v1:0 | $1.35 | $5.40 | — | 128K |
+| us.deepseek.v3.2 | $0.62 | $1.85 | — | 163.84K |
+| us.meta.llama3-3-70b-instruct-v1:0 | $0.72 | $0.72 | — | 128K |
+| us.meta.llama4-maverick-17b-instruct-v1:0 | $0.24 | $0.97 | — | 1M |
+| us.meta.llama4-scout-17b-instruct-v1:0 | $0.17 | $0.66 | — | 10M |
+| us.mistral.pixtral-large-2502-v1:0 | $2.00 | $6.00 | — | 128K |
+| us.moonshotai.kimi-k3 | $3.30 | $16.50 | $0.33 | 1M |
+| us.openai.gpt-5.4 | $2.75 | $16.50 | $0.28 | 1.05M |
+| us.openai.gpt-5.5 | $5.50 | $33.00 | $0.55 | 1.05M |
+| us.openai.gpt-5.6-luna | $0.22 | $1.32 | $0.02 | 1.05M |
+| us.openai.gpt-5.6-sol | $4.40 | $22.00 | $0.44 | 1.05M |
+| us.openai.gpt-5.6-terra | $2.20 | $13.20 | $0.22 | 1.05M |
+| us.openai.gpt-6-astra | $11.00 | $55.00 | $1.10 | 1.05M |
+| us.openai.gpt-6-luna | $0.11 | $0.55 | $0.01 | 1.05M |
+| us.openai.gpt-6-sol | $2.20 | $11.00 | $0.22 | 1.05M |
+| us.openai.gpt-6.1-sol | $2.20 | $11.00 | $0.11 | 1M |
+| us.writer.palmyra-x4-v1:0 | $2.50 | $10.00 | — | 128K |
+| us.writer.palmyra-x5-v1:0 | $0.60 | $6.00 | — | 128K |
+| us.xai.grok-4.6 | $2.20 | $6.60 | $0.55 | 500K |
+| us.xai.grok-4.7 | $2.20 | $6.60 | $0.55 | 500K |
+| us.zai.glm-5.3 | $1.85 | $5.81 | $0.34 | 1M |
+| writer.palmyra-vision-7b | $0.15 | $0.60 | — | 4.1K |
+| writer.palmyra-x4-v1:0 | $2.50 | $10.00 | — | 128K |
+| writer.palmyra-x5-v1:0 | $0.60 | $6.00 | — | 128K |
+| zai.glm-4.7 | $0.60 | $2.20 | — | 203K |
+| zai.glm-4.7-flash | $0.07 | $0.40 | — | 203K |
+| zai.glm-5 | $1.00 | $3.20 | — | 200K |
 
 ## bedrock_mantle
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| anthropic.claude-haiku-5-5 | 0.11000000 | 0.55000000 | 0.011000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek.v3.1 | 0.58000000 | 1.68000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-opus-5-5 | 4.4000000 | 22.000000 | 0.22000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-sonnet-5-5 | 2.2000000 | 11.000000 | 0.11000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic.claude-haiku-4-5 | 1.000000 | 5.000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-oss-20b | 0.07000000 | 0.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-4.6 | 2.64000000 | 7.92000000 | 0.66000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-5.6-sol | 4.4000000 | 22.000000 | 0.44000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-6-astra | 11.000000 | 55.000000 | 1.1000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| google.gemma-4-31b | 0.14000000 | 0.4000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-4.3 | 1.5000000 | 3.000000 | 0.24000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-5.6-cyber | 13.75000000 | 82.5000000 | 1.375000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-oss-safeguard-120b | 0.15000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-next-80b-a3b-instruct | 0.14000000 | 1.2000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-5.6-terra | 2.2000000 | 13.2000000 | 0.22000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-6.1-sol | 2.2000000 | 11.000000 | 0.11000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-oss-120b | 0.15000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-coder-480b-a35b-instruct | 0.45000000 | 1.8000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-5.4 | 2.75000000 | 16.5000000 | 0.275000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-6-sol | 2.2000000 | 11.000000 | 0.22000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-32b | 0.15000000 | 0.6000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-5.5 | 5.5000000 | 33.000000 | 0.55000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| google.gemma-4-26b-a4b | 0.13000000 | 0.4000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-6-luna | 0.11000000 | 0.55000000 | 0.011000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-235b-a22b-2507 | 0.22000000 | 0.88000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-vl-235b-a22b-instruct | 0.53000000 | 2.66000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen.qwen3-coder-30b-a3b-instruct | 0.15000000 | 0.6000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-daybreak-blue-5.6-sol | 4.4000000 | 22.000000 | 0.44000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshotai.kimi-k2-thinking | 0.6000000 | 2.5000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-oss-safeguard-20b | 0.07000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-5.6-luna | 0.22000000 | 1.32000000 | 0.022000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| google.gemma-4-e2b | 0.04000000 | 0.08000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| anthropic.claude-haiku-4-5 | $1.00 | $5.00 | $0.10 | 200K |
+| anthropic.claude-haiku-5-5 | $0.11 | $0.55 | $0.01 | 1M |
+| anthropic.claude-opus-5-5 | $4.40 | $22.00 | $0.22 | 1M |
+| anthropic.claude-sonnet-5-5 | $2.20 | $11.00 | $0.11 | 1M |
+| deepseek.v3.1 | $0.58 | $1.68 | — | 128K |
+| google.gemma-4-26b-a4b | $0.13 | $0.40 | — | 256K |
+| google.gemma-4-31b | $0.14 | $0.40 | — | 256K |
+| google.gemma-4-e2b | $0.04 | $0.08 | — | 128K |
+| moonshotai.kimi-k2-thinking | $0.60 | $2.50 | — | 256K |
+| openai.gpt-5.4 | $2.75 | $16.50 | $0.28 | 1.05M |
+| openai.gpt-5.5 | $5.50 | $33.00 | $0.55 | 1.05M |
+| openai.gpt-5.6-cyber | $13.75 | $82.50 | $1.38 | 272K |
+| openai.gpt-5.6-luna | $0.22 | $1.32 | $0.02 | 1.05M |
+| openai.gpt-5.6-sol | $4.40 | $22.00 | $0.44 | 1.05M |
+| openai.gpt-5.6-terra | $2.20 | $13.20 | $0.22 | 1.05M |
+| openai.gpt-6-astra | $11.00 | $55.00 | $1.10 | 1.05M |
+| openai.gpt-6-luna | $0.11 | $0.55 | $0.01 | 1.05M |
+| openai.gpt-6-sol | $2.20 | $11.00 | $0.22 | 1.05M |
+| openai.gpt-6.1-sol | $2.20 | $11.00 | $0.11 | 1M |
+| openai.gpt-daybreak-blue-5.6-sol | $4.40 | $22.00 | $0.44 | 1M |
+| openai.gpt-oss-20b | $0.07 | $0.30 | — | 131.07K |
+| openai.gpt-oss-120b | $0.15 | $0.60 | — | 131.07K |
+| openai.gpt-oss-safeguard-20b | $0.07 | $0.20 | — | 131.07K |
+| openai.gpt-oss-safeguard-120b | $0.15 | $0.60 | — | 131.07K |
+| qwen.qwen3-32b | $0.15 | $0.60 | — | 32K |
+| qwen.qwen3-235b-a22b-2507 | $0.22 | $0.88 | — | 256K |
+| qwen.qwen3-coder-30b-a3b-instruct | $0.15 | $0.60 | — | 256K |
+| qwen.qwen3-coder-480b-a35b-instruct | $0.45 | $1.80 | — | 128K |
+| qwen.qwen3-next-80b-a3b-instruct | $0.14 | $1.20 | — | 256K |
+| qwen.qwen3-vl-235b-a22b-instruct | $0.53 | $2.66 | — | 256K |
+| xai.grok-4.3 | $1.50 | $3.00 | $0.24 | 1.05M |
+| xai.grok-4.6 | $2.64 | $7.92 | $0.66 | 500K |
 
 ## bespoke
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Bespoke-Nimble-9B | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nimble-latest | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nimble | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| bespoke-nimble-9b | $0.00 | $0.00 | — | 8.19K |
+| nimble | $0.00 | $0.00 | — | 8.19K |
+| nimble-latest | $0.00 | $0.00 | — | 8.19K |
 
 ## bytedance
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| ByteDance: UI-TARS 7B  | 0.1000000 | 0.2000000 | 0.1000000 | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| ui-tars 7b | $0.10 | $0.20 | $0.10 | 128K |
 
 ## bytedance-seed
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| ByteDance Seed: Seed-2.0-Lite | 0.25000000 | 2.000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ByteDance Seed: Seed 1.6 Flash | 0.075000000 | 0.3000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ByteDance Seed: Seed 2.1 Turbo | 0.5000000 | 2.5000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ByteDance Seed: Seed-2.0-Mini | 0.1000000 | 0.4000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ByteDance Seed: Seed-2.0-Code | 0.5000000 | 3.000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ByteDance Seed: Seed 1.6 | 0.25000000 | 2.000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| bytedance seed: seed 1.6 | $0.25 | $2.00 | — | 262.14K |
+| bytedance seed: seed 1.6 flash | $0.08 | $0.30 | — | 262.14K |
+| bytedance seed: seed 2.1 turbo | $0.50 | $2.50 | — | 262.14K |
+| bytedance seed: seed-2.0-code | $0.50 | $3.00 | — | 262.14K |
+| bytedance seed: seed-2.0-lite | $0.25 | $2.00 | — | 262.14K |
+| bytedance seed: seed-2.0-mini | $0.10 | $0.40 | — | 262.14K |
 
 ## cerebras
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| qwen-3-32b | 0.4000000 | 0.8000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.1-70b | 0.6000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-3.8-27b | 0.99000000 | 1.49000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.35000000 | 0.75000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.1-8b | 0.1000000 | 0.1000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.3-70b | 0.85000000 | 1.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31b | 0.99000000 | 1.49000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| gemma-4-31b | $0.99 | $1.49 | — | 131.07K |
+| gpt-oss-120b | $0.35 | $0.75 | — | 131.07K |
+| llama3.1-8b | $0.10 | $0.10 | — | 128K |
+| llama3.1-70b | $0.60 | $0.60 | — | 128K |
+| llama-3.3-70b | $0.85 | $1.20 | — | 128K |
+| qwen-3-32b | $0.40 | $0.80 | — | 128K |
+| qwen-3.8-27b | $0.99 | $1.49 | — | 65.54K |
 
 ## cloudflare
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| clef | 0.24000000 | 0.0 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-qwen-32b | 0.497000000 | 4.881000000 | — | 80000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codellama-7b-instruct-awq | 1.923000000 | 1.923000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| clef-flash | 0.09000000 | 0.0 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b | 0.2000000 | 0.3000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-30b-a3b-fp8 | 0.0509000000 | 0.335000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.7-code | 0.95000000 | 4.000000 | 0.19000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-2b-it-lora | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-scout-17b-16e-instruct | 0.27000000 | 0.85000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.7-flash | 0.0605000000 | 0.4000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.2-1b-instruct | 0.027000000 | 0.201000000 | — | 60000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.3-70b-instruct-fp8-fast | 0.293000000 | 2.253000000 | — | 24000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.2 | 1.4000000 | 4.4000000 | 0.26000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small-3.1-24b-instruct | 0.351000000 | 0.555000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7b-instruct-v0.1 | 1.923000000 | 1.923000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.2-11b-vision-instruct | 0.0485000000 | 0.676000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-2-7b-chat-int8 | 1.923000000 | 1.923000000 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwq-32b | 0.66000000 | 1.000000 | — | 24000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nemotron-3-120b-a12b | 0.5000000 | 1.5000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-2-7b-chat-hf-lora | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.35000000 | 0.75000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.1-8b-instruct-fp8 | 0.152000000 | 0.287000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-guard-3-8b | 0.484000000 | 0.03000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.6 | 0.95000000 | 4.000000 | 0.16000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.2-3b-instruct | 0.0509000000 | 0.335000000 | — | 80000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-4.0-h-micro | 0.017000000 | 0.112000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2.5-coder-32b-instruct | 0.66000000 | 1.000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-sea-lion-v4-27b-it | 0.351000000 | 0.555000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-26b-a4b-it | 0.1000000 | 0.3000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7b-instruct-v0.2-lora | 0.0 | 0.0 | — | 15000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-7b-it-lora | 0.0 | 0.0 | — | 3500 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-2-7b-chat-fp16 | 1.923000000 | 1.923000000 | — | 3072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| clef | $0.24 | $0.00 | — | 65.54K |
+| clef-flash | $0.09 | $0.00 | — | 65.54K |
+| codellama-7b-instruct-awq | $1.92 | $1.92 | — | 4.1K |
+| deepseek-r1-distill-qwen-32b | $0.50 | $4.88 | — | 80K |
+| gemma-2b-it-lora | $0.00 | $0.00 | — | 8.19K |
+| gemma-4-26b-a4b-it | $0.10 | $0.30 | — | 256K |
+| gemma-7b-it-lora | $0.00 | $0.00 | — | 3.5K |
+| gemma-sea-lion-v4-27b-it | $0.35 | $0.56 | — | 128K |
+| glm-4.7-flash | $0.06 | $0.40 | — | 131.07K |
+| glm-5.2 | $1.40 | $4.40 | $0.26 | 262.14K |
+| gpt-oss-20b | $0.20 | $0.30 | — | 128K |
+| gpt-oss-120b | $0.35 | $0.75 | — | 128K |
+| granite-4.0-h-micro | $0.02 | $0.11 | — | 131K |
+| kimi-k2.6 | $0.95 | $4.00 | $0.16 | 262.14K |
+| kimi-k2.7-code | $0.95 | $4.00 | $0.19 | 262.14K |
+| llama-2-7b-chat-fp16 | $1.92 | $1.92 | — | 3.07K |
+| llama-2-7b-chat-hf-lora | $0.00 | $0.00 | — | 8.19K |
+| llama-2-7b-chat-int8 | $1.92 | $1.92 | — | 2.05K |
+| llama-3.1-8b-instruct-fp8 | $0.15 | $0.29 | — | 32K |
+| llama-3.2-1b-instruct | $0.03 | $0.20 | — | 60K |
+| llama-3.2-3b-instruct | $0.05 | $0.34 | — | 80K |
+| llama-3.2-11b-vision-instruct | $0.05 | $0.68 | — | 128K |
+| llama-3.3-70b-instruct-fp8-fast | $0.29 | $2.25 | — | 24K |
+| llama-4-scout-17b-16e-instruct | $0.27 | $0.85 | — | 131K |
+| llama-guard-3-8b | $0.48 | $0.03 | — | 131.07K |
+| mistral-7b-instruct-v0.1 | $1.92 | $1.92 | — | 8.19K |
+| mistral-7b-instruct-v0.2-lora | $0.00 | $0.00 | — | 15K |
+| mistral-small-3.1-24b-instruct | $0.35 | $0.56 | — | 128K |
+| nemotron-3-120b-a12b | $0.50 | $1.50 | — | 256K |
+| qwen2.5-coder-32b-instruct | $0.66 | $1.00 | — | 32.77K |
+| qwen3-30b-a3b-fp8 | $0.05 | $0.34 | — | 32.77K |
+| qwq-32b | $0.66 | $1.00 | — | 24K |
 
 ## codestral
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| codestral-2405 | 0.0 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral-latest | 0.0 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| codestral-2405 | $0.00 | $0.00 | — | 32K |
+| codestral-latest | $0.00 | $0.00 | — | 32K |
 
 ## cognition
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| swe-1.6 | 0.5000000 | 2.5000000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| swe-1.7-lightning | 2.5000000 | 12.5000000 | 1.000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| swe-1.7 | 0.5000000 | 2.5000000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| swe-1.6 | $0.50 | $2.50 | $0.20 | — |
+| swe-1.7 | $0.50 | $2.50 | $0.20 | — |
+| swe-1.7-lightning | $2.50 | $12.50 | $1.00 | — |
 
 ## cognitivecomputations
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Venice: Uncensored | 0.2000000 | 0.9000000 | — | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| venice: uncensored | $0.20 | $0.90 | — | 128K |
 
 ## cohere
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| command-nightly | 1.000000 | 2.000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cohere: Command A+ | 0.3000000 | 1.5000000 | 0.15000000 | 192000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cohere: Command R (08-2024) | 0.15000000 | 0.6000000 | — | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cohere: Command A | 2.5000000 | 10.00000 | — | 256000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| embed-multilingual-light-v3.0 | 100.0000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| embed-english-light-v3.0 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-v4.0-fast | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cohere: Command R7B (12-2024) | 0.0375000000 | 0.15000000 | — | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| embed-v5.0-fast | 0.08000000 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-v4.0-pro | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-english-v3.0 | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cohere: Command R+ (08-2024) | 2.5000000 | 10.00000 | — | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-v3.5 | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| embed-multilingual-v3.0 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-multilingual-v3.0 | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cohere: North Mini Code (free) | 0 | 0 | — | 256000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| embed-v4.0 | 0.12000000 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| embed-v5.0-pro | 0.12000000 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| embed-english-v3.0 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| c4ai-aya-expanse-32b | 0.5000000 | 1.5000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| command-a-03-2025 | 2.5000000 | 10.00000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| command-r-08-2024 | 0.15000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| command-a-plus-05-2026 | 0.0 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| command-r7b-12-2024 | 0.0375000000 | 0.15000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| command-r-plus-08-2024 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| c4ai-aya-expanse-32b | $0.50 | $1.50 | — | 128K |
+| command a | $2.50 | $10.00 | — | 256K |
+| command a+ | $0.30 | $1.50 | $0.15 | 192K |
+| command r7b (12-2024) | $0.04 | $0.15 | — | 128K |
+| command r (08-2024) | $0.15 | $0.60 | — | 128K |
+| command r+ (08-2024) | $2.50 | $10.00 | — | 128K |
+| command-a-03-2025 | $2.50 | $10.00 | — | 256K |
+| command-a-plus-05-2026 | $0.00 | $0.00 | — | 128K |
+| command-nightly | $1.00 | $2.00 | — | 4.1K |
+| command-r7b-12-2024 | $0.04 | $0.15 | — | 128K |
+| command-r-08-2024 | $0.15 | $0.60 | — | 128K |
+| command-r-plus-08-2024 | $2.50 | $10.00 | — | 128K |
+| embed-english-light-v3.0 | $0.10 | $0.00 | — | 512 |
+| embed-english-v3.0 | $0.10 | $0.00 | — | 512 |
+| embed-multilingual-light-v3.0 | $100.00 | $0.00 | — | 512 |
+| embed-multilingual-v3.0 | $0.10 | $0.00 | — | 512 |
+| embed-v4.0 | $0.12 | $0.00 | — | 128K |
+| embed-v5.0-fast | $0.08 | $0.00 | — | 128K |
+| embed-v5.0-pro | $0.12 | $0.00 | — | 128K |
+| north mini code (free) | $0.00 | $0.00 | — | 256K |
+| rerank-english-v3.0 | $0.00 | $0.00 | — | 4.1K |
+| rerank-multilingual-v3.0 | $0.00 | $0.00 | — | 4.1K |
+| rerank-v3.5 | $0.00 | $0.00 | — | 4.1K |
+| rerank-v4.0-fast | $0.00 | $0.00 | — | 32.77K |
+| rerank-v4.0-pro | $0.00 | $0.00 | — | 32.77K |
 
 ## crusoe
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gemma-3-12b-it | 0.1000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.3-70B-Instruct | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3-0324 | 1.5000000 | 1.5000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-235B-A22B-Instruct-2507 | 3.000000 | 3.000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2-Thinking | 2.5000000 | 2.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-0528 | 3.000000 | 7.000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.8000000 | 0.8000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-r1-0528 | $3.00 | $7.00 | — | 163.84K |
+| deepseek-v3-0324 | $1.50 | $1.50 | — | 163.84K |
+| gemma-3-12b-it | $0.10 | $0.10 | — | 131.07K |
+| gpt-oss-120b | $0.80 | $0.80 | — | 131.07K |
+| kimi-k2-thinking | $2.50 | $2.50 | — | 262.14K |
+| llama-3.3-70b-instruct | $0.20 | $0.20 | — | 131.07K |
+| qwen3-235b-a22b-instruct-2507 | $3.00 | $3.00 | — | 262.14K |
 
 ## darkbloom
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gemma-4-26b | 0.03000000 | 0.165000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b | 0.0145000000 | 0.07000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| gemma-4-26b | $0.03 | $0.16 | — | 131.07K |
+| gpt-oss-20b | $0.01 | $0.07 | — | 131.07K |
 
 ## dashscope
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| qwen-coder | 0.3000000 | 1.5000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-plus | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.7-code | 0.95000000 | 4.000000 | 0.19000000 | 229376 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro | 2.4000000 | 4.8000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo | 0.05000000 | 0.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo-2024-11-01 | 0.05000000 | 0.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash | 0.2000000 | 0.4000000 | 0.04000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash-0731 | 0.2000000 | 0.4000000 | 0.04000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-omni-flash | 0.15000000 | 0.47000000 | 0.016000000 | 991808 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-max | 2.000000 | 6.000000 | 0.25000000 | 991808 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-plus-2025-04-28 | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-flash | 0.15000000 | 0.47000000 | 0.016000000 | 991808 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-plus-2025-07-14 | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-max | 1.6000000 | 6.4000000 | — | 30720 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-plus-2025-01-25 | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.1 | 1.4000000 | 4.4000000 | 0.26000000 | 202745 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo-2025-04-28 | 0.05000000 | 0.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.2 | 1.4000000 | 4.4000000 | 0.28000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.7-max | 2.5000000 | 7.5000000 | 0.5000000 | 991808 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo-latest | 0.05000000 | 0.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-235b-a22b-instruct | 0.4000000 | 1.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-32b-thinking | 0.16000000 | 2.87000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-32b-instruct | 0.16000000 | 0.64000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-235b-a22b-thinking | 0.4000000 | 4.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-next-80b-a3b-thinking | 0.15000000 | 1.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwq-plus | 0.8000000 | 2.4000000 | — | 98304 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-next-80b-a3b-instruct | 0.15000000 | 1.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v4-flash | $0.20 | $0.40 | $0.04 | 1M |
+| deepseek-v4-flash-0731 | $0.20 | $0.40 | $0.04 | 1M |
+| deepseek-v4-pro | $2.40 | $4.80 | $0.20 | 1M |
+| glm-5.1 | $1.40 | $4.40 | $0.26 | 202.75K |
+| glm-5.2 | $1.40 | $4.40 | $0.28 | 1.05M |
+| kimi-k2.7-code | $0.95 | $4.00 | $0.19 | 229.38K |
+| qwen3-next-80b-a3b-instruct | $0.15 | $1.20 | — | 262.14K |
+| qwen3-next-80b-a3b-thinking | $0.15 | $1.20 | — | 262.14K |
+| qwen3-vl-32b-instruct | $0.16 | $0.64 | — | 131.07K |
+| qwen3-vl-32b-thinking | $0.16 | $2.87 | — | 131.07K |
+| qwen3-vl-235b-a22b-instruct | $0.40 | $1.60 | — | 131.07K |
+| qwen3-vl-235b-a22b-thinking | $0.40 | $4.00 | — | 131.07K |
+| qwen3.7-max | $2.50 | $7.50 | $0.50 | 991.81K |
+| qwen3.8-flash | $0.15 | $0.47 | $0.02 | 991.81K |
+| qwen3.8-max | $2.00 | $6.00 | $0.25 | 991.81K |
+| qwen3.8-omni-flash | $0.15 | $0.47 | $0.02 | 991.81K |
+| qwen-coder | $0.30 | $1.50 | — | 1M |
+| qwen-max | $1.60 | $6.40 | — | 30.72K |
+| qwen-plus | $0.40 | $1.20 | — | 129.02K |
+| qwen-plus-2025-01-25 | $0.40 | $1.20 | — | 129.02K |
+| qwen-plus-2025-04-28 | $0.40 | $1.20 | — | 129.02K |
+| qwen-plus-2025-07-14 | $0.40 | $1.20 | — | 129.02K |
+| qwen-turbo | $0.05 | $0.20 | — | 129.02K |
+| qwen-turbo-2024-11-01 | $0.05 | $0.20 | — | 1M |
+| qwen-turbo-2025-04-28 | $0.05 | $0.20 | — | 1M |
+| qwen-turbo-latest | $0.05 | $0.20 | — | 1M |
+| qwq-plus | $0.80 | $2.40 | — | 98.3K |
 
 ## databricks
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| databricks-claude-opus-5-5 | 4.00001000000 | 19.99998000000 | 0.19999000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-opus-4-6 | 5.00003000000 | 25.000010000000002000000 | 0.50001000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-sonnet-4-5 | 2.9999900000000002000000 | 15.000020000000002000000 | 0.30002000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gemma-3-12b | 0.15000999999999998000000 | 0.50001000000 | 0.15001000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-haiku-4-5 | 1.00002000000 | 5.00003000000 | 0.10003000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-glm-5-3 | 1.4000000 | 4.39999000000 | 0.25998000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-opus-4-1 | 15.000020000000002000000 | 75.00003000000001000000 | 1.50003000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gemini-3-pro | 2.49998000000 | 15.000020000000002000000 | 0.24997000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gemini-2-5-flash | 0.30001999999999996000000 | 2.49998000000 | 0.030002000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-opus-4 | 15.000020000000002000000 | 75.00003000000001000000 | 1.50003000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-2 | 1.75000000 | 14.000000 | 0.175000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-1 | 1.24999000000 | 9.999990000000002000000 | 0.12502000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-opus-4-5 | 5.00003000000 | 25.000010000000002000000 | 0.50001000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-sonnet-5 | 2.99999000000 | 15.00002000000 | 0.30002000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-deepseek-v4-flash-0731 | 0.14000000 | 0.28000000 | 0.028000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-fable-5-1 | 10.00006000000 | 50.00002000000 | 0.25004000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gemini-3-5-flash | 1.87502000000 | 11.24998000000 | 0.18753000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-opus-4-8 | 5.00003000000 | 25.00001000000 | 0.50001000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gemini-3-6-flash | 1.87502000000 | 9.37503000000 | 0.18753000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-fable-5 | 10.00006000000 | 50.00002000000 | 1.00002000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gemini-3-1-flash-lite | 0.31248000000 | 1.87502000000 | 0.03122000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-glm-5-2 | 1.4000000 | 4.39999000000 | 0.25998000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-glm-5-3-flash | 0.15001000000 | 0.50001000000 | 0.03003000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-opus-4-7 | 5.00003000000 | 25.00001000000 | 0.50001000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5 | 1.24999000000 | 9.999990000000002000000 | 0.12502000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-opus-5 | 5.00003000000 | 25.00001000000 | 0.50001000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-deepseek-v4-pro-0813 | 1.31999000000 | 3.95997000000 | 0.13202000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-sonnet-4 | 2.9999900000000002000000 | 15.000020000000002000000 | 0.30002000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-sonnet-4-6 | 2.9999900000000002000000 | 15.000020000000002000000 | 0.30002000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-claude-sonnet-4-1 | 2.9999900000000002000000 | 15.000020000000002000000 | 0.30002000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gemini-3-5-flash-lite | 0.37499000000 | 3.12501000000 | 0.03752000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-bge-large-en | 0.10003000000 | 0.0 | 0.10003000000 | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gemini-3-flash | 0.62503000000 | 3.74997000000 | 0.06251000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gemini-2-5-pro | 1.24999000000 | 9.999990000000002000000 | 0.124999000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gemini-3-1-pro | 2.49998000000 | 15.000020000000002000000 | 0.24997000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-oss-20b | 0.07000000 | 0.30001999999999996000000 | 0.07000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-meta-llama-3-1-8b-instruct | 0.15000999999999998000000 | 0.45003000000000007000000 | 0.15001000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-mini | 0.24997000000000006000000 | 1.9999700000000004000000 | 0.02499000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-grok-4-6 | 2.49998000000 | 7.50001000000 | 0.62503000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-4-mini | 0.74998000000 | 4.50002000000 | 0.07497000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-llama-4-maverick | 0.50001000000 | 1.5000300000000002000000 | 0.50001000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-5-pro | 29.99997000000 | 180.00003000000 | 29.99997000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-inkling | 1.00002000000 | 4.04999000000 | 0.17003000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-oss-120b | 0.15000999999999998000000 | 0.59997000000 | 0.15001000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-kimi-k3 | 2.99999000000 | 15.00002000000 | 0.30002000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-meta-llama-3-3-70b-instruct | 0.50001000000 | 1.5000300000000002000000 | 0.50001000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-qwen35-122b-a10b | 0.22001000000 | 2.20003000000 | 0.22001000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gte-large-en | 0.12999000000000001000000 | 0.0 | 0.12999000000 | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-4 | 2.49998000000 | 15.000020000000002000000 | 0.24997000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-4-nano | 0.19999000000 | 1.24999000000 | 0.02002000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-6-luna | 1.00002000000 | 5.99998000000 | 0.10003000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-qwen3-embedding-0-6b | 0.02002000000 | 0.0 | 0.02002000000 | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-6-terra | 2.49998000000 | 15.00002000000 | 0.24997000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-6-sol | 4.00001000000 | 19.99998000000 | 0.39998000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-3-codex | 1.75000000 | 14.000000 | 0.175000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-5 | 5.00003000000 | 29.99997000000 | 0.50001000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-openjev-qwen35-4b | 0.0 | 0.0 | 0.0 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-qwen3-next-80b-a3b-instruct | 0.15001000000 | 1.20001000000 | 0.15001000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| databricks-gpt-5-nano | 0.04998000000 | 0.39998000000000007000000 | 0.00497000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ai_decide | 0.0 | 0.0 | 0.0 | — | registry | 2026-10-11T12:48:08.584048+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| ai_decide | $0.00 | $0.00 | $0.00 | — |
+| databricks-bge-large-en | $0.10 | $0.00 | $0.10 | 512 |
+| databricks-claude-fable-5 | $10.00 | $50.00 | $1.00 | 1M |
+| databricks-claude-fable-5-1 | $10.00 | $50.00 | $0.25 | 1M |
+| databricks-claude-haiku-4-5 | $1.00 | $5.00 | $0.10 | 200K |
+| databricks-claude-opus-4 | $15.00 | $75.00 | $1.50 | 200K |
+| databricks-claude-opus-4-1 | $15.00 | $75.00 | $1.50 | 200K |
+| databricks-claude-opus-4-5 | $5.00 | $25.00 | $0.50 | 200K |
+| databricks-claude-opus-4-6 | $5.00 | $25.00 | $0.50 | 1M |
+| databricks-claude-opus-4-7 | $5.00 | $25.00 | $0.50 | 1M |
+| databricks-claude-opus-4-8 | $5.00 | $25.00 | $0.50 | 1M |
+| databricks-claude-opus-5 | $5.00 | $25.00 | $0.50 | 1M |
+| databricks-claude-opus-5-5 | $4.00 | $20.00 | $0.20 | 1M |
+| databricks-claude-sonnet-4 | $3.00 | $15.00 | $0.30 | 200K |
+| databricks-claude-sonnet-4-1 | $3.00 | $15.00 | $0.30 | 200K |
+| databricks-claude-sonnet-4-5 | $3.00 | $15.00 | $0.30 | 200K |
+| databricks-claude-sonnet-4-6 | $3.00 | $15.00 | $0.30 | 1M |
+| databricks-claude-sonnet-5 | $3.00 | $15.00 | $0.30 | 1M |
+| databricks-deepseek-v4-flash-0731 | $0.14 | $0.28 | $0.03 | 1M |
+| databricks-deepseek-v4-pro-0813 | $1.32 | $3.96 | $0.13 | 1M |
+| databricks-gemini-2-5-flash | $0.30 | $2.50 | $0.03 | 1.05M |
+| databricks-gemini-2-5-pro | $1.25 | $10.00 | $0.12 | 1.05M |
+| databricks-gemini-3-1-flash-lite | $0.31 | $1.88 | $0.03 | 1.05M |
+| databricks-gemini-3-1-pro | $2.50 | $15.00 | $0.25 | 1.05M |
+| databricks-gemini-3-5-flash | $1.88 | $11.25 | $0.19 | 1.05M |
+| databricks-gemini-3-5-flash-lite | $0.37 | $3.13 | $0.04 | 1.05M |
+| databricks-gemini-3-6-flash | $1.88 | $9.38 | $0.19 | 1.05M |
+| databricks-gemini-3-flash | $0.63 | $3.75 | $0.06 | 1.05M |
+| databricks-gemini-3-pro | $2.50 | $15.00 | $0.25 | 1.05M |
+| databricks-gemma-3-12b | $0.15 | $0.50 | $0.15 | 128K |
+| databricks-glm-5-2 | $1.40 | $4.40 | $0.26 | 1M |
+| databricks-glm-5-3 | $1.40 | $4.40 | $0.26 | 1.05M |
+| databricks-glm-5-3-flash | $0.15 | $0.50 | $0.03 | 1.05M |
+| databricks-gpt-5 | $1.25 | $10.00 | $0.13 | 272K |
+| databricks-gpt-5-1 | $1.25 | $10.00 | $0.13 | 272K |
+| databricks-gpt-5-2 | $1.75 | $14.00 | $0.18 | 272K |
+| databricks-gpt-5-3-codex | $1.75 | $14.00 | $0.18 | 272K |
+| databricks-gpt-5-4 | $2.50 | $15.00 | $0.25 | 922K |
+| databricks-gpt-5-4-mini | $0.75 | $4.50 | $0.07 | 272K |
+| databricks-gpt-5-4-nano | $0.20 | $1.25 | $0.02 | 272K |
+| databricks-gpt-5-5 | $5.00 | $30.00 | $0.50 | 922K |
+| databricks-gpt-5-5-pro | $30.00 | $180.00 | $30.00 | 922K |
+| databricks-gpt-5-6-luna | $1.00 | $6.00 | $0.10 | 922K |
+| databricks-gpt-5-6-sol | $4.00 | $20.00 | $0.40 | 922K |
+| databricks-gpt-5-6-terra | $2.50 | $15.00 | $0.25 | 922K |
+| databricks-gpt-5-mini | $0.25 | $2.00 | $0.02 | 272K |
+| databricks-gpt-5-nano | $0.05 | $0.40 | $0.00497 | 272K |
+| databricks-gpt-oss-20b | $0.07 | $0.30 | $0.07 | 131.07K |
+| databricks-gpt-oss-120b | $0.15 | $0.60 | $0.15 | 131.07K |
+| databricks-grok-4-6 | $2.50 | $7.50 | $0.63 | 500K |
+| databricks-gte-large-en | $0.13 | $0.00 | $0.13 | 8.19K |
+| databricks-inkling | $1.00 | $4.05 | $0.17 | 1M |
+| databricks-kimi-k3 | $3.00 | $15.00 | $0.30 | 1M |
+| databricks-llama-4-maverick | $0.50 | $1.50 | $0.50 | 128K |
+| databricks-meta-llama-3-1-8b-instruct | $0.15 | $0.45 | $0.15 | 200K |
+| databricks-meta-llama-3-3-70b-instruct | $0.50 | $1.50 | $0.50 | 128K |
+| databricks-openjev-qwen35-4b | $0.00 | $0.00 | $0.00 | — |
+| databricks-qwen3-embedding-0-6b | $0.02 | $0.00 | $0.02 | 32.77K |
+| databricks-qwen3-next-80b-a3b-instruct | $0.15 | $1.20 | $0.15 | — |
+| databricks-qwen35-122b-a10b | $0.22 | $2.20 | $0.22 | 262.14K |
 
 ## deepinfra
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| claude-opus-5 | 5.000000 | 25.000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Qwen-32B | 0.27000000 | 0.27000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-0528-Turbo | 1.000000 | 3.000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3 | 0.32000000 | 0.89000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-4-5 | 1.000000 | 5.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Turbo | 1.000000 | 3.000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3.1 | 0.25000000 | 0.95000000 | 0.216000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-4-sonnet | 3.3000000 | 16.5000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-8 | 5.000000 | 25.000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-0528 | 0.5000000 | 2.15000000 | 0.4000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-4-opus | 16.5000000 | 82.5000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5 | 2.000000 | 10.00000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1 | 0.7000000 | 2.4000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5 | 10.00000 | 50.00000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-6 | 3.000000 | 15.000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3-0324 | 0.24000000 | 0.9000000 | 0.135000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-7 | 5.000000 | 25.000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-7-sonnet-latest | 3.3000000 | 16.5000000 | 0.33000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Llama-70B | 0.2000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31B-it-turbo | 0.09000000 | 0.34000000 | 0.05000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.2 | 0.75000000 | 2.4000000 | 0.14000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Flash-0731 | 0.08000000 | 0.18000000 | 0.016000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Pro-0813 | 1.3000000 | 2.6000000 | 0.1000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-3-4b-it | 0.05000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.7-flash | 0.75000000 | 3.75000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash | 0.3000000 | 2.5000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| L3.1-70B-Euryale-v2.2 | 0.85000000 | 0.85000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Hermes-3-Llama-3.1-70B | 0.7000000 | 0.7000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-3-27b-it | 0.08000000 | 0.16000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b-Ultra | 0.2000000 | 0.95000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| L3.3-70B-Euryale-v2.3 | 0.65000000 | 0.75000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-3-12b-it | 0.05000000 | 0.15000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-E4B-it | 0.02000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31B-it-Ultra | 0.27000000 | 0.76000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-pro | 2.000000 | 12.000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Inkling | 0.95000000 | 4.05000000 | 0.16000000 | 524288 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.037000000 | 0.17000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-26B-A4B-it | 0.07000000 | 0.34000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K3 | 2.85000000 | 14.25000000 | 0.285000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-lite | 0.25000000 | 1.5000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Hermes-3-Llama-3.1-405B | 1.000000 | 1.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b | 0.03000000 | 0.14000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Flash | 0.09000000 | 0.18000000 | 0.018000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-4.7 | 0.4000000 | 1.75000000 | 0.08000000 | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5 | 0.6000000 | 2.08000000 | 0.12000000 | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-4.6 | 0.5000000 | 2.000000 | 0.1000000 | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.7-Code | 0.68000000 | 3.4000000 | 0.136000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2-Instruct-0905 | 0.5000000 | 2.000000 | 0.4000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31B-it | 0.13000000 | 0.38000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-4.5 | 0.4000000 | 1.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-flash | 1.5000000 | 9.000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2-Instruct | 0.5000000 | 2.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3.1-Terminus | 0.27000000 | 1.000000 | 0.216000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3.2 | 0.26000000 | 0.38000000 | 0.13000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Pro | 1.3000000 | 2.6000000 | 0.1000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.1 | 1.05000000 | 3.5000000 | 0.205000000 | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.6 | 0.75000000 | 3.5000000 | 0.15000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.5 | 0.45000000 | 2.25000000 | 0.07000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Inkling-Small | 0.45000000 | 1.2000000 | 0.1000000 | 524288 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b-Turbo | 0.15000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-pro | 1.25000000 | 10.00000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-4.7-Flash | 0.06000000 | 0.4000000 | 0.01000000 | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Hy3 | 0.14000000 | 0.58000000 | 0.035000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral-Nemo-Instruct-2407 | 0.019000000 | 0.03000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MythoMax-L2-13b | 0.4000000 | 0.4000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-235B-A22B-Instruct-2507 | 0.09000000 | 0.55000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-70B-Instruct | 0.4000000 | 0.4000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-72B-Instruct | 0.36000000 | 0.4000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA-Nemotron-3-Ultra-550B-A55B | 0.5000000 | 2.2000000 | 0.1000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-8B-Instruct | 0.03000000 | 0.05000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral-Small-3.2-24B-Instruct-2506 | 0.075000000 | 0.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| phi-4 | 0.07000000 | 0.14000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-8B-Instruct-Turbo | 0.02000000 | 0.04000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.2-3B-Instruct | 0.02000000 | 0.02000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.7-Turbo | 0.38000000 | 1.7000000 | 0.07000000 | 196608 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3-8B-Instruct | 0.03000000 | 0.06000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-14B | 0.12000000 | 0.24000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.3-70B-Instruct-Turbo | 0.1000000 | 0.32000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| L3-8B-Lunaris-v1-Turbo | 0.04000000 | 0.05000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA-Nemotron-3.5-Lightning | 0.08000000 | 0.2000000 | 0.04000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA-Nemotron-3-Super-120B-A12B | 0.085000000 | 0.4000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mixtral-8x7B-Instruct-v0.1 | 0.4000000 | 0.4000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-235B-A22B-Thinking-2507 | 0.3000000 | 2.9000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.7 | 0.25000000 | 1.000000 | 0.05000000 | 196608 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-235B-A22B | 0.18000000 | 0.54000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| olmOCR-7B-0725-FP8 | 0.27000000 | 1.5000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Nemotron-Content-Safety-3.5 | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-Guard-3-8B | 0.055000000 | 0.055000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA-Nemotron-Nano-9B-v2 | 0.04000000 | 0.16000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-7B-Instruct | 0.04000000 | 0.1000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M3 | 0.28000000 | 1.1000000 | 0.056000000 | 524288 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.2-11B-Vision-Instruct | 0.049000000 | 0.049000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Muse-Glimmer-30B | 0.3000000 | 1.2000000 | 0.04000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-4-Maverick-17B-128E-Instruct-FP8 | 0.2000000 | 0.8000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.1-Nemotron-70B-Instruct | 0.6000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-VL-32B-Instruct | 0.2000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-70B-Instruct-Turbo | 0.4000000 | 0.4000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Ling-3.0-flash | 0.06000000 | 0.18000000 | 0.012000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-4-Scout-17B-16E-Instruct | 0.1000000 | 0.3000000 | — | 327680 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral-Small-24B-Instruct-2501 | 0.05000000 | 0.08000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-Guard-4-12B | 0.18000000 | 0.18000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiMo-V2.5 | 0.4000000 | 2.000000 | 0.08000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Nemotron-3-Nano-30B-A3B | 0.05000000 | 0.2000000 | 0.025000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.3-Nemotron-Super-49B-v1.5 | 0.1000000 | 0.4000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiMo-V2.5-Pro | 1.000000 | 3.000000 | 0.2000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.3-70B-Instruct | 0.23000000 | 0.4000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| WizardLM-2-8x22B | 0.48000000 | 0.48000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Next-80B-A3B-Instruct | 0.09000000 | 1.1000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.5-27B | 0.26000000 | 2.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-32B | 0.08000000 | 0.28000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-VL-235B-A22B-Instruct | 0.2000000 | 0.88000000 | 0.11000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.8-2.4T-A95B | 2.000000 | 6.000000 | 0.2000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.5-122B-A10B | 0.29000000 | 2.4000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Max | 1.2000000 | 6.000000 | 0.24000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Seed-2.0-mini | 0.1000000 | 0.4000000 | 0.02000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-30B-A3B | 0.12000000 | 0.5000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Max-Thinking | 1.2000000 | 6.000000 | 0.24000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.6-27B | 0.32000000 | 3.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.7-Max | 2.5000000 | 7.5000000 | 0.5000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Seed-2.0-code | 0.5000000 | 3.000000 | 0.1000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Seed-2.0-pro | 0.5000000 | 3.000000 | 0.1000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.6-35B-A3B | 0.1000000 | 0.95000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.5-397B-A17B | 0.45000000 | 3.000000 | 0.22000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Seed-1.8 | 0.25000000 | 2.000000 | 0.05000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Coder-480B-A35B-Instruct | 0.4000000 | 1.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Next-80B-A3B-Thinking | 0.14000000 | 1.4000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.5-9B | 0.1000000 | 0.15000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Step-3.7-Flash | 0.2000000 | 1.15000000 | 0.04000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| QwQ-32B | 0.15000000 | 0.4000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-VL-30B-A3B-Instruct | 0.15000000 | 0.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.5-35B-A3B | 0.14000000 | 1.000000 | 0.05000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Coder-480B-A35B-Instruct-Turbo | 0.3000000 | 1.000000 | 0.1000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.8-Max | 1.65000000 | 4.951000000 | 0.206000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.8-27B | 0.4000000 | 3.000000 | 0.04000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| claude-3-7-sonnet-latest | $3.30 | $16.50 | $0.33 | 200K |
+| claude-4-opus | $16.50 | $82.50 | — | 200K |
+| claude-4-sonnet | $3.30 | $16.50 | — | 200K |
+| claude-fable-5 | $10.00 | $50.00 | — | 1M |
+| claude-haiku-4-5 | $1.00 | $5.00 | — | 200K |
+| claude-opus-4-7 | $5.00 | $25.00 | — | 1M |
+| claude-opus-4-8 | $5.00 | $25.00 | — | 1M |
+| claude-opus-5 | $5.00 | $25.00 | — | 1M |
+| claude-sonnet-4-6 | $3.00 | $15.00 | — | 1M |
+| claude-sonnet-5 | $2.00 | $10.00 | — | 1M |
+| deepseek-r1 | $0.70 | $2.40 | — | 163.84K |
+| deepseek-r1-0528 | $0.50 | $2.15 | $0.40 | 163.84K |
+| deepseek-r1-0528-turbo | $1.00 | $3.00 | — | 32.77K |
+| deepseek-r1-distill-llama-70b | $0.20 | $0.60 | — | 131.07K |
+| deepseek-r1-distill-qwen-32b | $0.27 | $0.27 | — | 131.07K |
+| deepseek-r1-turbo | $1.00 | $3.00 | — | 40.96K |
+| deepseek-v3 | $0.32 | $0.89 | — | 163.84K |
+| deepseek-v3-0324 | $0.24 | $0.90 | $0.14 | 163.84K |
+| deepseek-v3.1 | $0.25 | $0.95 | $0.22 | 163.84K |
+| deepseek-v3.1-terminus | $0.27 | $1.00 | $0.22 | 163.84K |
+| deepseek-v3.2 | $0.26 | $0.38 | $0.13 | 163.84K |
+| deepseek-v4-flash | $0.09 | $0.18 | $0.02 | 1.05M |
+| deepseek-v4-flash-0731 | $0.08 | $0.18 | $0.02 | 1.05M |
+| deepseek-v4-pro | $1.30 | $2.60 | $0.10 | 1.05M |
+| deepseek-v4-pro-0813 | $1.30 | $2.60 | $0.10 | 1.05M |
+| gemini-2.5-flash | $0.30 | $2.50 | — | 1M |
+| gemini-2.5-pro | $1.25 | $10.00 | — | 1M |
+| gemini-3.1-flash-lite | $0.25 | $1.50 | — | 1M |
+| gemini-3.1-pro | $2.00 | $12.00 | — | 1M |
+| gemini-3.5-flash | $1.50 | $9.00 | — | 1M |
+| gemini-3.7-flash | $0.75 | $3.75 | — | 1M |
+| gemma-3-4b-it | $0.05 | $0.10 | — | 131.07K |
+| gemma-3-12b-it | $0.05 | $0.15 | — | 131.07K |
+| gemma-3-27b-it | $0.08 | $0.16 | — | 131.07K |
+| gemma-4-26b-a4b-it | $0.07 | $0.34 | — | 262.14K |
+| gemma-4-31b-it | $0.13 | $0.38 | — | 262.14K |
+| gemma-4-31b-it-turbo | $0.09 | $0.34 | $0.05 | 262.14K |
+| gemma-4-31b-it-ultra | $0.27 | $0.76 | — | 131.07K |
+| gemma-4-e4b-it | $0.02 | $0.10 | — | 131.07K |
+| glm-4.5 | $0.40 | $1.60 | — | 131.07K |
+| glm-4.6 | $0.50 | $2.00 | $0.10 | 202.75K |
+| glm-4.7 | $0.40 | $1.75 | $0.08 | 202.75K |
+| glm-4.7-flash | $0.06 | $0.40 | $0.01 | 202.75K |
+| glm-5 | $0.60 | $2.08 | $0.12 | 202.75K |
+| glm-5.1 | $1.05 | $3.50 | $0.20 | 202.75K |
+| glm-5.2 | $0.75 | $2.40 | $0.14 | 1.05M |
+| gpt-oss-20b | $0.03 | $0.14 | — | 131.07K |
+| gpt-oss-120b | $0.04 | $0.17 | — | 131.07K |
+| gpt-oss-120b-turbo | $0.15 | $0.60 | — | 131.07K |
+| gpt-oss-120b-ultra | $0.20 | $0.95 | — | 131.07K |
+| hermes-3-llama-3.1-70b | $0.70 | $0.70 | — | 131.07K |
+| hermes-3-llama-3.1-405b | $1.00 | $1.00 | — | 131.07K |
+| hy3 | $0.14 | $0.58 | $0.04 | 262.14K |
+| inkling | $0.95 | $4.05 | $0.16 | 524.29K |
+| inkling-small | $0.45 | $1.20 | $0.10 | 524.29K |
+| kimi-k2-instruct | $0.50 | $2.00 | — | 131.07K |
+| kimi-k2-instruct-0905 | $0.50 | $2.00 | $0.40 | 262.14K |
+| kimi-k2.5 | $0.45 | $2.25 | $0.07 | 262.14K |
+| kimi-k2.6 | $0.75 | $3.50 | $0.15 | 262.14K |
+| kimi-k2.7-code | $0.68 | $3.40 | $0.14 | 262.14K |
+| kimi-k3 | $2.85 | $14.25 | $0.28 | 1.05M |
+| l3-8b-lunaris-v1-turbo | $0.04 | $0.05 | — | 8.19K |
+| l3.1-70b-euryale-v2.2 | $0.85 | $0.85 | — | 131.07K |
+| l3.3-70b-euryale-v2.3 | $0.65 | $0.75 | — | 131.07K |
+| ling-3.0-flash | $0.06 | $0.18 | $0.01 | 131.07K |
+| llama-3.1-nemotron-70b-instruct | $0.60 | $0.60 | — | 131.07K |
+| llama-3.2-3b-instruct | $0.02 | $0.02 | — | 131.07K |
+| llama-3.2-11b-vision-instruct | $0.05 | $0.05 | — | 131.07K |
+| llama-3.3-70b-instruct | $0.23 | $0.40 | — | 131.07K |
+| llama-3.3-70b-instruct-turbo | $0.10 | $0.32 | — | 131.07K |
+| llama-3.3-nemotron-super-49b-v1.5 | $0.10 | $0.40 | — | 131.07K |
+| llama-4-maverick-17b-128e-instruct-fp8 | $0.20 | $0.80 | — | 1.05M |
+| llama-4-scout-17b-16e-instruct | $0.10 | $0.30 | — | 327.68K |
+| llama-guard-3-8b | $0.06 | $0.06 | — | 131.07K |
+| llama-guard-4-12b | $0.18 | $0.18 | — | 163.84K |
+| meta-llama-3-8b-instruct | $0.03 | $0.06 | — | 8.19K |
+| meta-llama-3.1-8b-instruct | $0.03 | $0.05 | — | 131.07K |
+| meta-llama-3.1-8b-instruct-turbo | $0.02 | $0.04 | — | 131.07K |
+| meta-llama-3.1-70b-instruct | $0.40 | $0.40 | — | 131.07K |
+| meta-llama-3.1-70b-instruct-turbo | $0.40 | $0.40 | — | 131.07K |
+| mimo-v2.5 | $0.40 | $2.00 | $0.08 | 262.14K |
+| mimo-v2.5-pro | $1.00 | $3.00 | $0.20 | 1.05M |
+| minimax-m2.7 | $0.25 | $1.00 | $0.05 | 196.61K |
+| minimax-m2.7-turbo | $0.38 | $1.70 | $0.07 | 196.61K |
+| minimax-m3 | $0.28 | $1.10 | $0.06 | 524.29K |
+| mistral-nemo-instruct-2407 | $0.02 | $0.03 | — | 131.07K |
+| mistral-small-3.2-24b-instruct-2506 | $0.08 | $0.20 | — | 128K |
+| mistral-small-24b-instruct-2501 | $0.05 | $0.08 | — | 32.77K |
+| mixtral-8x7b-instruct-v0.1 | $0.40 | $0.40 | — | 32.77K |
+| muse-glimmer-30b | $0.30 | $1.20 | $0.04 | 131.07K |
+| mythomax-l2-13b | $0.40 | $0.40 | — | 4.1K |
+| nemotron-3-nano-30b-a3b | $0.05 | $0.20 | $0.02 | 262.14K |
+| nemotron-content-safety-3.5 | $0.20 | $0.20 | — | 131.07K |
+| nvidia-nemotron-3-super-120b-a12b | $0.08 | $0.40 | — | 262.14K |
+| nvidia-nemotron-3-ultra-550b-a55b | $0.50 | $2.20 | $0.10 | 262.14K |
+| nvidia-nemotron-3.5-lightning | $0.08 | $0.20 | $0.04 | 262.14K |
+| nvidia-nemotron-nano-9b-v2 | $0.04 | $0.16 | — | 131.07K |
+| olmocr-7b-0725-fp8 | $0.27 | $1.50 | — | 16.38K |
+| phi-4 | $0.07 | $0.14 | — | 16.38K |
+| qwen2.5-7b-instruct | $0.04 | $0.10 | — | 32.77K |
+| qwen2.5-72b-instruct | $0.36 | $0.40 | — | 32.77K |
+| qwen2.5-vl-32b-instruct | $0.20 | $0.60 | — | 128K |
+| qwen3-14b | $0.12 | $0.24 | — | 40.96K |
+| qwen3-30b-a3b | $0.12 | $0.50 | — | 40.96K |
+| qwen3-32b | $0.08 | $0.28 | — | 40.96K |
+| qwen3-235b-a22b | $0.18 | $0.54 | — | 40.96K |
+| qwen3-235b-a22b-instruct-2507 | $0.09 | $0.55 | — | 262.14K |
+| qwen3-235b-a22b-thinking-2507 | $0.30 | $2.90 | — | 262.14K |
+| qwen3-coder-480b-a35b-instruct | $0.40 | $1.60 | — | 262.14K |
+| qwen3-coder-480b-a35b-instruct-turbo | $0.30 | $1.00 | $0.10 | 262.14K |
+| qwen3-max | $1.20 | $6.00 | $0.24 | 256K |
+| qwen3-max-thinking | $1.20 | $6.00 | $0.24 | 256K |
+| qwen3-next-80b-a3b-instruct | $0.09 | $1.10 | — | 262.14K |
+| qwen3-next-80b-a3b-thinking | $0.14 | $1.40 | — | 262.14K |
+| qwen3-vl-30b-a3b-instruct | $0.15 | $0.60 | — | 262.14K |
+| qwen3-vl-235b-a22b-instruct | $0.20 | $0.88 | $0.11 | 262.14K |
+| qwen3.5-9b | $0.10 | $0.15 | — | 262.14K |
+| qwen3.5-27b | $0.26 | $2.60 | — | 262.14K |
+| qwen3.5-35b-a3b | $0.14 | $1.00 | $0.05 | 262.14K |
+| qwen3.5-122b-a10b | $0.29 | $2.40 | — | 262.14K |
+| qwen3.5-397b-a17b | $0.45 | $3.00 | $0.22 | 262.14K |
+| qwen3.6-27b | $0.32 | $3.20 | — | 262.14K |
+| qwen3.6-35b-a3b | $0.10 | $0.95 | — | 262.14K |
+| qwen3.7-max | $2.50 | $7.50 | $0.50 | 256K |
+| qwen3.8-2.4t-a95b | $2.00 | $6.00 | $0.20 | 262.14K |
+| qwen3.8-27b | $0.40 | $3.00 | $0.04 | 262.14K |
+| qwen3.8-max | $1.65 | $4.95 | $0.21 | 256K |
+| qwq-32b | $0.15 | $0.40 | — | 131.07K |
+| seed-1.8 | $0.25 | $2.00 | $0.05 | 256K |
+| seed-2.0-code | $0.50 | $3.00 | $0.10 | 256K |
+| seed-2.0-mini | $0.10 | $0.40 | $0.02 | 256K |
+| seed-2.0-pro | $0.50 | $3.00 | $0.10 | 256K |
+| step-3.7-flash | $0.20 | $1.15 | $0.04 | 262.14K |
+| wizardlm-2-8x22b | $0.48 | $0.48 | — | 65.54K |
 
 ## deepseek
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| deepseek-coder | 0.14000000 | 0.28000000 | 0.014000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1 | 0.55000000 | 2.19000000 | 0.14000000 | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek: DeepSeek V3 0324 | 0.29000000 | 1.14000000 | 0.11000000 | 163840 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek: DeepSeek V3.1 Terminus | 0.27000000 | 1.000000 | — | 163840 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek: R1 0528 | 0.5000000 | 2.15000000 | 0.35000000 | 163840 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek: DeepSeek V3.1 | 0.25000000 | 0.95000000 | 0.13000000 | 163840 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-reasoner | 0.28000000 | 0.42000000 | 0.028000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-chat | 0.28000000 | 0.42000000 | 0.028000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-flash | 0.3000000 | 1.2000000 | 0.006000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3 | 0.27000000 | 1.1000000 | 0.07000000 | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash | 0.3000000 | 1.2000000 | 0.006000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash-vision-exp | 0.3000000 | 1.2000000 | 0.006000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek: DeepSeek V4.1 Flash | 0.3000000 | 1.2000000 | 0.006000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek: DeepSeek V4 Pro 0813 | 0.66000000 | 1.98000000 | 0.022000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek: DeepSeek V4 Flash 0731 | 0.018000000 | 0.64000000 | 0.018000000 | 1048576 | aggregator | 2026-10-11T20:41:46.105503+00:00 | 
-
-| deepseek-v3.2 | 0.28000000 | 0.4000000 | 0.028000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek: DeepSeek V3.2 Exp | 0.27000000 | 0.41000000 | — | 163840 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro | 1.32000000 | 3.96000000 | 0.044000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek: DeepSeek V4.1 Flash (batch) | 0.112000000 | 0.336000000 | 0.00336000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek flash latest | $0.03 | $0.14 | $0.000696 | 1.05M |
+| deepseek pro latest | $0.21 | $0.63 | $0.006678 | 1.05M |
+| deepseek v3 0324 | $0.29 | $1.14 | $0.11 | 163.84K |
+| deepseek v3.1 | $0.25 | $0.95 | $0.13 | 163.84K |
+| deepseek v3.1 terminus | $0.27 | $1.00 | — | 163.84K |
+| deepseek v3.2 exp | $0.27 | $0.41 | — | 163.84K |
+| deepseek v4 flash 0731 | $0.02 | $0.64 | $0.02 | 1.05M |
+| deepseek v4 flash latest | $0.02 | $0.64 | $0.02 | 1.05M |
+| deepseek v4 pro 0813 | $0.66 | $1.98 | $0.02 | 1.05M |
+| deepseek v4.1 flash | $0.30 | $1.20 | $0.006 | 1.05M |
+| deepseek v4.1 flash (batch) | $0.11 | $0.34 | $0.00336 | 1.05M |
+| deepseek-chat | $0.28 | $0.42 | $0.03 | 131.07K |
+| deepseek-coder | $0.14 | $0.28 | $0.01 | 128K |
+| deepseek-flash | $0.30 | $1.20 | $0.006 | 1M |
+| deepseek-r1 | $0.55 | $2.19 | $0.14 | 65.54K |
+| deepseek-reasoner | $0.28 | $0.42 | $0.03 | 131.07K |
+| deepseek-v3 | $0.27 | $1.10 | $0.07 | 65.54K |
+| deepseek-v3.2 | $0.28 | $0.40 | $0.03 | 163.84K |
+| deepseek-v4-flash | $0.30 | $1.20 | $0.006 | 1M |
+| deepseek-v4-flash-vision-exp | $0.30 | $1.20 | $0.006 | 1M |
+| deepseek-v4-pro | $1.32 | $3.96 | $0.04 | 1M |
+| r1 0528 | $0.50 | $2.15 | $0.35 | 163.84K |
 
 ## dots-studio
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Dots Studio: Dots3-Note Preview (free) | 0 | 0 | — | 512000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| dots studio: dots3-note preview (free) | $0.00 | $0.00 | — | 512K |
 
 ## fal_ai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| query | 0.4000000 | 3.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| query | $0.40 | $3.50 | — | — |
 
 ## fireworks_ai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Fireworks: Ember-1 | 3.000000 | 15.000000 | 0.3000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-70b | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-34b | 0.9000000 | 0.9000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-34b-python | 0.9000000 | 0.9000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-7b | 0.2000000 | 0.2000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-qwen-1p5-7b | 0.2000000 | 0.2000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-13b | 0.2000000 | 0.2000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-7b-instruct | 0.2000000 | 0.2000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-13b-instruct | 0.2000000 | 0.2000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-7b-python | 0.2000000 | 0.2000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-13b-python | 0.2000000 | 0.2000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-70b-instruct | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codegemma-2b | 0.1000000 | 0.1000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cogito-v1-preview-llama-3b | 0.1000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cogito-v1-preview-llama-70b | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-70b-python | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cogito-v1-preview-llama-8b | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cogito-671b-v2-p1 | 1.2000000 | 1.2000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| chronos-hermes-13b-v2 | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| code-llama-34b-instruct | 0.9000000 | 0.9000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codegemma-7b | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-1b-base | 0.1000000 | 0.1000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v2p5 | 1.2000000 | 1.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-qwen-7b | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-v2-lite-instruct | 0.5000000 | 0.5000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-7b-instruct-v1p5 | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-prover-v2 | 1.2000000 | 1.2000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-v2-instruct | 1.2000000 | 1.2000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-33b-instruct | 0.9000000 | 0.9000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-qwen-32b | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cogito-v1-preview-qwen-14b | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-llama-70b | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-7b-base | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-qwen-14b | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3p1-terminus | 0.56000000 | 1.68000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v2-lite-chat | 0.5000000 | 0.5000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1 | 3.000000 | 8.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-qwen-1p5b | 0.1000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-basic | 0.55000000 | 2.19000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-v2-lite-base | 0.5000000 | 0.5000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-0528 | 3.000000 | 8.000000 | — | 160000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3p1 | 0.56000000 | 1.68000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-7b-base-v1p5 | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-0528-distill-qwen3-8b | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-llama-8b | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3 | 0.9000000 | 0.9000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cogito-v1-preview-qwen-32b | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| dbrx-instruct | 1.2000000 | 1.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3-0324 | 0.9000000 | 0.9000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-7b | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3p2 | 0.56000000 | 1.68000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4p1-flash | 0.3000000 | 1.2000000 | 0.006000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| firefunction-v1 | 0.5000000 | 0.5000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-2b-it | 0.1000000 | 0.1000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| fireworks-ai-56b-to-176b | 1.2000000 | 1.2000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ember-1 | 3.000000 | 15.000000 | 0.3000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro-0813 | 1.32000000 | 3.96000000 | 0.044000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| fireworks-asr-v2 | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| devstral-small-2505 | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| fireworks-ai-default | 0.0 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| flux-1-dev-controlnet-union | 0.001000000 | 0.001000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| firesearch-ocr-v6 | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| fare-20b | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro | 1.2000000 | 1.2000000 | 0.6000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| dolphin-2-9-2-qwen2-72b | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ernie-4p5-21b-a3b-pt | 0.1000000 | 0.1000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash-0731 | 0.22000000 | 0.66000000 | 0.007000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash-vision-exp | 0.22000000 | 0.66000000 | 0.007000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| flux-kontext-pro | 0.04000000 | 0.04000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| fireworks-ai-4.1b-to-16b | 0.2000000 | 0.2000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| dobby-mini-unhinged-plus-llama-3-1-8b | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| fireworks-ai-above-16b | 0.9000000 | 0.9000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| flux-kontext-max | 0.08000000 | 0.08000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| firefunction-v2 | 0.9000000 | 0.9000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| flux-1-dev-fp8 | 0.0005000000 | 0.0005000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| flux-1-dev | 0.1000000 | 0.1000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| firellava-13b | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| dobby-unhinged-llama-3-3-70b-new | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-3-27b-it | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| fireworks-asr-large | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| dolphin-2p6-mixtral-8x7b | 0.5000000 | 0.5000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| flux-1-schnell | 0.1000000 | 0.1000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4p1-flash-us | 0.45000000 | 1.8000000 | 0.009000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| flux-1-schnell-fp8 | 0.00035000000 | 0.00035000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| fireworks-ai-moe-up-to-56b | 0.5000000 | 0.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ernie-4p5-300b-a47b-pt | 0.1000000 | 0.1000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash | 0.14000000 | 0.28000000 | 0.028000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| fireworks-ai-up-to-4b | 0.1000000 | 0.1000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4p5v | 1.2000000 | 1.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| hermes-2-pro-mistral-7b | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5p1 | 1.4000000 | 4.4000000 | 0.26000000 | 202800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5p1-fast | 2.8000000 | 8.8000000 | 0.52000000 | 202800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5p3 | 1.4000000 | 4.4000000 | 0.26000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kat-dev-32b | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2-instruct | 0.6000000 | 2.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4p6 | 0.55000000 | 2.19000000 | — | 202800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4p5-air | 0.22000000 | 0.88000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| internvl3-78b | 0.9000000 | 0.9000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma2-9b-it | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| internvl3-8b | 0.2000000 | 0.2000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5p2-fast | 2.1000000 | 6.6000000 | 0.21000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| japanese-stable-diffusion-xl | 0.00013000000 | 0.00013000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b | 0.07000000 | 0.3000000 | 0.035000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| inkling | 1.000000 | 4.05000000 | 0.17000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kat-coder | 0.9000000 | 0.9000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-7b-it | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5p3-flash | 0.15000000 | 0.5000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4p5 | 0.55000000 | 2.19000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kat-dev-72b-exp | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5p3-us | 2.1000000 | 6.6000000 | 0.39000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5p3-fast | 2.1000000 | 6.6000000 | 0.39000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5p2-fast-us | 2.1000000 | 6.6000000 | 0.21000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2-instruct-0905 | 0.6000000 | 2.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4p7 | 0.6000000 | 2.2000000 | 0.3000000 | 202800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2p5 | 0.6000000 | 3.000000 | 0.1000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-safeguard-20b | 0.5000000 | 0.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| internvl3-38b | 0.9000000 | 0.9000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2-thinking | 0.6000000 | 2.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.15000000 | 0.6000000 | 0.015000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-safeguard-120b | 1.2000000 | 1.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5p2 | 1.4000000 | 4.4000000 | 0.14000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5p3-flash-us | 0.225000000 | 0.75000000 | 0.045000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p1-nemotron-70b-instruct | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama4-maverick-instruct-basic | 0.22000000 | 0.88000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m2 | 0.3000000 | 1.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k3 | 3.000000 | 15.000000 | 0.3000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p2-3b-instruct | 0.1000000 | 0.1000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3-70b-instruct | 0.9000000 | 0.9000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v2-13b | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p1-405b-instruct-long | 0.1000000 | 0.1000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p2-1b-instruct | 0.1000000 | 0.1000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llava-yi-34b | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2p6 | 0.95000000 | 4.000000 | 0.16000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2p7-code | 0.95000000 | 4.000000 | 0.19000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k3-fast | 4.5000000 | 22.5000000 | 0.45000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3-8b-instruct-hf | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v2-7b | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v2-7b-chat | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v2-70b-chat | 0.9000000 | 0.9000000 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m1-80k | 0.1000000 | 0.1000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p2-11b-vision-instruct | 0.2000000 | 0.2000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p3-70b-instruct | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p1-70b-instruct | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3-70b-instruct-hf | 0.9000000 | 0.9000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-guard-2-8b | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m2p1 | 0.3000000 | 1.2000000 | 0.03000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k3-us | 4.5000000 | 22.5000000 | 0.45000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p1-70b-instruct-1b | 0.1000000 | 0.1000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p2-3b | 0.1000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-guard-3-1b | 0.1000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p1-405b-instruct | 3.000000 | 3.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p2-90b-vision-instruct | 0.9000000 | 0.9000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2p7-code-fast | 1.9000000 | 8.000000 | 0.38000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v2-70b | 0.1000000 | 0.1000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p1-8b-instruct | 0.1000000 | 0.1000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v2-13b-chat | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3p2-1b | 0.1000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llamaguard-7b | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-guard-3-8b | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2p6-fast | 2.000000 | 8.000000 | 0.3000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama4-scout-instruct-basic | 0.15000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-v3-8b | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nous-hermes-2-mixtral-8x7b-dpo | 0.5000000 | 0.5000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-3-3b-instruct-2512 | 0.1000000 | 0.1000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7b-instruct-4k | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nous-hermes-llama2-13b | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nemotron-lightning-3p5-30b-a3b | 0.05000000 | 0.2000000 | 0.01000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-nemo-base-2407 | 0.2000000 | 0.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x7b-instruct-hf | 0.5000000 | 0.5000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x22b | 1.2000000 | 1.2000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nemotron-nano-v2-12b-vl | 0.1000000 | 0.1000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openorca-7b | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x7b-instruct | 0.5000000 | 0.5000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x22b-instruct-hf | 1.2000000 | 1.2000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nvidia-nemotron-nano-12b-v2 | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| phi-3-mini-128k-instruct | 0.1000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| phi-3-vision-128k-instruct | 0.2000000 | 0.2000000 | — | 32064 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nemotron-3-ultra-nvfp4 | 0.6000000 | 2.4000000 | 0.12000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nous-hermes-llama2-7b | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nous-hermes-llama2-70b | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openhermes-2p5-mistral-7b | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x7b | 0.5000000 | 0.5000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mythomax-l2-13b | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| phi-2-3b | 0.1000000 | 0.1000000 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| muse-glimmer-30b | 0.35000000 | 1.5000000 | 0.04000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7b-instruct-v3 | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small-24b-instruct-2501 | 0.9000000 | 0.9000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openhermes-2-mistral-7b | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7b-v0p2 | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x22b-instruct | 1.2000000 | 1.2000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nvidia-nemotron-nano-9b-v2 | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-nemo-instruct-2407 | 0.2000000 | 0.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-3-fp8 | 1.2000000 | 1.2000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7b-instruct-v0p2 | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-3-14b-instruct-2512 | 0.2000000 | 0.2000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7b | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| phind-code-llama-34b-python-v1 | 0.9000000 | 0.9000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-3-8b-instruct-2512 | 0.2000000 | 0.2000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openchat-3p5-0106-7b | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nous-hermes-2-yi-34b | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nous-capybara-7b-v1p9 | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m3 | 0.3000000 | 1.2000000 | 0.06000000 | 512000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-math-72b-instruct | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-32b-instruct-64k | 0.9000000 | 0.9000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-32b-instruct | 0.9000000 | 0.9000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| playground-v2-5-1024px-aesthetic | 0.00013000000 | 0.00013000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2-vl-2b-instruct | 0.1000000 | 0.1000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| phind-code-llama-34b-v2 | 0.9000000 | 0.9000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-32b-instruct-128k | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-7b-instruct | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-72b | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-3b | 0.1000000 | 0.1000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-32b | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-qwq-32b-preview | 0.9000000 | 0.9000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-14b-instruct | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-14b | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2-72b-instruct | 0.9000000 | 0.9000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-vl-3b-instruct | 0.2000000 | 0.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-v2p5-14b-instruct | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-vl-7b-instruct | 0.2000000 | 0.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| playground-v2-1024px-aesthetic | 0.00013000000 | 0.00013000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-0p5b | 0.1000000 | 0.1000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-32b | 0.9000000 | 0.9000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-7b | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-3b-instruct | 0.1000000 | 0.1000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-14b | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-1p5b-instruct | 0.1000000 | 0.1000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-0p5b-instruct | 0.1000000 | 0.1000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-7b-instruct | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2-7b-instruct | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-32b-instruct | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pythia-12b | 0.2000000 | 0.2000000 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-vl-32b-instruct | 0.9000000 | 0.9000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen1p5-72b-chat | 0.9000000 | 0.9000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-1p5b | 0.1000000 | 0.1000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-vl-72b-instruct | 0.9000000 | 0.9000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-v2p5-7b | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-72b-instruct | 0.9000000 | 0.9000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2-vl-72b-instruct | 0.9000000 | 0.9000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-1p5b-instruct | 0.1000000 | 0.1000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-0p5b-instruct | 0.1000000 | 0.1000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2p5-coder-32b-instruct-32k-rope | 0.9000000 | 0.9000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2-vl-7b-instruct | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| phind-code-llama-34b-v1 | 0.9000000 | 0.9000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-235b-a22b-instruct-2507 | 0.22000000 | 0.88000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-1p7b | 0.1000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder-480b-a35b-instruct | 0.45000000 | 1.8000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| stablecode-3b | 0.1000000 | 0.1000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-235b-a22b-instruct | 0.22000000 | 0.88000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rolm-ocr | 0.2000000 | 0.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-4b | 0.2000000 | 0.2000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-235b-a22b-thinking | 0.22000000 | 0.88000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder-30b-a3b-instruct | 0.15000000 | 0.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-0p6b | 0.1000000 | 0.1000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-embedding-4b | 0.0 | 0.0 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-1p7b-fp8-draft-131072 | 0.1000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-32b | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3p8-max | 2.000000 | 6.000000 | 0.25000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-8b-instruct | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder-480b-instruct-bf16 | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwq-32b | 0.9000000 | 0.9000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-embedding-0p6b | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-30b-a3b | 0.15000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| snorkel-mistral-7b-pairrm-dpo | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-embedding-8b | 0.1000000 | 0.0 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3p7-plus | 0.4000000 | 1.6000000 | 0.08000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-30b-a3b-instruct-2507 | 0.5000000 | 0.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-30b-a3b-instruct | 0.15000000 | 0.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-next-80b-a3b-instruct | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-1p7b-fp8-draft | 0.1000000 | 0.1000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-32b-instruct | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| SSD-1B | 0.00013000000 | 0.00013000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-14b | 0.2000000 | 0.2000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| stable-diffusion-xl-1024-v1-0 | 0.00013000000 | 0.00013000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-next-80b-a3b-thinking | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-1p7b-fp8-draft-40960 | 0.1000000 | 0.1000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-4b-instruct-2507 | 0.2000000 | 0.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-235b-a22b | 0.22000000 | 0.88000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-reranker-4b | 0.0 | 0.0 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-235b-a22b-thinking-2507 | 0.22000000 | 0.88000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-reranker-0p6b | 0.0 | 0.0 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-reranker-8b | 0.2000000 | 0.0 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-30b-a3b-thinking | 0.15000000 | 0.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-8b | 0.2000000 | 0.2000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-30b-a3b-thinking-2507 | 0.9000000 | 0.9000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| starcoder-16b | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| starcoder2-15b | 0.2000000 | 0.2000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| zephyr-7b-beta | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| starcoder2-7b | 0.2000000 | 0.2000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| starcoder2-3b | 0.1000000 | 0.1000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| yi-34b-chat | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| toppy-m-7b | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| yi-large | 3.000000 | 3.000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| starcoder-7b | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| yi-34b | 0.9000000 | 0.9000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| yi-34b-200k-capybara | 0.9000000 | 0.9000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| yi-6b | 0.2000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| chronos-hermes-13b-v2 | $0.20 | $0.20 | — | 4.1K |
+| code-llama-7b | $0.20 | $0.20 | — | 16.38K |
+| code-llama-7b-instruct | $0.20 | $0.20 | — | 16.38K |
+| code-llama-7b-python | $0.20 | $0.20 | — | 16.38K |
+| code-llama-13b | $0.20 | $0.20 | — | 16.38K |
+| code-llama-13b-instruct | $0.20 | $0.20 | — | 16.38K |
+| code-llama-13b-python | $0.20 | $0.20 | — | 16.38K |
+| code-llama-34b | $0.90 | $0.90 | — | 16.38K |
+| code-llama-34b-instruct | $0.90 | $0.90 | — | 16.38K |
+| code-llama-34b-python | $0.90 | $0.90 | — | 16.38K |
+| code-llama-70b | $0.90 | $0.90 | — | 4.1K |
+| code-llama-70b-instruct | $0.90 | $0.90 | — | 4.1K |
+| code-llama-70b-python | $0.90 | $0.90 | — | 4.1K |
+| code-qwen-1p5-7b | $0.20 | $0.20 | — | 65.54K |
+| codegemma-2b | $0.10 | $0.10 | — | 8.19K |
+| codegemma-7b | $0.20 | $0.20 | — | 8.19K |
+| cogito-671b-v2-p1 | $1.20 | $1.20 | — | 163.84K |
+| cogito-v1-preview-llama-3b | $0.10 | $0.10 | — | 131.07K |
+| cogito-v1-preview-llama-8b | $0.20 | $0.20 | — | 131.07K |
+| cogito-v1-preview-llama-70b | $0.90 | $0.90 | — | 131.07K |
+| cogito-v1-preview-qwen-14b | $0.20 | $0.20 | — | 131.07K |
+| cogito-v1-preview-qwen-32b | $0.90 | $0.90 | — | 131.07K |
+| dbrx-instruct | $1.20 | $1.20 | — | 32.77K |
+| deepseek-coder-1b-base | $0.10 | $0.10 | — | 16.38K |
+| deepseek-coder-7b-base | $0.20 | $0.20 | — | 4.1K |
+| deepseek-coder-7b-base-v1p5 | $0.20 | $0.20 | — | 4.1K |
+| deepseek-coder-7b-instruct-v1p5 | $0.20 | $0.20 | — | 4.1K |
+| deepseek-coder-33b-instruct | $0.90 | $0.90 | — | 16.38K |
+| deepseek-coder-v2-instruct | $1.20 | $1.20 | — | 65.54K |
+| deepseek-coder-v2-lite-base | $0.50 | $0.50 | — | 163.84K |
+| deepseek-coder-v2-lite-instruct | $0.50 | $0.50 | — | 163.84K |
+| deepseek-prover-v2 | $1.20 | $1.20 | — | 163.84K |
+| deepseek-r1 | $3.00 | $8.00 | — | 128K |
+| deepseek-r1-0528 | $3.00 | $8.00 | — | 160K |
+| deepseek-r1-0528-distill-qwen3-8b | $0.20 | $0.20 | — | 131.07K |
+| deepseek-r1-basic | $0.55 | $2.19 | — | 128K |
+| deepseek-r1-distill-llama-8b | $0.20 | $0.20 | — | 131.07K |
+| deepseek-r1-distill-llama-70b | $0.90 | $0.90 | — | 131.07K |
+| deepseek-r1-distill-qwen-1p5b | $0.10 | $0.10 | — | 131.07K |
+| deepseek-r1-distill-qwen-7b | $0.20 | $0.20 | — | 131.07K |
+| deepseek-r1-distill-qwen-14b | $0.20 | $0.20 | — | 131.07K |
+| deepseek-r1-distill-qwen-32b | $0.90 | $0.90 | — | 131.07K |
+| deepseek-v2-lite-chat | $0.50 | $0.50 | — | 163.84K |
+| deepseek-v2p5 | $1.20 | $1.20 | — | 32.77K |
+| deepseek-v3 | $0.90 | $0.90 | — | 128K |
+| deepseek-v3-0324 | $0.90 | $0.90 | — | 163.84K |
+| deepseek-v3p1 | $0.56 | $1.68 | — | 128K |
+| deepseek-v3p1-terminus | $0.56 | $1.68 | — | 128K |
+| deepseek-v3p2 | $0.56 | $1.68 | — | 163.84K |
+| deepseek-v4-flash | $0.14 | $0.28 | $0.03 | 1.05M |
+| deepseek-v4-flash-0731 | $0.22 | $0.66 | $0.007 | 1.05M |
+| deepseek-v4-flash-vision-exp | $0.22 | $0.66 | $0.007 | 1.05M |
+| deepseek-v4-pro | $1.20 | $1.20 | $0.60 | 1.05M |
+| deepseek-v4-pro-0813 | $1.32 | $3.96 | $0.04 | 1.05M |
+| deepseek-v4p1-flash | $0.30 | $1.20 | $0.006 | 1.05M |
+| deepseek-v4p1-flash-us | $0.45 | $1.80 | $0.009 | 1.05M |
+| devstral-small-2505 | $0.90 | $0.90 | — | 131.07K |
+| dobby-mini-unhinged-plus-llama-3-1-8b | $0.20 | $0.20 | — | 131.07K |
+| dobby-unhinged-llama-3-3-70b-new | $0.90 | $0.90 | — | 131.07K |
+| dolphin-2-9-2-qwen2-72b | $0.90 | $0.90 | — | 131.07K |
+| dolphin-2p6-mixtral-8x7b | $0.50 | $0.50 | — | 32.77K |
+| ember-1 | $3.00 | $15.00 | $0.30 | 1.05M |
+| ember-1 | $3.00 | $15.00 | $0.30 | 1.05M |
+| ernie-4p5-21b-a3b-pt | $0.10 | $0.10 | — | 4.1K |
+| ernie-4p5-300b-a47b-pt | $0.10 | $0.10 | — | 4.1K |
+| fare-20b | $0.90 | $0.90 | — | 131.07K |
+| firefunction-v1 | $0.50 | $0.50 | — | 32.77K |
+| firefunction-v2 | $0.90 | $0.90 | — | 8.19K |
+| firellava-13b | $0.20 | $0.20 | — | 4.1K |
+| firesearch-ocr-v6 | $0.20 | $0.20 | — | 8.19K |
+| fireworks-ai-4.1b-to-16b | $0.20 | $0.20 | — | — |
+| fireworks-ai-56b-to-176b | $1.20 | $1.20 | — | — |
+| fireworks-ai-above-16b | $0.90 | $0.90 | — | — |
+| fireworks-ai-default | $0.00 | $0.00 | — | — |
+| fireworks-ai-moe-up-to-56b | $0.50 | $0.50 | — | — |
+| fireworks-ai-up-to-4b | $0.10 | $0.10 | — | — |
+| fireworks-asr-large | $0.00 | $0.00 | — | 4.1K |
+| fireworks-asr-v2 | $0.00 | $0.00 | — | 4.1K |
+| flux-1-dev | $0.10 | $0.10 | — | 4.1K |
+| flux-1-dev-controlnet-union | $0.001 | $0.001 | — | 4.1K |
+| flux-1-dev-fp8 | $0.0005 | $0.0005 | — | 4.1K |
+| flux-1-schnell | $0.10 | $0.10 | — | 4.1K |
+| flux-1-schnell-fp8 | $0.00035 | $0.00035 | — | 4.1K |
+| flux-kontext-max | $0.08 | $0.08 | — | 4.1K |
+| flux-kontext-pro | $0.04 | $0.04 | — | 4.1K |
+| gemma2-9b-it | $0.20 | $0.20 | — | 8.19K |
+| gemma-2b-it | $0.10 | $0.10 | — | 8.19K |
+| gemma-3-27b-it | $0.90 | $0.90 | — | 131.07K |
+| gemma-7b | $0.20 | $0.20 | — | 8.19K |
+| gemma-7b-it | $0.20 | $0.20 | — | 8.19K |
+| glm-4p5 | $0.55 | $2.19 | — | 128K |
+| glm-4p5-air | $0.22 | $0.88 | — | 128K |
+| glm-4p5v | $1.20 | $1.20 | — | 131.07K |
+| glm-4p6 | $0.55 | $2.19 | — | 202.8K |
+| glm-4p7 | $0.60 | $2.20 | $0.30 | 202.8K |
+| glm-5p1 | $1.40 | $4.40 | $0.26 | 202.8K |
+| glm-5p1-fast | $2.80 | $8.80 | $0.52 | 202.8K |
+| glm-5p2 | $1.40 | $4.40 | $0.14 | 1.05M |
+| glm-5p2-fast | $2.10 | $6.60 | $0.21 | 1.05M |
+| glm-5p2-fast-us | $2.10 | $6.60 | $0.21 | 1.05M |
+| glm-5p3 | $1.40 | $4.40 | $0.26 | 1.05M |
+| glm-5p3-fast | $2.10 | $6.60 | $0.39 | 1.05M |
+| glm-5p3-flash | $0.15 | $0.50 | $0.03 | 1.05M |
+| glm-5p3-flash-us | $0.22 | $0.75 | $0.04 | 1.05M |
+| glm-5p3-us | $2.10 | $6.60 | $0.39 | 1.05M |
+| gpt-oss-20b | $0.07 | $0.30 | $0.04 | 131.07K |
+| gpt-oss-120b | $0.15 | $0.60 | $0.02 | 131.07K |
+| gpt-oss-safeguard-20b | $0.50 | $0.50 | — | 131.07K |
+| gpt-oss-safeguard-120b | $1.20 | $1.20 | — | 131.07K |
+| hermes-2-pro-mistral-7b | $0.20 | $0.20 | — | 32.77K |
+| inkling | $1.00 | $4.05 | $0.17 | 1.05M |
+| internvl3-8b | $0.20 | $0.20 | — | 16.38K |
+| internvl3-38b | $0.90 | $0.90 | — | 16.38K |
+| internvl3-78b | $0.90 | $0.90 | — | 16.38K |
+| japanese-stable-diffusion-xl | $0.00013 | $0.00013 | — | 4.1K |
+| kat-coder | $0.90 | $0.90 | — | 262.14K |
+| kat-dev-32b | $0.90 | $0.90 | — | 131.07K |
+| kat-dev-72b-exp | $0.90 | $0.90 | — | 131.07K |
+| kimi-k2-instruct | $0.60 | $2.50 | — | 131.07K |
+| kimi-k2-instruct-0905 | $0.60 | $2.50 | — | 262.14K |
+| kimi-k2-thinking | $0.60 | $2.50 | — | 262.14K |
+| kimi-k2p5 | $0.60 | $3.00 | $0.10 | 262.14K |
+| kimi-k2p6 | $0.95 | $4.00 | $0.16 | 262.14K |
+| kimi-k2p6-fast | $2.00 | $8.00 | $0.30 | 262.14K |
+| kimi-k2p7-code | $0.95 | $4.00 | $0.19 | 262.14K |
+| kimi-k2p7-code-fast | $1.90 | $8.00 | $0.38 | 262.14K |
+| kimi-k3 | $3.00 | $15.00 | $0.30 | 1.05M |
+| kimi-k3-fast | $4.50 | $22.50 | $0.45 | 1.05M |
+| kimi-k3-us | $4.50 | $22.50 | $0.45 | 1.05M |
+| llama4-maverick-instruct-basic | $0.22 | $0.88 | — | 131.07K |
+| llama4-scout-instruct-basic | $0.15 | $0.60 | — | 131.07K |
+| llama-guard-2-8b | $0.20 | $0.20 | — | 8.19K |
+| llama-guard-3-1b | $0.10 | $0.10 | — | 131.07K |
+| llama-guard-3-8b | $0.20 | $0.20 | — | 131.07K |
+| llama-v2-7b | $0.20 | $0.20 | — | 4.1K |
+| llama-v2-7b-chat | $0.20 | $0.20 | — | 4.1K |
+| llama-v2-13b | $0.20 | $0.20 | — | 4.1K |
+| llama-v2-13b-chat | $0.20 | $0.20 | — | 4.1K |
+| llama-v2-70b | $0.10 | $0.10 | — | 4.1K |
+| llama-v2-70b-chat | $0.90 | $0.90 | — | 2.05K |
+| llama-v3-8b | $0.20 | $0.20 | — | 8.19K |
+| llama-v3-8b-instruct-hf | $0.20 | $0.20 | — | 8.19K |
+| llama-v3-70b-instruct | $0.90 | $0.90 | — | 8.19K |
+| llama-v3-70b-instruct-hf | $0.90 | $0.90 | — | 8.19K |
+| llama-v3p1-8b-instruct | $0.10 | $0.10 | — | 16.38K |
+| llama-v3p1-70b-instruct | $0.90 | $0.90 | — | 131.07K |
+| llama-v3p1-70b-instruct-1b | $0.10 | $0.10 | — | 4.1K |
+| llama-v3p1-405b-instruct | $3.00 | $3.00 | — | 128K |
+| llama-v3p1-405b-instruct-long | $0.10 | $0.10 | — | 4.1K |
+| llama-v3p1-nemotron-70b-instruct | $0.90 | $0.90 | — | 131.07K |
+| llama-v3p2-1b | $0.10 | $0.10 | — | 131.07K |
+| llama-v3p2-1b-instruct | $0.10 | $0.10 | — | 16.38K |
+| llama-v3p2-3b | $0.10 | $0.10 | — | 131.07K |
+| llama-v3p2-3b-instruct | $0.10 | $0.10 | — | 16.38K |
+| llama-v3p2-11b-vision-instruct | $0.20 | $0.20 | — | 16.38K |
+| llama-v3p2-90b-vision-instruct | $0.90 | $0.90 | — | 16.38K |
+| llama-v3p3-70b-instruct | $0.90 | $0.90 | — | 131.07K |
+| llamaguard-7b | $0.20 | $0.20 | — | 4.1K |
+| llava-yi-34b | $0.90 | $0.90 | — | 4.1K |
+| minimax-m1-80k | $0.10 | $0.10 | — | 4.1K |
+| minimax-m2 | $0.30 | $1.20 | — | 4.1K |
+| minimax-m2p1 | $0.30 | $1.20 | $0.03 | 204.8K |
+| minimax-m3 | $0.30 | $1.20 | $0.06 | 512K |
+| ministral-3-3b-instruct-2512 | $0.10 | $0.10 | — | 256K |
+| ministral-3-8b-instruct-2512 | $0.20 | $0.20 | — | 256K |
+| ministral-3-14b-instruct-2512 | $0.20 | $0.20 | — | 256K |
+| mistral-7b | $0.20 | $0.20 | — | 32.77K |
+| mistral-7b-instruct-4k | $0.20 | $0.20 | — | 32.77K |
+| mistral-7b-instruct-v0p2 | $0.20 | $0.20 | — | 32.77K |
+| mistral-7b-instruct-v3 | $0.20 | $0.20 | — | 32.77K |
+| mistral-7b-v0p2 | $0.20 | $0.20 | — | 32.77K |
+| mistral-large-3-fp8 | $1.20 | $1.20 | — | 256K |
+| mistral-nemo-base-2407 | $0.20 | $0.20 | — | 128K |
+| mistral-nemo-instruct-2407 | $0.20 | $0.20 | — | 128K |
+| mistral-small-24b-instruct-2501 | $0.90 | $0.90 | — | 32.77K |
+| mixtral-8x7b | $0.50 | $0.50 | — | 32.77K |
+| mixtral-8x7b-instruct | $0.50 | $0.50 | — | 32.77K |
+| mixtral-8x7b-instruct-hf | $0.50 | $0.50 | — | 32.77K |
+| mixtral-8x22b | $1.20 | $1.20 | — | 65.54K |
+| mixtral-8x22b-instruct | $1.20 | $1.20 | — | 65.54K |
+| mixtral-8x22b-instruct-hf | $1.20 | $1.20 | — | 65.54K |
+| muse-glimmer-30b | $0.35 | $1.50 | $0.04 | 131.07K |
+| mythomax-l2-13b | $0.20 | $0.20 | — | 4.1K |
+| nemotron-3-ultra-nvfp4 | $0.60 | $2.40 | $0.12 | 262.14K |
+| nemotron-lightning-3p5-30b-a3b | $0.05 | $0.20 | $0.01 | 262.14K |
+| nemotron-nano-v2-12b-vl | $0.10 | $0.10 | — | 4.1K |
+| nous-capybara-7b-v1p9 | $0.20 | $0.20 | — | 32.77K |
+| nous-hermes-2-mixtral-8x7b-dpo | $0.50 | $0.50 | — | 32.77K |
+| nous-hermes-2-yi-34b | $0.90 | $0.90 | — | 4.1K |
+| nous-hermes-llama2-7b | $0.20 | $0.20 | — | 4.1K |
+| nous-hermes-llama2-13b | $0.20 | $0.20 | — | 4.1K |
+| nous-hermes-llama2-70b | $0.90 | $0.90 | — | 4.1K |
+| nvidia-nemotron-nano-9b-v2 | $0.20 | $0.20 | — | 131.07K |
+| nvidia-nemotron-nano-12b-v2 | $0.20 | $0.20 | — | 131.07K |
+| openchat-3p5-0106-7b | $0.20 | $0.20 | — | 8.19K |
+| openhermes-2-mistral-7b | $0.20 | $0.20 | — | 32.77K |
+| openhermes-2p5-mistral-7b | $0.20 | $0.20 | — | 32.77K |
+| openorca-7b | $0.20 | $0.20 | — | 32.77K |
+| phi-2-3b | $0.10 | $0.10 | — | 2.05K |
+| phi-3-mini-128k-instruct | $0.10 | $0.10 | — | 131.07K |
+| phi-3-vision-128k-instruct | $0.20 | $0.20 | — | 32.06K |
+| phind-code-llama-34b-python-v1 | $0.90 | $0.90 | — | 16.38K |
+| phind-code-llama-34b-v1 | $0.90 | $0.90 | — | 16.38K |
+| phind-code-llama-34b-v2 | $0.90 | $0.90 | — | 16.38K |
+| playground-v2-5-1024px-aesthetic | $0.00013 | $0.00013 | — | 4.1K |
+| playground-v2-1024px-aesthetic | $0.00013 | $0.00013 | — | 4.1K |
+| pythia-12b | $0.20 | $0.20 | — | 2.05K |
+| qwen1p5-72b-chat | $0.90 | $0.90 | — | 32.77K |
+| qwen2-7b-instruct | $0.20 | $0.20 | — | 32.77K |
+| qwen2-72b-instruct | $0.90 | $0.90 | — | 32.77K |
+| qwen2-vl-2b-instruct | $0.10 | $0.10 | — | 32.77K |
+| qwen2-vl-7b-instruct | $0.20 | $0.20 | — | 32.77K |
+| qwen2-vl-72b-instruct | $0.90 | $0.90 | — | 32.77K |
+| qwen2p5-0p5b-instruct | $0.10 | $0.10 | — | 32.77K |
+| qwen2p5-1p5b-instruct | $0.10 | $0.10 | — | 32.77K |
+| qwen2p5-7b-instruct | $0.20 | $0.20 | — | 32.77K |
+| qwen2p5-14b | $0.20 | $0.20 | — | 131.07K |
+| qwen2p5-32b | $0.90 | $0.90 | — | 131.07K |
+| qwen2p5-32b-instruct | $0.90 | $0.90 | — | 32.77K |
+| qwen2p5-72b | $0.90 | $0.90 | — | 131.07K |
+| qwen2p5-72b-instruct | $0.90 | $0.90 | — | 32.77K |
+| qwen2p5-coder-0p5b | $0.10 | $0.10 | — | 32.77K |
+| qwen2p5-coder-0p5b-instruct | $0.10 | $0.10 | — | 32.77K |
+| qwen2p5-coder-1p5b | $0.10 | $0.10 | — | 32.77K |
+| qwen2p5-coder-1p5b-instruct | $0.10 | $0.10 | — | 32.77K |
+| qwen2p5-coder-3b | $0.10 | $0.10 | — | 32.77K |
+| qwen2p5-coder-3b-instruct | $0.10 | $0.10 | — | 32.77K |
+| qwen2p5-coder-7b | $0.20 | $0.20 | — | 32.77K |
+| qwen2p5-coder-7b-instruct | $0.20 | $0.20 | — | 32.77K |
+| qwen2p5-coder-14b | $0.20 | $0.20 | — | 32.77K |
+| qwen2p5-coder-14b-instruct | $0.20 | $0.20 | — | 32.77K |
+| qwen2p5-coder-32b | $0.90 | $0.90 | — | 32.77K |
+| qwen2p5-coder-32b-instruct | $0.90 | $0.90 | — | 4.1K |
+| qwen2p5-coder-32b-instruct-32k-rope | $0.90 | $0.90 | — | 32.77K |
+| qwen2p5-coder-32b-instruct-64k | $0.90 | $0.90 | — | 65.54K |
+| qwen2p5-coder-32b-instruct-128k | $0.90 | $0.90 | — | 131.07K |
+| qwen2p5-math-72b-instruct | $0.90 | $0.90 | — | 4.1K |
+| qwen2p5-vl-3b-instruct | $0.20 | $0.20 | — | 128K |
+| qwen2p5-vl-7b-instruct | $0.20 | $0.20 | — | 128K |
+| qwen2p5-vl-32b-instruct | $0.90 | $0.90 | — | 128K |
+| qwen2p5-vl-72b-instruct | $0.90 | $0.90 | — | 128K |
+| qwen3-0p6b | $0.10 | $0.10 | — | 40.96K |
+| qwen3-1p7b | $0.10 | $0.10 | — | 131.07K |
+| qwen3-1p7b-fp8-draft | $0.10 | $0.10 | — | 262.14K |
+| qwen3-1p7b-fp8-draft-40960 | $0.10 | $0.10 | — | 40.96K |
+| qwen3-1p7b-fp8-draft-131072 | $0.10 | $0.10 | — | 131.07K |
+| qwen3-4b | $0.20 | $0.20 | — | 40.96K |
+| qwen3-4b-instruct-2507 | $0.20 | $0.20 | — | 262.14K |
+| qwen3-8b | $0.20 | $0.20 | — | 40.96K |
+| qwen3-14b | $0.20 | $0.20 | — | 40.96K |
+| qwen3-30b-a3b | $0.15 | $0.60 | — | 131.07K |
+| qwen3-30b-a3b-instruct-2507 | $0.50 | $0.50 | — | 262.14K |
+| qwen3-30b-a3b-thinking-2507 | $0.90 | $0.90 | — | 262.14K |
+| qwen3-32b | $0.90 | $0.90 | — | 131.07K |
+| qwen3-235b-a22b | $0.22 | $0.88 | — | 131.07K |
+| qwen3-235b-a22b-instruct-2507 | $0.22 | $0.88 | — | 262.14K |
+| qwen3-235b-a22b-thinking-2507 | $0.22 | $0.88 | — | 262.14K |
+| qwen3-coder-30b-a3b-instruct | $0.15 | $0.60 | — | 262.14K |
+| qwen3-coder-480b-a35b-instruct | $0.45 | $1.80 | — | 262.14K |
+| qwen3-coder-480b-instruct-bf16 | $0.90 | $0.90 | — | 4.1K |
+| qwen3-embedding-0p6b | $0.00 | $0.00 | — | 32.77K |
+| qwen3-embedding-4b | $0.00 | $0.00 | — | 40.96K |
+| qwen3-embedding-8b | $0.10 | $0.00 | — | 40.96K |
+| qwen3-next-80b-a3b-instruct | $0.90 | $0.90 | — | 4.1K |
+| qwen3-next-80b-a3b-thinking | $0.90 | $0.90 | — | 4.1K |
+| qwen3-reranker-0p6b | $0.00 | $0.00 | — | 40.96K |
+| qwen3-reranker-4b | $0.00 | $0.00 | — | 40.96K |
+| qwen3-reranker-8b | $0.20 | $0.00 | — | 40.96K |
+| qwen3-vl-8b-instruct | $0.20 | $0.20 | — | 4.1K |
+| qwen3-vl-30b-a3b-instruct | $0.15 | $0.60 | — | 262.14K |
+| qwen3-vl-30b-a3b-thinking | $0.15 | $0.60 | — | 262.14K |
+| qwen3-vl-32b-instruct | $0.90 | $0.90 | — | 4.1K |
+| qwen3-vl-235b-a22b-instruct | $0.22 | $0.88 | — | 262.14K |
+| qwen3-vl-235b-a22b-thinking | $0.22 | $0.88 | — | 262.14K |
+| qwen3p7-plus | $0.40 | $1.60 | $0.08 | 262.14K |
+| qwen3p8-max | $2.00 | $6.00 | $0.25 | 262.14K |
+| qwen-qwq-32b-preview | $0.90 | $0.90 | — | 32.77K |
+| qwen-v2p5-7b | $0.20 | $0.20 | — | 131.07K |
+| qwen-v2p5-14b-instruct | $0.20 | $0.20 | — | 32.77K |
+| qwq-32b | $0.90 | $0.90 | — | 131.07K |
+| rolm-ocr | $0.20 | $0.20 | — | 128K |
+| snorkel-mistral-7b-pairrm-dpo | $0.20 | $0.20 | — | 32.77K |
+| ssd-1b | $0.00013 | $0.00013 | — | 4.1K |
+| stable-diffusion-xl-1024-v1-0 | $0.00013 | $0.00013 | — | 4.1K |
+| stablecode-3b | $0.10 | $0.10 | — | 4.1K |
+| starcoder2-3b | $0.10 | $0.10 | — | 16.38K |
+| starcoder2-7b | $0.20 | $0.20 | — | 16.38K |
+| starcoder2-15b | $0.20 | $0.20 | — | 16.38K |
+| starcoder-7b | $0.20 | $0.20 | — | 8.19K |
+| starcoder-16b | $0.20 | $0.20 | — | 8.19K |
+| toppy-m-7b | $0.20 | $0.20 | — | 32.77K |
+| yi-6b | $0.20 | $0.20 | — | 4.1K |
+| yi-34b | $0.90 | $0.90 | — | 4.1K |
+| yi-34b-200k-capybara | $0.90 | $0.90 | — | 200K |
+| yi-34b-chat | $0.90 | $0.90 | — | 4.1K |
+| yi-large | $3.00 | $3.00 | — | 32.77K |
+| zephyr-7b-beta | $0.20 | $0.20 | — | 32.77K |
 
 ## fireworks_ai-embedding-models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gte-base | 0.008000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| UAE-Large-V1 | 0.016000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| fireworks-ai-embedding-up-to-150m | 0.008000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gte-large | 0.016000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nomic-embed-text-v1.5 | 0.008000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| fireworks-ai-embedding-150m-to-350m | 0.016000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nomic-embed-text-v1 | 0.008000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| fireworks-ai-embedding-150m-to-350m | $0.02 | $0.00 | — | — |
+| fireworks-ai-embedding-up-to-150m | $0.008 | $0.00 | — | — |
+| gte-base | $0.008 | $0.00 | — | 512 |
+| gte-large | $0.02 | $0.00 | — | 512 |
+| nomic-embed-text-v1 | $0.008 | $0.00 | — | 8.19K |
+| nomic-embed-text-v1.5 | $0.008 | $0.00 | — | 8.19K |
+| uae-large-v1 | $0.02 | $0.00 | — | 512 |
 
 ## friendliai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| GLM-5.3 | 1.26000000 | 3.96000000 | 0.234000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.2 | 1.4000000 | 4.4000000 | 0.26000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.5 | 0.3000000 | 1.2000000 | 0.06000000 | 196608 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.3-Flash | 0.15000000 | 0.5000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.1 | 1.4000000 | 4.4000000 | 0.26000000 | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3.2 | 0.5000000 | 1.5000000 | 0.25000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31B-it | 0.14000000 | 0.4000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v3.2 | $0.50 | $1.50 | $0.25 | 163.84K |
+| gemma-4-31b-it | $0.14 | $0.40 | — | 262.14K |
+| glm-5.1 | $1.40 | $4.40 | $0.26 | 202.75K |
+| glm-5.2 | $1.40 | $4.40 | $0.26 | 1.05M |
+| glm-5.3 | $1.26 | $3.96 | $0.23 | 1.05M |
+| glm-5.3-flash | $0.15 | $0.50 | $0.03 | 1.05M |
+| minimax-m2.5 | $0.30 | $1.20 | $0.06 | 196.61K |
 
 ## gemini
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gemini-2.5-computer-use-preview-10-2025 | 1.25000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-pro | 1.25000000 | 10.00000 | 0.125000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-native-audio-latest | 0.5000000 | 2.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deep-research-max-preview-04-2026 | 2.000000 | 12.000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-native-audio-preview-09-2025 | 0.5000000 | 2.000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-image | 0.3000000 | 2.5000000 | 0.03000000 | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-tts-preview | 1.000000 | 20.00000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.0-flash-exp-image-generation | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-lite-image | 0.25000000 | 1.5000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deep-research-pro-preview-12-2025 | 2.000000 | 12.000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deep-research-preview-04-2026 | 2.000000 | 12.000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-native-audio-preview-12-2025 | 0.5000000 | 2.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-pro-preview-tts | 1.000000 | 20.00000 | 0.125000000 | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-preview-tts | 0.5000000 | 10.00000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-image | 0.5000000 | 3.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-live-preview | 0.75000000 | 4.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-lite | 0.25000000 | 1.5000000 | 0.025000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-lite | 0.1000000 | 0.4000000 | 0.01000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash | 0.3000000 | 2.5000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-lite-preview | 0.25000000 | 1.5000000 | 0.025000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-image-preview | 0.5000000 | 3.000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-flash-tts | 0.5000000 | 9.000000 | 0.125000000 | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-exp-1114 | 0 | 0 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-pro-image-preview | 2.000000 | 12.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| lyria-3.5 | 0 | 0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-live-2.5-flash-preview-native-audio-09-2025 | 0.5000000 | 2.000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-flash-lite | 0.3000000 | 2.5000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-flash-latest | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-transcribe | 2.000000 | 12.000000 | — | 98304 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-pro-image | 2.000000 | 12.000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-embedding-2-preview | 0.2000000 | 0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-flash-lite-tts | 0.5000000 | 6.000000 | 0.125000000 | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-flash-preview | 0.5000000 | 3.000000 | 0.05000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-robotics-er-2-preview | 1.000000 | 5.000000 | 0.1000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-pro-preview-customtools | 2.000000 | 12.000000 | 0.2000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.7-flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.6-flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-3-27b-it | 0 | 0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-26b-a4b-it | 0.0 | 0.0 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-robotics-er-2-streaming-preview | 1.000000 | 5.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-flash-lite-latest | 0.3000000 | 2.5000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-flash | 1.5000000 | 9.000000 | 0.15000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-transcribe-live | 3.5000000 | 21.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-nano-banana-2.1 | 1.5000000 | 7.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-live-translate-preview | 3.5000000 | 21.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-gemma-2-9b-it | 0.35000000 | 1.05000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-pro-latest | 2.000000 | 12.000000 | 0.2000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-exp-1206 | 0.3000000 | 2.5000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-omni-1.1-flash | 1.5000000 | 9.000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31b-it | 0.0 | 0.0 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| learnlm-1.5-pro-experimental | 0 | 0 | — | 32767 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-embedding-001 | 0.15000000 | 0 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-live | 0.75000000 | 4.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-embedding-2 | 0.2000000 | 0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-gemma-2-27b-it | 0.35000000 | 1.05000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-live-extended-thinking | 0.75000000 | 4.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-omni-flash-preview | 1.5000000 | 9.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-pro-preview | 2.000000 | 12.000000 | 0.2000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| lyria-3.5-clip-preview | 0 | 0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nano-banana-pro-preview | 2.000000 | 12.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| lyria-3-pro-preview | 0 | 0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| lyria-3-clip-preview | 0 | 0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| lyria-3.5-pro-preview | 0 | 0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| lyria-realtime-exp | 0 | 0 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deep-research-max-preview-04-2026 | $2.00 | $12.00 | — | 1.05M |
+| deep-research-preview-04-2026 | $2.00 | $12.00 | — | 1.05M |
+| deep-research-pro-preview-12-2025 | $2.00 | $12.00 | — | 1.05M |
+| gemini-2.0-flash-exp-image-generation | $0.00 | $0.00 | — | 32.77K |
+| gemini-2.5-computer-use-preview-10-2025 | $1.25 | $10.00 | — | 128K |
+| gemini-2.5-flash | $0.30 | $2.50 | $0.03 | 1.05M |
+| gemini-2.5-flash-image | $0.30 | $2.50 | $0.03 | 65.54K |
+| gemini-2.5-flash-lite | $0.10 | $0.40 | $0.01 | 1.05M |
+| gemini-2.5-flash-native-audio-latest | $0.50 | $2.00 | — | 131.07K |
+| gemini-2.5-flash-native-audio-preview-09-2025 | $0.50 | $2.00 | — | 1.05M |
+| gemini-2.5-flash-native-audio-preview-12-2025 | $0.50 | $2.00 | — | 131.07K |
+| gemini-2.5-flash-preview-tts | $0.50 | $10.00 | — | 8.19K |
+| gemini-2.5-pro | $1.25 | $10.00 | $0.12 | 1.05M |
+| gemini-2.5-pro-preview-tts | $1.00 | $20.00 | $0.12 | 8.19K |
+| gemini-3-flash-preview | $0.50 | $3.00 | $0.05 | 1.05M |
+| gemini-3-pro-image | $2.00 | $12.00 | — | 65.54K |
+| gemini-3-pro-image-preview | $2.00 | $12.00 | — | 131.07K |
+| gemini-3.1-flash-image | $0.50 | $3.00 | — | 131.07K |
+| gemini-3.1-flash-image-preview | $0.50 | $3.00 | — | 65.54K |
+| gemini-3.1-flash-lite | $0.25 | $1.50 | $0.02 | 1.05M |
+| gemini-3.1-flash-lite-image | $0.25 | $1.50 | — | 65.54K |
+| gemini-3.1-flash-lite-preview | $0.25 | $1.50 | $0.02 | 1.05M |
+| gemini-3.1-flash-live-preview | $0.75 | $4.50 | — | 131.07K |
+| gemini-3.1-flash-tts-preview | $1.00 | $20.00 | — | 8.19K |
+| gemini-3.1-pro-preview | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini-3.1-pro-preview-customtools | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini-3.5-flash | $1.50 | $9.00 | $0.15 | 1.05M |
+| gemini-3.5-flash-lite | $0.30 | $2.50 | $0.03 | 1.05M |
+| gemini-3.5-live-translate-preview | $3.50 | $21.00 | — | 131.07K |
+| gemini-3.5-transcribe | $2.00 | $12.00 | — | 98.3K |
+| gemini-3.5-transcribe-live | $3.50 | $21.00 | — | 131.07K |
+| gemini-3.6-flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini-3.7-flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini-3.8-flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini-3.8-flash-lite-tts | $0.50 | $6.00 | $0.12 | 8.19K |
+| gemini-3.8-flash-tts | $0.50 | $9.00 | $0.12 | 8.19K |
+| gemini-3.8-live | $0.75 | $4.50 | — | 131.07K |
+| gemini-3.8-live-extended-thinking | $0.75 | $4.50 | — | 131.07K |
+| gemini-embedding-001 | $0.15 | $0.00 | — | 2.05K |
+| gemini-embedding-2 | $0.20 | $0.00 | — | 8.19K |
+| gemini-embedding-2-preview | $0.20 | $0.00 | — | 8.19K |
+| gemini-exp-1114 | $0.00 | $0.00 | — | 1.05M |
+| gemini-exp-1206 | $0.30 | $2.50 | $0.03 | 1.05M |
+| gemini-flash-latest | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini-flash-lite-latest | $0.30 | $2.50 | $0.03 | 1.05M |
+| gemini-gemma-2-9b-it | $0.35 | $1.05 | — | — |
+| gemini-gemma-2-27b-it | $0.35 | $1.05 | — | — |
+| gemini-live-2.5-flash-preview-native-audio-09-2025 | $0.50 | $2.00 | — | 1.05M |
+| gemini-nano-banana-2.1 | $1.50 | $7.50 | — | 131.07K |
+| gemini-omni-1.1-flash | $1.50 | $9.00 | — | 1.05M |
+| gemini-omni-flash-preview | $1.50 | $9.00 | — | 131.07K |
+| gemini-pro-latest | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini-robotics-er-2-preview | $1.00 | $5.00 | $0.10 | 131.07K |
+| gemini-robotics-er-2-streaming-preview | $1.00 | $5.00 | — | 131.07K |
+| gemma-3-27b-it | $0.00 | $0.00 | — | 131.07K |
+| gemma-4-26b-a4b-it | $0.00 | $0.00 | — | 262.14K |
+| gemma-4-31b-it | $0.00 | $0.00 | — | 262.14K |
+| learnlm-1.5-pro-experimental | $0.00 | $0.00 | — | 32.77K |
+| lyria-3-clip-preview | $0.00 | $0.00 | — | 131.07K |
+| lyria-3-pro-preview | $0.00 | $0.00 | — | 131.07K |
+| lyria-3.5 | $0.00 | $0.00 | — | 131.07K |
+| lyria-3.5-clip-preview | $0.00 | $0.00 | — | 131.07K |
+| lyria-3.5-pro-preview | $0.00 | $0.00 | — | 131.07K |
+| lyria-realtime-exp | $0.00 | $0.00 | — | 1.05M |
+| nano-banana-pro-preview | $2.00 | $12.00 | — | 131.07K |
 
 ## gigachat
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Embeddings-2 | 0.0 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GigaChat-2-Max | 0.0 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GigaChat-2-Pro | 0.0 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GigaChat-2 | 0.0 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Embeddings | 0.0 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GigaEmbeddings-3B-2025-09 | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| EmbeddingsGigaR | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| embeddings | $0.00 | $0.00 | — | 512 |
+| embeddings-2 | $0.00 | $0.00 | — | 512 |
+| embeddingsgigar | $0.00 | $0.00 | — | 4.1K |
+| gigachat-2 | $0.00 | $0.00 | — | 128K |
+| gigachat-2-max | $0.00 | $0.00 | — | 128K |
+| gigachat-2-pro | $0.00 | $0.00 | — | 128K |
+| gigaembeddings-3b-2025-09 | $0.00 | $0.00 | — | 4.1K |
 
 ## github_copilot
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| claude-haiku-5.5 | 0.1000000 | 0.5000000 | 0.01000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-4.5 | 1.000000 | 5.000000 | 0.1000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.3-codex | 1.75000000 | 14.000000 | 0.175000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-mini | 0.25000000 | 2.000000 | 0.025000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| claude-haiku-4.5 | $1.00 | $5.00 | $0.10 | 128K |
+| claude-haiku-5.5 | $0.10 | $0.50 | $0.01 | 128K |
+| gpt-5-mini | $0.25 | $2.00 | $0.02 | 128K |
+| gpt-5.3-codex | $1.75 | $14.00 | $0.18 | 128K |
 
 ## gmi
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| MiniMax-M2.1 | 0.3000000 | 1.2000000 | — | 196608 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4 | 15.000000 | 75.000000 | — | 409600 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini | 0.15000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4.5 | 3.000000 | 15.000000 | — | 409600 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2-Thinking | 0.8000000 | 1.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4.5 | 5.000000 | 25.000000 | — | 409600 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o | 2.5000000 | 10.00000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5 | 1.25000000 | 10.00000 | — | 409600 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2 | 1.75000000 | 14.000000 | — | 409600 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3-0324 | 0.28000000 | 0.88000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1 | 1.25000000 | 10.00000 | — | 409600 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4 | 3.000000 | 15.000000 | — | 409600 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-VL-235B-A22B-Instruct-FP8 | 0.3000000 | 1.4000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-flash-preview | 0.5000000 | 3.000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-4.7-FP8 | 0.4000000 | 2.000000 | — | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3.2 | 0.28000000 | 0.4000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| claude-opus-4 | $15.00 | $75.00 | — | 409.6K |
+| claude-opus-4.5 | $5.00 | $25.00 | — | 409.6K |
+| claude-sonnet-4 | $3.00 | $15.00 | — | 409.6K |
+| claude-sonnet-4.5 | $3.00 | $15.00 | — | 409.6K |
+| deepseek-v3-0324 | $0.28 | $0.88 | — | 163.84K |
+| deepseek-v3.2 | $0.28 | $0.40 | — | 163.84K |
+| gemini-3-flash-preview | $0.50 | $3.00 | — | 1.05M |
+| glm-4.7-fp8 | $0.40 | $2.00 | — | 202.75K |
+| gpt-4o | $2.50 | $10.00 | — | 131.07K |
+| gpt-4o-mini | $0.15 | $0.60 | — | 131.07K |
+| gpt-5 | $1.25 | $10.00 | — | 409.6K |
+| gpt-5.1 | $1.25 | $10.00 | — | 409.6K |
+| gpt-5.2 | $1.75 | $14.00 | — | 409.6K |
+| kimi-k2-thinking | $0.80 | $1.20 | — | 262.14K |
+| minimax-m2.1 | $0.30 | $1.20 | — | 196.61K |
+| qwen3-vl-235b-a22b-instruct-fp8 | $0.30 | $1.40 | — | 262.14K |
 
 ## google
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Google: Gemini 2.5 Flash (batch) | 0.15000000 | 1.25000000 | 0.03000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 2.5 Pro Preview 06-05 | 1.25000000 | 10.00000 | 0.125000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Nano Banana 2 (Gemini 3.1 Flash Image) | 0.5000000 | 3.000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 2.5 Flash | 0.3000000 | 2.5000000 | 0.03000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 2.5 Flash Lite | 0.1000000 | 0.4000000 | 0.01000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 2.5 Pro (batch) | 0.625000000 | 5.000000 | 0.125000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 2.5 Pro | 1.25000000 | 10.00000 | 0.125000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 2.5 Flash Lite (batch) | 0.05000000 | 0.2000000 | 0.01000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Nano Banana (Gemini 2.5 Flash Image) | 0.3000000 | 2.5000000 | 0.03000000 | 32768 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Lyria 3 Clip Preview | 0 | 0 | — | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.8 Flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Nano Banana 2 (Gemini 3.1 Flash Image Preview) | 0.5000000 | 3.000000 | — | 65536 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.6 Flash (batch) | 0.375000000 | 1.875000000 | 0.0375000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.1 Pro Preview | 2.000000 | 12.000000 | 0.2000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | 0.25000000 | 1.5000000 | — | 65536 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.6 Flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.1 Pro Preview (batch) | 1.000000 | 6.000000 | — | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.7 Flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemma 4 31B | 0.09000000 | 0.34000000 | 0.05000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Lyria 3 Pro Preview | 0 | 0 | — | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.5 Flash Lite | 0.3000000 | 2.5000000 | 0.03000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3 Flash Preview | 0.5000000 | 3.000000 | 0.05000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Nano Banana Pro (Gemini 3 Pro Image Preview) | 2.000000 | 12.000000 | 0.2000000 | 65536 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemma 3 4B | 0.05000000 | 0.1000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.5 Flash | 1.5000000 | 9.000000 | 0.15000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.1 Pro Preview Custom Tools | 2.000000 | 12.000000 | 0.2000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemma 4 31B (free) | 0 | 0 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemma 3 12B | 0.05000000 | 0.15000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.1 Flash Lite (batch) | 0.125000000 | 0.75000000 | 0.0125000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.5 Flash (batch) | 0.75000000 | 4.5000000 | 0.075000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemma 2 27B | 0.65000000 | 0.65000000 | — | 8192 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Nano Banana 2.1 | 1.5000000 | 7.5000000 | — | 65536 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemma 4 26B A4B  | 0.0675000000 | 0.225000000 | 0.0375000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemma 3 27B | 0.08000000 | 0.45000000 | 0.04000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.5 Flash Lite (batch) | 0.15000000 | 1.25000000 | 0.015000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemma 4 26B A4B  (free) | 0 | 0 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.1 Flash Lite | 0.25000000 | 1.5000000 | 0.025000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.7 Flash (batch) | 0.375000000 | 1.875000000 | 0.0375000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Nano Banana Pro (Gemini 3 Pro Image) | 2.000000 | 12.000000 | 0.2000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.8 Flash (batch) | 0.375000000 | 1.875000000 | 0.0375000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3 Flash Preview (batch) | 0.25000000 | 1.5000000 | — | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini 3.1 Flash Lite Preview | 0.25000000 | 1.5000000 | 0.025000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| gemini 2.5 flash | $0.30 | $2.50 | $0.03 | 1.05M |
+| gemini 2.5 flash (batch) | $0.15 | $1.25 | $0.03 | 1.05M |
+| gemini 2.5 flash lite | $0.10 | $0.40 | $0.01 | 1.05M |
+| gemini 2.5 flash lite (batch) | $0.05 | $0.20 | $0.01 | 1.05M |
+| gemini 2.5 pro | $1.25 | $10.00 | $0.12 | 1.05M |
+| gemini 2.5 pro (batch) | $0.62 | $5.00 | $0.12 | 1.05M |
+| gemini 2.5 pro preview 06-05 | $1.25 | $10.00 | $0.12 | 1.05M |
+| gemini 3 flash preview | $0.50 | $3.00 | $0.05 | 1.05M |
+| gemini 3 flash preview (batch) | $0.25 | $1.50 | — | 1.05M |
+| gemini 3.1 flash lite | $0.25 | $1.50 | $0.02 | 1.05M |
+| gemini 3.1 flash lite (batch) | $0.12 | $0.75 | $0.01 | 1.05M |
+| gemini 3.1 flash lite preview | $0.25 | $1.50 | $0.02 | 1.05M |
+| gemini 3.1 pro preview | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini 3.1 pro preview (batch) | $1.00 | $6.00 | — | 1.05M |
+| gemini 3.1 pro preview custom tools | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini 3.5 flash | $1.50 | $9.00 | $0.15 | 1.05M |
+| gemini 3.5 flash (batch) | $0.75 | $4.50 | $0.08 | 1.05M |
+| gemini 3.5 flash lite | $0.30 | $2.50 | $0.03 | 1.05M |
+| gemini 3.5 flash lite (batch) | $0.15 | $1.25 | $0.02 | 1.05M |
+| gemini 3.6 flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini 3.6 flash (batch) | $0.38 | $1.88 | $0.04 | 1.05M |
+| gemini 3.7 flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini 3.7 flash (batch) | $0.38 | $1.88 | $0.04 | 1.05M |
+| gemini 3.8 flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini 3.8 flash (batch) | $0.38 | $1.88 | $0.04 | 1.05M |
+| gemini flash latest | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini pro latest | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemma 2 27b | $0.65 | $0.65 | — | 8.19K |
+| gemma 3 4b | $0.05 | $0.10 | — | 131.07K |
+| gemma 3 12b | $0.05 | $0.15 | — | 131.07K |
+| gemma 3 27b | $0.08 | $0.45 | $0.04 | 131.07K |
+| gemma 4 26b a4b | $0.07 | $0.22 | $0.04 | 262.14K |
+| gemma 4 26b a4b  (free) | $0.00 | $0.00 | — | 262.14K |
+| gemma 4 31b | $0.09 | $0.34 | $0.05 | 262.14K |
+| gemma 4 31b (free) | $0.00 | $0.00 | — | 262.14K |
+| lyria 3 clip preview | $0.00 | $0.00 | — | 1.05M |
+| lyria 3 pro preview | $0.00 | $0.00 | — | 1.05M |
+| nano banana 2 (gemini 3.1 flash image preview) | $0.50 | $3.00 | — | 65.54K |
+| nano banana 2 (gemini 3.1 flash image) | $0.50 | $3.00 | — | 131.07K |
+| nano banana 2 lite (gemini 3.1 flash lite image) | $0.25 | $1.50 | — | 65.54K |
+| nano banana 2.1 | $1.50 | $7.50 | — | 65.54K |
+| nano banana (gemini 2.5 flash image) | $0.30 | $2.50 | $0.03 | 32.77K |
+| nano banana pro (gemini 3 pro image preview) | $2.00 | $12.00 | $0.20 | 65.54K |
+| nano banana pro (gemini 3 pro image) | $2.00 | $12.00 | $0.20 | 131.07K |
 
 ## gradient_ai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| anthropic-claude-3.5-sonnet | 3.000000 | 15.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic-claude-3.7-sonnet | 3.000000 | 15.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-llama-70b | 0.99000000 | 0.99000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic-claude-3.5-haiku | 0.8000000 | 4.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.3-70b-instruct | 0.65000000 | 0.65000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| anthropic-claude-3-opus | 15.000000 | 75.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai-o3 | 2.000000 | 8.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai-o3-mini | 1.1000000 | 4.4000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-nemo-instruct-2407 | 0.3000000 | 0.3000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3-8b-instruct | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| anthropic-claude-3-opus | $15.00 | $75.00 | — | 200K |
+| anthropic-claude-3.5-haiku | $0.80 | $4.00 | — | 200K |
+| anthropic-claude-3.5-sonnet | $3.00 | $15.00 | — | 200K |
+| anthropic-claude-3.7-sonnet | $3.00 | $15.00 | — | 200K |
+| deepseek-r1-distill-llama-70b | $0.99 | $0.99 | — | 32.77K |
+| llama3-8b-instruct | $0.20 | $0.20 | — | 8.19K |
+| llama3.3-70b-instruct | $0.65 | $0.65 | — | 128K |
+| mistral-nemo-instruct-2407 | $0.30 | $0.30 | — | 128K |
+| openai-o3 | $2.00 | $8.00 | — | 200K |
+| openai-o3-mini | $1.10 | $4.40 | — | 200K |
 
 ## groq
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gpt-oss-safeguard-20b | 0.075000000 | 0.3000000 | 0.037000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-prompt-guard-2-86m | 0.04000000 | 0.04000000 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.15000000 | 0.6000000 | 0.075000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-guard-3-8b | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b | 0.075000000 | 0.3000000 | 0.0375000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-27b | 0.8000000 | 4.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-prompt-guard-2-22m | 0.03000000 | 0.03000000 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| gpt-oss-20b | $0.08 | $0.30 | $0.04 | 131.07K |
+| gpt-oss-120b | $0.15 | $0.60 | $0.08 | 131.07K |
+| gpt-oss-safeguard-20b | $0.08 | $0.30 | $0.04 | 131.07K |
+| llama-guard-3-8b | $0.20 | $0.20 | — | 8.19K |
+| llama-prompt-guard-2-22m | $0.03 | $0.03 | — | 512 |
+| llama-prompt-guard-2-86m | $0.04 | $0.04 | — | 512 |
+| qwen3.8-27b | $0.80 | $4.00 | — | 131.07K |
 
 ## gryphe
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| MythoMax 13B | 0.08000000 | 0.11000000 | — | 8192 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| mythomax 13b | $0.08 | $0.11 | — | 8.19K |
 
 ## hyperbolic
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| DeepSeek-V3-0324 | 0.4000000 | 0.4000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.3-70B-Instruct | 0.12000000 | 0.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3-70B-Instruct | 0.12000000 | 0.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2-Instruct | 2.000000 | 2.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-235B-A22B | 2.000000 | 2.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| QwQ-32B | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Hermes-3-Llama-3.1-70B | 0.12000000 | 0.3000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-72B-Instruct | 0.12000000 | 0.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-405B-Instruct | 0.12000000 | 0.3000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1 | 0.4000000 | 0.4000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-Coder-32B-Instruct | 0.12000000 | 0.3000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-70B-Instruct | 0.12000000 | 0.3000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-0528 | 0.25000000 | 0.25000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-8B-Instruct | 0.12000000 | 0.3000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.2-3B-Instruct | 0.12000000 | 0.3000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3 | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-r1 | $0.40 | $0.40 | — | 32.77K |
+| deepseek-r1-0528 | $0.25 | $0.25 | — | 131.07K |
+| deepseek-v3 | $0.20 | $0.20 | — | 32.77K |
+| deepseek-v3-0324 | $0.40 | $0.40 | — | 32.77K |
+| hermes-3-llama-3.1-70b | $0.12 | $0.30 | — | 32.77K |
+| kimi-k2-instruct | $2.00 | $2.00 | — | 131.07K |
+| llama-3.2-3b-instruct | $0.12 | $0.30 | — | 32.77K |
+| llama-3.3-70b-instruct | $0.12 | $0.30 | — | 131.07K |
+| meta-llama-3-70b-instruct | $0.12 | $0.30 | — | 131.07K |
+| meta-llama-3.1-8b-instruct | $0.12 | $0.30 | — | 32.77K |
+| meta-llama-3.1-70b-instruct | $0.12 | $0.30 | — | 32.77K |
+| meta-llama-3.1-405b-instruct | $0.12 | $0.30 | — | 32.77K |
+| qwen2.5-72b-instruct | $0.12 | $0.30 | — | 131.07K |
+| qwen2.5-coder-32b-instruct | $0.12 | $0.30 | — | 32.77K |
+| qwen3-235b-a22b | $2.00 | $2.00 | — | 131.07K |
+| qwq-32b | $0.20 | $0.20 | — | 131.07K |
 
 ## ibm-granite
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| IBM: Granite 4.2 8B | 0.06000000 | 0.25000000 | 0.015000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| IBM: Granite 4.0 Micro | 0.017000000 | 0.112000000 | — | 131000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| ibm: granite 4.0 micro | $0.02 | $0.11 | — | 131K |
+| ibm: granite 4.2 8b | $0.06 | $0.25 | $0.02 | 131.07K |
 
 ## inception
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| mercury-2 | 0.25000000 | 0.75000000 | 0.025000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mercury-2.5 | 0.2000000 | 0.75000000 | 0.02000000 | 260000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| mercury-2 | $0.25 | $0.75 | $0.02 | 128K |
+| mercury-2.5 | $0.20 | $0.75 | $0.02 | 260K |
 
 ## inclusionai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| inclusionAI: Ling 3.0 Flash Sante | 0.042000000 | 0.1232000000 | 0.0084000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| inclusionAI: Ling 3.0 Flash | 0.021000000 | 0.063000000 | 0.0042000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| inclusionAI: Ling 3.1 Flash | 0 | 0 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| inclusionAI: Ling 3.0 Flash VL | 0.021000000 | 0.0616000000 | 0.0042000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| inclusionAI: Ling 3.0 Flash Fin | 0.042000000 | 0.1232000000 | 0.0084000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| ling 3.0 flash | $0.02 | $0.06 | $0.0042 | 262.14K |
+| ling 3.0 flash fin | $0.04 | $0.12 | $0.0084 | 262.14K |
+| ling 3.0 flash sante | $0.04 | $0.12 | $0.0084 | 262.14K |
+| ling 3.0 flash vl | $0.02 | $0.06 | $0.0042 | 262.14K |
+| ling 3.1 flash | $0.00 | $0.00 | — | 262.14K |
 
 ## inference-net
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Inference.net: Schematron V2 Turbo | 0.03000000 | 0.15000000 | 0.03000000 | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Inference.net: Schematron V2 Small | 0.05000000 | 0.23000000 | 0.05000000 | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| inference.net: schematron v2 small | $0.05 | $0.23 | $0.05 | 128K |
+| inference.net: schematron v2 turbo | $0.03 | $0.15 | $0.03 | 128K |
 
 ## jina_ai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| jina-reranker-v2-base-multilingual | 0.05000000 | 0.0 | — | 1024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| jina-reranker-v2-base-multilingual | $0.05 | $0.00 | — | 1.02K |
 
 ## lambda_ai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| deepseek-llama3.3-70b | 0.2000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.1-8b-instruct | 0.025000000 | 0.04000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3-0324 | 0.2000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-32b-fp8 | 0.05000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.1-nemotron-70b-instruct-fp8 | 0.12000000 | 0.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| hermes3-70b | 0.12000000 | 0.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| lfm-7b | 0.025000000 | 0.04000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| lfm-40b | 0.1000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen25-coder-32b-instruct | 0.05000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.2-11b-vision-instruct | 0.015000000 | 0.025000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| hermes3-8b | 0.025000000 | 0.04000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-0528 | 0.2000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-scout-17b-16e-instruct | 0.05000000 | 0.1000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.2-3b-instruct | 0.015000000 | 0.025000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-maverick-17b-128e-instruct-fp8 | 0.05000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.1-405b-instruct-fp8 | 0.8000000 | 0.8000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.1-70b-instruct-fp8 | 0.12000000 | 0.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-671b | 0.8000000 | 0.8000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| hermes3-405b | 0.8000000 | 0.8000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.3-70b-instruct-fp8 | 0.12000000 | 0.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-llama3.3-70b | $0.20 | $0.60 | — | 131.07K |
+| deepseek-r1-0528 | $0.20 | $0.60 | — | 131.07K |
+| deepseek-r1-671b | $0.80 | $0.80 | — | 131.07K |
+| deepseek-v3-0324 | $0.20 | $0.60 | — | 131.07K |
+| hermes3-8b | $0.02 | $0.04 | — | 131.07K |
+| hermes3-70b | $0.12 | $0.30 | — | 131.07K |
+| hermes3-405b | $0.80 | $0.80 | — | 131.07K |
+| lfm-7b | $0.02 | $0.04 | — | 131.07K |
+| lfm-40b | $0.10 | $0.20 | — | 131.07K |
+| llama3.1-8b-instruct | $0.02 | $0.04 | — | 131.07K |
+| llama3.1-70b-instruct-fp8 | $0.12 | $0.30 | — | 131.07K |
+| llama3.1-405b-instruct-fp8 | $0.80 | $0.80 | — | 131.07K |
+| llama3.1-nemotron-70b-instruct-fp8 | $0.12 | $0.30 | — | 131.07K |
+| llama3.2-3b-instruct | $0.02 | $0.02 | — | 131.07K |
+| llama3.2-11b-vision-instruct | $0.02 | $0.02 | — | 131.07K |
+| llama3.3-70b-instruct-fp8 | $0.12 | $0.30 | — | 131.07K |
+| llama-4-maverick-17b-128e-instruct-fp8 | $0.05 | $0.10 | — | 131.07K |
+| llama-4-scout-17b-16e-instruct | $0.05 | $0.10 | — | 16.38K |
+| qwen3-32b-fp8 | $0.05 | $0.10 | — | 131.07K |
+| qwen25-coder-32b-instruct | $0.05 | $0.10 | — | 131.07K |
 
 ## laya
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| typed-decisions | 0.0 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| multilingual | 0.0 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| english | 0.0 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| english | $0.00 | $0.00 | — | — |
+| multilingual | $0.00 | $0.00 | — | — |
+| typed-decisions | $0.00 | $0.00 | — | — |
 
 ## lemonade
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Qwen3-Coder-30B-A3B-Instruct-GGUF | 0 | 0 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Gemma-3-4b-it-GGUF | 0 | 0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-4B-Instruct-2507-GGUF | 0 | 0 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b-mxfp-GGUF | 0 | 0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b-mxfp4-GGUF | 0 | 0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| gemma-3-4b-it-gguf | $0.00 | $0.00 | — | 128K |
+| gpt-oss-20b-mxfp4-gguf | $0.00 | $0.00 | — | 131.07K |
+| gpt-oss-120b-mxfp-gguf | $0.00 | $0.00 | — | 131.07K |
+| qwen3-4b-instruct-2507-gguf | $0.00 | $0.00 | — | 262.14K |
+| qwen3-coder-30b-a3b-instruct-gguf | $0.00 | $0.00 | — | 262.14K |
 
 ## libertai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gemma-4-31b-it | 0.15000000 | 0.4000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.5-122b-a10b | 0.25000000 | 1.75000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| bge-m3 | 0.01000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| hermes-3-8b-tee | 0.15000000 | 0.6000000 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.6-27b-thinking | 0.15000000 | 0.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash | 0.25000000 | 1.75000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31b-it-thinking | 0.15000000 | 0.4000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.6-27b | 0.15000000 | 0.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash-thinking | 0.25000000 | 1.75000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.6-35b-a3b | 0.15000000 | 0.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.5-122b-a10b-thinking | 0.25000000 | 1.75000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.6-35b-a3b-thinking | 0.15000000 | 0.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| bge-m3 | $0.01 | $0.00 | — | 8.19K |
+| deepseek-v4-flash | $0.25 | $1.75 | — | 200K |
+| deepseek-v4-flash-thinking | $0.25 | $1.75 | — | 200K |
+| gemma-4-31b-it | $0.15 | $0.40 | — | 262.14K |
+| gemma-4-31b-it-thinking | $0.15 | $0.40 | — | 262.14K |
+| hermes-3-8b-tee | $0.15 | $0.60 | — | 16K |
+| qwen3.5-122b-a10b | $0.25 | $1.75 | — | 262.14K |
+| qwen3.5-122b-a10b-thinking | $0.25 | $1.75 | — | 262.14K |
+| qwen3.6-27b | $0.15 | $0.50 | — | 262.14K |
+| qwen3.6-27b-thinking | $0.15 | $0.50 | — | 262.14K |
+| qwen3.6-35b-a3b | $0.15 | $0.50 | — | 262.14K |
+| qwen3.6-35b-a3b-thinking | $0.15 | $0.50 | — | 262.14K |
 
 ## liquid
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| LiquidAI: LFM2.5-2.6B (free) | 0 | 0 | — | 65536 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| liquidai: lfm2.5-2.6b (free) | $0.00 | $0.00 | — | 65.54K |
 
 ## llamagate
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| qwen3-embedding-8b | 0.02000000 | 0 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-8b | 0.15000000 | 0.55000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma3-4b | 0.03000000 | 0.08000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.1-8b | 0.03000000 | 0.05000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openthinker-7b | 0.08000000 | 0.15000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-6.7b | 0.06000000 | 0.12000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.2-3b | 0.04000000 | 0.08000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| dolphin3-8b | 0.08000000 | 0.15000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7b-v0.3 | 0.1000000 | 0.15000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llava-7b | 0.1000000 | 0.2000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2.5-coder-7b | 0.06000000 | 0.12000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-8b | 0.1000000 | 0.2000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codellama-7b | 0.06000000 | 0.12000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-8b | 0.04000000 | 0.14000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nomic-embed-text | 0.02000000 | 0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-7b-qwen | 0.08000000 | 0.15000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| codellama-7b | $0.06 | $0.12 | — | 16.38K |
+| deepseek-coder-6.7b | $0.06 | $0.12 | — | 16.38K |
+| deepseek-r1-7b-qwen | $0.08 | $0.15 | — | 131.07K |
+| deepseek-r1-8b | $0.10 | $0.20 | — | 65.54K |
+| dolphin3-8b | $0.08 | $0.15 | — | 128K |
+| gemma3-4b | $0.03 | $0.08 | — | 128K |
+| llama-3.1-8b | $0.03 | $0.05 | — | 131.07K |
+| llama-3.2-3b | $0.04 | $0.08 | — | 131.07K |
+| llava-7b | $0.10 | $0.20 | — | 4.1K |
+| mistral-7b-v0.3 | $0.10 | $0.15 | — | 32.77K |
+| nomic-embed-text | $0.02 | $0.00 | — | 8.19K |
+| openthinker-7b | $0.08 | $0.15 | — | 32.77K |
+| qwen2.5-coder-7b | $0.06 | $0.12 | — | 32.77K |
+| qwen3-8b | $0.04 | $0.14 | — | 32.77K |
+| qwen3-embedding-8b | $0.02 | $0.00 | — | 40.96K |
+| qwen3-vl-8b | $0.15 | $0.55 | — | 32.77K |
 
 ## mancer
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Mancer: Weaver (alpha) | 0.4000000 | 0.75000000 | — | 8000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| weaver (alpha) | $0.40 | $0.75 | — | 8K |
 
 ## meituan
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Meituan: LongCat 2.0 | 0.3000000 | 1.2000000 | 0.006000000 | 1048756 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| longcat 2.0 | $0.30 | $1.20 | $0.006 | 1.05M |
 
 ## meta
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| muse-spark-1.2-contributor | 0.1000000 | 0.2000000 | 0.002000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta: Muse Glimmer 30B | 0.3000000 | 1.2000000 | 0.04000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| muse-spark-1.3-contributor | 0.1000000 | 0.2000000 | 0.002000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| muse-spark-1.3 | 1.25000000 | 4.25000000 | 0.15000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| muse-spark-1.1 | 1.25000000 | 4.25000000 | 0.15000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| muse-spark-1.2 | 1.25000000 | 4.25000000 | 0.15000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| muse glimmer 30b | $0.30 | $1.20 | $0.04 | 131.07K |
+| muse-spark-1.1 | $1.25 | $4.25 | $0.15 | 1.05M |
+| muse-spark-1.2 | $1.25 | $4.25 | $0.15 | 1.05M |
+| muse-spark-1.2-contributor | $0.10 | $0.20 | $0.002 | 1.05M |
+| muse-spark-1.3 | $1.25 | $4.25 | $0.15 | 1.05M |
+| muse-spark-1.3-contributor | $0.10 | $0.20 | $0.002 | 1.05M |
 
 ## meta-llama
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Meta: Llama 3.3 70B Instruct | 0.22000000 | 0.5000000 | 0.11000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta: Llama 3.1 8B Instruct | 0.05000000 | 0.08000000 | 0.025000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta: Llama 4 Scout | 0.1000000 | 0.3000000 | — | 1310720 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta: Llama Guard 4 12B | 0.18000000 | 0.18000000 | — | 163840 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta: Llama 3.2 3B Instruct | 0.05000000 | 0.33000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta: Llama 3.1 70B Instruct | 0.4000000 | 0.4000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta: Llama 4 Maverick | 0.1875000000 | 0.6525000000 | 0.05000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta: Llama 3.2 1B Instruct | 0.027000000 | 0.201000000 | — | 60000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| meta: llama 3.1 8b instruct | $0.05 | $0.08 | $0.02 | 131.07K |
+| meta: llama 3.1 70b instruct | $0.40 | $0.40 | — | 131.07K |
+| meta: llama 3.2 1b instruct | $0.03 | $0.20 | — | 60K |
+| meta: llama 3.2 3b instruct | $0.05 | $0.33 | — | 131.07K |
+| meta: llama 3.3 70b instruct | $0.22 | $0.50 | $0.11 | 131.07K |
+| meta: llama 4 maverick | $0.19 | $0.65 | $0.05 | 1.05M |
+| meta: llama 4 scout | $0.10 | $0.30 | — | 1.31M |
+| meta: llama guard 4 12b | $0.18 | $0.18 | — | 163.84K |
 
 ## microsoft
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| WizardLM-2 8x22B | 0.62000000 | 0.62000000 | — | 65535 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Microsoft: Phi 4 | 0.07000000 | 0.14000000 | — | 16384 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| phi 4 | $0.07 | $0.14 | — | 16.38K |
+| wizardlm-2 8x22b | $0.62 | $0.62 | — | 65.53K |
 
 ## microsoft_365_copilot
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| chat | 0.0 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| chat | $0.00 | $0.00 | — | — |
 
 ## minimax
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| MiniMax-M2 | 0.3000000 | 1.2000000 | 0.03000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax: MiniMax M1 | 0.55000000 | 2.2000000 | — | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.5 | 0.3000000 | 1.2000000 | 0.03000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax: MiniMax M2.7 | 0.21000000 | 0.84000000 | 0.042000000 | 204800 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M3 | 0.3000000 | 1.2000000 | 0.06000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.1-lightning | 0.3000000 | 2.4000000 | 0.03000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax: MiniMax M2-her | 0.3000000 | 1.2000000 | 0.03000000 | 65536 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax: MiniMax-01 | 0.2000000 | 1.1000000 | — | 1000192 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.5-lightning | 0.3000000 | 2.4000000 | 0.03000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.1 | 0.3000000 | 1.2000000 | 0.03000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| minimax m1 | $0.55 | $2.20 | — | 1M |
+| minimax m2-her | $0.30 | $1.20 | $0.03 | 65.54K |
+| minimax m2.7 | $0.21 | $0.84 | $0.04 | 204.8K |
+| minimax-01 | $0.20 | $1.10 | — | 1M |
+| minimax-m2 | $0.30 | $1.20 | $0.03 | 200K |
+| minimax-m2.1 | $0.30 | $1.20 | $0.03 | 1M |
+| minimax-m2.1-lightning | $0.30 | $2.40 | $0.03 | 1M |
+| minimax-m2.5 | $0.30 | $1.20 | $0.03 | 1M |
+| minimax-m2.5-lightning | $0.30 | $2.40 | $0.03 | 1M |
+| minimax-m3 | $0.30 | $1.20 | $0.06 | 1M |
 
 ## mistral
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| ministral-14b-latest | 0.2000000 | 0.2000000 | 0.02000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| labs-leanstral-1-5-1 | 0.0 | 0.0 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-14b-2512 | 0.2000000 | 0.2000000 | 0.02000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| magistral-medium-latest | 1.5000000 | 7.5000000 | 0.15000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| labs-leanstral-1-5 | 0.0 | 0.0 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-3b-latest | 0.1000000 | 0.1000000 | 0.01000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral-embed | 0.15000000 | — | 0.015000000 | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5-2 | 1.4000000 | 4.4000000 | 0.14000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-3-14b-2512 | 0.2000000 | 0.2000000 | 0.02000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral-embed-2505 | 0.15000000 | — | 0.015000000 | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral-2508 | 0.3000000 | 0.9000000 | 0.03000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral-mamba-latest | 0.25000000 | 0.25000000 | 0.025000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-3-3b-2512 | 0.1000000 | 0.1000000 | 0.01000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| devstral-small-latest | 0.1000000 | 0.3000000 | 0.01000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-8b-latest | 0.15000000 | 0.15000000 | 0.015000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral-latest | 0.3000000 | 0.9000000 | 0.03000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-3b-2512 | 0.1000000 | 0.1000000 | 0.01000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| magistral-small-latest | 0.15000000 | 0.6000000 | 0.015000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-code-fim-latest | 0.3000000 | 0.9000000 | 0.03000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| devstral-medium-latest | 0.4000000 | 2.000000 | 0.04000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-3-8b-2512 | 0.15000000 | 0.15000000 | 0.015000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-8b-2512 | 0.15000000 | 0.15000000 | 0.015000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| devstral-latest | 0.4000000 | 2.000000 | 0.04000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-code-agent-latest | 0.4000000 | 2.000000 | 0.04000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small-latest | 0.15000000 | 0.6000000 | 0.015000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small | 0.1000000 | 0.3000000 | 0.01000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-4-0 | 0.68000000 | 2.09000000 | 0.068000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| zai-glm-5-2 | 1.4000000 | 4.4000000 | 0.14000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voxtral-small-2507 | 0.1000000 | 0.4000000 | 0.01000000 | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-medium | 1.5000000 | 7.5000000 | 0.15000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-embed | 0.1000000 | — | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-medium-3 | 1.5000000 | 7.5000000 | 0.15000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-3 | 0.5000000 | 1.5000000 | 0.05000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| zai-glm-5-3 | 1.4000000 | 4.4000000 | 0.14000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small-2603 | 0.15000000 | 0.6000000 | 0.015000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-embed-2312 | 0.1000000 | — | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-vibe-cli-latest | 1.5000000 | 7.5000000 | 0.15000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-latest | 0.5000000 | 1.5000000 | 0.05000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voxtral-small-latest | 0.1000000 | 0.4000000 | 0.01000000 | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-tiny | 0.25000000 | 0.25000000 | 0.025000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pixtral-large-latest | 2.000000 | 6.000000 | 0.2000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-vibe-cli-fast | 0.15000000 | 0.6000000 | 0.015000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-moderation-2603 | 0.0 | 0.0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-2512 | 0.5000000 | 1.5000000 | 0.05000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-medium-latest | 1.5000000 | 7.5000000 | 0.15000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-vibe-cli-with-tools | 1.5000000 | 7.5000000 | 0.15000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-medium-3-5 | 1.5000000 | 7.5000000 | 0.15000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| open-mistral-nemo | 0.3000000 | 0.3000000 | 0.03000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-4 | 0.68000000 | 2.09000000 | 0.068000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| zai-glm-5 | 1.4000000 | 4.4000000 | 0.14000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-code-latest | 0.3000000 | 0.9000000 | 0.03000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-medium-2604 | 1.5000000 | 7.5000000 | 0.15000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| zai-glm-latest | 1.4000000 | 4.4000000 | 0.14000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Small 3.2 24B | 0.09375000000 | 0.25000000 | — | 256000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Saba | 0.2000000 | 0.6000000 | 0.02000000 | 32768 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Codestral 2508 | 0.3000000 | 0.9000000 | 0.03000000 | 256000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Ministral 3 8B 2512 | 0.15000000 | 0.15000000 | 0.015000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Devstral 2 2512 | 0.4000000 | 2.000000 | 0.04000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Ministral 3 8B 2512 (batch) | 0.075000000 | 0.075000000 | 0.0075000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Voxtral Small 24B 2507 | 0.1000000 | 0.3000000 | 0.01000000 | 32768 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral Large | 2.000000 | 6.000000 | 0.2000000 | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Ministral 3 3B 2512 | 0.1000000 | 0.1000000 | 0.01000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Small 4 (batch) | 0.075000000 | 0.3000000 | 0.0075000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Medium 3.5 (batch) | 0.75000000 | 3.75000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Medium 3.5 | 1.5000000 | 7.5000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral Large 2407 | 2.000000 | 6.000000 | 0.2000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Small 4 | 0.15000000 | 0.6000000 | 0.015000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Large 3 2512 (batch) | 0.25000000 | 0.75000000 | 0.025000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Large 3 2512 | 0.5000000 | 1.5000000 | 0.05000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Medium 3 | 0.4000000 | 2.000000 | 0.04000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Medium 3.1 | 0.4000000 | 2.000000 | 0.04000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Small 3.1 24B | 0.351000000 | 0.555000000 | — | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Codestral 2508 (batch) | 0.15000000 | 0.45000000 | 0.015000000 | 256000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Ministral 3 14B 2512 | 0.2000000 | 0.2000000 | 0.02000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mixtral 8x22B Instruct | 2.000000 | 6.000000 | 0.2000000 | 65536 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Nemo | 0.029000000 | 0.03000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Medium 3.1 (batch) | 0.2000000 | 1.000000 | 0.02000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Small 3 | 0.05000000 | 0.08000000 | — | 32768 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral: Mistral Large 4 | 0.68000000 | 2.09000000 | 0.07000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| codestral 2508 | $0.30 | $0.90 | $0.03 | 256K |
+| codestral 2508 (batch) | $0.15 | $0.45 | $0.02 | 256K |
+| codestral-2508 | $0.30 | $0.90 | $0.03 | 128K |
+| codestral-embed | $0.15 | — | $0.02 | 8.19K |
+| codestral-embed-2505 | $0.15 | — | $0.02 | 8.19K |
+| codestral-latest | $0.30 | $0.90 | $0.03 | 128K |
+| codestral-mamba-latest | $0.25 | $0.25 | $0.02 | 256K |
+| devstral 2 2512 | $0.40 | $2.00 | $0.04 | 262.14K |
+| devstral-latest | $0.40 | $2.00 | $0.04 | 256K |
+| devstral-medium-latest | $0.40 | $2.00 | $0.04 | 256K |
+| devstral-small-latest | $0.10 | $0.30 | $0.01 | 256K |
+| glm-5-2 | $1.40 | $4.40 | $0.14 | 1.05M |
+| labs-leanstral-1-5 | $0.00 | $0.00 | — | 262.14K |
+| labs-leanstral-1-5-1 | $0.00 | $0.00 | — | 262.14K |
+| magistral-medium-latest | $1.50 | $7.50 | $0.15 | 262.14K |
+| magistral-small-latest | $0.15 | $0.60 | $0.02 | 262.14K |
+| ministral 3 3b 2512 | $0.10 | $0.10 | $0.01 | 131.07K |
+| ministral 3 8b 2512 | $0.15 | $0.15 | $0.02 | 262.14K |
+| ministral 3 8b 2512 (batch) | $0.08 | $0.08 | $0.0075 | 262.14K |
+| ministral 3 14b 2512 | $0.20 | $0.20 | $0.02 | 262.14K |
+| ministral-3-3b-2512 | $0.10 | $0.10 | $0.01 | 131.07K |
+| ministral-3-8b-2512 | $0.15 | $0.15 | $0.02 | 262.14K |
+| ministral-3-14b-2512 | $0.20 | $0.20 | $0.02 | 262.14K |
+| ministral-3b-2512 | $0.10 | $0.10 | $0.01 | 131.07K |
+| ministral-3b-latest | $0.10 | $0.10 | $0.01 | 131.07K |
+| ministral-8b-2512 | $0.15 | $0.15 | $0.02 | 262.14K |
+| ministral-8b-latest | $0.15 | $0.15 | $0.02 | 262.14K |
+| ministral-14b-2512 | $0.20 | $0.20 | $0.02 | 262.14K |
+| ministral-14b-latest | $0.20 | $0.20 | $0.02 | 262.14K |
+| mistral large | $2.00 | $6.00 | $0.20 | 128K |
+| mistral large 3 2512 | $0.50 | $1.50 | $0.05 | 262.14K |
+| mistral large 3 2512 (batch) | $0.25 | $0.75 | $0.02 | 262.14K |
+| mistral large 4 | $0.68 | $2.09 | $0.07 | 1.05M |
+| mistral large 2407 | $2.00 | $6.00 | $0.20 | 131.07K |
+| mistral medium 3 | $0.40 | $2.00 | $0.04 | 131.07K |
+| mistral medium 3.1 | $0.40 | $2.00 | $0.04 | 131.07K |
+| mistral medium 3.1 (batch) | $0.20 | $1.00 | $0.02 | 131.07K |
+| mistral medium 3.5 | $1.50 | $7.50 | — | 262.14K |
+| mistral medium 3.5 (batch) | $0.75 | $3.75 | — | 262.14K |
+| mistral nemo | $0.03 | $0.03 | — | 131.07K |
+| mistral small 3 | $0.05 | $0.08 | — | 32.77K |
+| mistral small 3.1 24b | $0.35 | $0.56 | — | 128K |
+| mistral small 3.2 24b | $0.09 | $0.25 | — | 256K |
+| mistral small 4 | $0.15 | $0.60 | $0.02 | 262.14K |
+| mistral small 4 (batch) | $0.08 | $0.30 | $0.0075 | 262.14K |
+| mistral-code-agent-latest | $0.40 | $2.00 | $0.04 | 256K |
+| mistral-code-fim-latest | $0.30 | $0.90 | $0.03 | 128K |
+| mistral-code-latest | $0.30 | $0.90 | $0.03 | 128K |
+| mistral-embed | $0.10 | — | — | 8.19K |
+| mistral-embed-2312 | $0.10 | — | — | 8.19K |
+| mistral-large-3 | $0.50 | $1.50 | $0.05 | 262.14K |
+| mistral-large-4 | $0.68 | $2.09 | $0.07 | 1.05M |
+| mistral-large-4-0 | $0.68 | $2.09 | $0.07 | 1.05M |
+| mistral-large-2512 | $0.50 | $1.50 | $0.05 | 262.14K |
+| mistral-large-latest | $0.50 | $1.50 | $0.05 | 262.14K |
+| mistral-medium | $1.50 | $7.50 | $0.15 | 262.14K |
+| mistral-medium-3 | $1.50 | $7.50 | $0.15 | 262.14K |
+| mistral-medium-3-5 | $1.50 | $7.50 | $0.15 | 262.14K |
+| mistral-medium-2604 | $1.50 | $7.50 | $0.15 | 262.14K |
+| mistral-medium-latest | $1.50 | $7.50 | $0.15 | 262.14K |
+| mistral-moderation-2603 | $0.00 | $0.00 | — | 131.07K |
+| mistral-small | $0.10 | $0.30 | $0.01 | 32K |
+| mistral-small-2603 | $0.15 | $0.60 | $0.02 | 262.14K |
+| mistral-small-latest | $0.15 | $0.60 | $0.02 | 262.14K |
+| mistral-tiny | $0.25 | $0.25 | $0.02 | 32K |
+| mistral-vibe-cli-fast | $0.15 | $0.60 | $0.02 | 262.14K |
+| mistral-vibe-cli-latest | $1.50 | $7.50 | $0.15 | 262.14K |
+| mistral-vibe-cli-with-tools | $1.50 | $7.50 | $0.15 | 262.14K |
+| mixtral 8x22b instruct | $2.00 | $6.00 | $0.20 | 65.54K |
+| open-mistral-nemo | $0.30 | $0.30 | $0.03 | 128K |
+| pixtral-large-latest | $2.00 | $6.00 | $0.20 | 128K |
+| saba | $0.20 | $0.60 | $0.02 | 32.77K |
+| voxtral small 24b 2507 | $0.10 | $0.30 | $0.01 | 32.77K |
+| voxtral-small-2507 | $0.10 | $0.40 | $0.01 | 32.77K |
+| voxtral-small-latest | $0.10 | $0.40 | $0.01 | 32.77K |
+| zai-glm-5 | $1.40 | $4.40 | $0.14 | 1.05M |
+| zai-glm-5-2 | $1.40 | $4.40 | $0.14 | 1.05M |
+| zai-glm-5-3 | $1.40 | $4.40 | $0.14 | 1.05M |
+| zai-glm-latest | $1.40 | $4.40 | $0.14 | 1.05M |
 
 ## moonshotai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| moonshot-v1-128k | 2.000000 | 5.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.5 | 0.6000000 | 3.000000 | 0.1000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshot-v1-128k-vision-preview | 2.000000 | 5.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshot-v1-auto | 2.000000 | 5.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.7-code | 0.95000000 | 4.000000 | 0.19000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshot-v1-32k | 1.000000 | 3.000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.6 | 0.95000000 | 4.000000 | 0.16000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshot-v1-8k-vision-preview | 0.2000000 | 2.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k3 | 3.000000 | 15.000000 | 0.3000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshot-v1-8k | 0.2000000 | 2.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| moonshot-v1-32k-vision-preview | 1.000000 | 3.000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MoonshotAI: Kimi K2 0711 | 0.57000000 | 2.3000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MoonshotAI: Kimi K2.5 | 0.5000000 | 2.5000000 | 0.15000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MoonshotAI: Kimi K3 (batch) | 2.28000000 | 11.4000000 | 0.228000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MoonshotAI: Kimi K3 | 0.8000000 | 13.5000000 | 0.55000000 | 1048576 | aggregator | 2026-10-11T20:41:46.105503+00:00 | 
-
-| MoonshotAI: Kimi K2 0905 | 0.6000000 | 2.5000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MoonshotAI: Kimi K2 Thinking | 0.6000000 | 2.5000000 | 0.15000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MoonshotAI: Kimi K2.6 | 0.65000000 | 3.41000000 | 0.15000000 | 262144 | aggregator | 2026-10-11T20:41:46.105503+00:00 | 
-
-| MoonshotAI: Kimi K2.7 Code | 0.6712000000 | 3.35000000 | 0.18000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| kimi k2 0711 | $0.57 | $2.30 | — | 131.07K |
+| kimi k2 0905 | $0.60 | $2.50 | — | 262.14K |
+| kimi k2 thinking | $0.60 | $2.50 | $0.15 | 262.14K |
+| kimi k2.5 | $0.50 | $2.50 | $0.15 | 262.14K |
+| kimi k2.6 | $0.65 | $3.41 | $0.15 | 262.14K |
+| kimi k2.7 code | $0.67 | $3.35 | $0.18 | 262.14K |
+| kimi k3 | $0.73 | $13.50 | $0.55 | 1.05M |
+| kimi k3 (batch) | $2.28 | $11.40 | $0.23 | 1.05M |
+| kimi latest | $0.67 | $16.50 | $0.30 | 1.05M |
+| kimi-k2.5 | $0.60 | $3.00 | $0.10 | 262.14K |
+| kimi-k2.6 | $0.95 | $4.00 | $0.16 | 262.14K |
+| kimi-k2.7-code | $0.95 | $4.00 | $0.19 | 262.14K |
+| kimi-k3 | $3.00 | $15.00 | $0.30 | 1.05M |
+| moonshot-v1-8k | $0.20 | $2.00 | — | 8.19K |
+| moonshot-v1-8k-vision-preview | $0.20 | $2.00 | — | 8.19K |
+| moonshot-v1-32k | $1.00 | $3.00 | — | 32.77K |
+| moonshot-v1-32k-vision-preview | $1.00 | $3.00 | — | 32.77K |
+| moonshot-v1-128k | $2.00 | $5.00 | — | 131.07K |
+| moonshot-v1-128k-vision-preview | $2.00 | $5.00 | — | 131.07K |
+| moonshot-v1-auto | $2.00 | $5.00 | — | 131.07K |
 
 ## morph
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| morph-v3-fast | 0.8000000 | 1.2000000 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| morph-v3-large | 0.9000000 | 1.9000000 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| morph-v3-fast | $0.80 | $1.20 | — | 16K |
+| morph-v3-large | $0.90 | $1.90 | — | 16K |
 
 ## nebius
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Hermes-4-70B | 0.13000000 | 0.4000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1 | 0.8000000 | 2.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.3 | 1.4000000 | 4.4000000 | — | 1024000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Hermes-4-405B | 1.000000 | 3.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.6 | 0.95000000 | 4.000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Hermes-3-Llama-3.1-405B | 1.000000 | 3.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-0528 | 0.8000000 | 2.4000000 | — | 164000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| bge-multilingual-gemma2 | 0.01000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Cosmos3-Super-Reasoner | 0.1000000 | 0.3000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.3-Nemotron-Super-49B-v1 | 0.1000000 | 0.4000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.3-70B-Instruct | 0.13000000 | 0.4000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Flash | 0.14000000 | 0.28000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-3-27b-it | 0.1000000 | 0.3000000 | — | 110000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Pro | 1.75000000 | 3.5000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-Guard-3-8B | 0.02000000 | 0.06000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3 | 0.5000000 | 1.5000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Llama-70B | 0.25000000 | 0.75000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K3 | 3.000000 | 15.000000 | — | 1024000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Pro-0813 | 1.32000000 | 3.96000000 | — | 979000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.1-Nemotron-Ultra-253B-v1 | 0.6000000 | 1.8000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.1 | 1.4000000 | 4.4000000 | — | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.2 | 1.4000000 | 4.4000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.7-Code | 0.95000000 | 4.000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4.1-Flash | 0.3000000 | 1.2000000 | — | 1048000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.15000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| e5-mistral-7b-instruct | 0.01000000 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| bge-en-icl | 0.01000000 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3-0324 | 0.5000000 | 1.5000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Flash-0731 | 0.14000000 | 0.28000000 | — | 1024000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.3-Flash | 0.15000000 | 0.5000000 | — | 1024000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral-Nemo-Instruct-2407 | 0.04000000 | 0.12000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Nemotron-3_5-Lightning | 0.06000000 | 0.24000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-235B-A22B-Instruct-2507 | 0.2000000 | 0.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Embedding-8B | 0.01000000 | 0.0 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-405B-Instruct | 1.000000 | 3.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nemotron-3-super-120b-a12b | 0.3000000 | 0.9000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.5-397B-A17B | 0.6000000 | 3.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-30B-A3B-Instruct-2507 | 0.1000000 | 0.3000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-235B-A22B | 0.2000000 | 0.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Nemotron-3-Ultra-550b-a55b | 1.000000 | 3.000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-4B | 0.08000000 | 0.24000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-72B-Instruct | 0.13000000 | 0.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-8B-Instruct | 0.02000000 | 0.06000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-30B-A3B | 0.1000000 | 0.3000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2-VL-7B-Instruct | 0.02000000 | 0.06000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2-VL-72B-Instruct | 0.13000000 | 0.4000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-14B | 0.08000000 | 0.24000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-32B | 0.1000000 | 0.3000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniCPM-V-4_5 | 0.658000000 | 1.11000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| QwQ-32B | 0.15000000 | 0.45000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-32B-Instruct | 0.06000000 | 0.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-70B-Instruct | 0.13000000 | 0.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA-Nemotron-3-Nano-30B-A3B | 0.06000000 | 0.24000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-Coder-7B | 0.01000000 | 0.03000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Nemotron-3-Nano-Omni | 0.06000000 | 0.24000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-VL-72B-Instruct | 0.25000000 | 0.75000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.8-27B | 0.45000000 | 3.000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.5 | 0.3000000 | 1.2000000 | — | 196608 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Next-80B-A3B-Thinking | 0.15000000 | 1.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M3 | 0.3000000 | 1.2000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| bge-en-icl | $0.01 | $0.00 | — | 32.77K |
+| bge-multilingual-gemma2 | $0.01 | $0.00 | — | 8.19K |
+| cosmos3-super-reasoner | $0.10 | $0.30 | — | 262.14K |
+| deepseek-r1 | $0.80 | $2.40 | — | 128K |
+| deepseek-r1-0528 | $0.80 | $2.40 | — | 164K |
+| deepseek-r1-distill-llama-70b | $0.25 | $0.75 | — | 128K |
+| deepseek-v3 | $0.50 | $1.50 | — | 128K |
+| deepseek-v3-0324 | $0.50 | $1.50 | — | 128K |
+| deepseek-v4-flash | $0.14 | $0.28 | — | 1.05M |
+| deepseek-v4-flash-0731 | $0.14 | $0.28 | — | 1.02M |
+| deepseek-v4-pro | $1.75 | $3.50 | — | 1.05M |
+| deepseek-v4-pro-0813 | $1.32 | $3.96 | — | 979K |
+| deepseek-v4.1-flash | $0.30 | $1.20 | — | 1.05M |
+| e5-mistral-7b-instruct | $0.01 | $0.00 | — | 32.77K |
+| gemma-3-27b-it | $0.10 | $0.30 | — | 110K |
+| glm-5.1 | $1.40 | $4.40 | — | 202.75K |
+| glm-5.2 | $1.40 | $4.40 | — | 1.05M |
+| glm-5.3 | $1.40 | $4.40 | — | 1.02M |
+| glm-5.3-flash | $0.15 | $0.50 | — | 1.02M |
+| gpt-oss-120b | $0.15 | $0.60 | — | 131.07K |
+| hermes-3-llama-3.1-405b | $1.00 | $3.00 | — | 128K |
+| hermes-4-70b | $0.13 | $0.40 | — | 131.07K |
+| hermes-4-405b | $1.00 | $3.00 | — | 131.07K |
+| kimi-k2.6 | $0.95 | $4.00 | — | 262.14K |
+| kimi-k2.7-code | $0.95 | $4.00 | — | 262.14K |
+| kimi-k3 | $3.00 | $15.00 | — | 1.02M |
+| llama-3.1-nemotron-ultra-253b-v1 | $0.60 | $1.80 | — | 128K |
+| llama-3.3-70b-instruct | $0.13 | $0.40 | — | 131.07K |
+| llama-3.3-nemotron-super-49b-v1 | $0.10 | $0.40 | — | 131.07K |
+| llama-guard-3-8b | $0.02 | $0.06 | — | 128K |
+| meta-llama-3.1-8b-instruct | $0.02 | $0.06 | — | 128K |
+| meta-llama-3.1-70b-instruct | $0.13 | $0.40 | — | 128K |
+| meta-llama-3.1-405b-instruct | $1.00 | $3.00 | — | 128K |
+| minicpm-v-4_5 | $0.66 | $1.11 | — | 32K |
+| minimax-m2.5 | $0.30 | $1.20 | — | 196.61K |
+| minimax-m3 | $0.30 | $1.20 | — | 1.05M |
+| mistral-nemo-instruct-2407 | $0.04 | $0.12 | — | 128K |
+| nemotron-3-nano-omni | $0.06 | $0.24 | — | 262.14K |
+| nemotron-3-super-120b-a12b | $0.30 | $0.90 | — | 262.14K |
+| nemotron-3-ultra-550b-a55b | $1.00 | $3.00 | — | 1.05M |
+| nemotron-3_5-lightning | $0.06 | $0.24 | — | 1.05M |
+| nvidia-nemotron-3-nano-30b-a3b | $0.06 | $0.24 | — | 262.14K |
+| qwen2-vl-7b-instruct | $0.02 | $0.06 | — | 131.07K |
+| qwen2-vl-72b-instruct | $0.13 | $0.40 | — | 131.07K |
+| qwen2.5-32b-instruct | $0.06 | $0.20 | — | 128K |
+| qwen2.5-72b-instruct | $0.13 | $0.40 | — | 128K |
+| qwen2.5-coder-7b | $0.01 | $0.03 | — | 32.77K |
+| qwen2.5-vl-72b-instruct | $0.25 | $0.75 | — | 32K |
+| qwen3-4b | $0.08 | $0.24 | — | 32.77K |
+| qwen3-14b | $0.08 | $0.24 | — | 32.77K |
+| qwen3-30b-a3b | $0.10 | $0.30 | — | 32.77K |
+| qwen3-30b-a3b-instruct-2507 | $0.10 | $0.30 | — | 262.14K |
+| qwen3-32b | $0.10 | $0.30 | — | 40.96K |
+| qwen3-235b-a22b | $0.20 | $0.60 | — | 262.14K |
+| qwen3-235b-a22b-instruct-2507 | $0.20 | $0.60 | — | 262.14K |
+| qwen3-embedding-8b | $0.01 | $0.00 | — | 40.96K |
+| qwen3-next-80b-a3b-thinking | $0.15 | $1.20 | — | 128K |
+| qwen3.5-397b-a17b | $0.60 | $3.60 | — | 262.14K |
+| qwen3.8-27b | $0.45 | $3.00 | — | 262.14K |
+| qwq-32b | $0.15 | $0.45 | — | 32.77K |
 
 ## nex-agi
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Nex AGI: Nex-N2.5-Mini | 0.025000000 | 0.1000000 | 0.0025000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Nex AGI: Nex-N2.5-Pro | 0.075000000 | 0.25000000 | 0.015000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| nex agi: nex-n2.5-mini | $0.02 | $0.10 | $0.0025 | 262.14K |
+| nex agi: nex-n2.5-pro | $0.08 | $0.25 | $0.02 | 262.14K |
 
 ## nlp_cloud
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| dolphin | 0.5000000 | 0.5000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| chatdolphin | 0.5000000 | 0.5000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| chatdolphin | $0.50 | $0.50 | — | 16.38K |
+| dolphin | $0.50 | $0.50 | — | 16.38K |
 
 ## nousresearch
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Nous: Hermes 3 70B Instruct | 0.7000000 | 0.7000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Nous: Hermes 3 405B Instruct | 1.000000 | 1.000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Nous: Hermes 4 405B | 1.000000 | 3.000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| nous: hermes 3 70b instruct | $0.70 | $0.70 | — | 131.07K |
+| nous: hermes 3 405b instruct | $1.00 | $1.00 | — | 131.07K |
+| nous: hermes 4 405b | $1.00 | $3.00 | — | 131.07K |
 
 ## novita
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| bge-reranker-v2-m3 | 0.01000000 | 0.01000000 | — | 8000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| baichuan-m2-32b | 0.07000000 | 0.07000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| bge-m3 | 0.01000000 | 0.01000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| autoglm-phone-9b-multilingual | 0.035000000 | 0.138000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ernie-4.5-vl-28b-a3b-thinking | 0.39000000 | 0.39000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-turbo | 0.7000000 | 2.5000000 | — | 64000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-0528-qwen3-8b | 0.06000000 | 0.09000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-prover-v2-671b | 0.7000000 | 2.5000000 | — | 160000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-0528 | 0.7000000 | 2.5000000 | 0.35000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-qwen-14b | 0.15000000 | 0.15000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek_v3 | 0.8900000000000001000000 | 0.8900000000000001000000 | — | 64000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5v | 0.6000000 | 1.8000000 | 0.11000000 | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-3-12b-it | 0.05000000 | 0.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-ocr-2 | 0.03000000 | 0.03000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-26b-a4b-it | 0.13000000 | 0.40000000000000003000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-qwen-32b | 0.3000000 | 0.3000000 | — | 64000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3-turbo | 0.4000000 | 1.3000000 | — | 64000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.6 | 0.55000000 | 2.2000000 | 0.11000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3.1 | 0.27000000 | 1.000000 | 0.135000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3.1-terminus | 0.27000000 | 1.000000 | 0.135000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash-vision-exp | 0.44000000 | 1.32000000 | 0.028000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash-0731 | 0.44000000 | 1.32000000 | 0.028000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro-0813 | 1.32000000 | 3.96000000 | 0.13200000000000002000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| community | 4.000000 | 4.000000 | — | 64000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4-32b-0414 | 0.55000000 | 1.66000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3-0324 | 0.27000000 | 1.12000000 | 0.135000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5-air | 0.13000000 | 0.85000000 | 0.025000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31b-it | 0.14000000 | 0.40000000000000003000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ernie-4.5-vl-424b-a47b | 0.42000000 | 1.25000000 | — | 123000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ernie-4.5-300b-a47b-paddle | 0.28000000 | 1.1000000 | — | 123000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3.2 | 0.269000000 | 0.4000000 | 0.1345000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5 | 0.6000000 | 2.2000000 | 0.11000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ernie-4.5-vl-28b-a3b | 0.14000000 | 0.56000000 | — | 30000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-llama-70b | 0.8000000 | 0.8000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash | 0.14000000 | 0.28000000 | 0.028000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ernie-4.5-21B-a3b-thinking | 0.07000000 | 0.28000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro | 1.6000000000000001000000 | 3.2000000000000003000000 | 0.135000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-ocr | 0.03000000 | 0.03000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3.2-exp | 0.27000000 | 0.41000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cobuddy | 0.28000000 | 1.13000000 | 0.07000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1 | 4.000000 | 4.000000 | — | 64000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ernie-4.5-21B-a3b | 0.07000000 | 0.28000000 | — | 120000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-3-27b-it | 0.119000000 | 0.2000000 | — | 98304 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| L3-8B-Stheno-v3.2 | 0.05000000 | 0.05000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mimo-v2.5 | 0.16800000000000002000000 | 0.33600000000000004000000 | 0.0034000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5 | 1.000000 | 3.2000000000000003000000 | 0.20000000000000002000000 | 202800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5-turbo | 1.2000000 | 4.000000 | 0.24000000 | 202800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.1 | 1.38000000 | 4.4000000 | 0.26000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.6 | 0.8000000000000001000000 | 3.4000000 | 0.16000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5v-turbo | 1.2000000 | 4.000000 | 0.24000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| hermes-2-pro-llama-3-8b | 0.14000000 | 0.14000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.3-70b-instruct | 0.135000000 | 0.4000000 | — | 12288 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.7-code | 0.9499999999999999000000 | 4.000000 | 0.19000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.7-flash | 0.07000000 | 0.40000000000000003000000 | 0.01000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-8b-instruct | 0.04000000 | 0.04000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-maverick-17b-128e-instruct-fp8 | 0.27000000 | 0.85000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| l3-8b-lunaris | 0.05000000 | 0.05000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.2-3b-instruct | 0.03000000 | 0.05000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ling-3.0-flash | 0.06000000 | 0.18000000 | 0.012000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b | 0.04000000 | 0.15000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| l3-70b-euryale-v2.1 | 1.48000000 | 1.48000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.5 | 0.6000000 | 3.000000 | 0.10000000000000001000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kat-coder-pro | 0.3000000 | 1.2000000 | 0.06000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.2 | 1.4000000 | 4.4000000 | 0.26000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.2-1b-instruct | 0.02000000 | 0.02000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.7 | 0.6000000 | 2.2000000 | 0.11000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.6v | 0.3000000 | 0.9000000 | 0.055000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| macaron-v1-tall | 0.45000000000000003000000 | 2.6000000 | 0.08000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-scout-17b-16e-instruct | 0.18000000 | 0.59000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ling-3.0-flash-fast | 0.06000000 | 0.18000000 | 0.012000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.3 | 1.4000000 | 4.4000000 | 0.26000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2-instruct | 0.57000000 | 2.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| macaron-v1-venti | 1.5000000 | 4.5000000 | 0.3000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.1-8b-instruct | 0.02000000 | 0.05000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.7-h | 0.6000000 | 2.2000000 | 0.11000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2-0905 | 0.6000000 | 2.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-70b-instruct | 0.51000000 | 0.74000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mimo-v2.5-pro | 0.522000000 | 1.044000000 | 0.0043000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.05000000 | 0.25000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| hy3 | 0.14000000 | 0.58000000 | 0.035000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2-thinking | 0.6000000 | 2.5000000 | 0.15000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k3 | 3.000000 | 15.000000 | 0.3000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| l31-70b-euryale-v2.2 | 1.48000000 | 1.48000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-next-80b-a3b-instruct | 0.15000000 | 1.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m2 | 0.3000000 | 1.2000000 | 0.03000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-embedding-0.6b | 0.07000000 | 0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m2.7-highspeed | 0.6000000 | 2.4000000 | 0.06000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-235b-a22b-fp8 | 0.2000000 | 0.8000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| paddleocr-vl | 0.02000000 | 0.02000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m3 | 0.3000000 | 1.2000000 | 0.06000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.7-max | 1.25000000 | 3.75000000 | 0.25000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-next-80b-a3b-thinking | 0.15000000 | 1.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-2.5-72b-instruct | 0.38000000 | 0.4000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-30b-a3b-fp8 | 0.09000000 | 0.45000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-nemo | 0.04000000 | 0.17000000 | — | 60288 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-235b-a22b-instruct-2507 | 0.09000000 | 0.58000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder-30b-a3b-instruct | 0.07000000 | 0.27000000 | — | 160000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-235b-a22b-thinking-2507 | 0.3000000 | 3.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m2.7 | 0.3000000 | 1.2000000 | 0.06000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder-next | 0.20000000000000002000000 | 1.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2.5-7b-instruct | 0.07000000 | 0.07000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-32b-fp8 | 0.1000000 | 0.45000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.5-122b-a10b | 0.40000000000000003000000 | 3.2000000000000003000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nemotron-3-nano-30b-a3b | 0.050000000000000004000000 | 0.20000000000000002000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mythomax-l2-13b | 0.09000000 | 0.09000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen2.5-vl-72b-instruct | 0.8000000 | 0.8000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mimo-v2-flash | 0.11000000 | 0.33000000 | 0.024000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-embedding-8b | 0.07000000 | 0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-max | 2.000000 | 6.000000 | 0.25000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.5-27b | 0.3000000 | 2.4000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.6-35b-a3b | 0.248000000 | 1.4850000000000002000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m2.1 | 0.3000000 | 1.2000000 | 0.03000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m2.5 | 0.3000000 | 1.2000000 | 0.03000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-max | 2.11000000 | 8.45000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-8b-fp8 | 0.035000000 | 0.138000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m2.5-highspeed | 0.6000000 | 2.4000000 | 0.03000000 | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.5-397b-a17b | 0.6000000 | 3.6000000000000003000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.6-27b | 0.6000000 | 3.6000000000000003000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-mt-plus | 0.25000000 | 0.75000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.5-35b-a3b | 0.25000000 | 2.000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder-480b-a35b-instruct | 0.38000000 | 1.55000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-4b-fp8 | 0.03000000 | 0.03000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m1-80k | 0.55000000 | 2.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| step-3.7-flash | 0.20000000000000002000000 | 1.15000000 | 0.04000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| r1v4-lite | 0.2000000 | 0.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-8b-instruct | 0.08000000 | 0.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-235b-a22b-thinking | 0.98000000 | 3.95000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-reranker-8b | 0.05000000 | 0.05000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-omni-30b-a3b-thinking | 0.25000000 | 0.97000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| wizardlm-2-8x22b | 0.62000000 | 0.62000000 | — | 65535 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-omni-30b-a3b-instruct | 0.25000000 | 0.97000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-30b-a3b-instruct | 0.2000000 | 0.7000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-235b-a22b-instruct | 0.3000000 | 1.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-30b-a3b-thinking | 0.2000000 | 1.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| autoglm-phone-9b-multilingual | $0.04 | $0.14 | — | 65.54K |
+| baichuan-m2-32b | $0.07 | $0.07 | — | 131.07K |
+| bge-m3 | $0.01 | $0.01 | — | 8.19K |
+| bge-reranker-v2-m3 | $0.01 | $0.01 | — | 8K |
+| cobuddy | $0.28 | $1.13 | $0.07 | 131.07K |
+| community | $4.00 | $4.00 | — | 64K |
+| deepseek-ocr | $0.03 | $0.03 | — | 8.19K |
+| deepseek-ocr-2 | $0.03 | $0.03 | — | 8.19K |
+| deepseek-prover-v2-671b | $0.70 | $2.50 | — | 160K |
+| deepseek-r1 | $4.00 | $4.00 | — | 64K |
+| deepseek-r1-0528 | $0.70 | $2.50 | $0.35 | 163.84K |
+| deepseek-r1-0528-qwen3-8b | $0.06 | $0.09 | — | 128K |
+| deepseek-r1-distill-llama-70b | $0.80 | $0.80 | — | 8.19K |
+| deepseek-r1-distill-qwen-14b | $0.15 | $0.15 | — | 32.77K |
+| deepseek-r1-distill-qwen-32b | $0.30 | $0.30 | — | 64K |
+| deepseek-r1-turbo | $0.70 | $2.50 | — | 64K |
+| deepseek-v3-0324 | $0.27 | $1.12 | $0.14 | 163.84K |
+| deepseek-v3-turbo | $0.40 | $1.30 | — | 64K |
+| deepseek-v3.1 | $0.27 | $1.00 | $0.14 | 131.07K |
+| deepseek-v3.1-terminus | $0.27 | $1.00 | $0.14 | 131.07K |
+| deepseek-v3.2 | $0.27 | $0.40 | $0.13 | 163.84K |
+| deepseek-v3.2-exp | $0.27 | $0.41 | — | 163.84K |
+| deepseek-v4-flash | $0.14 | $0.28 | $0.03 | 1.05M |
+| deepseek-v4-flash-0731 | $0.44 | $1.32 | $0.03 | 1.05M |
+| deepseek-v4-flash-vision-exp | $0.44 | $1.32 | $0.03 | 1.05M |
+| deepseek-v4-pro | $1.60 | $3.20 | $0.14 | 1.05M |
+| deepseek-v4-pro-0813 | $1.32 | $3.96 | $0.13 | 1.05M |
+| deepseek_v3 | $0.89 | $0.89 | — | 64K |
+| ernie-4.5-21b-a3b | $0.07 | $0.28 | — | 120K |
+| ernie-4.5-21b-a3b-thinking | $0.07 | $0.28 | — | 131.07K |
+| ernie-4.5-300b-a47b-paddle | $0.28 | $1.10 | — | 123K |
+| ernie-4.5-vl-28b-a3b | $0.14 | $0.56 | — | 30K |
+| ernie-4.5-vl-28b-a3b-thinking | $0.39 | $0.39 | — | 131.07K |
+| ernie-4.5-vl-424b-a47b | $0.42 | $1.25 | — | 123K |
+| gemma-3-12b-it | $0.05 | $0.10 | — | 131.07K |
+| gemma-3-27b-it | $0.12 | $0.20 | — | 98.3K |
+| gemma-4-26b-a4b-it | $0.13 | $0.40 | — | 262.14K |
+| gemma-4-31b-it | $0.14 | $0.40 | — | 262.14K |
+| glm-4-32b-0414 | $0.55 | $1.66 | — | 32K |
+| glm-4.5 | $0.60 | $2.20 | $0.11 | 131.07K |
+| glm-4.5-air | $0.13 | $0.85 | $0.02 | 131.07K |
+| glm-4.5v | $0.60 | $1.80 | $0.11 | 65.54K |
+| glm-4.6 | $0.55 | $2.20 | $0.11 | 204.8K |
+| glm-4.6v | $0.30 | $0.90 | $0.06 | 131.07K |
+| glm-4.7 | $0.60 | $2.20 | $0.11 | 204.8K |
+| glm-4.7-flash | $0.07 | $0.40 | $0.01 | 200K |
+| glm-4.7-h | $0.60 | $2.20 | $0.11 | 204.8K |
+| glm-5 | $1.00 | $3.20 | $0.20 | 202.8K |
+| glm-5-turbo | $1.20 | $4.00 | $0.24 | 202.8K |
+| glm-5.1 | $1.38 | $4.40 | $0.26 | 204.8K |
+| glm-5.2 | $1.40 | $4.40 | $0.26 | 1.05M |
+| glm-5.3 | $1.40 | $4.40 | $0.26 | 1.05M |
+| glm-5v-turbo | $1.20 | $4.00 | $0.24 | 204.8K |
+| gpt-oss-20b | $0.04 | $0.15 | — | 131.07K |
+| gpt-oss-120b | $0.05 | $0.25 | — | 131.07K |
+| hermes-2-pro-llama-3-8b | $0.14 | $0.14 | — | 8.19K |
+| hy3 | $0.14 | $0.58 | $0.04 | 262.14K |
+| kat-coder-pro | $0.30 | $1.20 | $0.06 | 256K |
+| kimi-k2-0905 | $0.60 | $2.50 | — | 262.14K |
+| kimi-k2-instruct | $0.57 | $2.30 | — | 131.07K |
+| kimi-k2-thinking | $0.60 | $2.50 | $0.15 | 262.14K |
+| kimi-k2.5 | $0.60 | $3.00 | $0.10 | 262.14K |
+| kimi-k2.6 | $0.80 | $3.40 | $0.16 | 262.14K |
+| kimi-k2.7-code | $0.95 | $4.00 | $0.19 | 262.14K |
+| kimi-k3 | $3.00 | $15.00 | $0.30 | 1.05M |
+| l3-8b-lunaris | $0.05 | $0.05 | — | 8.19K |
+| l3-8b-stheno-v3.2 | $0.05 | $0.05 | — | 8.19K |
+| l3-70b-euryale-v2.1 | $1.48 | $1.48 | — | 8.19K |
+| l31-70b-euryale-v2.2 | $1.48 | $1.48 | — | 8.19K |
+| ling-3.0-flash | $0.06 | $0.18 | $0.01 | 262.14K |
+| ling-3.0-flash-fast | $0.06 | $0.18 | $0.01 | 262.14K |
+| llama-3-8b-instruct | $0.04 | $0.04 | — | 8.19K |
+| llama-3-70b-instruct | $0.51 | $0.74 | — | 8.19K |
+| llama-3.1-8b-instruct | $0.02 | $0.05 | — | 16.38K |
+| llama-3.2-1b-instruct | $0.02 | $0.02 | — | 131K |
+| llama-3.2-3b-instruct | $0.03 | $0.05 | — | 32.77K |
+| llama-3.3-70b-instruct | $0.14 | $0.40 | — | 12.29K |
+| llama-4-maverick-17b-128e-instruct-fp8 | $0.27 | $0.85 | — | 1.05M |
+| llama-4-scout-17b-16e-instruct | $0.18 | $0.59 | — | 131.07K |
+| macaron-v1-tall | $0.45 | $2.60 | $0.08 | 262.14K |
+| macaron-v1-venti | $1.50 | $4.50 | $0.30 | 1.05M |
+| mimo-v2-flash | $0.11 | $0.33 | $0.02 | 262.14K |
+| mimo-v2.5 | $0.17 | $0.34 | $0.0034 | 1.05M |
+| mimo-v2.5-pro | $0.52 | $1.04 | $0.0043 | 1.05M |
+| minimax-m1-80k | $0.55 | $2.20 | — | 1M |
+| minimax-m2 | $0.30 | $1.20 | $0.03 | 204.8K |
+| minimax-m2.1 | $0.30 | $1.20 | $0.03 | 204.8K |
+| minimax-m2.5 | $0.30 | $1.20 | $0.03 | 204.8K |
+| minimax-m2.5-highspeed | $0.60 | $2.40 | $0.03 | 204.8K |
+| minimax-m2.7 | $0.30 | $1.20 | $0.06 | 204.8K |
+| minimax-m2.7-highspeed | $0.60 | $2.40 | $0.06 | 204.8K |
+| minimax-m3 | $0.30 | $1.20 | $0.06 | 1M |
+| mistral-nemo | $0.04 | $0.17 | — | 60.29K |
+| mythomax-l2-13b | $0.09 | $0.09 | — | 4.1K |
+| nemotron-3-nano-30b-a3b | $0.05 | $0.20 | — | 262.14K |
+| paddleocr-vl | $0.02 | $0.02 | — | 16.38K |
+| qwen2.5-7b-instruct | $0.07 | $0.07 | — | 32K |
+| qwen2.5-vl-72b-instruct | $0.80 | $0.80 | — | 32.77K |
+| qwen3-4b-fp8 | $0.03 | $0.03 | — | 128K |
+| qwen3-8b-fp8 | $0.04 | $0.14 | — | 128K |
+| qwen3-30b-a3b-fp8 | $0.09 | $0.45 | — | 40.96K |
+| qwen3-32b-fp8 | $0.10 | $0.45 | — | 40.96K |
+| qwen3-235b-a22b-fp8 | $0.20 | $0.80 | — | 40.96K |
+| qwen3-235b-a22b-instruct-2507 | $0.09 | $0.58 | — | 131.07K |
+| qwen3-235b-a22b-thinking-2507 | $0.30 | $3.00 | — | 131.07K |
+| qwen3-coder-30b-a3b-instruct | $0.07 | $0.27 | — | 160K |
+| qwen3-coder-480b-a35b-instruct | $0.38 | $1.55 | — | 262.14K |
+| qwen3-coder-next | $0.20 | $1.50 | — | 262.14K |
+| qwen3-embedding-0.6b | $0.07 | $0.00 | — | 32.77K |
+| qwen3-embedding-8b | $0.07 | $0.00 | — | 32.77K |
+| qwen3-max | $2.11 | $8.45 | — | 262.14K |
+| qwen3-next-80b-a3b-instruct | $0.15 | $1.50 | — | 131.07K |
+| qwen3-next-80b-a3b-thinking | $0.15 | $1.50 | — | 131.07K |
+| qwen3-omni-30b-a3b-instruct | $0.25 | $0.97 | — | 65.54K |
+| qwen3-omni-30b-a3b-thinking | $0.25 | $0.97 | — | 65.54K |
+| qwen3-reranker-8b | $0.05 | $0.05 | — | 32.77K |
+| qwen3-vl-8b-instruct | $0.08 | $0.50 | — | 131.07K |
+| qwen3-vl-30b-a3b-instruct | $0.20 | $0.70 | — | 131.07K |
+| qwen3-vl-30b-a3b-thinking | $0.20 | $1.00 | — | 131.07K |
+| qwen3-vl-235b-a22b-instruct | $0.30 | $1.50 | — | 131.07K |
+| qwen3-vl-235b-a22b-thinking | $0.98 | $3.95 | — | 131.07K |
+| qwen3.5-27b | $0.30 | $2.40 | — | 262.14K |
+| qwen3.5-35b-a3b | $0.25 | $2.00 | — | 262.14K |
+| qwen3.5-122b-a10b | $0.40 | $3.20 | — | 262.14K |
+| qwen3.5-397b-a17b | $0.60 | $3.60 | — | 262.14K |
+| qwen3.6-27b | $0.60 | $3.60 | — | 262.14K |
+| qwen3.6-35b-a3b | $0.25 | $1.49 | — | 262.14K |
+| qwen3.7-max | $1.25 | $3.75 | $0.25 | 1M |
+| qwen3.8-max | $2.00 | $6.00 | $0.25 | 1M |
+| qwen-2.5-72b-instruct | $0.38 | $0.40 | — | 32K |
+| qwen-mt-plus | $0.25 | $0.75 | — | 16.38K |
+| r1v4-lite | $0.20 | $0.60 | — | 262.14K |
+| step-3.7-flash | $0.20 | $1.15 | $0.04 | 262.14K |
+| wizardlm-2-8x22b | $0.62 | $0.62 | — | 65.53K |
 
 ## nscale
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| QwQ-32B | 0.18000000 | 0.2000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Qwen-32B | 0.15000000 | 0.15000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Qwen-1.5B | 0.09000000 | 0.09000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x22b-instruct-v0.1 | 0.6000000 | 0.6000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-Coder-7B-Instruct | 0.01000000 | 0.03000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-Coder-3B-Instruct | 0.01000000 | 0.03000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-4-Scout-17B-16E-Instruct | 0.09000000 | 0.29000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-Coder-32B-Instruct | 0.06000000 | 0.2000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Qwen-14B | 0.07000000 | 0.07000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Llama-70B | 0.375000000 | 0.375000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.1-8B-Instruct | 0.03000000 | 0.03000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.3-70B-Instruct | 0.2000000 | 0.2000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Qwen-7B | 0.2000000 | 0.2000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Llama-8B | 0.025000000 | 0.025000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-r1-distill-llama-8b | $0.02 | $0.02 | — | — |
+| deepseek-r1-distill-llama-70b | $0.38 | $0.38 | — | — |
+| deepseek-r1-distill-qwen-1.5b | $0.09 | $0.09 | — | — |
+| deepseek-r1-distill-qwen-7b | $0.20 | $0.20 | — | — |
+| deepseek-r1-distill-qwen-14b | $0.07 | $0.07 | — | — |
+| deepseek-r1-distill-qwen-32b | $0.15 | $0.15 | — | — |
+| llama-3.1-8b-instruct | $0.03 | $0.03 | — | — |
+| llama-3.3-70b-instruct | $0.20 | $0.20 | — | — |
+| llama-4-scout-17b-16e-instruct | $0.09 | $0.29 | — | — |
+| mixtral-8x22b-instruct-v0.1 | $0.60 | $0.60 | — | — |
+| qwen2.5-coder-3b-instruct | $0.01 | $0.03 | — | — |
+| qwen2.5-coder-7b-instruct | $0.01 | $0.03 | — | — |
+| qwen2.5-coder-32b-instruct | $0.06 | $0.20 | — | — |
+| qwq-32b | $0.18 | $0.20 | — | — |
 
 ## nvidia
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| NVIDIA: Nemotron 3 Nano Omni (free) | 0 | 0 | — | 256000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA: Nemotron 3.5 Content Safety | 0.2000000 | 0.2000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA: Nemotron 3.5 Content Safety (free) | 0 | 0 | — | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA: Nemotron 3 Ultra (free) | 0 | 0 | — | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA: Nemotron 3 Nano 30B A3B | 0.06000000 | 0.24000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA: Nemotron 3 Ultra | 0.6000000 | 2.4000000 | 0.12000000 | 262144 | aggregator | 2026-10-11T20:41:46.105503+00:00 | 
-
-| NVIDIA: Nemotron 3 Super | 0.08000000 | 0.45000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA: Nemotron 3 Super (free) | 0 | 0 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA: Nemotron 3.5 Lightning (free) | 0 | 0 | — | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA: Nemotron 3.5 Lightning | 0.07000000 | 0.2000000 | 0.04000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| nemotron 3 nano 30b a3b | $0.06 | $0.24 | — | 262.14K |
+| nemotron 3 nano omni (free) | $0.00 | $0.00 | — | 256K |
+| nemotron 3 super | $0.08 | $0.45 | — | 262.14K |
+| nemotron 3 super (free) | $0.00 | $0.00 | — | 262.14K |
+| nemotron 3 ultra | $0.60 | $2.40 | $0.12 | 262.14K |
+| nemotron 3 ultra (free) | $0.00 | $0.00 | — | 1M |
+| nemotron 3.5 content safety | $0.20 | $0.20 | — | 131.07K |
+| nemotron 3.5 content safety (free) | $0.00 | $0.00 | — | 128K |
+| nemotron 3.5 lightning | $0.07 | $0.20 | $0.04 | 262.14K |
+| nemotron 3.5 lightning (free) | $0.00 | $0.00 | — | 1M |
 
 ## nvidia_nim
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| nv-rerankqa-mistral-4b-v3 | 0.0 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3_2-nv-rerankqa-1b-v2 | 0.0 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| llama-3_2-nv-rerankqa-1b-v2 | $0.00 | $0.00 | — | — |
+| nv-rerankqa-mistral-4b-v3 | $0.00 | $0.00 | — | — |
 
 ## oci
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| cohere.command-a-03-2025 | 1.56000000 | 1.56000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.command-a-reasoning-08-2025 | 1.56000000 | 1.56000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.command-a-reasoning | 1.56000000 | 1.56000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-v4.0 | 0.12000000 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.command-r-plus-08-2024 | 1.56000000 | 1.56000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-multilingual-image-v3.0 | 0.1000000 | — | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama-3.1-70b-instruct | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-3-fast | 5.000000 | 25.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama-3.3-70b-instruct | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.command-latest | 1.56000000 | 1.56000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.command-plus-latest | 1.56000000 | 1.56000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-5 | 1.25000000 | 10.00000 | — | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama-3.3-70b-instruct-fp8-dynamic | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.command-a-vision-07-2025 | 1.56000000 | 1.56000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama-3.2-90b-vision-instruct | 2.000000 | 2.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-4 | 3.000000 | 15.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama-3.1-8b-instruct | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-4-fast | 5.000000 | 25.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.command-a-vision | 1.56000000 | 1.56000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-english-light-image-v3.0 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-3-mini-fast | 0.6000000 | 4.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-4.1-fast | 5.000000 | 25.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama-3.2-11b-vision-instruct | 2.000000 | 2.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-multilingual-light-image-v3.0 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-5-mini | 0.25000000 | 2.000000 | — | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama-4-scout-17b-16e-instruct | 0.72000000 | 0.72000000 | — | 10485760 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.command-a-translate-08-2025 | 0.09000000 | 0.09000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-4.20 | 3.000000 | 15.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| google.gemini-2.5-flash | 0.15000000 | 0.6000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| google.gemini-2.5-flash-lite | 0.075000000 | 0.3000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-4.20-multi-agent | 3.000000 | 15.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.command-r-08-2024 | 0.15000000 | 0.15000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama-4-maverick-17b-128e-instruct-fp8 | 0.72000000 | 0.72000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-english-image-v3.0 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai.gpt-5-nano | 0.05000000 | 0.4000000 | — | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-english-light-v3.0 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-3-mini | 0.3000000 | 0.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta.llama-3.1-405b-instruct | 10.68000000 | 10.68000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-english-v3.0 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| google.gemini-2.5-pro | 1.25000000 | 10.00000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-3 | 3.000000 | 15.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-multilingual-light-v3.0 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| cohere.embed-multilingual-v3.0 | 0.1000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| xai.grok-code-fast-1 | 5.000000 | 25.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| cohere.command-a-03-2025 | $1.56 | $1.56 | — | 256K |
+| cohere.command-a-reasoning | $1.56 | $1.56 | — | 256K |
+| cohere.command-a-reasoning-08-2025 | $1.56 | $1.56 | — | 256K |
+| cohere.command-a-translate-08-2025 | $0.09 | $0.09 | — | 256K |
+| cohere.command-a-vision | $1.56 | $1.56 | — | 256K |
+| cohere.command-a-vision-07-2025 | $1.56 | $1.56 | — | 128K |
+| cohere.command-latest | $1.56 | $1.56 | — | 128K |
+| cohere.command-plus-latest | $1.56 | $1.56 | — | 128K |
+| cohere.command-r-08-2024 | $0.15 | $0.15 | — | 128K |
+| cohere.command-r-plus-08-2024 | $1.56 | $1.56 | — | 128K |
+| cohere.embed-english-image-v3.0 | $0.10 | $0.00 | — | 512 |
+| cohere.embed-english-light-image-v3.0 | $0.10 | $0.00 | — | 512 |
+| cohere.embed-english-light-v3.0 | $0.10 | $0.00 | — | 512 |
+| cohere.embed-english-v3.0 | $0.10 | $0.00 | — | 512 |
+| cohere.embed-multilingual-image-v3.0 | $0.10 | — | — | 512 |
+| cohere.embed-multilingual-light-image-v3.0 | $0.10 | $0.00 | — | 512 |
+| cohere.embed-multilingual-light-v3.0 | $0.10 | $0.00 | — | 512 |
+| cohere.embed-multilingual-v3.0 | $0.10 | $0.00 | — | 512 |
+| cohere.embed-v4.0 | $0.12 | $0.00 | — | 128K |
+| google.gemini-2.5-flash | $0.15 | $0.60 | — | 1.05M |
+| google.gemini-2.5-flash-lite | $0.08 | $0.30 | — | 1.05M |
+| google.gemini-2.5-pro | $1.25 | $10.00 | — | 1.05M |
+| meta.llama-3.1-8b-instruct | $0.72 | $0.72 | — | 128K |
+| meta.llama-3.1-70b-instruct | $0.72 | $0.72 | — | 128K |
+| meta.llama-3.1-405b-instruct | $10.68 | $10.68 | — | 128K |
+| meta.llama-3.2-11b-vision-instruct | $2.00 | $2.00 | — | 128K |
+| meta.llama-3.2-90b-vision-instruct | $2.00 | $2.00 | — | 128K |
+| meta.llama-3.3-70b-instruct | $0.72 | $0.72 | — | 128K |
+| meta.llama-3.3-70b-instruct-fp8-dynamic | $0.72 | $0.72 | — | 128K |
+| meta.llama-4-maverick-17b-128e-instruct-fp8 | $0.72 | $0.72 | — | 1.05M |
+| meta.llama-4-scout-17b-16e-instruct | $0.72 | $0.72 | — | 10.49M |
+| openai.gpt-5 | $1.25 | $10.00 | — | 272K |
+| openai.gpt-5-mini | $0.25 | $2.00 | — | 272K |
+| openai.gpt-5-nano | $0.05 | $0.40 | — | 272K |
+| xai.grok-3 | $3.00 | $15.00 | — | 131.07K |
+| xai.grok-3-fast | $5.00 | $25.00 | — | 131.07K |
+| xai.grok-3-mini | $0.30 | $0.50 | — | 131.07K |
+| xai.grok-3-mini-fast | $0.60 | $4.00 | — | 131.07K |
+| xai.grok-4 | $3.00 | $15.00 | — | 128K |
+| xai.grok-4-fast | $5.00 | $25.00 | — | 131.07K |
+| xai.grok-4.1-fast | $5.00 | $25.00 | — | 131.07K |
+| xai.grok-4.20 | $3.00 | $15.00 | — | 131.07K |
+| xai.grok-4.20-multi-agent | $3.00 | $15.00 | — | 131.07K |
+| xai.grok-code-fast-1 | $5.00 | $25.00 | — | 131.07K |
 
 ## ollama
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| deepseek-coder-v2-instruct | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3 | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x22B-Instruct-v0.1 | 0.0 | 0.0 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codegemma | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7B-Instruct-v0.2 | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x7B-Instruct-v0.1 | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codegeex4 | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.1 | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7B-Instruct-v0.1 | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama2:7b | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3:8b | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-v2-lite-instruct | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3:70b | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama2 | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| internlm2_5-20b-chat | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| orca-mini | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3.1:671b-cloud | 0.0 | 0.0 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| vicuna | 0.0 | 0.0 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-instruct-2407 | 0.0 | 0.0 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama2:70b | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss:120b-cloud | 0.0 | 0.0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder:480b-cloud | 0.0 | 0.0 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codellama | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama2-uncensored | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-v2-lite-base | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss:20b-cloud | 0.0 | 0.0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama2:13b | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-v2-base | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| codegeex4 | $0.00 | $0.00 | — | 32.77K |
+| codegemma | $0.00 | $0.00 | — | 8.19K |
+| codellama | $0.00 | $0.00 | — | 4.1K |
+| deepseek-coder-v2-base | $0.00 | $0.00 | — | 8.19K |
+| deepseek-coder-v2-instruct | $0.00 | $0.00 | — | 32.77K |
+| deepseek-coder-v2-lite-base | $0.00 | $0.00 | — | 8.19K |
+| deepseek-coder-v2-lite-instruct | $0.00 | $0.00 | — | 32.77K |
+| deepseek-v3.1:671b-cloud | $0.00 | $0.00 | — | 163.84K |
+| gpt-oss:20b-cloud | $0.00 | $0.00 | — | 131.07K |
+| gpt-oss:120b-cloud | $0.00 | $0.00 | — | 131.07K |
+| internlm2_5-20b-chat | $0.00 | $0.00 | — | 32.77K |
+| llama2 | $0.00 | $0.00 | — | 4.1K |
+| llama2-uncensored | $0.00 | $0.00 | — | 4.1K |
+| llama2:7b | $0.00 | $0.00 | — | 4.1K |
+| llama2:13b | $0.00 | $0.00 | — | 4.1K |
+| llama2:70b | $0.00 | $0.00 | — | 4.1K |
+| llama3 | $0.00 | $0.00 | — | 8.19K |
+| llama3.1 | $0.00 | $0.00 | — | 8.19K |
+| llama3:8b | $0.00 | $0.00 | — | 8.19K |
+| llama3:70b | $0.00 | $0.00 | — | 8.19K |
+| mistral | $0.00 | $0.00 | — | 8.19K |
+| mistral-7b-instruct-v0.1 | $0.00 | $0.00 | — | 8.19K |
+| mistral-7b-instruct-v0.2 | $0.00 | $0.00 | — | 32.77K |
+| mistral-large-instruct-2407 | $0.00 | $0.00 | — | 65.54K |
+| mixtral-8x7b-instruct-v0.1 | $0.00 | $0.00 | — | 32.77K |
+| mixtral-8x22b-instruct-v0.1 | $0.00 | $0.00 | — | 65.54K |
+| orca-mini | $0.00 | $0.00 | — | 4.1K |
+| qwen3-coder:480b-cloud | $0.00 | $0.00 | — | 262.14K |
+| vicuna | $0.00 | $0.00 | — | 2.05K |
 
 ## openai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| ft:gpt-3.5-turbo-0613 | 3.000000 | 6.000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| chatgpt-image-latest | 5.000000 | 10.00000 | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:gpt-4-0613 | 30.00000 | 60.00000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:gpt-4.1-2025-04-14 | 3.000000 | 12.000000 | 0.75000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| chat-latest | 5.000000 | 30.00000 | 0.5000000 | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| daybreak-red-latest | 12.5000000 | 75.000000 | 1.25000000 | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:gpt-3.5-turbo-0125 | 3.000000 | 6.000000 | — | 16385 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:gpt-3.5-turbo | 3.000000 | 6.000000 | — | 16385 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:gpt-3.5-turbo-1106 | 3.000000 | 6.000000 | — | 16385 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| daybreak-blue-latest | 4.000000 | 20.00000 | 0.4000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| computer-use-preview | 3.000000 | 12.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:gpt-4o-2024-08-06 | 3.75000000 | 15.000000 | 1.875000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-4o-mini (batch) | 0.075000000 | 0.3000000 | 0.0375000000 | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-2025-04-14 | 2.000000 | 8.000000 | 0.5000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini | 0.15000000 | 0.6000000 | 0.075000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4 | 30.00000 | 60.00000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:gpt-4.1-mini-2025-04-14 | 0.8000000 | 3.2000000 | 0.2000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-3.5-turbo-16k | 3.000000 | 4.000000 | — | 16385 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-3.5 Turbo Instruct | 1.5000000 | 2.000000 | — | 4095 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-2024-05-13 | 5.000000 | 15.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-audio-preview-2024-12-17 | 0.15000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-4o (batch) | 1.25000000 | 5.000000 | 0.625000000 | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-audio-preview-2025-06-03 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-2024-07-18 | 0.15000000 | 0.6000000 | 0.075000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-4.1 Mini (batch) | 0.2000000 | 0.8000000 | 0.05000000 | 1047576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-mini-2025-04-14 | 0.4000000 | 1.6000000 | 0.1000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-audio-preview-2024-12-17 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-nano-2025-04-14 | 0.1000000 | 0.4000000 | 0.025000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:gpt-4o-2024-11-20 | 3.75000000 | 15.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-4.1 Nano (batch) | 0.05000000 | 0.2000000 | 0.0125000000 | 1047576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-turbo | 10.00000 | 30.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-mini | 0.4000000 | 1.6000000 | 0.1000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-3.5-turbo-0125 | 0.5000000 | 1.5000000 | — | 16385 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-2024-11-20 | 2.5000000 | 10.00000 | 1.25000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-nano | 0.1000000 | 0.4000000 | 0.025000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-2024-08-06 | 2.5000000 | 10.00000 | 1.25000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-4 Turbo (batch) | 5.000000 | 15.000000 | — | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-3.5 Turbo (older v0613) | 1.000000 | 2.000000 | — | 4095 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o | 2.5000000 | 10.00000 | 1.25000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-3.5 Turbo (batch) | 0.25000000 | 0.75000000 | — | 16385 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:o4-mini-2025-04-16 | 4.000000 | 16.000000 | 1.000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-4.1 (batch) | 1.000000 | 4.000000 | 0.25000000 | 1047576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-turbo-2024-04-09 | 10.00000 | 30.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-3.5-turbo-1106 | 1.000000 | 2.000000 | — | 16385 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-3.5-turbo | 0.5000000 | 1.5000000 | — | 16385 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:gpt-4.1-nano-2025-04-14 | 0.2000000 | 0.8000000 | 0.05000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:gpt-4o-mini-2024-07-18 | 0.3000000 | 1.2000000 | 0.15000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1 | 2.000000 | 8.000000 | 0.5000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-0613 | 30.00000 | 60.00000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-1106-preview | 10.00000 | 30.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2-2025-12-11 | 1.75000000 | 14.000000 | 0.175000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-search-preview | 2.5000000 | 10.00000 | 1.25000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-codex-max | 1.25000000 | 10.00000 | 0.125000000 | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-codex | 1.25000000 | 10.00000 | 0.125000000 | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-transcribe | 2.5000000 | 10.00000 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2 | 1.75000000 | 14.000000 | 0.175000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.2 (batch) | 0.875000000 | 7.000000 | 0.0875000000 | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-chat-latest | 1.25000000 | 10.00000 | 0.125000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.2 Pro (batch) | 10.5000000 | 84.000000 | — | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-2025-11-13 | 1.25000000 | 10.00000 | 0.125000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-search-preview | 0.15000000 | 0.6000000 | 0.075000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.1 (batch) | 0.625000000 | 5.000000 | 0.0625000000 | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2-codex | 1.75000000 | 14.000000 | 0.175000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-2025-08-07 | 1.25000000 | 10.00000 | 0.125000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2-pro | 21.000000 | 168.000000 | — | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1-codex-mini | 0.25000000 | 2.000000 | 0.025000000 | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-realtime-preview-2024-12-17 | 0.6000000 | 2.4000000 | 0.3000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-tts-2025-12-15 | 0.6000000 | 10.00000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-transcribe | 1.25000000 | 5.000000 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1 | 1.25000000 | 10.00000 | 0.125000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.2 Chat | 1.75000000 | 14.000000 | 0.175000000 | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.3-chat-latest | 1.75000000 | 14.000000 | 0.175000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-tts | 0.6000000 | 10.00000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-transcribe-2025-12-15 | 1.25000000 | 5.000000 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-tts-2025-03-20 | 0.6000000 | 10.00000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2-pro-2025-12-11 | 21.000000 | 168.000000 | — | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini-transcribe-2025-03-20 | 1.25000000 | 5.000000 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-transcribe-diarize | 2.5000000 | 10.00000 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2-chat-latest | 1.75000000 | 14.000000 | 0.175000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5 | 1.25000000 | 10.00000 | 0.125000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.6 Sol Pro | 2.000000 | 10.00000 | 0.2000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-terra | 2.000000 | 12.000000 | 0.2000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.6 Luna Pro (batch) | 0.1000000 | 0.6000000 | 0.01000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-2026-03-05 | 2.5000000 | 15.000000 | 0.25000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.6 Terra Pro | 2.000000 | 12.000000 | 0.2000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-sol | 4.000000 | 20.00000 | 0.4000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.6 Luna Pro | 0.2000000 | 1.2000000 | 0.02000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5 (batch) | 0.625000000 | 5.000000 | 0.0625000000 | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.4 Nano (batch) | 0.1000000 | 0.625000000 | 0.01000000 | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-cyber | 12.5000000 | 75.000000 | 1.25000000 | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.3-codex | 1.75000000 | 14.000000 | 0.175000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5-cyber | 12.5000000 | 75.000000 | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-mini-2026-03-17 | 0.75000000 | 4.5000000 | 0.075000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-nano | 0.2000000 | 1.25000000 | 0.02000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.6 Sol (batch) | 1.000000 | 5.000000 | 0.1000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.5 Pro (batch) | 15.000000 | 90.00000 | — | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.4 Pro (batch) | 15.000000 | 90.00000 | — | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-pro | 30.00000 | 180.00000 | — | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.6 Terra Pro (batch) | 1.000000 | 6.000000 | 0.1000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-mini | 0.75000000 | 4.5000000 | 0.075000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-pro-2026-03-05 | 30.00000 | 180.00000 | — | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.6 Terra (batch) | 1.000000 | 6.000000 | 0.1000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.6 Sol Pro (batch) | 1.000000 | 5.000000 | 0.1000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.4 Mini (batch) | 0.375000000 | 2.25000000 | 0.0375000000 | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5 | 5.000000 | 30.00000 | 0.5000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5-pro | 30.00000 | 180.00000 | — | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-nano-2026-03-17 | 0.2000000 | 1.25000000 | 0.02000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6 | 4.000000 | 20.00000 | 0.4000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-chat | 1.25000000 | 10.00000 | 0.125000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.4 Image 2 | 8.000000 | 15.000000 | 2.000000 | 272000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-luna | 0.2000000 | 1.2000000 | 0.02000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5-2026-04-23 | 5.000000 | 30.00000 | 0.5000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5 Image | 10.00000 | 10.00000 | 1.25000000 | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-codex | 1.25000000 | 10.00000 | 0.125000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.4 (batch) | 1.25000000 | 7.5000000 | 0.125000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.6 Luna (batch) | 0.1000000 | 0.6000000 | 0.01000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5.5 (batch) | 2.5000000 | 15.000000 | 0.25000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-chat-latest | 1.25000000 | 10.00000 | 0.125000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4 | 2.5000000 | 15.000000 | 0.25000000 | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5-pro-2026-04-23 | 30.00000 | 180.00000 | — | 1050000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6 Astra Pro (batch) | 5.000000 | 25.000000 | 0.5000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-pro | 15.000000 | 120.00000 | — | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6.1 Sol (batch) | 1.000000 | 5.000000 | 0.05000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-sol | 2.000000 | 10.00000 | 0.2000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-search-api | 1.25000000 | 10.00000 | 0.125000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-mini-2025-08-07 | 0.25000000 | 2.000000 | 0.025000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-audio-mini | 0.6000000 | 2.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-audio-2025-08-28 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6 Luna (batch) | 0.05000000 | 0.25000000 | 0.005000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-nano-2025-08-07 | 0.05000000 | 0.4000000 | 0.005000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-daybreak-blue-latest | 4.000000 | 20.00000 | 0.4000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6 Astra (batch) | 5.000000 | 25.000000 | 0.5000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6 Luna Pro (batch) | 0.05000000 | 0.25000000 | 0.005000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6 Sol Pro | 2.000000 | 10.00000 | 0.2000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6 Luna Pro | 0.1000000 | 0.5000000 | 0.01000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-pro-2025-10-06 | 15.000000 | 120.00000 | — | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-search-api-2025-10-14 | 1.25000000 | 10.00000 | 0.125000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-luna | 0.1000000 | 0.5000000 | 0.01000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-audio-1.5 | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6.1 Sol Pro | 2.000000 | 10.00000 | 0.1000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-audio | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-astra | 10.00000 | 50.00000 | 1.000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-mini | 0.25000000 | 2.000000 | 0.025000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT Chat Latest | 5.000000 | 30.00000 | 0.5000000 | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5 Mini (batch) | 0.125000000 | 1.000000 | 0.0125000000 | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6 Sol (batch) | 1.000000 | 5.000000 | 0.1000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5 Pro (batch) | 7.5000000 | 60.00000 | — | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-nano | 0.05000000 | 0.4000000 | 0.005000000 | 272000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-daybreak-red-latest | 12.5000000 | 75.000000 | 1.25000000 | 400000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6 Astra Pro | 10.00000 | 50.00000 | 1.000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5 Nano (batch) | 0.025000000 | 0.2000000 | 0.0025000000 | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-1 | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-5 Image Mini | 2.5000000 | 2.000000 | 0.25000000 | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6 Sol Pro (batch) | 1.000000 | 5.000000 | 0.1000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-audio-mini-2025-12-15 | 0.6000000 | 2.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT-6.1 Sol Pro (batch) | 1.000000 | 5.000000 | 0.05000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6.1-sol | 2.000000 | 10.00000 | 0.1000000 | 922000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-2.1-mini | 0.6000000 | 2.4000000 | 0.06000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-1.5 | 5.000000 | 10.00000 | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1-pro | 150.00000 | 600.0000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: gpt-oss-20b (batch) | 0.024000000 | 0.112000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-2.5-sunburst-2026-09-08 | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1 | 15.000000 | 60.00000 | 7.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-mini | 0.6000000 | 2.4000000 | 0.06000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: o3 (batch) | 1.000000 | 4.000000 | 0.25000000 | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: o3 Mini High | 1.1000000 | 4.4000000 | 0.55000000 | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-2025-04-16 | 2.000000 | 8.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-mini | 1.1000000 | 4.4000000 | 0.55000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-2-2026-04-21 | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-2 | 4.000000 | 24.000000 | 0.4000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3 | 2.000000 | 8.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-mini-2025-12-15 | 0.6000000 | 2.4000000 | 0.06000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-1-mini | 2.000000 | — | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-2 | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-2.1 | 4.000000 | 24.000000 | 0.4000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-2025-08-28 | 4.000000 | 16.000000 | 0.4000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-2.5-sunburst | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-2.5-flare-2026-09-08 | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: gpt-oss-20b | 0.018000000 | 0.09000000 | 0.009000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-2.5-flare | 5.000000 | — | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: gpt-oss-120b (batch) | 0.0296000000 | 0.136000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1-pro-2025-03-19 | 150.00000 | 600.0000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: gpt-oss-120b | 0.037000000 | 0.17000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-rosalind-research | 5.000000 | 25.000000 | 0.5000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-mini-2025-01-31 | 1.1000000 | 4.4000000 | 0.55000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-image-1.5-2025-12-16 | 5.000000 | 10.00000 | 1.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: o3 Mini (batch) | 0.55000000 | 2.2000000 | 0.275000000 | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime | 4.000000 | 16.000000 | 0.4000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-rosalind-discovery | 5.000000 | 25.000000 | 0.5000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: gpt-oss-safeguard-20b | 0.075000000 | 0.3000000 | 0.0375000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1-2024-12-17 | 15.000000 | 60.00000 | 7.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-realtime-1.5 | 4.000000 | 16.000000 | 0.4000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-deep-research | 10.00000 | 40.00000 | 2.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-pro | 20.00000 | 80.00000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| omni-moderation-2024-09-26 | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| omni-moderation-latest | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-3-large | 0.13000000 | 0.0 | — | 8191 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: o4 Mini High | 1.1000000 | 4.4000000 | 0.275000000 | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: o4 Mini (batch) | 0.55000000 | 2.2000000 | 0.1375000000 | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-ada-002-v2 | 0.1000000 | 0.0 | — | 8191 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o4-mini-2025-04-16 | 1.1000000 | 4.4000000 | 0.275000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o4-mini | 1.1000000 | 4.4000000 | 0.275000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-3-small | 0.02000000 | 0.0 | — | 8191 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o4-mini-deep-research | 2.000000 | 8.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-pro-2025-06-10 | 20.00000 | 80.00000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-ada-002 | 0.1000000 | 0.0 | — | 8191 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| chat-latest | $5.00 | $30.00 | $0.50 | 400K |
+| chatgpt-image-latest | $5.00 | $10.00 | $1.25 | — |
+| computer-use-preview | $3.00 | $12.00 | — | 8.19K |
+| daybreak-blue-latest | $4.00 | $20.00 | $0.40 | 922K |
+| daybreak-red-latest | $12.50 | $75.00 | $1.25 | 400K |
+| ft:gpt-3.5-turbo | $3.00 | $6.00 | — | 16.39K |
+| ft:gpt-3.5-turbo-0125 | $3.00 | $6.00 | — | 16.39K |
+| ft:gpt-3.5-turbo-0613 | $3.00 | $6.00 | — | 4.1K |
+| ft:gpt-3.5-turbo-1106 | $3.00 | $6.00 | — | 16.39K |
+| ft:gpt-4-0613 | $30.00 | $60.00 | — | 8.19K |
+| ft:gpt-4.1-2025-04-14 | $3.00 | $12.00 | $0.75 | 1.05M |
+| ft:gpt-4.1-mini-2025-04-14 | $0.80 | $3.20 | $0.20 | 1.05M |
+| ft:gpt-4.1-nano-2025-04-14 | $0.20 | $0.80 | $0.05 | 1.05M |
+| ft:gpt-4o-2024-08-06 | $3.75 | $15.00 | $1.88 | 128K |
+| ft:gpt-4o-2024-11-20 | $3.75 | $15.00 | — | 128K |
+| ft:gpt-4o-mini-2024-07-18 | $0.30 | $1.20 | $0.15 | 128K |
+| ft:o4-mini-2025-04-16 | $4.00 | $16.00 | $1.00 | 200K |
+| gpt astra latest | $10.00 | $50.00 | $1.00 | 1.05M |
+| gpt chat latest | $5.00 | $30.00 | $0.50 | 400K |
+| gpt luna latest | $0.10 | $0.50 | $0.01 | 1.05M |
+| gpt mini latest | $0.75 | $4.50 | $0.08 | 400K |
+| gpt sol latest | $2.00 | $10.00 | $0.10 | 1.05M |
+| gpt terra latest | $2.00 | $12.00 | $0.20 | 1.05M |
+| gpt-3.5 turbo (batch) | $0.25 | $0.75 | — | 16.39K |
+| gpt-3.5 turbo (older v0613) | $1.00 | $2.00 | — | 4.09K |
+| gpt-3.5 turbo instruct | $1.50 | $2.00 | — | 4.09K |
+| gpt-3.5-turbo | $0.50 | $1.50 | — | 16.39K |
+| gpt-3.5-turbo-16k | $3.00 | $4.00 | — | 16.39K |
+| gpt-3.5-turbo-0125 | $0.50 | $1.50 | — | 16.39K |
+| gpt-3.5-turbo-1106 | $1.00 | $2.00 | — | 16.39K |
+| gpt-4 | $30.00 | $60.00 | — | 8.19K |
+| gpt-4 turbo (batch) | $5.00 | $15.00 | — | 128K |
+| gpt-4-0613 | $30.00 | $60.00 | — | 8.19K |
+| gpt-4-1106-preview | $10.00 | $30.00 | — | 128K |
+| gpt-4-turbo | $10.00 | $30.00 | — | 128K |
+| gpt-4-turbo-2024-04-09 | $10.00 | $30.00 | — | 128K |
+| gpt-4.1 | $2.00 | $8.00 | $0.50 | 1.05M |
+| gpt-4.1 (batch) | $1.00 | $4.00 | $0.25 | 1.05M |
+| gpt-4.1 mini (batch) | $0.20 | $0.80 | $0.05 | 1.05M |
+| gpt-4.1 nano (batch) | $0.05 | $0.20 | $0.01 | 1.05M |
+| gpt-4.1-2025-04-14 | $2.00 | $8.00 | $0.50 | 1.05M |
+| gpt-4.1-mini | $0.40 | $1.60 | $0.10 | 1.05M |
+| gpt-4.1-mini-2025-04-14 | $0.40 | $1.60 | $0.10 | 1.05M |
+| gpt-4.1-nano | $0.10 | $0.40 | $0.02 | 1.05M |
+| gpt-4.1-nano-2025-04-14 | $0.10 | $0.40 | $0.02 | 1.05M |
+| gpt-4o | $2.50 | $10.00 | $1.25 | 128K |
+| gpt-4o (batch) | $1.25 | $5.00 | $0.62 | 128K |
+| gpt-4o-2024-05-13 | $5.00 | $15.00 | — | 128K |
+| gpt-4o-2024-08-06 | $2.50 | $10.00 | $1.25 | 128K |
+| gpt-4o-2024-11-20 | $2.50 | $10.00 | $1.25 | 128K |
+| gpt-4o-audio-preview-2024-12-17 | $2.50 | $10.00 | — | 128K |
+| gpt-4o-audio-preview-2025-06-03 | $2.50 | $10.00 | — | 128K |
+| gpt-4o-mini | $0.15 | $0.60 | $0.08 | 128K |
+| gpt-4o-mini (batch) | $0.08 | $0.30 | $0.04 | 128K |
+| gpt-4o-mini-2024-07-18 | $0.15 | $0.60 | $0.08 | 128K |
+| gpt-4o-mini-audio-preview-2024-12-17 | $0.15 | $0.60 | — | 128K |
+| gpt-4o-mini-realtime-preview-2024-12-17 | $0.60 | $2.40 | $0.30 | 128K |
+| gpt-4o-mini-search-preview | $0.15 | $0.60 | $0.08 | 128K |
+| gpt-4o-mini-transcribe | $1.25 | $5.00 | — | 16K |
+| gpt-4o-mini-transcribe-2025-03-20 | $1.25 | $5.00 | — | 16K |
+| gpt-4o-mini-transcribe-2025-12-15 | $1.25 | $5.00 | — | 16K |
+| gpt-4o-mini-tts | $0.60 | $10.00 | — | — |
+| gpt-4o-mini-tts-2025-03-20 | $0.60 | $10.00 | — | — |
+| gpt-4o-mini-tts-2025-12-15 | $0.60 | $10.00 | — | — |
+| gpt-4o-search-preview | $2.50 | $10.00 | $1.25 | 128K |
+| gpt-4o-transcribe | $2.50 | $10.00 | — | 16K |
+| gpt-4o-transcribe-diarize | $2.50 | $10.00 | — | 16K |
+| gpt-5 | $1.25 | $10.00 | $0.12 | 272K |
+| gpt-5 (batch) | $0.62 | $5.00 | $0.06 | 400K |
+| gpt-5 image | $10.00 | $10.00 | $1.25 | 400K |
+| gpt-5 image mini | $2.50 | $2.00 | $0.25 | 400K |
+| gpt-5 mini (batch) | $0.12 | $1.00 | $0.01 | 400K |
+| gpt-5 nano (batch) | $0.02 | $0.20 | $0.0025 | 400K |
+| gpt-5 pro (batch) | $7.50 | $60.00 | — | 400K |
+| gpt-5-2025-08-07 | $1.25 | $10.00 | $0.12 | 272K |
+| gpt-5-chat | $1.25 | $10.00 | $0.12 | 128K |
+| gpt-5-chat-latest | $1.25 | $10.00 | $0.12 | 128K |
+| gpt-5-codex | $1.25 | $10.00 | $0.12 | 272K |
+| gpt-5-mini | $0.25 | $2.00 | $0.02 | 272K |
+| gpt-5-mini-2025-08-07 | $0.25 | $2.00 | $0.02 | 272K |
+| gpt-5-nano | $0.05 | $0.40 | $0.005 | 272K |
+| gpt-5-nano-2025-08-07 | $0.05 | $0.40 | $0.005 | 272K |
+| gpt-5-pro | $15.00 | $120.00 | — | 400K |
+| gpt-5-pro-2025-10-06 | $15.00 | $120.00 | — | 400K |
+| gpt-5-search-api | $1.25 | $10.00 | $0.12 | 272K |
+| gpt-5-search-api-2025-10-14 | $1.25 | $10.00 | $0.12 | 272K |
+| gpt-5.1 | $1.25 | $10.00 | $0.12 | 272K |
+| gpt-5.1 (batch) | $0.62 | $5.00 | $0.06 | 400K |
+| gpt-5.1-2025-11-13 | $1.25 | $10.00 | $0.12 | 272K |
+| gpt-5.1-chat-latest | $1.25 | $10.00 | $0.12 | 128K |
+| gpt-5.1-codex | $1.25 | $10.00 | $0.12 | 400K |
+| gpt-5.1-codex-max | $1.25 | $10.00 | $0.12 | 400K |
+| gpt-5.1-codex-mini | $0.25 | $2.00 | $0.02 | 400K |
+| gpt-5.2 | $1.75 | $14.00 | $0.18 | 272K |
+| gpt-5.2 (batch) | $0.88 | $7.00 | $0.09 | 400K |
+| gpt-5.2 chat | $1.75 | $14.00 | $0.18 | 128K |
+| gpt-5.2 pro (batch) | $10.50 | $84.00 | — | 400K |
+| gpt-5.2-2025-12-11 | $1.75 | $14.00 | $0.18 | 272K |
+| gpt-5.2-chat-latest | $1.75 | $14.00 | $0.18 | 128K |
+| gpt-5.2-codex | $1.75 | $14.00 | $0.18 | 272K |
+| gpt-5.2-pro | $21.00 | $168.00 | — | 272K |
+| gpt-5.2-pro-2025-12-11 | $21.00 | $168.00 | — | 272K |
+| gpt-5.3-chat-latest | $1.75 | $14.00 | $0.18 | 128K |
+| gpt-5.3-codex | $1.75 | $14.00 | $0.18 | 272K |
+| gpt-5.4 | $2.50 | $15.00 | $0.25 | 1.05M |
+| gpt-5.4 (batch) | $1.25 | $7.50 | $0.12 | 1.05M |
+| gpt-5.4 image 2 | $8.00 | $15.00 | $2.00 | 272K |
+| gpt-5.4 mini (batch) | $0.38 | $2.25 | $0.04 | 400K |
+| gpt-5.4 nano (batch) | $0.10 | $0.62 | $0.01 | 400K |
+| gpt-5.4 pro (batch) | $15.00 | $90.00 | — | 1.05M |
+| gpt-5.4-2026-03-05 | $2.50 | $15.00 | $0.25 | 1.05M |
+| gpt-5.4-mini | $0.75 | $4.50 | $0.08 | 272K |
+| gpt-5.4-mini-2026-03-17 | $0.75 | $4.50 | $0.08 | 272K |
+| gpt-5.4-nano | $0.20 | $1.25 | $0.02 | 272K |
+| gpt-5.4-nano-2026-03-17 | $0.20 | $1.25 | $0.02 | 272K |
+| gpt-5.4-pro | $30.00 | $180.00 | — | 1.05M |
+| gpt-5.4-pro-2026-03-05 | $30.00 | $180.00 | — | 1.05M |
+| gpt-5.5 | $5.00 | $30.00 | $0.50 | 1.05M |
+| gpt-5.5 (batch) | $2.50 | $15.00 | $0.25 | 1.05M |
+| gpt-5.5 pro (batch) | $15.00 | $90.00 | — | 1.05M |
+| gpt-5.5-2026-04-23 | $5.00 | $30.00 | $0.50 | 1.05M |
+| gpt-5.5-cyber | $12.50 | $75.00 | $1.25 | — |
+| gpt-5.5-pro | $30.00 | $180.00 | — | 1.05M |
+| gpt-5.5-pro-2026-04-23 | $30.00 | $180.00 | — | 1.05M |
+| gpt-5.6 | $4.00 | $20.00 | $0.40 | 922K |
+| gpt-5.6 luna (batch) | $0.10 | $0.60 | $0.01 | 1.05M |
+| gpt-5.6 luna pro | $0.20 | $1.20 | $0.02 | 1.05M |
+| gpt-5.6 luna pro (batch) | $0.10 | $0.60 | $0.01 | 1.05M |
+| gpt-5.6 sol (batch) | $1.00 | $5.00 | $0.10 | 1.05M |
+| gpt-5.6 sol pro | $2.00 | $10.00 | $0.20 | 1.05M |
+| gpt-5.6 sol pro (batch) | $1.00 | $5.00 | $0.10 | 1.05M |
+| gpt-5.6 terra (batch) | $1.00 | $6.00 | $0.10 | 1.05M |
+| gpt-5.6 terra pro | $2.00 | $12.00 | $0.20 | 1.05M |
+| gpt-5.6 terra pro (batch) | $1.00 | $6.00 | $0.10 | 1.05M |
+| gpt-5.6-cyber | $12.50 | $75.00 | $1.25 | 400K |
+| gpt-5.6-luna | $0.20 | $1.20 | $0.02 | 922K |
+| gpt-5.6-sol | $4.00 | $20.00 | $0.40 | 922K |
+| gpt-5.6-terra | $2.00 | $12.00 | $0.20 | 922K |
+| gpt-6 astra (batch) | $5.00 | $25.00 | $0.50 | 1.05M |
+| gpt-6 astra pro | $10.00 | $50.00 | $1.00 | 1.05M |
+| gpt-6 astra pro (batch) | $5.00 | $25.00 | $0.50 | 1.05M |
+| gpt-6 luna (batch) | $0.05 | $0.25 | $0.005 | 1.05M |
+| gpt-6 luna pro | $0.10 | $0.50 | $0.01 | 1.05M |
+| gpt-6 luna pro (batch) | $0.05 | $0.25 | $0.005 | 1.05M |
+| gpt-6 sol (batch) | $1.00 | $5.00 | $0.10 | 1.05M |
+| gpt-6 sol pro | $2.00 | $10.00 | $0.20 | 1.05M |
+| gpt-6 sol pro (batch) | $1.00 | $5.00 | $0.10 | 1.05M |
+| gpt-6-astra | $10.00 | $50.00 | $1.00 | 922K |
+| gpt-6-luna | $0.10 | $0.50 | $0.01 | 922K |
+| gpt-6-sol | $2.00 | $10.00 | $0.20 | 922K |
+| gpt-6.1 sol (batch) | $1.00 | $5.00 | $0.05 | 1.05M |
+| gpt-6.1 sol pro | $2.00 | $10.00 | $0.10 | 1.05M |
+| gpt-6.1 sol pro (batch) | $1.00 | $5.00 | $0.05 | 1.05M |
+| gpt-6.1-sol | $2.00 | $10.00 | $0.10 | 922K |
+| gpt-audio | $2.50 | $10.00 | — | 128K |
+| gpt-audio-1.5 | $2.50 | $10.00 | — | 128K |
+| gpt-audio-2025-08-28 | $2.50 | $10.00 | — | 128K |
+| gpt-audio-mini | $0.60 | $2.40 | — | 128K |
+| gpt-audio-mini-2025-12-15 | $0.60 | $2.40 | — | 128K |
+| gpt-daybreak-blue-latest | $4.00 | $20.00 | $0.40 | 922K |
+| gpt-daybreak-red-latest | $12.50 | $75.00 | $1.25 | 400K |
+| gpt-image-1 | $5.00 | — | $1.25 | — |
+| gpt-image-1-mini | $2.00 | — | $0.20 | — |
+| gpt-image-1.5 | $5.00 | $10.00 | $1.25 | — |
+| gpt-image-1.5-2025-12-16 | $5.00 | $10.00 | $1.25 | — |
+| gpt-image-2 | $5.00 | — | $1.25 | — |
+| gpt-image-2-2026-04-21 | $5.00 | — | $1.25 | — |
+| gpt-image-2.5-flare | $5.00 | — | $1.25 | — |
+| gpt-image-2.5-flare-2026-09-08 | $5.00 | — | $1.25 | — |
+| gpt-image-2.5-sunburst | $5.00 | — | $1.25 | — |
+| gpt-image-2.5-sunburst-2026-09-08 | $5.00 | — | $1.25 | — |
+| gpt-oss-20b | $0.02 | $0.09 | $0.009 | 131.07K |
+| gpt-oss-20b (batch) | $0.02 | $0.11 | — | 131.07K |
+| gpt-oss-120b | $0.04 | $0.17 | — | 131.07K |
+| gpt-oss-120b (batch) | $0.03 | $0.14 | — | 131.07K |
+| gpt-oss-safeguard-20b | $0.08 | $0.30 | $0.04 | 131.07K |
+| gpt-realtime | $4.00 | $16.00 | $0.40 | 32K |
+| gpt-realtime-1.5 | $4.00 | $16.00 | $0.40 | 32K |
+| gpt-realtime-2 | $4.00 | $24.00 | $0.40 | 128K |
+| gpt-realtime-2.1 | $4.00 | $24.00 | $0.40 | 128K |
+| gpt-realtime-2.1-mini | $0.60 | $2.40 | $0.06 | 128K |
+| gpt-realtime-2025-08-28 | $4.00 | $16.00 | $0.40 | 32K |
+| gpt-realtime-mini | $0.60 | $2.40 | $0.06 | 32K |
+| gpt-realtime-mini-2025-12-15 | $0.60 | $2.40 | $0.06 | 128K |
+| gpt-rosalind-discovery | $5.00 | $25.00 | $0.50 | — |
+| gpt-rosalind-research | $5.00 | $25.00 | $0.50 | — |
+| o1 | $15.00 | $60.00 | $7.50 | 200K |
+| o1-2024-12-17 | $15.00 | $60.00 | $7.50 | 200K |
+| o1-pro | $150.00 | $600.00 | — | 200K |
+| o1-pro-2025-03-19 | $150.00 | $600.00 | — | 200K |
+| o3 | $2.00 | $8.00 | $0.50 | 200K |
+| o3 (batch) | $1.00 | $4.00 | $0.25 | 200K |
+| o3 mini (batch) | $0.55 | $2.20 | $0.28 | 200K |
+| o3 mini high | $1.10 | $4.40 | $0.55 | 200K |
+| o3-2025-04-16 | $2.00 | $8.00 | $0.50 | 200K |
+| o3-deep-research | $10.00 | $40.00 | $2.50 | 200K |
+| o3-mini | $1.10 | $4.40 | $0.55 | 200K |
+| o3-mini-2025-01-31 | $1.10 | $4.40 | $0.55 | 200K |
+| o3-pro | $20.00 | $80.00 | — | 200K |
+| o3-pro-2025-06-10 | $20.00 | $80.00 | — | 200K |
+| o4 mini (batch) | $0.55 | $2.20 | $0.14 | 200K |
+| o4 mini high | $1.10 | $4.40 | $0.28 | 200K |
+| o4-mini | $1.10 | $4.40 | $0.28 | 200K |
+| o4-mini-2025-04-16 | $1.10 | $4.40 | $0.28 | 200K |
+| o4-mini-deep-research | $2.00 | $8.00 | $0.50 | 200K |
+| omni-moderation-2024-09-26 | $0.00 | $0.00 | — | 32.77K |
+| omni-moderation-latest | $0.00 | $0.00 | — | 32.77K |
+| text-embedding-3-large | $0.13 | $0.00 | — | 8.19K |
+| text-embedding-3-small | $0.02 | $0.00 | — | 8.19K |
+| text-embedding-ada-002 | $0.10 | $0.00 | — | 8.19K |
+| text-embedding-ada-002-v2 | $0.10 | $0.00 | — | 8.19K |
 
 ## openrouter
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Free Models Router | 0 | 0 | — | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| free models router | $0.00 | $0.00 | — | 200K |
 
 ## ovhcloud
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Qwen3-32B | 0.08000000 | 0.23000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral-7B-Instruct-v0.3 | 0.1000000 | 0.1000000 | — | 127000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-VL-72B-Instruct | 0.91000000 | 0.91000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3_1-70B-Instruct | 0.67000000 | 0.67000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3_3-70B-Instruct | 0.67000000 | 0.67000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-Coder-32B-Instruct | 0.87000000 | 0.87000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Llama-70B | 0.67000000 | 0.67000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.1-8B-Instruct | 0.1000000 | 0.1000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mamba-codestral-7B-v0.1 | 0.19000000 | 0.19000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llava-v1.6-mistral-7b-hf | 0.29000000 | 0.29000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b | 0.04000000 | 0.15000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mixtral-8x7B-Instruct-v0.1 | 0.63000000 | 0.63000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral-Small-3.2-24B-Instruct-2506 | 0.09000000 | 0.28000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.08000000 | 0.4000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral-Nemo-Instruct-2407 | 0.13000000 | 0.13000000 | — | 118000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-r1-distill-llama-70b | $0.67 | $0.67 | — | 131K |
+| gpt-oss-20b | $0.04 | $0.15 | — | 131K |
+| gpt-oss-120b | $0.08 | $0.40 | — | 131K |
+| llama-3.1-8b-instruct | $0.10 | $0.10 | — | 131K |
+| llava-v1.6-mistral-7b-hf | $0.29 | $0.29 | — | 32K |
+| mamba-codestral-7b-v0.1 | $0.19 | $0.19 | — | 256K |
+| meta-llama-3_1-70b-instruct | $0.67 | $0.67 | — | 131K |
+| meta-llama-3_3-70b-instruct | $0.67 | $0.67 | — | 131K |
+| mistral-7b-instruct-v0.3 | $0.10 | $0.10 | — | 127K |
+| mistral-nemo-instruct-2407 | $0.13 | $0.13 | — | 118K |
+| mistral-small-3.2-24b-instruct-2506 | $0.09 | $0.28 | — | 128K |
+| mixtral-8x7b-instruct-v0.1 | $0.63 | $0.63 | — | 32K |
+| qwen2.5-coder-32b-instruct | $0.87 | $0.87 | — | 32K |
+| qwen2.5-vl-72b-instruct | $0.91 | $0.91 | — | 32K |
+| qwen3-32b | $0.08 | $0.23 | — | 32K |
 
 ## perceptron
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Perceptron: Perceptron Mk1 | 0.15000000 | 1.5000000 | — | 32768 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Perceptron: Perceptron Mk1.5 | 0.15000000 | 1.5000000 | — | 36864 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| perceptron mk1 | $0.15 | $1.50 | — | 32.77K |
+| perceptron mk1.5 | $0.15 | $1.50 | — | 36.86K |
 
 ## perplexity
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| claude-opus-4-5 | 5.000000 | 25.000000 | 0.5000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-6 | 5.000000 | 25.000000 | 0.5000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-5 | 5.000000 | 25.000000 | 0.5000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-7 | 5.000000 | 25.000000 | 0.5000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-8 | 5.000000 | 25.000000 | 0.5000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-5-5 | 0.1000000 | 0.5000000 | 0.01000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5 | 10.00000 | 50.00000 | 1.000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-4-5 | 1.000000 | 5.000000 | 0.1000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5-1 | 10.00000 | 50.00000 | 0.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.3-codex | 3.5000000 | 28.000000 | 0.35000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5 | 2.000000 | 10.00000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-flash | 1.5000000 | 9.000000 | 0.15000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.3 | 1.4000000 | 4.4000000 | 0.26000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5-5 | 2.000000 | 10.00000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-flash-lite | 0.3000000 | 2.5000000 | 0.03000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-mini | 0.75000000 | 4.5000000 | 0.075000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-multi-agent | 1.25000000 | 2.5000000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codellama-70b-instruct | 0.7000000 | 2.8000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-nano | 0.05000000 | 0.4000000 | 0.005000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.2 | 1.75000000 | 14.000000 | 0.175000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4 | 2.5000000 | 15.000000 | 0.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codellama-34b-instruct | 0.35000000 | 1.4000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-flash | 0.75000000 | 3.75000000 | 0.075000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.4-nano | 0.2000000 | 1.25000000 | 0.02000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-6 | 3.000000 | 15.000000 | 0.3000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.3-flash | 0.15000000 | 0.5000000 | 0.03000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-mini | 0.25000000 | 2.000000 | 0.025000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-sol | 4.000000 | 20.00000 | 0.4000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash-0731 | 0.13000000 | 0.26000000 | 0.028000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-lite | 0.25000000 | 1.5000000 | 0.025000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5 | 1.25000000 | 10.00000 | 0.125000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-terra | 2.000000 | 12.000000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-flash-preview | 0.5000000 | 3.000000 | 0.05000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.7-flash | 0.75000000 | 3.75000000 | 0.075000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-5-5 | 4.000000 | 20.00000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro-0813 | 1.32000000 | 3.96000000 | 0.044000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-pro-preview | 2.000000 | 12.000000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6.1-sol | 2.000000 | 10.00000 | 0.1000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-5 | 3.000000 | 15.000000 | 0.3000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.5 | 5.000000 | 30.00000 | 0.5000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-astra | 10.00000 | 50.00000 | 1.000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.6-flash | 1.5000000 | 7.5000000 | 0.15000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-luna | 0.1000000 | 0.5000000 | 0.01000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.2 | 1.4000000 | 4.4000000 | 0.14000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.1 | 1.25000000 | 10.00000 | 0.125000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-non-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-6-sol | 2.000000 | 10.00000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5.6-luna | 0.2000000 | 1.2000000 | 0.02000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar-reasoning | 1.000000 | 5.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pplx-embed-v1-0.6b | 0.004000000 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7b-instruct | 0.07000000 | 0.28000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar | 0.25000000 | 2.5000000 | 0.0625000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nemotron-3-ultra-550b-a55b | 0.25000000 | 2.5000000 | 0.25000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pplx-7b-chat | 0.07000000 | 0.28000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k3 | 3.000000 | 15.000000 | 0.3000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-2-70b-chat | 0.7000000 | 2.8000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pplx-embed-context-v1-0.6b | 0.008000000 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pplx-decider-v1-27b | 0.04000000 | 0.0 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nemotron-3.5-lightning-30b-a3b | 0.0115000000 | 0.17000000 | 0.00115000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar-pro | 3.000000 | 15.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x7b-instruct | 0.07000000 | 0.28000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pplx-embed-context-v1-4b | 0.05000000 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pplx-7b-online | 0.0 | 0.28000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.7 | 2.000000 | 6.000000 | 0.5000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.1-70b-instruct | 1.000000 | 1.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.3 | 1.25000000 | 2.5000000 | 0.2000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar-deep-research | 2.000000 | 8.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pplx-embed-v1-4b | 0.03000000 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.7-code | 0.95000000 | 4.000000 | 0.19000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar-medium-chat | 0.6000000 | 1.8000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pplx-70b-online | 0.0 | 2.8000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.1-8b-instruct | 0.2000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.5 | 2.000000 | 6.000000 | 0.3000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar-medium-online | 0 | 1.8000000 | — | 12000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pplx-70b-chat | 0.7000000 | 2.8000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Perplexity: Sonar Pro Search | 3.000000 | 15.000000 | — | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.6 | 2.000000 | 6.000000 | 0.5000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar-small-online | 0 | 0.28000000 | — | 12000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar-small-chat | 0.07000000 | 0.28000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar-reasoning-pro | 2.000000 | 8.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| claude-fable-5 | $10.00 | $50.00 | $1.00 | — |
+| claude-fable-5-1 | $10.00 | $50.00 | $0.25 | — |
+| claude-haiku-4-5 | $1.00 | $5.00 | $0.10 | — |
+| claude-haiku-5-5 | $0.10 | $0.50 | $0.01 | — |
+| claude-opus-4-5 | $5.00 | $25.00 | $0.50 | — |
+| claude-opus-4-6 | $5.00 | $25.00 | $0.50 | — |
+| claude-opus-4-7 | $5.00 | $25.00 | $0.50 | — |
+| claude-opus-4-8 | $5.00 | $25.00 | $0.50 | — |
+| claude-opus-5 | $5.00 | $25.00 | $0.50 | — |
+| claude-opus-5-5 | $4.00 | $20.00 | $0.20 | — |
+| claude-sonnet-4-5 | $3.00 | $15.00 | $0.30 | — |
+| claude-sonnet-4-6 | $3.00 | $15.00 | $0.30 | — |
+| claude-sonnet-5 | $2.00 | $10.00 | $0.20 | — |
+| claude-sonnet-5-5 | $2.00 | $10.00 | $0.20 | — |
+| codellama-34b-instruct | $0.35 | $1.40 | — | 16.38K |
+| codellama-70b-instruct | $0.70 | $2.80 | — | 16.38K |
+| deepseek-v4-flash-0731 | $0.13 | $0.26 | $0.03 | — |
+| deepseek-v4-pro-0813 | $1.32 | $3.96 | $0.04 | — |
+| gemini-3-flash-preview | $0.50 | $3.00 | $0.05 | — |
+| gemini-3.1-flash-lite | $0.25 | $1.50 | $0.02 | — |
+| gemini-3.1-pro-preview | $2.00 | $12.00 | $0.20 | — |
+| gemini-3.5-flash | $1.50 | $9.00 | $0.15 | — |
+| gemini-3.5-flash-lite | $0.30 | $2.50 | $0.03 | — |
+| gemini-3.6-flash | $1.50 | $7.50 | $0.15 | — |
+| gemini-3.7-flash | $0.75 | $3.75 | $0.08 | — |
+| gemini-3.8-flash | $0.75 | $3.75 | $0.08 | — |
+| glm-5.2 | $1.40 | $4.40 | $0.14 | — |
+| glm-5.3 | $1.40 | $4.40 | $0.26 | — |
+| glm-5.3-flash | $0.15 | $0.50 | $0.03 | — |
+| gpt-5 | $1.25 | $10.00 | $0.12 | — |
+| gpt-5-mini | $0.25 | $2.00 | $0.02 | — |
+| gpt-5-nano | $0.05 | $0.40 | $0.005 | — |
+| gpt-5.1 | $1.25 | $10.00 | $0.12 | — |
+| gpt-5.2 | $1.75 | $14.00 | $0.18 | — |
+| gpt-5.3-codex | $3.50 | $28.00 | $0.35 | — |
+| gpt-5.4 | $2.50 | $15.00 | $0.25 | — |
+| gpt-5.4-mini | $0.75 | $4.50 | $0.08 | — |
+| gpt-5.4-nano | $0.20 | $1.25 | $0.02 | — |
+| gpt-5.5 | $5.00 | $30.00 | $0.50 | — |
+| gpt-5.6-luna | $0.20 | $1.20 | $0.02 | — |
+| gpt-5.6-sol | $4.00 | $20.00 | $0.40 | — |
+| gpt-5.6-terra | $2.00 | $12.00 | $0.20 | — |
+| gpt-6-astra | $10.00 | $50.00 | $1.00 | — |
+| gpt-6-luna | $0.10 | $0.50 | $0.01 | — |
+| gpt-6-sol | $2.00 | $10.00 | $0.20 | — |
+| gpt-6.1-sol | $2.00 | $10.00 | $0.10 | — |
+| grok-4.3 | $1.25 | $2.50 | $0.20 | — |
+| grok-4.5 | $2.00 | $6.00 | $0.30 | — |
+| grok-4.6 | $2.00 | $6.00 | $0.50 | — |
+| grok-4.7 | $2.00 | $6.00 | $0.50 | — |
+| grok-4.20-multi-agent | $1.25 | $2.50 | $0.20 | — |
+| grok-4.20-non-reasoning | $1.25 | $2.50 | $0.20 | — |
+| grok-4.20-reasoning | $1.25 | $2.50 | $0.20 | — |
+| kimi-k2.7-code | $0.95 | $4.00 | $0.19 | — |
+| kimi-k3 | $3.00 | $15.00 | $0.30 | — |
+| llama-2-70b-chat | $0.70 | $2.80 | — | 4.1K |
+| llama-3.1-8b-instruct | $0.20 | $0.20 | — | 131.07K |
+| llama-3.1-70b-instruct | $1.00 | $1.00 | — | 131.07K |
+| mistral-7b-instruct | $0.07 | $0.28 | — | 4.1K |
+| mixtral-8x7b-instruct | $0.07 | $0.28 | — | 4.1K |
+| nemotron-3-ultra-550b-a55b | $0.25 | $2.50 | $0.25 | — |
+| nemotron-3.5-lightning-30b-a3b | $0.01 | $0.17 | $0.00115 | — |
+| pplx-7b-chat | $0.07 | $0.28 | — | 8.19K |
+| pplx-7b-online | $0.00 | $0.28 | — | 4.1K |
+| pplx-70b-chat | $0.70 | $2.80 | — | 4.1K |
+| pplx-70b-online | $0.00 | $2.80 | — | 4.1K |
+| pplx-decider-v1-27b | $0.04 | $0.00 | — | 262.14K |
+| pplx-embed-context-v1-0.6b | $0.008 | $0.00 | — | 32.77K |
+| pplx-embed-context-v1-4b | $0.05 | $0.00 | — | 32.77K |
+| pplx-embed-v1-0.6b | $0.004 | $0.00 | — | 32.77K |
+| pplx-embed-v1-4b | $0.03 | $0.00 | — | 32.77K |
+| sonar | $0.25 | $2.50 | $0.06 | — |
+| sonar pro search | $3.00 | $15.00 | — | 200K |
+| sonar-deep-research | $2.00 | $8.00 | — | 128K |
+| sonar-medium-chat | $0.60 | $1.80 | — | 16.38K |
+| sonar-medium-online | $0.00 | $1.80 | — | 12K |
+| sonar-pro | $3.00 | $15.00 | — | 200K |
+| sonar-reasoning | $1.00 | $5.00 | — | 128K |
+| sonar-reasoning-pro | $2.00 | $8.00 | — | 128K |
+| sonar-small-chat | $0.07 | $0.28 | — | 16.38K |
+| sonar-small-online | $0.00 | $0.28 | — | 12K |
 
 ## pinstripes
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| qwen3.6-35b-a3b | 0.14000000 | 0.45000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder-30b-a3b | 0.3000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash | 0.1000000 | 0.2000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-30b-a3b | 0.09000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5-air | 0.125000000 | 0.45000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m2.7 | 0.255000000 | 0.55000000 | — | 1000192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v4-flash | $0.10 | $0.20 | — | 163.84K |
+| glm-4.5-air | $0.12 | $0.45 | — | 128K |
+| minimax-m2.7 | $0.26 | $0.55 | — | 1M |
+| qwen3-30b-a3b | $0.09 | $0.20 | — | 131.07K |
+| qwen3-coder-30b-a3b | $0.30 | $0.60 | — | 131.07K |
+| qwen3.6-35b-a3b | $0.14 | $0.45 | — | 131.07K |
 
 ## poolside
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Poolside: Laguna S 2.1 (free) | 0 | 0 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Poolside: Laguna S 2.1 | 0.09000000 | 0.18000000 | 0.009000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Poolside: Laguna XS 2.1 (free) | 0 | 0 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Poolside: Laguna XS 2.1 | 0.06000000 | 0.12000000 | 0.03000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| laguna s 2.1 | $0.09 | $0.18 | $0.009 | 1.05M |
+| laguna s 2.1 (free) | $0.00 | $0.00 | — | 262.14K |
+| laguna xs 2.1 | $0.06 | $0.12 | $0.03 | 262.14K |
+| laguna xs 2.1 (free) | $0.00 | $0.00 | — | 262.14K |
 
 ## prism
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| deepseek-v4-flash | 0.17000000 | 0.21000000 | 0.07000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4.1-flash | 0.17000000 | 0.63000000 | 0.07000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v4-flash | $0.17 | $0.21 | $0.07 | 1M |
+| deepseek-v4.1-flash | $0.17 | $0.63 | $0.07 | 1M |
 
 ## prism-ml
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| PrismML: Ternary Bonsai 2 27B | 0.075000000 | 0.5000000 | 0.0375000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| prismml: ternary bonsai 2 27b | $0.08 | $0.50 | $0.04 | 262.14K |
 
 ## publicai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Olmo-3-7B-Instruct | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apertus-8b-instruct | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ALIA-40b-instruct_Q8_0 | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Olmo-3-7B-Think | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| salamandra-7b-instruct-tools-16k | 0.0 | 0.0 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| apertus-70b-instruct | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Gemma-SEA-LION-v4-27B-IT | 0.0 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Olmo-3-32B-Think | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen-SEA-LION-v4-32B-IT | 0.0 | 0.0 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| alia-40b-instruct_q8_0 | $0.00 | $0.00 | — | 8.19K |
+| apertus-8b-instruct | $0.00 | $0.00 | — | 8.19K |
+| apertus-70b-instruct | $0.00 | $0.00 | — | 8.19K |
+| gemma-sea-lion-v4-27b-it | $0.00 | $0.00 | — | 8.19K |
+| olmo-3-7b-instruct | $0.00 | $0.00 | — | 32.77K |
+| olmo-3-7b-think | $0.00 | $0.00 | — | 32.77K |
+| olmo-3-32b-think | $0.00 | $0.00 | — | 32.77K |
+| qwen-sea-lion-v4-32b-it | $0.00 | $0.00 | — | 32.77K |
+| salamandra-7b-instruct-tools-16k | $0.00 | $0.00 | — | 16.38K |
 
 ## qwen
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Qwen: Qwen3.5-9B | 0.1000000 | 0.15000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.5-35B-A3B | 0.08000000 | 0.75000000 | 0.04000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 30B A3B Instruct 2507 | 0.1000000 | 0.3000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.5-122B-A10B | 0.26000000 | 2.08000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen-Plus | 0.26000000 | 0.78000000 | 0.052000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 32B | 0.08000000 | 0.28000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.5 397B A17B | 0.55000000 | 3.5000000 | 0.225000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 14B | 0.12000000 | 0.24000000 | — | 40960 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 235B A22B Instruct 2507 | 0.09000000 | 0.55000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen2.5 7B Instruct | 0.1000000 | 0.2000000 | — | 32768 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5 72B Instruct | 0.36000000 | 0.4000000 | — | 32768 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.5-Flash | 0.065000000 | 0.26000000 | — | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 235B A22B Thinking 2507 | 0.45000000 | 3.5000000 | — | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen2.5 VL 72B Instruct | 0.8000000 | 1.000000 | 0.4000000 | 128000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5 Coder 32B Instruct | 0.66000000 | 1.000000 | — | 32768 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 30B A3B | 0.12000000 | 0.5000000 | — | 40960 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.5-27B | 0.26000000 | 2.6000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.6 Flash | 0.1875000000 | 1.125000000 | — | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 VL 8B Instruct | 0.25000000 | 0.75000000 | 0.12000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.6 Plus | 0.325000000 | 1.95000000 | — | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.7 Flash | 0.03000000 | 0.13000000 | 0.006000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.6 27B | 0.32000000 | 3.2000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 Coder Flash | 0.195000000 | 0.975000000 | 0.039000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 Coder 480B A35B | 0.3000000 | 1.000000 | 0.1000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.8 27B | 0.04000000 | 2.3000000 | 0.0198000000 | 1000000 | aggregator | 2026-10-11T20:41:46.105503+00:00 | 
-
-| Qwen: Qwen3 Coder Next | 0.12000000 | 0.8000000 | 0.07000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 Next 80B A3B Thinking | 0.15000000 | 1.2000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.7 Max | 1.475000000 | 4.425000000 | 0.295000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.7 Plus | 0.32000000 | 1.28000000 | 0.064000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 Coder 30B A3B Instruct | 0.07000000 | 0.28000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.8 Max Prime | 4.000000 | 12.000000 | 0.5000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.6 35B A3B | 0.1000000 | 0.95000000 | 0.1000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.8 Flash | 0.15000000 | 0.47000000 | 0.016000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.5 Plus 2026-04-20 | 0.3000000 | 1.8000000 | — | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.5 Plus 2026-02-15 | 0.26000000 | 1.56000000 | — | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 Next 80B A3B Instruct | 0.1000000 | 1.1000000 | 0.07000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 VL 30B A3B Instruct | 0.15000000 | 0.6000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 VL 30B A3B Thinking | 0.29000000 | 1.000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3 VL 235B A22B Instruct | 0.21000000 | 1.9000000 | 0.1000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.8 Max (0902) | 2.000000 | 6.000000 | 0.25000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.8 Omni Flash | 0.15000000 | 0.47000000 | 0.016000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen: Qwen3.8 2.4T A95B | 2.000000 | 6.000000 | 0.25000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| qwen2.5 7b instruct | $0.10 | $0.20 | — | 32.77K |
+| qwen2.5 72b instruct | $0.36 | $0.40 | — | 32.77K |
+| qwen2.5 coder 32b instruct | $0.66 | $1.00 | — | 32.77K |
+| qwen2.5 vl 72b instruct | $0.80 | $1.00 | $0.40 | 128K |
+| qwen3 14b | $0.12 | $0.24 | — | 40.96K |
+| qwen3 30b a3b | $0.12 | $0.50 | — | 40.96K |
+| qwen3 30b a3b instruct 2507 | $0.10 | $0.30 | — | 262.14K |
+| qwen3 32b | $0.08 | $0.28 | — | 131.07K |
+| qwen3 235b a22b instruct 2507 | $0.09 | $0.55 | — | 262.14K |
+| qwen3 235b a22b thinking 2507 | $0.45 | $3.50 | — | 128K |
+| qwen3 coder 30b a3b instruct | $0.07 | $0.28 | — | 262.14K |
+| qwen3 coder 480b a35b | $0.30 | $1.00 | $0.10 | 262.14K |
+| qwen3 coder flash | $0.20 | $0.98 | $0.04 | 1M |
+| qwen3 coder next | $0.12 | $0.80 | $0.07 | 262.14K |
+| qwen3 next 80b a3b instruct | $0.10 | $1.10 | $0.07 | 262.14K |
+| qwen3 next 80b a3b thinking | $0.15 | $1.20 | — | 262.14K |
+| qwen3 vl 8b instruct | $0.25 | $0.75 | $0.12 | 262.14K |
+| qwen3 vl 30b a3b instruct | $0.15 | $0.60 | — | 262.14K |
+| qwen3 vl 30b a3b thinking | $0.29 | $1.00 | — | 262.14K |
+| qwen3 vl 235b a22b instruct | $0.21 | $1.90 | $0.10 | 262.14K |
+| qwen3.5 397b a17b | $0.55 | $3.50 | $0.22 | 262.14K |
+| qwen3.5 plus 2026-02-15 | $0.26 | $1.56 | — | 1M |
+| qwen3.5 plus 2026-04-20 | $0.30 | $1.80 | — | 1M |
+| qwen3.5-9b | $0.10 | $0.15 | — | 262.14K |
+| qwen3.5-27b | $0.26 | $2.60 | — | 262.14K |
+| qwen3.5-35b-a3b | $0.08 | $0.75 | $0.04 | 262.14K |
+| qwen3.5-122b-a10b | $0.26 | $2.08 | — | 262.14K |
+| qwen3.5-flash | $0.06 | $0.26 | — | 1M |
+| qwen3.6 27b | $0.32 | $3.20 | — | 262.14K |
+| qwen3.6 35b a3b | $0.10 | $0.95 | $0.10 | 262.14K |
+| qwen3.6 flash | $0.19 | $1.12 | — | 1M |
+| qwen3.6 plus | $0.32 | $1.95 | — | 1M |
+| qwen3.7 flash | $0.03 | $0.13 | $0.006 | 1M |
+| qwen3.7 max | $1.48 | $4.42 | $0.30 | 1M |
+| qwen3.7 plus | $0.32 | $1.28 | $0.06 | 1M |
+| qwen3.8 2.4t a95b | $2.00 | $6.00 | $0.25 | 1.05M |
+| qwen3.8 27b | $0.04 | $2.30 | $0.02 | 1M |
+| qwen3.8 flash | $0.15 | $0.47 | $0.02 | 1M |
+| qwen3.8 max (0902) | $2.00 | $6.00 | $0.25 | 1M |
+| qwen3.8 max prime | $4.00 | $12.00 | $0.50 | 1M |
+| qwen3.8 omni flash | $0.15 | $0.47 | $0.02 | 1M |
+| qwen-plus | $0.26 | $0.78 | $0.05 | 1M |
 
 ## qwen_ai_platform
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| deepseek-v4-flash | 0.2000000 | 0.4000000 | 0.04000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.1 | 1.4000000 | 4.4000000 | 0.26000000 | 202745 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.2 | 1.4000000 | 4.4000000 | 0.28000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro | 2.4000000 | 4.8000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash-0731 | 0.2000000 | 0.4000000 | 0.04000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.7-code | 0.95000000 | 4.000000 | 0.19000000 | 229376 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-max | 2.000000 | 6.000000 | 0.25000000 | 991808 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-plus-2025-07-14 | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-32b-instruct | 0.16000000 | 0.64000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-plus-2025-04-28 | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwq-plus | 0.8000000 | 2.4000000 | — | 98304 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-coder | 0.3000000 | 1.5000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-32b-thinking | 0.16000000 | 2.87000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-235b-a22b-thinking | 0.4000000 | 4.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.7-max | 2.5000000 | 7.5000000 | 0.5000000 | 991808 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-omni-flash | 0.15000000 | 0.47000000 | 0.016000000 | 991808 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-plus | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo-latest | 0.05000000 | 0.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-235b-a22b-instruct | 0.4000000 | 1.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-flash | 0.15000000 | 0.47000000 | 0.016000000 | 991808 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-next-80b-a3b-instruct | 0.15000000 | 1.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-plus-2025-01-25 | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-max | 1.6000000 | 6.4000000 | — | 30720 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo-2025-04-28 | 0.05000000 | 0.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo-2024-11-01 | 0.05000000 | 0.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo | 0.05000000 | 0.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-next-80b-a3b-thinking | 0.15000000 | 1.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v4-flash | $0.20 | $0.40 | $0.04 | 1M |
+| deepseek-v4-flash-0731 | $0.20 | $0.40 | $0.04 | 1M |
+| deepseek-v4-pro | $2.40 | $4.80 | $0.20 | 1M |
+| glm-5.1 | $1.40 | $4.40 | $0.26 | 202.75K |
+| glm-5.2 | $1.40 | $4.40 | $0.28 | 1.05M |
+| kimi-k2.7-code | $0.95 | $4.00 | $0.19 | 229.38K |
+| qwen3-next-80b-a3b-instruct | $0.15 | $1.20 | — | 262.14K |
+| qwen3-next-80b-a3b-thinking | $0.15 | $1.20 | — | 262.14K |
+| qwen3-vl-32b-instruct | $0.16 | $0.64 | — | 131.07K |
+| qwen3-vl-32b-thinking | $0.16 | $2.87 | — | 131.07K |
+| qwen3-vl-235b-a22b-instruct | $0.40 | $1.60 | — | 131.07K |
+| qwen3-vl-235b-a22b-thinking | $0.40 | $4.00 | — | 131.07K |
+| qwen3.7-max | $2.50 | $7.50 | $0.50 | 991.81K |
+| qwen3.8-flash | $0.15 | $0.47 | $0.02 | 991.81K |
+| qwen3.8-max | $2.00 | $6.00 | $0.25 | 991.81K |
+| qwen3.8-omni-flash | $0.15 | $0.47 | $0.02 | 991.81K |
+| qwen-coder | $0.30 | $1.50 | — | 1M |
+| qwen-max | $1.60 | $6.40 | — | 30.72K |
+| qwen-plus | $0.40 | $1.20 | — | 129.02K |
+| qwen-plus-2025-01-25 | $0.40 | $1.20 | — | 129.02K |
+| qwen-plus-2025-04-28 | $0.40 | $1.20 | — | 129.02K |
+| qwen-plus-2025-07-14 | $0.40 | $1.20 | — | 129.02K |
+| qwen-turbo | $0.05 | $0.20 | — | 129.02K |
+| qwen-turbo-2024-11-01 | $0.05 | $0.20 | — | 1M |
+| qwen-turbo-2025-04-28 | $0.05 | $0.20 | — | 1M |
+| qwen-turbo-latest | $0.05 | $0.20 | — | 1M |
+| qwq-plus | $0.80 | $2.40 | — | 98.3K |
 
 ## qwencloud
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| qwen-plus | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-max | 1.6000000 | 6.4000000 | — | 30720 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-coder | 0.3000000 | 1.5000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash-0731 | 0.2000000 | 0.4000000 | 0.04000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-plus-2025-01-25 | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2.7-code | 0.95000000 | 4.000000 | 0.19000000 | 229376 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-plus-2025-04-28 | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.2 | 1.4000000 | 4.4000000 | 0.28000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo | 0.05000000 | 0.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo-2024-11-01 | 0.05000000 | 0.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-plus-2025-07-14 | 0.4000000 | 1.2000000 | — | 129024 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.1 | 1.4000000 | 4.4000000 | 0.26000000 | 202745 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro | 2.4000000 | 4.8000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash | 0.2000000 | 0.4000000 | 0.04000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo-2025-04-28 | 0.05000000 | 0.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-next-80b-a3b-thinking | 0.15000000 | 1.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-next-80b-a3b-instruct | 0.15000000 | 1.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-32b-thinking | 0.16000000 | 2.87000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-235b-a22b-instruct | 0.4000000 | 1.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-32b-instruct | 0.16000000 | 0.64000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-vl-235b-a22b-thinking | 0.4000000 | 4.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.7-max | 2.5000000 | 7.5000000 | 0.5000000 | 991808 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.8-max | 2.000000 | 6.000000 | 0.25000000 | 991808 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-turbo-latest | 0.05000000 | 0.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwq-plus | 0.8000000 | 2.4000000 | — | 98304 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v4-flash | $0.20 | $0.40 | $0.04 | 1M |
+| deepseek-v4-flash-0731 | $0.20 | $0.40 | $0.04 | 1M |
+| deepseek-v4-pro | $2.40 | $4.80 | $0.20 | 1M |
+| glm-5.1 | $1.40 | $4.40 | $0.26 | 202.75K |
+| glm-5.2 | $1.40 | $4.40 | $0.28 | 1.05M |
+| kimi-k2.7-code | $0.95 | $4.00 | $0.19 | 229.38K |
+| qwen3-next-80b-a3b-instruct | $0.15 | $1.20 | — | 262.14K |
+| qwen3-next-80b-a3b-thinking | $0.15 | $1.20 | — | 262.14K |
+| qwen3-vl-32b-instruct | $0.16 | $0.64 | — | 131.07K |
+| qwen3-vl-32b-thinking | $0.16 | $2.87 | — | 131.07K |
+| qwen3-vl-235b-a22b-instruct | $0.40 | $1.60 | — | 131.07K |
+| qwen3-vl-235b-a22b-thinking | $0.40 | $4.00 | — | 131.07K |
+| qwen3.7-max | $2.50 | $7.50 | $0.50 | 991.81K |
+| qwen3.8-max | $2.00 | $6.00 | $0.25 | 991.81K |
+| qwen-coder | $0.30 | $1.50 | — | 1M |
+| qwen-max | $1.60 | $6.40 | — | 30.72K |
+| qwen-plus | $0.40 | $1.20 | — | 129.02K |
+| qwen-plus-2025-01-25 | $0.40 | $1.20 | — | 129.02K |
+| qwen-plus-2025-04-28 | $0.40 | $1.20 | — | 129.02K |
+| qwen-plus-2025-07-14 | $0.40 | $1.20 | — | 129.02K |
+| qwen-turbo | $0.05 | $0.20 | — | 129.02K |
+| qwen-turbo-2024-11-01 | $0.05 | $0.20 | — | 1M |
+| qwen-turbo-2025-04-28 | $0.05 | $0.20 | — | 1M |
+| qwen-turbo-latest | $0.05 | $0.20 | — | 1M |
+| qwq-plus | $0.80 | $2.40 | — | 98.3K |
 
 ## rekaai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Reka Edge | 0.1000000 | 0.1000000 | — | 16384 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Reka Flash 3 | 0.1000000 | 0.2000000 | — | 65536 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| reka edge | $0.10 | $0.10 | — | 16.38K |
+| reka flash 3 | $0.10 | $0.20 | — | 65.54K |
 
 ## relace
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Relace: Relace Search | 1.000000 | 3.000000 | — | 256000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Relace: Relace Apply 3 | 0.85000000 | 1.25000000 | — | 256000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| relace apply 3 | $0.85 | $1.25 | — | 256K |
+| relace search | $1.00 | $3.00 | — | 256K |
 
 ## replicate
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gemini-2.5-flash | 0.3000000 | 2.5000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-pro | 2.000000 | 12.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-nano | 0.05000000 | 0.4000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-4.5-haiku | 1.000000 | 5.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-4-sonnet | 3.000000 | 15.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o | 2.5000000 | 10.00000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b | 0.09000000 | 0.36000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-mini | 0.4000000 | 1.6000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4 | 7.2000000 | 36.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5 | 1.25000000 | 10.00000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1 | 3.75000000 | 10.00000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini | 0.15000000 | 0.6000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3.7-sonnet | 3.000000 | 15.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3.1 | 0.672000000 | 2.016000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3.5-haiku | 1.000000 | 5.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1 | 2.000000 | 8.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.18000000 | 0.72000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-nano | 0.1000000 | 0.4000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3 | 1.45000000 | 1.45000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3.5-sonnet | 3.75000000 | 18.75000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-5-mini | 0.25000000 | 2.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-4.5-sonnet | 3.000000 | 15.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-2-13b | 0.1000000 | 0.5000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-3.3-8b-instruct | 0.03000000 | 0.25000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o4-mini | 1.000000 | 4.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7b-v0.1 | 0.05000000 | 0.25000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1-mini | 1.1000000 | 4.4000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-2-7b-chat | 0.05000000 | 0.25000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1 | 15.000000 | 60.00000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-8b | 0.05000000 | 0.25000000 | — | 8086 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-2-70b-chat | 0.65000000 | 2.75000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-2-70b | 0.65000000 | 2.75000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-70b | 0.65000000 | 2.75000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-70b-instruct | 0.65000000 | 2.75000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x7b-instruct-v0.1 | 0.3000000 | 1.000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-2-7b | 0.05000000 | 0.25000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-235b-a22b-instruct-2507 | 0.264000000 | 1.06000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-7b-instruct-v0.2 | 0.05000000 | 0.25000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-2-13b-chat | 0.1000000 | 0.5000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-8b-instruct | 0.05000000 | 0.25000000 | — | 8086 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| claude-3.5-haiku | $1.00 | $5.00 | — | — |
+| claude-3.5-sonnet | $3.75 | $18.75 | — | — |
+| claude-3.7-sonnet | $3.00 | $15.00 | — | — |
+| claude-4-sonnet | $3.00 | $15.00 | — | — |
+| claude-4.5-haiku | $1.00 | $5.00 | — | — |
+| claude-4.5-sonnet | $3.00 | $15.00 | — | — |
+| deepseek-r1 | $3.75 | $10.00 | — | 65.54K |
+| deepseek-v3 | $1.45 | $1.45 | — | 65.54K |
+| deepseek-v3.1 | $0.67 | $2.02 | — | 163.84K |
+| gemini-2.5-flash | $0.30 | $2.50 | — | — |
+| gemini-3-pro | $2.00 | $12.00 | — | — |
+| gpt-4.1 | $2.00 | $8.00 | — | — |
+| gpt-4.1-mini | $0.40 | $1.60 | — | — |
+| gpt-4.1-nano | $0.10 | $0.40 | — | — |
+| gpt-4o | $2.50 | $10.00 | — | — |
+| gpt-4o-mini | $0.15 | $0.60 | — | — |
+| gpt-5 | $1.25 | $10.00 | — | — |
+| gpt-5-mini | $0.25 | $2.00 | — | — |
+| gpt-5-nano | $0.05 | $0.40 | — | — |
+| gpt-oss-20b | $0.09 | $0.36 | — | — |
+| gpt-oss-120b | $0.18 | $0.72 | — | — |
+| granite-3.3-8b-instruct | $0.03 | $0.25 | — | — |
+| grok-4 | $7.20 | $36.00 | — | — |
+| llama-2-7b | $0.05 | $0.25 | — | 4.1K |
+| llama-2-7b-chat | $0.05 | $0.25 | — | 4.1K |
+| llama-2-13b | $0.10 | $0.50 | — | 4.1K |
+| llama-2-13b-chat | $0.10 | $0.50 | — | 4.1K |
+| llama-2-70b | $0.65 | $2.75 | — | 4.1K |
+| llama-2-70b-chat | $0.65 | $2.75 | — | 4.1K |
+| llama-3-8b | $0.05 | $0.25 | — | 8.09K |
+| llama-3-8b-instruct | $0.05 | $0.25 | — | 8.09K |
+| llama-3-70b | $0.65 | $2.75 | — | 8.19K |
+| llama-3-70b-instruct | $0.65 | $2.75 | — | 8.19K |
+| mistral-7b-instruct-v0.2 | $0.05 | $0.25 | — | 4.1K |
+| mistral-7b-v0.1 | $0.05 | $0.25 | — | 4.1K |
+| mixtral-8x7b-instruct-v0.1 | $0.30 | $1.00 | — | 4.1K |
+| o1 | $15.00 | $60.00 | — | — |
+| o1-mini | $1.10 | $4.40 | — | — |
+| o4-mini | $1.00 | $4.00 | — | — |
+| qwen3-235b-a22b-instruct-2507 | $0.26 | $1.06 | — | — |
 
 ## sagemaker
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| meta-textgeneration-llama-2-70b | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta-textgeneration-llama-2-13b-f | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta-textgeneration-llama-2-7b-f | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta-textgeneration-llama-2-7b | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta-textgeneration-llama-2-70b-b-f | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| meta-textgeneration-llama-2-13b | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| meta-textgeneration-llama-2-7b | $0.00 | $0.00 | — | 4.1K |
+| meta-textgeneration-llama-2-7b-f | $0.00 | $0.00 | — | 4.1K |
+| meta-textgeneration-llama-2-13b | $0.00 | $0.00 | — | 4.1K |
+| meta-textgeneration-llama-2-13b-f | $0.00 | $0.00 | — | 4.1K |
+| meta-textgeneration-llama-2-70b | $0.00 | $0.00 | — | 4.1K |
+| meta-textgeneration-llama-2-70b-b-f | $0.00 | $0.00 | — | 4.1K |
 
 ## sail
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| DeepSeek-V4-Pro-0813 | 0.92000000 | 2.77000000 | 0.04000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Gemma-4-31B-IT-NVFP4 | 0.14000000 | 0.4000000 | 0.07000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4.1-Flash | 0.15000000 | 0.6000000 | 0.006000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.6-35B-A3B | 0.05000000 | 0.4000000 | 0.02000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31B-it | 0.4000000 | 0.6000000 | 0.2000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.3 | 0.98000000 | 3.08000000 | 0.18000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.6 | 1.000000 | 4.000000 | 0.2000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Flash-0731 | 0.09000000 | 0.18000000 | 0.02000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.06000000 | 0.4000000 | 0.03000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.3-Flash | 0.11000000 | 0.35000000 | 0.02000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K3 | 2.5000000 | 12.5000000 | 0.25000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-12B-it | 0.3000000 | 2.000000 | 0.15000000 | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v4-flash-0731 | $0.09 | $0.18 | $0.02 | 1.05M |
+| deepseek-v4-pro-0813 | $0.92 | $2.77 | $0.04 | 1.05M |
+| deepseek-v4.1-flash | $0.15 | $0.60 | $0.006 | 1.05M |
+| gemma-4-12b-it | $0.30 | $2.00 | $0.15 | 16.38K |
+| gemma-4-31b-it | $0.40 | $0.60 | $0.20 | 256K |
+| gemma-4-31b-it-nvfp4 | $0.14 | $0.40 | $0.07 | 262.14K |
+| glm-5.3 | $0.98 | $3.08 | $0.18 | 1.05M |
+| glm-5.3-flash | $0.11 | $0.35 | $0.02 | 1.05M |
+| gpt-oss-120b | $0.06 | $0.40 | $0.03 | 131.07K |
+| kimi-k2.6 | $1.00 | $4.00 | $0.20 | 262.14K |
+| kimi-k3 | $2.50 | $12.50 | $0.25 | 1.05M |
+| qwen3.6-35b-a3b | $0.05 | $0.40 | $0.02 | 262.14K |
 
 ## sakana
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Sakana: Fugu Ultra | 5.000000 | 30.00000 | 0.5000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Sakana: Fugu Max | 2.000000 | 6.000000 | 0.25000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Sakana: Fugu Ultra v2 | 5.000000 | 30.00000 | 0.5000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Sakana: Sakana Namazu | 0.95000000 | 4.000000 | 0.15000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| fugu max | $2.00 | $6.00 | $0.25 | 1M |
+| fugu ultra | $5.00 | $30.00 | $0.50 | 1M |
+| fugu ultra v2 | $5.00 | $30.00 | $0.50 | 1M |
+| sakana namazu | $0.95 | $4.00 | $0.15 | 262.14K |
 
 ## sambanova
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| DeepSeek-R1 | 5.000000 | 7.000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3.2 | 3.000000 | 4.5000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-4-Maverick-17B-128E-Instruct | 0.63000000 | 1.8000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31B-it | 0.38000000 | 1.15000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3.1 | 3.000000 | 4.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.3-70B-Instruct | 0.6000000 | 1.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.22000000 | 0.59000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.7 | 0.6000000 | 2.4000000 | — | 196608 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-r1 | $5.00 | $7.00 | — | 32.77K |
+| deepseek-v3.1 | $3.00 | $4.50 | — | 131.07K |
+| deepseek-v3.2 | $3.00 | $4.50 | — | 32.77K |
+| gemma-4-31b-it | $0.38 | $1.15 | — | 131.07K |
+| gpt-oss-120b | $0.22 | $0.59 | — | 131.07K |
+| llama-4-maverick-17b-128e-instruct | $0.63 | $1.80 | — | 131.07K |
+| meta-llama-3.3-70b-instruct | $0.60 | $1.20 | — | 131.07K |
+| minimax-m2.7 | $0.60 | $2.40 | — | 196.61K |
 
 ## sao10k
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Sao10K: Llama 3.3 Euryale 70B | 0.65000000 | 0.75000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Sao10K: Llama 3.1 Euryale 70B v2.2 | 0.85000000 | 0.85000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Sao10K: Llama 3 8B Lunaris | 0.04000000 | 0.05000000 | — | 8192 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| llama 3 8b lunaris | $0.04 | $0.05 | — | 8.19K |
+| llama 3.1 euryale 70b v2.2 | $0.85 | $0.85 | — | 131.07K |
+| llama 3.3 euryale 70b | $0.65 | $0.75 | — | 131.07K |
 
 ## sarvam
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| sarvam-m | 0 | 0 | 0 | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| sarvam-m | $0.00 | $0.00 | $0.00 | 8.19K |
 
 ## scaledown
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| compress | 0.05000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| extract | 0.05000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| classify | 0.05000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| decisions | 0.05000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| summarize | 0.05000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| classify | $0.05 | $0.00 | — | — |
+| compress | $0.05 | $0.00 | — | — |
+| decisions | $0.05 | $0.00 | — | — |
+| extract | $0.05 | $0.00 | — | — |
+| summarize | $0.05 | $0.00 | — | — |
 
 ## scaleway
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gemma-4-26b-a4b-it | 0.25000000 | 0.5000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-embedding-8b | 0.1000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-235b-a22b-instruct-2507 | 0.75000000 | 2.25000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| bge-multilingual-gemma2 | 0.1000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small-3.2-24b-instruct-2506 | 0.15000000 | 0.35000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.5-397b-a17b | 0.6000000 | 3.6000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-medium-3.5-128b | 1.5000000 | 7.5000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| whisper-large-v3 | — | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.2 | 1.8000000 | 5.5000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3.6-35b-a3b | 0.25000000 | 1.5000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.15000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.3-70b-instruct | 0.9000000 | 0.9000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder-30b-a3b-instruct | 0.2000000 | 0.8000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash-0731 | 0.4000000 | 0.8000000 | 0.08000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pixtral-12b-2409 | 0.2000000 | 0.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| bge-multilingual-gemma2 | $0.10 | $0.00 | — | — |
+| deepseek-v4-flash-0731 | $0.40 | $0.80 | $0.08 | 256K |
+| gemma-4-26b-a4b-it | $0.25 | $0.50 | — | 256K |
+| glm-5.2 | $1.80 | $5.50 | — | 256K |
+| gpt-oss-120b | $0.15 | $0.60 | — | 128K |
+| llama-3.3-70b-instruct | $0.90 | $0.90 | — | 128K |
+| mistral-medium-3.5-128b | $1.50 | $7.50 | — | 256K |
+| mistral-small-3.2-24b-instruct-2506 | $0.15 | $0.35 | — | 128K |
+| pixtral-12b-2409 | $0.20 | $0.20 | — | 128K |
+| qwen3-235b-a22b-instruct-2507 | $0.75 | $2.25 | — | 256K |
+| qwen3-coder-30b-a3b-instruct | $0.20 | $0.80 | — | 128K |
+| qwen3-embedding-8b | $0.10 | $0.00 | — | — |
+| qwen3.5-397b-a17b | $0.60 | $3.60 | — | 256K |
+| qwen3.6-35b-a3b | $0.25 | $1.50 | — | 256K |
+| whisper-large-v3 | — | $0.00 | — | — |
 
 ## scx-ai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Qwen3.8-Max | 1.65000000 | 4.99000000 | 0.21000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.2 | 0.61000000 | 1.98000000 | 0.22000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| glm-5.2 | $0.61 | $1.98 | $0.22 | 1.05M |
+| qwen3.8-max | $1.65 | $4.99 | $0.21 | 1M |
 
 ## snowflake
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| claude-sonnet-4-5 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-4-sonnet | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-4-5 | 1.000000 | 5.000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-4-opus | 5.000000 | 25.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-5-sonnet | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-7-sonnet | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-6 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| snowflake-arctic-embed-l-v2.0 | 0.07000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama4-maverick | 0.24000000 | 0.97000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.1-405b | 1.2000000 | 1.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai-gpt-5 | 1.25000000 | 10.00000 | 0.125000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.1-8b | 0.24000000 | 0.24000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1 | 1.35000000 | 5.4000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai-gpt-5-mini | 0.3000000 | 1.2000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| snowflake-llama-3.3-70b | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.1-70b | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai-gpt-4.1 | 2.000000 | 8.000000 | 0.5000000 | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| openai-gpt-5-nano | 0.15000000 | 0.6000000 | — | 5000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3.3-70b | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| snowflake-arctic-embed-m-v2.0 | 0.07000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large2 | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| claude-3-5-sonnet | $3.00 | $15.00 | $0.30 | 200K |
+| claude-3-7-sonnet | $3.00 | $15.00 | $0.30 | 200K |
+| claude-4-opus | $5.00 | $25.00 | $0.50 | 200K |
+| claude-4-sonnet | $3.00 | $15.00 | $0.30 | 200K |
+| claude-haiku-4-5 | $1.00 | $5.00 | $0.10 | 200K |
+| claude-sonnet-4-5 | $3.00 | $15.00 | $0.30 | 200K |
+| claude-sonnet-4-6 | $3.00 | $15.00 | $0.30 | 200K |
+| deepseek-r1 | $1.35 | $5.40 | — | 128K |
+| llama3.1-8b | $0.24 | $0.24 | — | 128K |
+| llama3.1-70b | $0.72 | $0.72 | — | 128K |
+| llama3.1-405b | $1.20 | $1.20 | — | 128K |
+| llama3.3-70b | $0.72 | $0.72 | — | 128K |
+| llama4-maverick | $0.24 | $0.97 | — | 128K |
+| mistral-large2 | $2.00 | $6.00 | — | 128K |
+| openai-gpt-4.1 | $2.00 | $8.00 | $0.50 | 300K |
+| openai-gpt-5 | $1.25 | $10.00 | $0.12 | 300K |
+| openai-gpt-5-mini | $0.30 | $1.20 | — | 1M |
+| openai-gpt-5-nano | $0.15 | $0.60 | — | 5M |
+| snowflake-arctic-embed-l-v2.0 | $0.07 | $0.00 | — | 8.19K |
+| snowflake-arctic-embed-m-v2.0 | $0.07 | $0.00 | — | 8.19K |
+| snowflake-llama-3.3-70b | $0.72 | $0.72 | — | 128K |
 
 ## stepfun
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| StepFun: Step 3.7 Flash | 0.2000000 | 1.15000000 | 0.04000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| StepFun: Step 3.5 Flash | 0.1000000 | 0.3000000 | — | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| StepFun: Step 5 Preview | 1.000000 | 2.7000000 | 0.05000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| step 3.5 flash | $0.10 | $0.30 | — | 262.14K |
+| step 3.7 flash | $0.20 | $1.15 | $0.04 | 262.14K |
+| step 5 preview | $1.00 | $2.70 | $0.05 | 1M |
 
 ## strands_decider
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| strands-decider-2B-hobson-v19 | 0.0 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| strands-decider-2b-hobson-v19 | $0.00 | $0.00 | — | — |
 
 ## tencent
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Tencent: Hy-MT2-30B-A3B | 0.074000000 | 0.295000000 | — | 8192 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| minimax-m3 | 0.3000000 | 1.2000000 | 0.06000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Tencent: Hy-MT2-1.8B | 0.044000000 | 0.177000000 | — | 8192 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Tencent: Hy3 preview | 0.18000000 | 0.6000000 | 0.06000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Tencent: Hy4 preview | 0.7506000000 | 2.2509000000 | 0.0378000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-pro | 0.435000000 | 0.87000000 | 0.003625000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Tencent: Hunyuan A13B Instruct | 0.14000000 | 0.57000000 | — | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v4-flash | 0.14000000 | 0.28000000 | 0.0028000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Tencent: Hy-MT2-7B | 0.074000000 | 0.295000000 | — | 8192 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Tencent: Hy3 | 0.0825000000 | 0.33000000 | 0.020625000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v4-flash | $0.14 | $0.28 | $0.0028 | 1M |
+| deepseek-v4-pro | $0.44 | $0.87 | $0.003625 | 1M |
+| hunyuan a13b instruct | $0.14 | $0.57 | — | 131.07K |
+| hy3 | $0.08 | $0.33 | $0.02 | 262.14K |
+| hy3 preview | $0.18 | $0.60 | $0.06 | 262.14K |
+| hy4 preview | $0.75 | $2.25 | $0.04 | 1.05M |
+| hy-mt2-1.8b | $0.04 | $0.18 | — | 8.19K |
+| hy-mt2-7b | $0.07 | $0.30 | — | 8.19K |
+| hy-mt2-30b-a3b | $0.07 | $0.30 | — | 8.19K |
+| minimax-m3 | $0.30 | $1.20 | $0.06 | 1M |
 
 ## tensormesh
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Qwen3.6-27B-FP8 | 0.32000000 | 3.2000000 | 0 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Coder-480B-A35B-Instruct-FP8 | 0.45000000 | 1.8000000 | 0 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.15000000 | 0.6000000 | 0 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Flash | 0.14000000 | 0.28000000 | 0 | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.5-397B-A17B-FP8 | 0.6000000 | 3.6000000 | 0 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31B-it | 0.14000000 | 0.56000000 | 0 | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.6 | 0.96000000 | 4.000000 | 0 | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b | 0.07000000 | 0.28000000 | 0 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.5 | 0.3000000 | 1.2000000 | 0 | 196608 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.1-NVFP4-MTP | 1.4000000 | 4.4000000 | 0 | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v4-flash | $0.14 | $0.28 | $0.00 | 32.77K |
+| gemma-4-31b-it | $0.14 | $0.56 | $0.00 | 32.77K |
+| glm-5.1-nvfp4-mtp | $1.40 | $4.40 | $0.00 | 202.75K |
+| gpt-oss-20b | $0.07 | $0.28 | $0.00 | 131.07K |
+| gpt-oss-120b | $0.15 | $0.60 | $0.00 | 131.07K |
+| kimi-k2.6 | $0.96 | $4.00 | $0.00 | 32.77K |
+| minimax-m2.5 | $0.30 | $1.20 | $0.00 | 196.61K |
+| qwen3-coder-480b-a35b-instruct-fp8 | $0.45 | $1.80 | $0.00 | 262.14K |
+| qwen3.5-397b-a17b-fp8 | $0.60 | $3.60 | $0.00 | 262.14K |
+| qwen3.6-27b-fp8 | $0.32 | $3.20 | $0.00 | 262.14K |
 
 ## text-completion-codestral
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| codestral-2405 | 0.0 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral-latest | 0.0 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| codestral-2405 | $0.00 | $0.00 | — | 32K |
+| codestral-latest | $0.00 | $0.00 | — | 32K |
 
 ## text-completion-inception
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| mercury-edit-2 | 0.25000000 | 0.75000000 | 0.025000000 | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| mercury-edit-2 | $0.25 | $0.75 | $0.02 | 32K |
 
 ## text-completion-openai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| ft:davinci-002 | 12.000000 | 12.000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ft:babbage-002 | 1.6000000 | 1.6000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-3.5-turbo-instruct | 1.5000000 | 2.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| davinci-002 | 2.000000 | 2.000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| babbage-002 | 0.4000000 | 0.4000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-3.5-turbo-instruct-0914 | 1.5000000 | 2.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| babbage-002 | $0.40 | $0.40 | — | 16.38K |
+| davinci-002 | $2.00 | $2.00 | — | 16.38K |
+| ft:babbage-002 | $1.60 | $1.60 | — | 16.38K |
+| ft:davinci-002 | $12.00 | $12.00 | — | 16.38K |
+| gpt-3.5-turbo-instruct | $1.50 | $2.00 | — | 8.19K |
+| gpt-3.5-turbo-instruct-0914 | $1.50 | $2.00 | — | 8.19K |
 
 ## thedrummer
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| TheDrummer: Cydonia 24B V4.1 | 0.3000000 | 0.5000000 | 0.15000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| TheDrummer: Skyfall 36B V2 | 0.55000000 | 0.8000000 | 0.25000000 | 32768 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| TheDrummer: UnslopNemo 12B | 0.4000000 | 0.4000000 | — | 1024000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| cydonia 24b v4.1 | $0.30 | $0.50 | $0.15 | 131.07K |
+| skyfall 36b v2 | $0.55 | $0.80 | $0.25 | 32.77K |
+| unslopnemo 12b | $0.40 | $0.40 | — | 1.02M |
 
 ## thinkingmachines
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Thinking Machines: Inkling Small | 0.45000000 | 1.2000000 | 0.1000000 | 524288 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Thinking Machines: Inkling | 1.000000 | 4.05000000 | 0.17000000 | 524288 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Thinking Machines: Inkling Small (free) | 0 | 0 | — | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Thinking Machines: Inkling (free) | 0 | 0 | — | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| thinking machines: inkling | $1.00 | $4.05 | $0.17 | 524.29K |
+| thinking machines: inkling (free) | $0.00 | $0.00 | — | 1.05M |
+| thinking machines: inkling small | $0.45 | $1.20 | $0.10 | 524.29K |
+| thinking machines: inkling small (free) | $0.00 | $0.00 | — | 1.05M |
 
 ## together_ai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| DeepSeek-R1-Distill-Qwen-14B | 1.6000000 | 1.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3 | 1.25000000 | 1.25000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Llama-70B | 2.000000 | 2.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-Distill-Qwen-1.5B | 0.18000000 | 0.18000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-coder-33b-instruct | 0.8000000 | 0.8000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| bge-base-en-v1.5 | 0.008000000 | 0.0 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-R1-0528 | 3.000000 | 7.000000 | — | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3.1 | 0.6000000 | 1.7000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4.1-Flash | 0.3000000 | 1.2000000 | 0.006000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.3-70B-Instruct-Turbo | 1.04000000 | 1.04000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.1 | 1.4000000 | 4.4000000 | 0.26000000 | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-4.6 | 0.6000000 | 2.2000000 | — | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Inkling | 1.000000 | 4.05000000 | 0.17000000 | 524288 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M2.7 | 0.3000000 | 1.2000000 | 0.06000000 | 196608 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31B-it | 0.39000000 | 0.97000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.7-Code | 0.95000000 | 4.000000 | 0.19000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Pro-0813 | 1.32000000 | 3.96000000 | 0.13000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Ministral-3-14B-Instruct-2512 | 0.2000000 | 0.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-4.5-Air-FP8 | 0.2000000 | 1.1000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3-8b-chat-hf | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Muse-Glimmer-30B | 0.35000000 | 1.5000000 | 0.04000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-4.7 | 0.45000000 | 2.000000 | — | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.3 | 1.4000000 | 4.4000000 | 0.26000000 | 1048575 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.2 | 1.4000000 | 4.4000000 | 0.26000000 | 1048575 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.5-fp4 | 0.5000000 | 2.8000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2-Instruct | 1.000000 | 3.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-8B-Instruct-Turbo | 0.18000000 | 0.18000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M3 | 0.3000000 | 1.2000000 | 0.06000000 | 524288 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-70B-Instruct-Turbo | 0.88000000 | 0.88000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-4-Scout-17B-16E-Instruct | 0.18000000 | 0.59000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-2-27b-it | 0.8000000 | 0.8000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.1-Nemotron-70B-Instruct-HF | 0.88000000 | 0.88000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.2-1B-Instruct | 0.06000000 | 0.06000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral-7B-Instruct-v0.3 | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3.1-8B | 0.2000000 | 0.2000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral-Small-24B-Instruct-2501 | 0.1000000 | 0.3000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3-8B-Instruct | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5 | 1.000000 | 3.2000000 | — | 202752 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mistral-7B-Instruct-v0.1 | 0.2000000 | 0.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K3 | 2.7000000 | 13.5000000 | 0.27000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.15000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.3-Flash | 0.15000000 | 0.5000000 | 0.03000000 | 1048575 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.1-405B-Instruct | 3.5000000 | 3.5000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b | 0.05000000 | 0.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-Rank-V1 | 0.1000000 | 0.0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mixtral-8x7B-Instruct-v0.1 | 0.6000000 | 0.6000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.2-3B-Instruct | 0.06000000 | 0.06000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Meta-Llama-3-70B-Instruct-Turbo | 0.88000000 | 0.88000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.6 | 1.2000000 | 4.5000000 | 0.2000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Flash-0731 | 0.14000000 | 0.28000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2-VL-72B-Instruct | 1.2000000 | 1.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2-1.5B-Instruct | 0.02000000 | 0.02000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.7-Max | 2.5000000 | 7.5000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Nous-Hermes-2-Mixtral-8x7B-DPO | 0.6000000 | 0.6000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.6-Plus | 0.5000000 | 3.000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.5-397B-A17B | 0.6000000 | 3.6000000 | 0.35000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-2-1.5b-instruct | 0.1000000 | 0.1000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-VL-72B-Instruct | 1.95000000 | 8.000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Next-80B-A3B-Instruct | 0.15000000 | 1.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-Coder-32B-Instruct | 0.8000000 | 0.8000000 | — | 16384 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| together-ai-8.1b-21b | 0.3000000 | 0.3000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| together-ai-embedding-151m-to-350m | 0.016000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.7-Plus | 0.32000000 | 1.28000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.8-Flash | 0.15000000 | 0.47000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-7B-Instruct-Turbo | 0.3000000 | 0.3000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.8-2.4T-A95B | 2.000000 | 6.000000 | 0.25000000 | 1010000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-72B-Instruct | 1.2000000 | 1.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| together-ai-41.1b-80b | 0.9000000 | 0.9000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Tev1-4B-experimental | 0.042000000 | 0.0 | 0.042000000 | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| together-ai-embedding-up-to-150m | 0.008000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Next-80B-A3B-Thinking | 0.15000000 | 1.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Ternary-Bonsai-27B | 0.0 | 0.0 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| together-ai-81.1b-110b | 1.8000000 | 1.8000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-72B-Instruct-Turbo | 1.2000000 | 1.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Coder-480B-A35B-Instruct-FP8 | 2.000000 | 2.000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2-72B-Instruct | 0.9000000 | 0.9000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-Coder-Next-FP8 | 0.5000000 | 1.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen2.5-14B-Instruct | 0.8000000 | 0.8000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA-Nemotron-Nano-9B-v2 | 0.06000000 | 0.25000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| together-ai-21.1b-41b | 0.8000000 | 0.8000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-VL-32B-Instruct | 0.5000000 | 1.5000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| together-ai-4.1b-8b | 0.2000000 | 0.2000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| QwQ-32B | 1.2000000 | 1.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.5-9B | 0.17000000 | 0.25000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-VL-8B-Instruct | 0.18000000 | 0.68000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| together-ai-up-to-4b | 0.1000000 | 0.1000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nemotron-3-ultra-550b-a55b | 0.6000000 | 3.6000000 | 0.2000000 | 512288 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| trinity-mini | 0.045000000 | 0.15000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| bge-base-en-v1.5 | $0.008 | $0.00 | — | 512 |
+| deepseek-coder-33b-instruct | $0.80 | $0.80 | — | 16.38K |
+| deepseek-r1-0528 | $3.00 | $7.00 | — | 163.84K |
+| deepseek-r1-distill-llama-70b | $2.00 | $2.00 | — | 131.07K |
+| deepseek-r1-distill-qwen-1.5b | $0.18 | $0.18 | — | 131.07K |
+| deepseek-r1-distill-qwen-14b | $1.60 | $1.60 | — | 131.07K |
+| deepseek-v3 | $1.25 | $1.25 | — | 65.54K |
+| deepseek-v3.1 | $0.60 | $1.70 | — | 131.07K |
+| deepseek-v4-flash-0731 | $0.14 | $0.28 | $0.03 | 1.05M |
+| deepseek-v4-pro-0813 | $1.32 | $3.96 | $0.13 | 1.05M |
+| deepseek-v4.1-flash | $0.30 | $1.20 | $0.006 | 1.05M |
+| gemma-2-27b-it | $0.80 | $0.80 | — | 8.19K |
+| gemma-4-31b-it | $0.39 | $0.97 | — | 262.14K |
+| glm-4.5-air-fp8 | $0.20 | $1.10 | — | 131.07K |
+| glm-4.6 | $0.60 | $2.20 | — | 202.75K |
+| glm-4.7 | $0.45 | $2.00 | — | 202.75K |
+| glm-5 | $1.00 | $3.20 | — | 202.75K |
+| glm-5.1 | $1.40 | $4.40 | $0.26 | 202.75K |
+| glm-5.2 | $1.40 | $4.40 | $0.26 | 1.05M |
+| glm-5.3 | $1.40 | $4.40 | $0.26 | 1.05M |
+| glm-5.3-flash | $0.15 | $0.50 | $0.03 | 1.05M |
+| gpt-oss-20b | $0.05 | $0.20 | — | 131.07K |
+| gpt-oss-120b | $0.15 | $0.60 | — | 131.07K |
+| inkling | $1.00 | $4.05 | $0.17 | 524.29K |
+| kimi-k2-instruct | $1.00 | $3.00 | — | — |
+| kimi-k2.5-fp4 | $0.50 | $2.80 | — | 262.14K |
+| kimi-k2.6 | $1.20 | $4.50 | $0.20 | 262.14K |
+| kimi-k2.7-code | $0.95 | $4.00 | $0.19 | 262.14K |
+| kimi-k3 | $2.70 | $13.50 | $0.27 | 1.05M |
+| llama-3-8b-chat-hf | $0.20 | $0.20 | — | 8.19K |
+| llama-3.1-405b-instruct | $3.50 | $3.50 | — | 4.1K |
+| llama-3.1-nemotron-70b-instruct-hf | $0.88 | $0.88 | — | 32.77K |
+| llama-3.2-1b-instruct | $0.06 | $0.06 | — | 131.07K |
+| llama-3.2-3b-instruct | $0.06 | $0.06 | — | 131.07K |
+| llama-3.3-70b-instruct-turbo | $1.04 | $1.04 | — | 131.07K |
+| llama-4-scout-17b-16e-instruct | $0.18 | $0.59 | — | 1.05M |
+| llama-rank-v1 | $0.10 | $0.00 | — | 8.19K |
+| meta-llama-3-8b-instruct | $0.20 | $0.20 | — | 8.19K |
+| meta-llama-3-70b-instruct-turbo | $0.88 | $0.88 | — | 8.19K |
+| meta-llama-3.1-8b | $0.20 | $0.20 | — | 16.38K |
+| meta-llama-3.1-8b-instruct-turbo | $0.18 | $0.18 | — | 131.07K |
+| meta-llama-3.1-70b-instruct-turbo | $0.88 | $0.88 | — | 131.07K |
+| minimax-m2.7 | $0.30 | $1.20 | $0.06 | 196.61K |
+| minimax-m3 | $0.30 | $1.20 | $0.06 | 524.29K |
+| ministral-3-14b-instruct-2512 | $0.20 | $0.20 | — | 262.14K |
+| mistral-7b-instruct-v0.1 | $0.20 | $0.20 | — | 32.77K |
+| mistral-7b-instruct-v0.3 | $0.20 | $0.20 | — | 32.77K |
+| mistral-small-24b-instruct-2501 | $0.10 | $0.30 | — | 32.77K |
+| mixtral-8x7b-instruct-v0.1 | $0.60 | $0.60 | — | 32.77K |
+| muse-glimmer-30b | $0.35 | $1.50 | $0.04 | 131.07K |
+| nemotron-3-ultra-550b-a55b | $0.60 | $3.60 | $0.20 | 512.29K |
+| nous-hermes-2-mixtral-8x7b-dpo | $0.60 | $0.60 | — | 32.77K |
+| nvidia-nemotron-nano-9b-v2 | $0.06 | $0.25 | — | 131.07K |
+| qwen2-1.5b-instruct | $0.02 | $0.02 | — | 32.77K |
+| qwen2-72b-instruct | $0.90 | $0.90 | — | 32.77K |
+| qwen2-vl-72b-instruct | $1.20 | $1.20 | — | 32.77K |
+| qwen2.5-7b-instruct-turbo | $0.30 | $0.30 | — | 32.77K |
+| qwen2.5-14b-instruct | $0.80 | $0.80 | — | 32.77K |
+| qwen2.5-72b-instruct | $1.20 | $1.20 | — | 32.77K |
+| qwen2.5-72b-instruct-turbo | $1.20 | $1.20 | — | 131.07K |
+| qwen2.5-coder-32b-instruct | $0.80 | $0.80 | — | 16.38K |
+| qwen2.5-vl-72b-instruct | $1.95 | $8.00 | — | 32.77K |
+| qwen3-coder-480b-a35b-instruct-fp8 | $2.00 | $2.00 | — | 262.14K |
+| qwen3-coder-next-fp8 | $0.50 | $1.20 | — | 262.14K |
+| qwen3-next-80b-a3b-instruct | $0.15 | $1.50 | — | 262.14K |
+| qwen3-next-80b-a3b-thinking | $0.15 | $1.50 | — | 262.14K |
+| qwen3-vl-8b-instruct | $0.18 | $0.68 | — | 262.14K |
+| qwen3-vl-32b-instruct | $0.50 | $1.50 | — | 262.14K |
+| qwen3.5-9b | $0.17 | $0.25 | — | 262.14K |
+| qwen3.5-397b-a17b | $0.60 | $3.60 | $0.35 | 262.14K |
+| qwen3.6-plus | $0.50 | $3.00 | — | 1M |
+| qwen3.7-max | $2.50 | $7.50 | $0.50 | 1M |
+| qwen3.7-plus | $0.32 | $1.28 | — | 1M |
+| qwen3.8-2.4t-a95b | $2.00 | $6.00 | $0.25 | 1.01M |
+| qwen3.8-flash | $0.15 | $0.47 | — | 1M |
+| qwen-2-1.5b-instruct | $0.10 | $0.10 | — | 32.77K |
+| qwq-32b | $1.20 | $1.20 | — | 131.07K |
+| ternary-bonsai-27b | $0.00 | $0.00 | — | 262.14K |
+| tev1-4b-experimental | $0.04 | $0.00 | $0.04 | 32.77K |
+| together-ai-4.1b-8b | $0.20 | $0.20 | — | — |
+| together-ai-8.1b-21b | $0.30 | $0.30 | — | — |
+| together-ai-21.1b-41b | $0.80 | $0.80 | — | — |
+| together-ai-41.1b-80b | $0.90 | $0.90 | — | — |
+| together-ai-81.1b-110b | $1.80 | $1.80 | — | — |
+| together-ai-embedding-151m-to-350m | $0.02 | $0.00 | — | — |
+| together-ai-embedding-up-to-150m | $0.008 | $0.00 | — | — |
+| together-ai-up-to-4b | $0.10 | $0.10 | — | — |
+| trinity-mini | $0.04 | $0.15 | — | 128K |
 
 ## typesafe
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| jev-1.13.0 | 0.042000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jev-preview | 0.042000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jev-latest | 0.042000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| jev-1.13.0 | $0.04 | $0.00 | — | — |
+| jev-latest | $0.04 | $0.00 | — | — |
+| jev-preview | $0.04 | $0.00 | — | — |
 
 ## unbiased
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Pareto 26.10 Preview | 0.8000000 | 3.2000000 | 0.03000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Pareto | 2.5000000 | 7.5000000 | 0.25000000 | 262144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| pareto | $2.50 | $7.50 | $0.25 | 262.14K |
+| pareto 26.10 preview | $0.80 | $3.20 | $0.03 | 1.05M |
 
 ## undi95
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| ReMM SLERP 13B | 0.35000000 | 0.65000000 | — | 6144 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| remm slerp 13b | $0.35 | $0.65 | — | 6.14K |
 
 ## upstage
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Upstage: Solar Mini 4 | 0.05000000 | 0.2000000 | 0.005000000 | 524288 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Upstage: Solar Pro 4 | 0.09000000 | 0.36000000 | 0.018000000 | 524288 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Upstage: Solar Pro 3 | 0.15000000 | 0.6000000 | 0.015000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| solar mini 4 | $0.05 | $0.20 | $0.005 | 524.29K |
+| solar pro 3 | $0.15 | $0.60 | $0.02 | 131.07K |
+| solar pro 4 | $0.09 | $0.36 | $0.02 | 524.29K |
 
 ## v0
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| v0-1.5-lg | 15.000000 | 75.000000 | — | 512000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| v0-1.0-md | 3.000000 | 15.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| v0-1.5-md | 3.000000 | 15.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| v0-1.0-md | $3.00 | $15.00 | — | 128K |
+| v0-1.5-lg | $15.00 | $75.00 | — | 512K |
+| v0-1.5-md | $3.00 | $15.00 | — | 128K |
 
 ## vercel_ai_gateway
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| claude-opus-4 | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral | 0.3000000 | 0.9000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3 | 0.9000000 | 0.9000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4.5 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-4-opus | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4.6 | 5.000000 | 25.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-7-sonnet | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-distill-llama-70b | 0.75000000 | 0.99000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| command-r-plus | 2.5000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-4.5 | 1.000000 | 5.000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4.5 | 5.000000 | 25.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-4-sonnet | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral-embed | 0.15000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash | 0.3000000 | 2.5000000 | 0.03000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| embed-v4.0 | 0.12000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| command-r | 0.15000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1 | 0.55000000 | 2.19000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3.5-haiku | 0.8000000 | 4.000000 | 0.08000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-opus | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| devstral-small | 0.07000000 | 0.28000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-5-sonnet | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| command-a | 2.5000000 | 10.00000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4.1 | 15.000000 | 75.000000 | 1.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-haiku | 0.25000000 | 1.25000000 | 0.03000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-5-sonnet-20241022 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| magistral-small | 0.5000000 | 1.5000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-nano | 0.1000000 | 0.4000000 | 0.025000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| magistral-medium | 2.000000 | 5.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-embedding-001 | 0.15000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1-mini | 0.4000000 | 1.6000000 | 0.1000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large | 2.000000 | 6.000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-3-mini | 0.3000000 | 0.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o | 2.5000000 | 10.00000 | 1.25000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.1-8b | 0.05000000 | 0.08000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.3-70b | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4o-mini | 0.15000000 | 0.6000000 | 0.075000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-3 | 3.000000 | 15.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-70b | 0.59000000 | 0.79000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-3.5-turbo-instruct | 1.5000000 | 2.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.1-70b | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-3.5-turbo | 0.5000000 | 1.5000000 | — | 16385 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-8b | 0.05000000 | 0.08000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-scout | 0.1000000 | 0.3000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-pro | 1.25000000 | 10.00000 | 0.125000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.6 | 0.45000000 | 1.8000000 | 0.11000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-saba-24b | 0.79000000 | 0.79000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mercury-coder-small | 0.25000000 | 1.000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.2-3b | 0.15000000 | 0.15000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4 | 3.000000 | 15.000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-2 | 2.000000 | 10.00000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.2-1b | 0.1000000 | 0.1000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4.1 | 2.000000 | 8.000000 | 0.5000000 | 1047576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5-air | 0.2000000 | 1.1000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2 | 0.55000000 | 2.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5 | 0.6000000 | 2.2000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-embed | 0.1000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.2-90b | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.2-11b | 0.16000000 | 0.16000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-4-turbo | 10.00000 | 30.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-3-mini-fast | 0.6000000 | 4.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-3-fast | 5.000000 | 25.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-3b | 0.04000000 | 0.04000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-2-9b | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-maverick | 0.2000000 | 0.6000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| ministral-8b | 0.1000000 | 0.1000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-2-vision | 2.000000 | 10.00000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pixtral-large | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3-mini | 1.1000000 | 4.4000000 | 0.55000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small | 0.1000000 | 0.3000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-3-large | 0.13000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-005 | 0.025000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| v0-1.0-md | 3.000000 | 15.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-3-235b | 0.2000000 | 0.6000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nova-micro | 0.035000000 | 0.14000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-3-14b | 0.08000000 | 0.24000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-3-32b | 0.1000000 | 0.3000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-multilingual-embedding-002 | 0.025000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nova-lite | 0.06000000 | 0.24000000 | — | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-3-small | 0.02000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o4-mini | 1.1000000 | 4.4000000 | 0.275000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen-3-30b | 0.1000000 | 0.3000000 | — | 40960 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o1 | 15.000000 | 60.00000 | 7.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| titan-embed-text-v2 | 0.02000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar-pro | 3.000000 | 15.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| nova-pro | 0.8000000 | 3.2000000 | — | 300000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| o3 | 2.000000 | 8.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder | 0.4000000 | 1.6000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| morph-v3-fast | 0.8000000 | 1.2000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pixtral-12b | 0.15000000 | 0.15000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar | 1.000000 | 1.000000 | — | 127000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| v0-1.5-md | 3.000000 | 15.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar-reasoning-pro | 2.000000 | 8.000000 | — | 127000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mixtral-8x22b-instruct | 1.2000000 | 1.2000000 | — | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| sonar-reasoning | 1.000000 | 5.000000 | — | 127000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-ada-002 | 0.1000000 | 0.0 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| morph-v3-large | 0.9000000 | 1.9000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| claude-3-5-sonnet | $3.00 | $15.00 | $0.30 | 200K |
+| claude-3-5-sonnet-20241022 | $3.00 | $15.00 | $0.30 | 200K |
+| claude-3-7-sonnet | $3.00 | $15.00 | $0.30 | 200K |
+| claude-3-haiku | $0.25 | $1.25 | $0.03 | 200K |
+| claude-3-opus | $15.00 | $75.00 | $1.50 | 200K |
+| claude-3.5-haiku | $0.80 | $4.00 | $0.08 | 200K |
+| claude-4-opus | $15.00 | $75.00 | $1.50 | 200K |
+| claude-4-sonnet | $3.00 | $15.00 | $0.30 | 200K |
+| claude-haiku-4.5 | $1.00 | $5.00 | $0.10 | 200K |
+| claude-opus-4 | $15.00 | $75.00 | $1.50 | 200K |
+| claude-opus-4.1 | $15.00 | $75.00 | $1.50 | 200K |
+| claude-opus-4.5 | $5.00 | $25.00 | $0.50 | 200K |
+| claude-opus-4.6 | $5.00 | $25.00 | $0.50 | 200K |
+| claude-sonnet-4 | $3.00 | $15.00 | $0.30 | 200K |
+| claude-sonnet-4.5 | $3.00 | $15.00 | $0.30 | 1M |
+| codestral | $0.30 | $0.90 | — | 256K |
+| codestral-embed | $0.15 | $0.00 | — | — |
+| command-a | $2.50 | $10.00 | — | 256K |
+| command-r | $0.15 | $0.60 | — | 128K |
+| command-r-plus | $2.50 | $10.00 | — | 128K |
+| deepseek-r1 | $0.55 | $2.19 | — | 128K |
+| deepseek-r1-distill-llama-70b | $0.75 | $0.99 | — | 131.07K |
+| deepseek-v3 | $0.90 | $0.90 | — | 128K |
+| devstral-small | $0.07 | $0.28 | — | 128K |
+| embed-v4.0 | $0.12 | $0.00 | — | — |
+| gemini-2.5-flash | $0.30 | $2.50 | $0.03 | 1M |
+| gemini-2.5-pro | $1.25 | $10.00 | $0.12 | 1.05M |
+| gemini-embedding-001 | $0.15 | $0.00 | — | — |
+| gemma-2-9b | $0.20 | $0.20 | — | 8.19K |
+| glm-4.5 | $0.60 | $2.20 | — | 131.07K |
+| glm-4.5-air | $0.20 | $1.10 | — | 128K |
+| glm-4.6 | $0.45 | $1.80 | $0.11 | 200K |
+| gpt-3.5-turbo | $0.50 | $1.50 | — | 16.39K |
+| gpt-3.5-turbo-instruct | $1.50 | $2.00 | — | 8.19K |
+| gpt-4-turbo | $10.00 | $30.00 | — | 128K |
+| gpt-4.1 | $2.00 | $8.00 | $0.50 | 1.05M |
+| gpt-4.1-mini | $0.40 | $1.60 | $0.10 | 1.05M |
+| gpt-4.1-nano | $0.10 | $0.40 | $0.02 | 1.05M |
+| gpt-4o | $2.50 | $10.00 | $1.25 | 128K |
+| gpt-4o-mini | $0.15 | $0.60 | $0.08 | 128K |
+| grok-2 | $2.00 | $10.00 | — | 131.07K |
+| grok-2-vision | $2.00 | $10.00 | — | 32.77K |
+| grok-3 | $3.00 | $15.00 | — | 131.07K |
+| grok-3-fast | $5.00 | $25.00 | — | 131.07K |
+| grok-3-mini | $0.30 | $0.50 | — | 131.07K |
+| grok-3-mini-fast | $0.60 | $4.00 | — | 131.07K |
+| grok-4 | $3.00 | $15.00 | — | 256K |
+| kimi-k2 | $0.55 | $2.20 | — | 131.07K |
+| llama-3-8b | $0.05 | $0.08 | — | 8.19K |
+| llama-3-70b | $0.59 | $0.79 | — | 8.19K |
+| llama-3.1-8b | $0.05 | $0.08 | — | 131K |
+| llama-3.1-70b | $0.72 | $0.72 | — | 128K |
+| llama-3.2-1b | $0.10 | $0.10 | — | 128K |
+| llama-3.2-3b | $0.15 | $0.15 | — | 128K |
+| llama-3.2-11b | $0.16 | $0.16 | — | 128K |
+| llama-3.2-90b | $0.72 | $0.72 | — | 128K |
+| llama-3.3-70b | $0.72 | $0.72 | — | 128K |
+| llama-4-maverick | $0.20 | $0.60 | — | 131.07K |
+| llama-4-scout | $0.10 | $0.30 | — | 131.07K |
+| magistral-medium | $2.00 | $5.00 | — | 128K |
+| magistral-small | $0.50 | $1.50 | — | 128K |
+| mercury-coder-small | $0.25 | $1.00 | — | 32K |
+| ministral-3b | $0.04 | $0.04 | — | 128K |
+| ministral-8b | $0.10 | $0.10 | — | 128K |
+| mistral-embed | $0.10 | $0.00 | — | — |
+| mistral-large | $2.00 | $6.00 | — | 32K |
+| mistral-saba-24b | $0.79 | $0.79 | — | 32.77K |
+| mistral-small | $0.10 | $0.30 | — | 32K |
+| mixtral-8x22b-instruct | $1.20 | $1.20 | — | 65.54K |
+| morph-v3-fast | $0.80 | $1.20 | — | 32.77K |
+| morph-v3-large | $0.90 | $1.90 | — | 32.77K |
+| nova-lite | $0.06 | $0.24 | — | 300K |
+| nova-micro | $0.04 | $0.14 | — | 128K |
+| nova-pro | $0.80 | $3.20 | — | 300K |
+| o1 | $15.00 | $60.00 | $7.50 | 200K |
+| o3 | $2.00 | $8.00 | $0.50 | 200K |
+| o3-mini | $1.10 | $4.40 | $0.55 | 200K |
+| o4-mini | $1.10 | $4.40 | $0.28 | 200K |
+| pixtral-12b | $0.15 | $0.15 | — | 128K |
+| pixtral-large | $2.00 | $6.00 | — | 128K |
+| qwen3-coder | $0.40 | $1.60 | — | 262.14K |
+| qwen-3-14b | $0.08 | $0.24 | — | 40.96K |
+| qwen-3-30b | $0.10 | $0.30 | — | 40.96K |
+| qwen-3-32b | $0.10 | $0.30 | — | 40.96K |
+| qwen-3-235b | $0.20 | $0.60 | — | 40.96K |
+| sonar | $1.00 | $1.00 | — | 127K |
+| sonar-pro | $3.00 | $15.00 | — | 200K |
+| sonar-reasoning | $1.00 | $5.00 | — | 127K |
+| sonar-reasoning-pro | $2.00 | $8.00 | — | 127K |
+| text-embedding-3-large | $0.13 | $0.00 | — | — |
+| text-embedding-3-small | $0.02 | $0.00 | — | — |
+| text-embedding-005 | $0.02 | $0.00 | — | — |
+| text-embedding-ada-002 | $0.10 | $0.00 | — | — |
+| text-multilingual-embedding-002 | $0.02 | $0.00 | — | — |
+| titan-embed-text-v2 | $0.02 | $0.00 | — | — |
+| v0-1.0-md | $3.00 | $15.00 | — | 128K |
+| v0-1.5-md | $3.00 | $15.00 | — | 128K |
 
 ## vertex_ai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gemma-4-26b-a4b-it | 0.15000000 | 0.6000000 | 0.015000000 | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-flash-tts | 0.5000000 | 9.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-pro-preview | 2.000000 | 12.000000 | 0.2000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.0-flash-lite | 0.075000000 | 0.3000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-flash-preview | 0.5000000 | 3.000000 | 0.05000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-transcribe-live-preview | 3.5000000 | 21.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-tts | 0.5000000 | 10.00000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.7-flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-preview-tts | 0.5000000 | 10.00000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.1-fast-reasoning | 0.2000000 | 0.5000000 | 0.05000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-flash-lite-tts | 0.5000000 | 6.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-live | 0.75000000 | 4.5000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.1-fast-non-reasoning | 0.2000000 | 0.5000000 | 0.05000000 | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.0-flash | 0.15000000 | 0.6000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-embedding-2-preview | 0.2000000 | 0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-embedding-2 | 0.2000000 | 0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.6-flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-transcribe-preview | 2.000000 | 12.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-transcribe | — | 12.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-native-audio | 0.5000000 | 2.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-omni-1.1-flash | 1.5000000 | 9.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-live-translate-preview | 3.5000000 | 21.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-tts-preview | 1.000000 | 20.00000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-pro-preview-customtools | 2.000000 | 12.000000 | 0.2000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-transcribe-live | — | 21.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-pro-tts | 1.000000 | 20.00000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-ocr-maas | 0.3000000 | 1.2000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-omni-1.1-flash-preview | 1.5000000 | 9.000000 | — | — | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-flash-cyber | 1.5000000 | 7.5000000 | 0.15000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-pro-preview | 2.000000 | 12.000000 | 0.2000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-flash | 1.5000000 | 9.000000 | 0.15000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 2000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.7 | 2.000000 | 6.000000 | 0.5000000 | 524288 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-non-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 2000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.3 | 1.25000000 | 2.5000000 | 0.2000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.6 | 2.000000 | 6.000000 | 0.5000000 | 524288 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| lyria-3-pro-preview | 0 | 0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| lyria-3-clip-preview | 0 | 0 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-ocr-maas | $0.30 | $1.20 | — | — |
+| gemini-2.0-flash | $0.15 | $0.60 | — | — |
+| gemini-2.0-flash-lite | $0.08 | $0.30 | — | — |
+| gemini-2.5-flash-native-audio | $0.50 | $2.00 | — | — |
+| gemini-2.5-flash-preview-tts | $0.50 | $10.00 | — | — |
+| gemini-2.5-flash-tts | $0.50 | $10.00 | — | — |
+| gemini-2.5-pro-tts | $1.00 | $20.00 | — | — |
+| gemini-3-flash-preview | $0.50 | $3.00 | $0.05 | 1.05M |
+| gemini-3-pro-preview | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini-3.1-flash-tts-preview | $1.00 | $20.00 | — | — |
+| gemini-3.1-pro-preview | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini-3.1-pro-preview-customtools | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini-3.5-flash | $1.50 | $9.00 | $0.15 | 1.05M |
+| gemini-3.5-live-translate-preview | $3.50 | $21.00 | — | — |
+| gemini-3.5-transcribe | — | $12.00 | — | — |
+| gemini-3.5-transcribe-live | — | $21.00 | — | — |
+| gemini-3.5-transcribe-live-preview | $3.50 | $21.00 | — | — |
+| gemini-3.5-transcribe-preview | $2.00 | $12.00 | — | — |
+| gemini-3.6-flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini-3.7-flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini-3.8-flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini-3.8-flash-cyber | $1.50 | $7.50 | $0.15 | 1.05M |
+| gemini-3.8-flash-lite-tts | $0.50 | $6.00 | — | 8.19K |
+| gemini-3.8-flash-tts | $0.50 | $9.00 | — | 8.19K |
+| gemini-3.8-live | $0.75 | $4.50 | — | 131.07K |
+| gemini-embedding-2 | $0.20 | $0.00 | — | 8.19K |
+| gemini-embedding-2-preview | $0.20 | $0.00 | — | 8.19K |
+| gemini-omni-1.1-flash | $1.50 | $9.00 | — | — |
+| gemini-omni-1.1-flash-preview | $1.50 | $9.00 | — | — |
+| gemma-4-26b-a4b-it | $0.15 | $0.60 | $0.02 | — |
+| grok-4.1-fast-non-reasoning | $0.20 | $0.50 | $0.05 | 128K |
+| grok-4.1-fast-reasoning | $0.20 | $0.50 | $0.05 | 128K |
+| grok-4.3 | $1.25 | $2.50 | $0.20 | 200K |
+| grok-4.6 | $2.00 | $6.00 | $0.50 | 524.29K |
+| grok-4.7 | $2.00 | $6.00 | $0.50 | 524.29K |
+| grok-4.20-non-reasoning | $1.25 | $2.50 | $0.20 | 2M |
+| grok-4.20-reasoning | $1.25 | $2.50 | $0.20 | 2M |
+| lyria-3-clip-preview | $0.00 | $0.00 | — | 131.07K |
+| lyria-3-pro-preview | $0.00 | $0.00 | — | 131.07K |
 
 ## vertex_ai-ai21_models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| jamba-1.5 | 0.2000000 | 0.4000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-1.5-mini | 0.2000000 | 0.4000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-1.5-large | 2.000000 | 8.000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-1.5-mini@001 | 0.2000000 | 0.4000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jamba-1.5-large@001 | 2.000000 | 8.000000 | — | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| jamba-1.5 | $0.20 | $0.40 | — | 256K |
+| jamba-1.5-large | $2.00 | $8.00 | — | 256K |
+| jamba-1.5-large@001 | $2.00 | $8.00 | — | 256K |
+| jamba-1.5-mini | $0.20 | $0.40 | — | 256K |
+| jamba-1.5-mini@001 | $0.20 | $0.40 | — | 256K |
 
 ## vertex_ai-anthropic_models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| claude-3-5-haiku | 1.000000 | 5.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-5-sonnet | 3.000000 | 15.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-5-haiku@20241022 | 1.000000 | 5.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-5-sonnet@20240620 | 3.000000 | 15.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-7 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-opus@20240229 | 15.000000 | 75.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-8 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-5-5@default | 0.1000000 | 0.5000000 | 0.01000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5-1 | 10.00000 | 50.00000 | 0.25000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-7@default | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5-5@default | 2.000000 | 10.00000 | 0.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-6@default | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5-5 | 2.000000 | 10.00000 | 0.1000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-5 | 5.000000 | 25.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5@default | 2.000000 | 10.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-opus | 15.000000 | 75.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-6 | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-6 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5-1@default | 10.00000 | 50.00000 | 0.25000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-sonnet | 3.000000 | 15.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-sonnet@20240229 | 3.000000 | 15.000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5@default | 10.00000 | 50.00000 | 1.000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-4-5 | 1.000000 | 5.000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-haiku | 0.25000000 | 1.25000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-5-5@default | 4.000000 | 20.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-8@default | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-5 | 2.000000 | 10.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-5 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-5 | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-5@20250929 | 3.000000 | 15.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-5@default | 5.000000 | 25.000000 | 0.5000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-fable-5 | 10.00000 | 50.00000 | 1.000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-4-5@20251001 | 1.000000 | 5.000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-haiku-5-5 | 0.1000000 | 0.5000000 | 0.01000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-3-haiku@20240307 | 0.25000000 | 1.25000000 | — | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-4-5@20251101 | 5.000000 | 25.000000 | 0.5000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-sonnet-4-6@default | 3.000000 | 15.000000 | 0.3000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| claude-opus-5-5 | 4.000000 | 20.00000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| claude-3-5-haiku | $1.00 | $5.00 | — | 200K |
+| claude-3-5-haiku@20241022 | $1.00 | $5.00 | — | 200K |
+| claude-3-5-sonnet | $3.00 | $15.00 | — | 200K |
+| claude-3-5-sonnet@20240620 | $3.00 | $15.00 | — | 200K |
+| claude-3-haiku | $0.25 | $1.25 | — | 200K |
+| claude-3-haiku@20240307 | $0.25 | $1.25 | — | 200K |
+| claude-3-opus | $15.00 | $75.00 | — | 200K |
+| claude-3-opus@20240229 | $15.00 | $75.00 | — | 200K |
+| claude-3-sonnet | $3.00 | $15.00 | — | 200K |
+| claude-3-sonnet@20240229 | $3.00 | $15.00 | — | 200K |
+| claude-fable-5 | $10.00 | $50.00 | $1.00 | 1M |
+| claude-fable-5-1 | $10.00 | $50.00 | $0.25 | 1M |
+| claude-fable-5-1@default | $10.00 | $50.00 | $0.25 | 1M |
+| claude-fable-5@default | $10.00 | $50.00 | $1.00 | 1M |
+| claude-haiku-4-5 | $1.00 | $5.00 | $0.10 | 200K |
+| claude-haiku-4-5@20251001 | $1.00 | $5.00 | $0.10 | 200K |
+| claude-haiku-5-5 | $0.10 | $0.50 | $0.01 | 1M |
+| claude-haiku-5-5@default | $0.10 | $0.50 | $0.01 | 1M |
+| claude-opus-4-5 | $5.00 | $25.00 | $0.50 | 200K |
+| claude-opus-4-5@20251101 | $5.00 | $25.00 | $0.50 | 200K |
+| claude-opus-4-6 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-4-6@default | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-4-7 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-4-7@default | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-4-8 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-4-8@default | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-5 | $5.00 | $25.00 | $0.50 | 1M |
+| claude-opus-5-5 | $4.00 | $20.00 | $0.20 | 1M |
+| claude-opus-5-5@default | $4.00 | $20.00 | $0.20 | 1M |
+| claude-opus-5@default | $5.00 | $25.00 | $0.50 | 1M |
+| claude-sonnet-4-5 | $3.00 | $15.00 | $0.30 | 200K |
+| claude-sonnet-4-5@20250929 | $3.00 | $15.00 | $0.30 | 200K |
+| claude-sonnet-4-6 | $3.00 | $15.00 | $0.30 | 1M |
+| claude-sonnet-4-6@default | $3.00 | $15.00 | $0.30 | 1M |
+| claude-sonnet-5 | $2.00 | $10.00 | $0.20 | 1M |
+| claude-sonnet-5-5 | $2.00 | $10.00 | $0.10 | 1M |
+| claude-sonnet-5-5@default | $2.00 | $10.00 | $0.10 | 1M |
+| claude-sonnet-5@default | $2.00 | $10.00 | $0.20 | 1M |
 
 ## vertex_ai-deepseek_models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| deepseek-v3.1-maas | 0.6000000 | 1.7000000 | 0.06000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3.2-maas | 0.56000000 | 1.68000000 | 0.056000000 | 163840 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-r1-0528-maas | 1.35000000 | 5.4000000 | — | 65336 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-r1-0528-maas | $1.35 | $5.40 | — | 65.34K |
+| deepseek-v3.1-maas | $0.60 | $1.70 | $0.06 | 163.84K |
+| deepseek-v3.2-maas | $0.56 | $1.68 | $0.06 | 163.84K |
 
 ## vertex_ai-embedding-models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gemini-embedding-2 | 0.2000000 | 0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-embedding-2-preview | 0.2000000 | 0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-embedding-001 | 0.15000000 | 0 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-preview-0409 | 0.00625000000 | 0 | — | 3072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| multimodalembedding | 0.8000000 | 0 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-004 | 0.1000000 | 0 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| multimodalembedding@001 | 0.8000000 | 0 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-multilingual-embedding-002 | 0.1000000 | 0 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-005 | 0.1000000 | 0 | — | 2048 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-embedding-large-exp-03-07 | 0.1000000 | 0 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| gemini-embedding-001 | $0.15 | $0.00 | — | 2.05K |
+| gemini-embedding-2 | $0.20 | $0.00 | — | 8.19K |
+| gemini-embedding-2-preview | $0.20 | $0.00 | — | 8.19K |
+| multimodalembedding | $0.80 | $0.00 | — | 2.05K |
+| multimodalembedding@001 | $0.80 | $0.00 | — | 2.05K |
+| text-embedding-004 | $0.10 | $0.00 | — | 2.05K |
+| text-embedding-005 | $0.10 | $0.00 | — | 2.05K |
+| text-embedding-large-exp-03-07 | $0.10 | $0.00 | — | 8.19K |
+| text-embedding-preview-0409 | $0.00625 | $0.00 | — | 3.07K |
+| text-multilingual-embedding-002 | $0.10 | $0.00 | — | 2.05K |
 
 ## vertex_ai-language-models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gemini-3.1-flash-image-preview | 0.5000000 | 3.000000 | 0.05000000 | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-lite-preview-09-2025 | 0.1000000 | 0.4000000 | 0.01000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-pro-preview-customtools | 2.000000 | 12.000000 | 0.2000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-pro-image-preview | 2.000000 | 12.000000 | 0.2000000 | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-lite | 0.25000000 | 1.5000000 | 0.025000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-computer-use-preview-10-2025 | 1.25000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-flash-lite | 0.3000000 | 2.5000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-preview-09-2025 | 0.3000000 | 2.5000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-image | 0.5000000 | 3.000000 | 0.05000000 | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-flash-cyber | 1.5000000 | 7.5000000 | 0.15000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-pro-image | 2.000000 | 12.000000 | 0.2000000 | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.6-flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-omni-flash-preview | 1.5000000 | 9.000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-lite-image | 0.25000000 | 1.5000000 | 0.025000000 | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.7-flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.5-flash | 1.5000000 | 9.000000 | 0.15000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deep-research-pro-preview-12-2025 | 2.000000 | 12.000000 | 0.2000000 | 65536 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3-flash-preview | 0.5000000 | 3.000000 | 0.05000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash | 0.3000000 | 2.5000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-pro-preview | 2.000000 | 12.000000 | 0.2000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-live-2.5-flash-native-audio | 0.5000000 | 2.000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.1-flash-lite-preview | 0.25000000 | 1.5000000 | 0.025000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-live-2.5-flash-preview-native-audio-09-2025 | 0.5000000 | 2.000000 | — | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-3.8-flash | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-lite | 0.1000000 | 0.4000000 | 0.01000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-nano-banana-2.1 | 1.5000000 | 7.5000000 | 0.15000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-pro | 1.25000000 | 10.00000 | 0.125000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-flash-image | 0.3000000 | 2.5000000 | — | 32768 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-2.5-pro-preview-tts | 1.000000 | 20.00000 | 0.125000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-flash-experimental | 0 | 0 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemini-robotics-er-1.5-preview | 0.3000000 | 2.5000000 | 0 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deep-research-pro-preview-12-2025 | $2.00 | $12.00 | $0.20 | 65.54K |
+| gemini-2.5-computer-use-preview-10-2025 | $1.25 | $10.00 | — | 128K |
+| gemini-2.5-flash | $0.30 | $2.50 | $0.03 | 1.05M |
+| gemini-2.5-flash-image | $0.30 | $2.50 | — | 32.77K |
+| gemini-2.5-flash-lite | $0.10 | $0.40 | $0.01 | 1.05M |
+| gemini-2.5-flash-lite-preview-09-2025 | $0.10 | $0.40 | $0.01 | 1.05M |
+| gemini-2.5-flash-preview-09-2025 | $0.30 | $2.50 | $0.03 | 1.05M |
+| gemini-2.5-pro | $1.25 | $10.00 | $0.12 | 1.05M |
+| gemini-2.5-pro-preview-tts | $1.00 | $20.00 | $0.12 | 1.05M |
+| gemini-3-flash-preview | $0.50 | $3.00 | $0.05 | 1.05M |
+| gemini-3-pro-image | $2.00 | $12.00 | $0.20 | 65.54K |
+| gemini-3-pro-image-preview | $2.00 | $12.00 | $0.20 | 65.54K |
+| gemini-3.1-flash-image | $0.50 | $3.00 | $0.05 | 65.54K |
+| gemini-3.1-flash-image-preview | $0.50 | $3.00 | $0.05 | 65.54K |
+| gemini-3.1-flash-lite | $0.25 | $1.50 | $0.02 | 1.05M |
+| gemini-3.1-flash-lite-image | $0.25 | $1.50 | $0.02 | 65.54K |
+| gemini-3.1-flash-lite-preview | $0.25 | $1.50 | $0.02 | 1.05M |
+| gemini-3.1-pro-preview | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini-3.1-pro-preview-customtools | $2.00 | $12.00 | $0.20 | 1.05M |
+| gemini-3.5-flash | $1.50 | $9.00 | $0.15 | 1.05M |
+| gemini-3.5-flash-lite | $0.30 | $2.50 | $0.03 | 1.05M |
+| gemini-3.6-flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini-3.7-flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini-3.8-flash | $0.75 | $3.75 | $0.08 | 1.05M |
+| gemini-3.8-flash-cyber | $1.50 | $7.50 | $0.15 | 1.05M |
+| gemini-flash-experimental | $0.00 | $0.00 | — | 1M |
+| gemini-live-2.5-flash-native-audio | $0.50 | $2.00 | — | 131.07K |
+| gemini-live-2.5-flash-preview-native-audio-09-2025 | $0.50 | $2.00 | — | 1.05M |
+| gemini-nano-banana-2.1 | $1.50 | $7.50 | $0.15 | 131.07K |
+| gemini-omni-flash-preview | $1.50 | $9.00 | — | 1.05M |
+| gemini-robotics-er-1.5-preview | $0.30 | $2.50 | $0.00 | 1.05M |
 
 ## vertex_ai-llama_models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| llama3-405b-instruct-maas | 0.0 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-scout-17b-128e-instruct-maas | 0.25000000 | 0.7000000 | — | 10000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-maverick-17b-16e-instruct-maas | 0.35000000 | 1.15000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.1-8b-instruct-maas | 0.0 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.1-405b-instruct-maas | 5.000000 | 16.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3-8b-instruct-maas | 0.0 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.2-90b-vision-instruct-maas | 0.0 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.3-70b-instruct-maas | 0.72000000 | 0.72000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3.1-70b-instruct-maas | 0.0 | 0.0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-scout-17b-16e-instruct-maas | 0.25000000 | 0.7000000 | — | 10000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-maverick-17b-128e-instruct-maas | 0.35000000 | 1.15000000 | — | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama3-70b-instruct-maas | 0.0 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| llama3-8b-instruct-maas | $0.00 | $0.00 | — | 32K |
+| llama3-70b-instruct-maas | $0.00 | $0.00 | — | 32K |
+| llama3-405b-instruct-maas | $0.00 | $0.00 | — | 32K |
+| llama-3.1-8b-instruct-maas | $0.00 | $0.00 | — | 128K |
+| llama-3.1-70b-instruct-maas | $0.00 | $0.00 | — | 128K |
+| llama-3.1-405b-instruct-maas | $5.00 | $16.00 | — | 128K |
+| llama-3.2-90b-vision-instruct-maas | $0.00 | $0.00 | — | 128K |
+| llama-3.3-70b-instruct-maas | $0.72 | $0.72 | — | 128K |
+| llama-4-maverick-17b-16e-instruct-maas | $0.35 | $1.15 | — | 1M |
+| llama-4-maverick-17b-128e-instruct-maas | $0.35 | $1.15 | — | 1M |
+| llama-4-scout-17b-16e-instruct-maas | $0.25 | $0.70 | — | 10M |
+| llama-4-scout-17b-128e-instruct-maas | $0.25 | $0.70 | — | 10M |
 
 ## vertex_ai-minimax_models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| minimax-m2-maas | 0.3000000 | 1.2000000 | 0.03000000 | 196608 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| minimax-m2-maas | $0.30 | $1.20 | $0.03 | 196.61K |
 
 ## vertex_ai-mistral_models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| mistral-medium-3 | 0.4000000 | 2.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral-2 | 0.3000000 | 0.9000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral@latest | 0.2000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large@2411-001 | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large@latest | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large@2407 | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral-2501 | 0.2000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral-2@001 | 0.3000000 | 0.9000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small-2503@001 | 0.1000000 | 0.3000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large-2411 | 2.000000 | 6.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| codestral@2405 | 0.2000000 | 0.6000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-medium-3@001 | 0.4000000 | 2.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-nemo@latest | 0.15000000 | 0.15000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small-2503 | 0.1000000 | 0.3000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-nemo@2407 | 3.000000 | 3.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| codestral-2 | $0.30 | $0.90 | — | 128K |
+| codestral-2@001 | $0.30 | $0.90 | — | 128K |
+| codestral-2501 | $0.20 | $0.60 | — | 128K |
+| codestral@2405 | $0.20 | $0.60 | — | 128K |
+| codestral@latest | $0.20 | $0.60 | — | 128K |
+| mistral-large-2411 | $2.00 | $6.00 | — | 128K |
+| mistral-large@2407 | $2.00 | $6.00 | — | 128K |
+| mistral-large@2411-001 | $2.00 | $6.00 | — | 128K |
+| mistral-large@latest | $2.00 | $6.00 | — | 128K |
+| mistral-medium-3 | $0.40 | $2.00 | — | 128K |
+| mistral-medium-3@001 | $0.40 | $2.00 | — | 128K |
+| mistral-nemo@2407 | $3.00 | $3.00 | — | 128K |
+| mistral-nemo@latest | $0.15 | $0.15 | — | 128K |
+| mistral-small-2503 | $0.10 | $0.30 | — | 128K |
+| mistral-small-2503@001 | $0.10 | $0.30 | — | 32K |
 
 ## vertex_ai-moonshot_models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| kimi-k2-thinking-maas | 0.6000000 | 2.5000000 | 0.06000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| kimi-k2-thinking-maas | $0.60 | $2.50 | $0.06 | 256K |
 
 ## vertex_ai-openai_models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gpt-oss-120b-maas | 0.09000000 | 0.36000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-26b-a4b-it-maas | 0.15000000 | 0.6000000 | 0.015000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b-maas | 0.07000000 | 0.25000000 | 0.007000000 | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| gemma-4-26b-a4b-it-maas | $0.15 | $0.60 | $0.02 | 262.14K |
+| gpt-oss-20b-maas | $0.07 | $0.25 | $0.007 | 131.07K |
+| gpt-oss-120b-maas | $0.09 | $0.36 | — | 131.07K |
 
 ## vertex_ai-qwen_models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| qwen3-next-80b-a3b-instruct-maas | 0.15000000 | 1.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-coder-480b-a35b-instruct-maas | 0.22000000 | 1.8000000 | 0.022000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-235b-a22b-instruct-2507-maas | 0.22000000 | 0.88000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| qwen3-next-80b-a3b-thinking-maas | 0.15000000 | 1.2000000 | — | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| qwen3-235b-a22b-instruct-2507-maas | $0.22 | $0.88 | — | 262.14K |
+| qwen3-coder-480b-a35b-instruct-maas | $0.22 | $1.80 | $0.02 | 262.14K |
+| qwen3-next-80b-a3b-instruct-maas | $0.15 | $1.20 | — | 262.14K |
+| qwen3-next-80b-a3b-thinking-maas | $0.15 | $1.20 | — | 262.14K |
 
 ## vertex_ai-text-models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| text-unicorn@001 | 10.00000 | 28.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| text-unicorn | 10.00000 | 28.000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| text-unicorn | $10.00 | $28.00 | — | 8.19K |
+| text-unicorn@001 | $10.00 | $28.00 | — | 8.19K |
 
 ## vertex_ai-zai_models
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| glm-4.7-maas | 0.6000000 | 2.2000000 | 0.06000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5-maas | 1.000000 | 3.2000000 | 0.1000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.2-maas | 1.4000000 | 4.4000000 | 0.14000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| glm-4.7-maas | $0.60 | $2.20 | $0.06 | 200K |
+| glm-5-maas | $1.00 | $3.20 | $0.10 | 200K |
+| glm-5.2-maas | $1.40 | $4.40 | $0.14 | 1M |
 
 ## volcengine
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| doubao-embedding | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| doubao-embedding-large-text-240915 | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4-7-251222 | 0.0 | 0.0 | — | 204800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| doubao-embedding-large | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| deepseek-v3-2-251201 | 0.0 | 0.0 | — | 98304 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| doubao-seed-2-1-turbo-260628 | 0.43125000000 | 2.15625000000 | 0.08625000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| kimi-k2-thinking-251104 | 0.0 | 0.0 | — | 229376 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| doubao-seed-2-1-pro-260628 | 0.8625000000 | 4.3125000000 | 0.1725000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| doubao-embedding-text-240715 | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| doubao-embedding-large-text-250515 | 0.0 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v3-2-251201 | $0.00 | $0.00 | — | 98.3K |
+| doubao-embedding | $0.00 | $0.00 | — | 4.1K |
+| doubao-embedding-large | $0.00 | $0.00 | — | 4.1K |
+| doubao-embedding-large-text-240915 | $0.00 | $0.00 | — | 4.1K |
+| doubao-embedding-large-text-250515 | $0.00 | $0.00 | — | 4.1K |
+| doubao-embedding-text-240715 | $0.00 | $0.00 | — | 4.1K |
+| doubao-seed-2-1-pro-260628 | $0.86 | $4.31 | $0.17 | 256K |
+| doubao-seed-2-1-turbo-260628 | $0.43 | $2.16 | $0.09 | 256K |
+| glm-4-7-251222 | $0.00 | $0.00 | — | 204.8K |
+| kimi-k2-thinking-251104 | $0.00 | $0.00 | — | 229.38K |
 
 ## voyage
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| rerank-2.5-lite | 0.02000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-3.5-lite | 0.02000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-4 | 0.06000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-2 | 0.1000000 | 0.0 | — | 4000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-3 | 0.05000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-3.5 | 0.06000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-2 | 0.05000000 | 0.0 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-3 | 0.06000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-3-large | 0.18000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-3-lite | 0.02000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-1 | 0.05000000 | 0.0 | — | 8000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-2.5 | 0.05000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-4-large | 0.12000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-code-3 | 0.18000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-3-lite | 0.02000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-code-2 | 0.12000000 | 0.0 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-4-lite | 0.02000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-lite-1 | 0.02000000 | 0.0 | — | 4000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| rerank-2-lite | 0.02000000 | 0.0 | — | 8000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-lite-01 | 0.1000000 | 0.0 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-large-2-instruct | 0.12000000 | 0.0 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-large-2 | 0.12000000 | 0.0 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-finance-2 | 0.12000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-code-4 | 0.12000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-lite-02-instruct | 0.1000000 | 0.0 | — | 4000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-multimodal-3 | 0.12000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-context-3 | 0.18000000 | 0.0 | — | 120000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-law-2 | 0.12000000 | 0.0 | — | 16000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-multimodal-3.5 | 0.12000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-multilingual-2 | 0.12000000 | 0.0 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| voyage-context-4 | 0.12000000 | 0.0 | — | 120000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| rerank-1 | $0.05 | $0.00 | — | 8K |
+| rerank-2 | $0.05 | $0.00 | — | 16K |
+| rerank-2-lite | $0.02 | $0.00 | — | 8K |
+| rerank-2.5 | $0.05 | $0.00 | — | 32K |
+| rerank-2.5-lite | $0.02 | $0.00 | — | 32K |
+| rerank-3 | $0.05 | $0.00 | — | 32K |
+| rerank-3-lite | $0.02 | $0.00 | — | 32K |
+| rerank-lite-1 | $0.02 | $0.00 | — | 4K |
+| voyage-2 | $0.10 | $0.00 | — | 4K |
+| voyage-3 | $0.06 | $0.00 | — | 32K |
+| voyage-3-large | $0.18 | $0.00 | — | 32K |
+| voyage-3-lite | $0.02 | $0.00 | — | 32K |
+| voyage-3.5 | $0.06 | $0.00 | — | 32K |
+| voyage-3.5-lite | $0.02 | $0.00 | — | 32K |
+| voyage-4 | $0.06 | $0.00 | — | 32K |
+| voyage-4-large | $0.12 | $0.00 | — | 32K |
+| voyage-4-lite | $0.02 | $0.00 | — | 32K |
+| voyage-code-2 | $0.12 | $0.00 | — | 16K |
+| voyage-code-3 | $0.18 | $0.00 | — | 32K |
+| voyage-code-4 | $0.12 | $0.00 | — | 32K |
+| voyage-context-3 | $0.18 | $0.00 | — | 120K |
+| voyage-context-4 | $0.12 | $0.00 | — | 120K |
+| voyage-finance-2 | $0.12 | $0.00 | — | 32K |
+| voyage-large-2 | $0.12 | $0.00 | — | 16K |
+| voyage-large-2-instruct | $0.12 | $0.00 | — | 16K |
+| voyage-law-2 | $0.12 | $0.00 | — | 16K |
+| voyage-lite-01 | $0.10 | $0.00 | — | 4.1K |
+| voyage-lite-02-instruct | $0.10 | $0.00 | — | 4K |
+| voyage-multilingual-2 | $0.12 | $0.00 | — | 32K |
+| voyage-multimodal-3 | $0.12 | $0.00 | — | 32K |
+| voyage-multimodal-3.5 | $0.12 | $0.00 | — | 32K |
 
 ## wandb
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| gemma-4-26B-A4B-it | 0.1000000 | 0.3000000 | 0.05000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA-Nemotron-3-Ultra-550B-A55B | 0.5000000 | 2.15000000 | 0.1000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4.1-Flash | 0.2000000 | 0.65000000 | 0.03000000 | 1049000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Pro-0813 | 1.31000000 | 3.96000000 | 0.044000000 | 1049000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.03000000 | 0.17000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Flash | 0.14000000 | 0.28000000 | 0.07000000 | 1049000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.1-70B-Instruct | 0.8000000 | 0.8000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.5 | 0.6000000 | 3.000000 | 0.1000000 | 262144 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.5-35B-A3B | 0.25000000 | 1.25000000 | — | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.7-Code | 0.71000000 | 3.5000000 | 0.15000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V3.1 | 0.55000000 | 1.65000000 | — | 161000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.3-70B-Instruct | 0.71000000 | 0.71000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| NVIDIA-Nemotron-3.5-Lightning-30B-A3B | 0.07000000 | 0.2000000 | 0.04000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gemma-4-31B-it | 0.1000000 | 0.34000000 | — | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-4.2-8b | 0.1000000 | 0.15000000 | 0.05000000 | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-14B-Instruct | 0.05000000 | 0.22000000 | — | 32800 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.3-Flash | 0.15000000 | 0.5000000 | 0.05000000 | 1049000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Llama-3.1-8B-Instruct | 0.22000000 | 0.22000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| GLM-5.2 | 0.76000000 | 2.42000000 | 0.14000000 | 1049000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-20b | 0.03000000 | 0.13000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Kimi-K2.6 | 0.65000000 | 3.41000000 | 0.15000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Mellum2-12B-A2.5B-Instruct | 0.05000000 | 0.1000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| MiniMax-M3 | 0.23000000 | 0.96000000 | 0.05000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Pro | 1.15000000 | 2.55000000 | 0.2000000 | 1049000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| DeepSeek-V4-Flash-0731 | 0.13000000 | 0.28000000 | 0.07000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-4.1-8b | 0.05000000 | 0.1000000 | — | 131000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3-30B-A3B-Instruct-2507 | 0.1000000 | 0.3000000 | — | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.8-27B | 0.4000000 | 3.000000 | 0.15000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.6-27B | 0.6000000 | 3.6000000 | 0.12000000 | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Qwen3.6-35B-A3B | 0.25000000 | 1.25000000 | — | 262000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v3.1 | $0.55 | $1.65 | — | 161K |
+| deepseek-v4-flash | $0.14 | $0.28 | $0.07 | 1.05M |
+| deepseek-v4-flash-0731 | $0.13 | $0.28 | $0.07 | 262K |
+| deepseek-v4-pro | $1.15 | $2.55 | $0.20 | 1.05M |
+| deepseek-v4-pro-0813 | $1.31 | $3.96 | $0.04 | 1.05M |
+| deepseek-v4.1-flash | $0.20 | $0.65 | $0.03 | 1.05M |
+| gemma-4-26b-a4b-it | $0.10 | $0.30 | $0.05 | 262K |
+| gemma-4-31b-it | $0.10 | $0.34 | — | 262K |
+| glm-5.2 | $0.76 | $2.42 | $0.14 | 1.05M |
+| glm-5.3-flash | $0.15 | $0.50 | $0.05 | 1.05M |
+| gpt-oss-20b | $0.03 | $0.13 | — | 131K |
+| gpt-oss-120b | $0.03 | $0.17 | — | 131K |
+| granite-4.1-8b | $0.05 | $0.10 | — | 131K |
+| granite-4.2-8b | $0.10 | $0.15 | $0.05 | 131K |
+| kimi-k2.5 | $0.60 | $3.00 | $0.10 | 262.14K |
+| kimi-k2.6 | $0.65 | $3.41 | $0.15 | 262K |
+| kimi-k2.7-code | $0.71 | $3.50 | $0.15 | 262K |
+| llama-3.1-8b-instruct | $0.22 | $0.22 | — | 131K |
+| llama-3.1-70b-instruct | $0.80 | $0.80 | — | 131K |
+| llama-3.3-70b-instruct | $0.71 | $0.71 | — | 128K |
+| mellum2-12b-a2.5b-instruct | $0.05 | $0.10 | — | 131K |
+| minimax-m3 | $0.23 | $0.96 | $0.05 | 262K |
+| nvidia-nemotron-3-ultra-550b-a55b | $0.50 | $2.15 | $0.10 | 262K |
+| nvidia-nemotron-3.5-lightning-30b-a3b | $0.07 | $0.20 | $0.04 | 262K |
+| qwen3-14b-instruct | $0.05 | $0.22 | — | 32.8K |
+| qwen3-30b-a3b-instruct-2507 | $0.10 | $0.30 | — | 262K |
+| qwen3.5-35b-a3b | $0.25 | $1.25 | — | 262K |
+| qwen3.6-27b | $0.60 | $3.60 | $0.12 | 262K |
+| qwen3.6-35b-a3b | $0.25 | $1.25 | — | 262K |
+| qwen3.8-27b | $0.40 | $3.00 | $0.15 | 262K |
 
 ## watsonx
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| llama-3-3-70b-instruct | 0.7526000000 | 0.7526000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-3-8b-instruct | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-maverick-17b-128e-instruct-fp8 | 0.371000000 | 1.484000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| allam-1-13b-instruct | 1.8000000 | 1.8000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-guardian-3-2-2b | 0.1000000 | 0.1000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-large | 3.000000 | 10.00000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| gpt-oss-120b | 0.159000000 | 0.636000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-4-maverick-17b | 0.371000000 | 1.484000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-ttm-512-96-r2 | 0.38000000 | 0.38000000 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small-3-1-24b-instruct-2503 | 0.106000000 | 0.318000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-ttm-1024-96-r2 | 0.38000000 | 0.38000000 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-2-11b-vision-instruct | 0.35000000 | 0.35000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-guardian-3-3-8b | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| jais-13b-chat | 500.0000 | 2000.000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-ttm-1536-96-r2 | 0.38000000 | 0.38000000 | — | 512 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-4-h-small | 0.0636000000 | 0.265000000 | — | 131072 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-small-2503 | 0.1000000 | 0.3000000 | — | 32000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-13b-chat-v2 | 0.6000000 | 0.6000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-2-3b-instruct | 0.15000000 | 0.15000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-13b-instruct-v2 | 0.6000000 | 0.6000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| flan-t5-xl-3b | 0.6000000 | 0.6000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-vision-3-2-2b | 0.1000000 | 0.1000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| granite-3-3-8b-instruct | 0.2000000 | 0.2000000 | — | 8192 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mistral-medium-2505 | 3.000000 | 10.00000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-2-90b-vision-instruct | 2.000000 | 2.000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-guard-3-11b-vision | 0.35000000 | 0.35000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| llama-3-2-1b-instruct | 0.1000000 | 0.1000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mt0-xxl-13b | 1.908000000 | 1.908000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| pixtral-12b-2409 | 0.35000000 | 0.35000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mt0-xxl | 1.908000000 | 1.908000000 | — | 4096 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| allam-1-13b-instruct | $1.80 | $1.80 | — | 8.19K |
+| flan-t5-xl-3b | $0.60 | $0.60 | — | 8.19K |
+| gpt-oss-120b | $0.16 | $0.64 | — | 131.07K |
+| granite-3-3-8b-instruct | $0.20 | $0.20 | — | 8.19K |
+| granite-3-8b-instruct | $0.20 | $0.20 | — | 8.19K |
+| granite-4-h-small | $0.06 | $0.26 | — | 131.07K |
+| granite-13b-chat-v2 | $0.60 | $0.60 | — | 8.19K |
+| granite-13b-instruct-v2 | $0.60 | $0.60 | — | 8.19K |
+| granite-guardian-3-2-2b | $0.10 | $0.10 | — | 8.19K |
+| granite-guardian-3-3-8b | $0.20 | $0.20 | — | 8.19K |
+| granite-ttm-512-96-r2 | $0.38 | $0.38 | — | 512 |
+| granite-ttm-1024-96-r2 | $0.38 | $0.38 | — | 512 |
+| granite-ttm-1536-96-r2 | $0.38 | $0.38 | — | 512 |
+| granite-vision-3-2-2b | $0.10 | $0.10 | — | 8.19K |
+| jais-13b-chat | $500.00 | $2,000.00 | — | 8.19K |
+| llama-3-2-1b-instruct | $0.10 | $0.10 | — | 128K |
+| llama-3-2-3b-instruct | $0.15 | $0.15 | — | 128K |
+| llama-3-2-11b-vision-instruct | $0.35 | $0.35 | — | 128K |
+| llama-3-2-90b-vision-instruct | $2.00 | $2.00 | — | 128K |
+| llama-3-3-70b-instruct | $0.75 | $0.75 | — | 131.07K |
+| llama-4-maverick-17b | $0.37 | $1.48 | — | 131.07K |
+| llama-4-maverick-17b-128e-instruct-fp8 | $0.37 | $1.48 | — | 131.07K |
+| llama-guard-3-11b-vision | $0.35 | $0.35 | — | 128K |
+| mistral-large | $3.00 | $10.00 | — | 131.07K |
+| mistral-medium-2505 | $3.00 | $10.00 | — | 128K |
+| mistral-small-3-1-24b-instruct-2503 | $0.11 | $0.32 | — | 131.07K |
+| mistral-small-2503 | $0.10 | $0.30 | — | 32K |
+| mt0-xxl | $1.91 | $1.91 | — | 4.1K |
+| mt0-xxl-13b | $1.91 | $1.91 | — | 4.1K |
+| pixtral-12b-2409 | $0.35 | $0.35 | — | 128K |
 
 ## writer
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Writer: Palmyra X5 | 0.6000000 | 6.000000 | — | 1040000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| palmyra x5 | $0.60 | $6.00 | — | 1.04M |
 
 ## xai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| SpaceXAI: Grok 4.3 (batch) | 1.000000 | 2.000000 | 0.16000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| SpaceXAI: Grok 4.20 | 1.25000000 | 2.5000000 | 0.2000000 | 2000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| SpaceXAI: Grok 4.20 Multi-Agent | 1.25000000 | 2.5000000 | 0.2000000 | 2000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| SpaceXAI: Grok 4.7 | 2.000000 | 6.000000 | 0.5000000 | 500000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| SpaceXAI: Grok 4.6 | 2.000000 | 6.000000 | 0.5000000 | 500000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| SpaceXAI: Grok 4.3 | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| SpaceXAI: Grok 4.5 | 2.000000 | 6.000000 | 0.3000000 | 500000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| SpaceXAI: Grok Build 0.1 | 1.000000 | 2.000000 | 0.2000000 | 256000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-experimental-beta-0304 | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-beta-latest | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-experimental-beta-0304-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-beta | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-non-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-multi-agent-experimental-beta-latest | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-beta-0309-non-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-beta-latest-non-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-multi-agent-beta-0309 | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-beta-0309-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-multi-agent-latest | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-beta-latest-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-experimental-beta-0304-non-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-beta-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-experimental-beta-latest | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-beta-0309 | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-experimental-beta-non-reasoning-latest | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-0309-non-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20 | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-0309-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-beta-non-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-0309 | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-experimental-beta-reasoning-latest | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-multi-agent-0309 | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-multi-agent-beta-latest | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-multi-agent | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-multi-agent-experimental-beta-0304 | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.7 | 2.000000 | 6.000000 | 0.5000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-non-reasoning-latest | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-code-fast-1 | 1.000000 | 2.000000 | 0.2000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-code-fast-1-0825 | 1.000000 | 2.000000 | 0.2000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-non-reasoning-gv2 | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-build-latest | 2.000000 | 6.000000 | 0.3000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-reasoning-gv2 | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.6 | 2.000000 | 6.000000 | 0.5000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.5 | 2.000000 | 6.000000 | 0.3000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.5-latest | 2.000000 | 6.000000 | 0.3000000 | 500000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.3-latest | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-reasoning | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.3 | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-code-fast | 1.000000 | 2.000000 | 0.2000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-build-0.1 | 1.000000 | 2.000000 | 0.2000000 | 256000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| grok-4.20-reasoning-latest | 1.25000000 | 2.5000000 | 0.2000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| grok latest | $2.00 | $6.00 | $0.50 | 500K |
+| grok-4.3 | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.3-latest | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.5 | $2.00 | $6.00 | $0.30 | 500K |
+| grok-4.5-latest | $2.00 | $6.00 | $0.30 | 500K |
+| grok-4.6 | $2.00 | $6.00 | $0.50 | 500K |
+| grok-4.7 | $2.00 | $6.00 | $0.50 | 500K |
+| grok-4.20 | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-0309 | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-0309-non-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-0309-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-beta | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-beta-0309 | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-beta-0309-non-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-beta-0309-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-beta-latest | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-beta-latest-non-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-beta-latest-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-beta-non-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-beta-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-experimental-beta-0304 | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-experimental-beta-0304-non-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-experimental-beta-0304-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-experimental-beta-latest | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-experimental-beta-non-reasoning-latest | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-experimental-beta-reasoning-latest | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-multi-agent | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-multi-agent-0309 | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-multi-agent-beta-0309 | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-multi-agent-beta-latest | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-multi-agent-experimental-beta-0304 | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-multi-agent-experimental-beta-latest | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-multi-agent-latest | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-non-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-non-reasoning-gv2 | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-non-reasoning-latest | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-reasoning | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-reasoning-gv2 | $1.25 | $2.50 | $0.20 | 1M |
+| grok-4.20-reasoning-latest | $1.25 | $2.50 | $0.20 | 1M |
+| grok-build-0.1 | $1.00 | $2.00 | $0.20 | 256K |
+| grok-build-latest | $2.00 | $6.00 | $0.30 | 500K |
+| grok-code-fast | $1.00 | $2.00 | $0.20 | 256K |
+| grok-code-fast-1 | $1.00 | $2.00 | $0.20 | 256K |
+| grok-code-fast-1-0825 | $1.00 | $2.00 | $0.20 | 256K |
+| spacexai: grok 4.3 | $1.25 | $2.50 | $0.20 | 1M |
+| spacexai: grok 4.3 (batch) | $1.00 | $2.00 | $0.16 | 1M |
+| spacexai: grok 4.5 | $2.00 | $6.00 | $0.30 | 500K |
+| spacexai: grok 4.6 | $2.00 | $6.00 | $0.50 | 500K |
+| spacexai: grok 4.7 | $2.00 | $6.00 | $0.50 | 500K |
+| spacexai: grok 4.20 | $1.25 | $2.50 | $0.20 | 2M |
+| spacexai: grok 4.20 multi-agent | $1.25 | $2.50 | $0.20 | 2M |
+| spacexai: grok build 0.1 | $1.00 | $2.00 | $0.20 | 256K |
 
 ## xiaomi
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Xiaomi: MiMo-V2.6-Pro | 0.435000000 | 0.87000000 | 0.0036000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Xiaomi: MiMo-V2.5 | 0.14000000 | 0.28000000 | 0.0028000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Xiaomi: MiMo-V2.6-Pro-UltraSpeed | 4.35000000 | 8.7000000 | 0.036000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Xiaomi: MiMo-V2.5-Pro | 0.435000000 | 0.87000000 | 0.0036000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Xiaomi: MiMo-V2.6-Flash | 0.14000000 | 0.28000000 | 0.0028000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| mimo-v2.5 | $0.14 | $0.28 | $0.0028 | 1.05M |
+| mimo-v2.5-pro | $0.44 | $0.87 | $0.0036 | 1.05M |
+| mimo-v2.6-flash | $0.14 | $0.28 | $0.0028 | 1.05M |
+| mimo-v2.6-pro | $0.44 | $0.87 | $0.0036 | 1.05M |
+| mimo-v2.6-pro-ultraspeed | $4.35 | $8.70 | $0.04 | 1.05M |
 
 ## xiaomi_mimo
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| mimo-v2.6-pro | 0.435000000 | 0.87000000 | 0.0036000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| mimo-v2.6-flash | 0.14000000 | 0.28000000 | 0.0028000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| mimo-v2.6-flash | $0.14 | $0.28 | $0.0028 | 1.05M |
+| mimo-v2.6-pro | $0.44 | $0.87 | $0.0036 | 1.05M |
 
 ## zai
 
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Z.ai: GLM 4.5 | 0.6000000 | 2.2000000 | 0.11000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| glm-4-32b-0414-128k | $0.10 | $0.10 | — | 128K |
+| glm-4.5 | $0.60 | $2.20 | — | 128K |
+| glm-4.5-air | $0.20 | $1.10 | — | 128K |
+| glm-4.5-airx | $1.10 | $4.50 | — | 128K |
+| glm-4.5-flash | $0.00 | $0.00 | — | 128K |
+| glm-4.5-x | $2.20 | $8.90 | — | 128K |
+| glm-4.5v | $0.60 | $1.80 | — | 128K |
+| glm-4.6 | $0.60 | $2.20 | $0.11 | 200K |
+| glm-4.7 | $0.60 | $2.20 | $0.11 | 200K |
+| glm-4.7-flash | $0.00 | $0.00 | $0.00 | 200K |
+| glm-5 | $1.00 | $3.20 | $0.20 | 200K |
+| glm-5-code | $1.20 | $5.00 | $0.30 | 200K |
+| glm-5.1 | $1.40 | $4.40 | $0.26 | 200K |
+| glm-5.2 | $1.40 | $4.40 | $0.26 | 1M |
+| glm-5.3 | $1.40 | $4.40 | $0.26 | 1M |
+| glm-5.3-flash | $0.15 | $0.50 | $0.03 | 1.05M |
+| z.ai: glm 4.5 | $0.60 | $2.20 | $0.11 | 131.07K |
+| z.ai: glm 4.5 air | $0.13 | $0.85 | $0.02 | 131.07K |
+| z.ai: glm 4.5v | $0.60 | $1.80 | $0.11 | 65.54K |
+| z.ai: glm 4.6 | $0.50 | $2.00 | $0.10 | 204.8K |
+| z.ai: glm 4.6v | $0.30 | $0.90 | $0.06 | 131.07K |
+| z.ai: glm 4.7 | $0.60 | $2.20 | $0.11 | 204.8K |
+| z.ai: glm 4.7 flash | $0.06 | $0.40 | — | 200K |
+| z.ai: glm 5 | $0.60 | $1.92 | $0.12 | 204.8K |
+| z.ai: glm 5 turbo | $1.20 | $4.00 | $0.24 | 202.75K |
+| z.ai: glm 5.1 | $0.97 | $3.04 | $0.18 | 204.8K |
+| z.ai: glm 5.2 | $0.06 | $7.00 | $0.06 | 1.05M |
+| z.ai: glm 5.3 | $0.08 | $4.80 | $0.06 | 1.05M |
+| z.ai: glm 5.3 (batch) | $0.45 | $2.00 | $0.10 | 1.05M |
+| z.ai: glm 5.3 flash | $0.15 | $0.50 | $0.03 | 1.05M |
+| z.ai: glm 5.3 flash (batch) | $0.06 | $0.20 | $0.01 | 1.05M |
+| z.ai: glm 5.3 flashx | $0.37 | $1.25 | $0.09 | 1.05M |
+| z.ai: glm 5.3 prime | $2.80 | $8.80 | $0.56 | 1M |
+| z.ai: glm 5v turbo | $1.20 | $4.00 | $0.24 | 202.75K |
+| z.ai: glm flash latest | $0.04 | $0.50 | $0.01 | 1.05M |
+| z.ai: glm latest | $0.08 | $4.80 | $0.06 | 1.05M |
 
-| Z.ai: GLM 5.3 Prime | 2.8000000 | 8.8000000 | 0.56000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+## About this dataset
 
-| Z.ai: GLM 4.6V | 0.3000000 | 0.9000000 | 0.055000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
+- **Coverage:** API model offerings and hosted variants. The same underlying model may have different prices through different providers.
+- **Pricing:** Standard input, output, and cached-input token rates when available. Discounts, batch tiers, and modality-specific charges may vary; confirm important purchasing decisions with the relevant provider.
+- **Freshness:** The dataset is refreshed daily. `price_last_checked` in the JSON and CSV reflects the last successful retrieval of the selected record, which may be earlier than the publication date when cached data is used.
+- **Formats:** [JSON](prices.json) for applications and [CSV](prices.csv) for analysis. Individual model records retain stable IDs across runs.
 
-| Z.ai: GLM 5 | 0.6000000 | 1.92000000 | 0.12000000 | 204800 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 5.1 | 0.966000000 | 3.036000000 | 0.1794000000 | 204800 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 4.5 Air | 0.13000000 | 0.85000000 | 0.025000000 | 131072 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 5.3 FlashX | 0.37000000 | 1.25000000 | 0.09000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 5.3 (batch) | 0.45000000 | 2.000000 | 0.1000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 4.7 Flash | 0.0605000000 | 0.4000000 | — | 200000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 5.3 Flash (batch) | 0.06000000 | 0.2000000 | 0.012000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 5.2 | 0.06000000 | 7.000000 | 0.059000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 4.7 | 0.6000000 | 2.2000000 | 0.11000000 | 204800 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 4.5V | 0.6000000 | 1.8000000 | 0.11000000 | 65536 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 4.6 | 0.5000000 | 2.000000 | 0.1000000 | 204800 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 5.3 Flash | 0.15000000 | 0.5000000 | 0.03000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 5.3 | 0.07000000 | 4.8000000 | 0.05000000 | 1048576 | aggregator | 2026-10-11T20:41:46.105503+00:00 | 
-
-| Z.ai: GLM 5V Turbo | 1.2000000 | 4.000000 | 0.24000000 | 202752 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Z.ai: GLM 5 Turbo | 1.2000000 | 4.000000 | 0.24000000 | 202752 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5-airx | 1.1000000 | 4.5000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.2 | 1.4000000 | 4.4000000 | 0.26000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.3-flash | 0.15000000 | 0.5000000 | 0.03000000 | 1048576 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5-code | 1.2000000 | 5.000000 | 0.3000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5-x | 2.2000000 | 8.9000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5v | 0.6000000 | 1.8000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.3 | 1.4000000 | 4.4000000 | 0.26000000 | 1000000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.7-flash | 0 | 0 | 0 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5 | 1.000000 | 3.2000000 | 0.2000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.6 | 0.6000000 | 2.2000000 | 0.11000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5 | 0.6000000 | 2.2000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4-32b-0414-128k | 0.1000000 | 0.1000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.7 | 0.6000000 | 2.2000000 | 0.11000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5-air | 0.2000000 | 1.1000000 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-5.1 | 1.4000000 | 4.4000000 | 0.26000000 | 200000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-| glm-4.5-flash | 0 | 0 | — | 128000 | registry | 2026-10-10T22:38:27.852763+00:00 | 
-
-## ~anthropic
-
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Anthropic: Claude Fable Latest | 10.00000 | 50.00000 | 0.25000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Opus Latest | 4.000000 | 20.00000 | 0.2000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Haiku Latest | 0.1000000 | 0.5000000 | 0.01000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Anthropic: Claude Sonnet Latest | 2.000000 | 10.00000 | 0.1000000 | 1000000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-## ~deepseek
-
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| DeepSeek: DeepSeek Pro Latest | 0.20988000000 | 0.62964000000 | 0.006678000000 | 1048576 | aggregator | 2026-10-11T20:41:46.105503+00:00 | 
-
-| DeepSeek: DeepSeek Flash Latest | 0.0348000000 | 0.1392000000 | 0.000696000000 | 1048576 | aggregator | 2026-10-11T20:41:46.105503+00:00 | 
-
-| DeepSeek: DeepSeek V4 Flash Latest | 0.018000000 | 0.64000000 | 0.018000000 | 1048576 | aggregator | 2026-10-11T20:41:46.105503+00:00 | 
-
-## ~google
-
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Google: Gemini Flash Latest | 0.75000000 | 3.75000000 | 0.075000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| Google: Gemini Pro Latest | 2.000000 | 12.000000 | 0.2000000 | 1048576 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-## ~moonshotai
-
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| MoonshotAI: Kimi Latest | 0.74000000 | 15.000000 | 0.3000000 | 1048576 | aggregator | 2026-10-11T20:41:46.105503+00:00 | 
-
-## ~openai
-
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| OpenAI: GPT Astra Latest | 10.00000 | 50.00000 | 1.000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT Terra Latest | 2.000000 | 12.000000 | 0.2000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT Mini Latest | 0.75000000 | 4.5000000 | 0.075000000 | 400000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT Sol Latest | 2.000000 | 10.00000 | 0.1000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-| OpenAI: GPT Luna Latest | 0.1000000 | 0.5000000 | 0.01000000 | 1050000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-## ~x-ai
-
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| xAI: Grok Latest | 2.000000 | 6.000000 | 0.5000000 | 500000 | aggregator | 2026-10-10T22:38:27.852763+00:00 | 
-
-## ~z-ai
-
-| Model | Input | Output | Cached input | Context | Pricing type | Price updated (UTC) | 
-| --- | --- | --- | --- | --- | --- | --- |
-| Z.ai: GLM Latest | 0.07000000 | 4.8000000 | 0.05000000 | 1048576 | aggregator | 2026-10-11T20:41:46.105503+00:00 | 
-
-| Z.ai: GLM Flash Latest | 0.04000000 | 0.5000000 | 0.0125000000 | 1048576 | aggregator | 2026-10-10T23:13:52.925529+00:00 |
+Find an issue or suggest an improvement? [Open a GitHub issue](https://github.com/jessejones/ai-model-prices/issues).
