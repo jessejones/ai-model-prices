@@ -5,7 +5,7 @@ Daily-updated AI model API prices across OpenAI, Anthropic, Google Gemini, DeepS
 **AI model API pricing** for LLMs, reasoning models, and other hosted AI models. Compare input, output, and cached-token costs across providers, with free machine-readable **JSON and CSV** downloads. This catalog is generated automatically from the latest collected pricing data.
 
 **3,438 model offerings** · **151 providers** · **2,347 distinct model names**  
-**Prices:** USD per 1 million tokens · **Catalog generated:** 2026-10-22 11:50 UTC
+**Prices:** USD per 1 million tokens · **Catalog generated:** 2026-10-23 11:36 UTC
 
 [**Download JSON**](prices.json) · [**Download CSV**](prices.csv) · [**Browse providers**](#providers)
 
@@ -1401,7 +1401,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | Model | Input | Output | Cached input | Context |
 | --- | ---: | ---: | ---: | ---: |
 | deepseek flash latest | $0.07 | $0.50 | $0.008 | 1.05M |
-| deepseek pro latest | $0.22 | $8.00 | $0.23 | 1.05M |
+| deepseek pro latest | $0.26 | $8.00 | $0.26 | 1.05M |
 | deepseek v3 0324 | $0.29 | $1.14 | $0.11 | 163.84K |
 | deepseek v3.1 | $0.25 | $0.95 | $0.13 | 163.84K |
 | deepseek v3.1 terminus | $0.27 | $1.00 | — | 163.84K |
@@ -2227,7 +2227,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | minimax m1 | $0.55 | $2.20 | — | 1M |
 | minimax m2-her | $0.30 | $1.20 | $0.03 | 65.54K |
 | minimax m2.7 | $0.30 | $1.20 | $0.06 | 204.8K |
-| minimax m3.1 flash (free) | $0.00 | $0.00 | — | 1M |
+| minimax m3.1 flash | $0.15 | $0.60 | $0.02 | 1.05M |
 | minimax-01 | $0.20 | $1.10 | — | 1M |
 | minimax-m2 | $0.30 | $1.20 | $0.03 | 200K |
 | minimax-m2.1 | $0.30 | $1.20 | $0.03 | 1M |
@@ -2282,7 +2282,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | mistral nemo | $0.03 | $0.03 | — | 131.07K |
 | mistral small 3 | $0.05 | $0.08 | — | 32.77K |
 | mistral small 3.1 24b | $0.35 | $0.56 | — | 128K |
-| mistral small 3.2 24b | $0.09 | $0.25 | — | 256K |
+| mistral small 3.2 24b | $0.08 | $0.20 | — | 256K |
 | mistral small 4 | $0.15 | $0.60 | $0.02 | 262.14K |
 | mistral small 4 (batch) | $0.08 | $0.30 | $0.0075 | 262.14K |
 | mistral-code-agent-latest | $0.40 | $2.00 | $0.04 | 256K |
@@ -2339,7 +2339,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | kimi k2.7 code | $0.67 | $3.35 | $0.18 | 262.14K |
 | kimi k3 | $0.24 | $11.94 | $0.21 | 1.05M |
 | kimi k3 (batch) | $2.28 | $11.40 | $0.23 | 1.05M |
-| kimi latest | $0.24 | $24.00 | $0.23 | 1.05M |
+| kimi latest | $0.24 | $16.00 | $0.23 | 1.05M |
 | kimi-k2.5 | $0.60 | $3.00 | $0.10 | 262.14K |
 | kimi-k2.6 | $0.95 | $4.00 | $0.16 | 262.14K |
 | kimi-k2.7-code | $0.95 | $4.00 | $0.19 | 262.14K |
@@ -3156,7 +3156,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | qwen3.5 397b a17b | $0.50 | $3.60 | $0.30 | 262.14K |
 | qwen3.5 plus 2026-02-15 | $0.26 | $1.56 | — | 1M |
 | qwen3.5 plus 2026-04-20 | $0.30 | $1.80 | — | 1M |
-| qwen3.5-9b | $0.08 | $0.13 | $0.04 | 262.14K |
+| qwen3.5-9b | $0.17 | $0.25 | — | 262.14K |
 | qwen3.5-27b | $0.27 | $2.16 | $0.27 | 262.14K |
 | qwen3.5-35b-a3b | $0.14 | $1.00 | $0.05 | 262.14K |
 | qwen3.5-122b-a10b | $0.40 | $3.20 | — | 262.14K |
@@ -3170,7 +3170,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | qwen3.7 plus | $0.32 | $1.28 | $0.06 | 1M |
 | qwen3.7 plus (batch) | $0.23 | $0.92 | — | 262.14K |
 | qwen3.8 2.4t a95b | $2.00 | $6.00 | $0.25 | 1.05M |
-| qwen3.8 27b | $0.04 | $1.35 | $0.02 | 1M |
+| qwen3.8 27b | $0.20 | $2.50 | $0.09 | 1M |
 | qwen3.8 flash | $0.15 | $0.47 | $0.02 | 1M |
 | qwen3.8 max (0902) | $2.00 | $6.00 | $0.25 | 1M |
 | qwen3.8 max prime | $4.00 | $12.00 | $0.50 | 1M |
