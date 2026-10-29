@@ -4,8 +4,8 @@ Daily-updated AI model API prices across OpenAI, Anthropic, Google Gemini, DeepS
 
 **AI model API pricing** for LLMs, reasoning models, and other hosted AI models. Compare input, output, and cached-token costs across providers, with free machine-readable **JSON and CSV** downloads. This catalog is generated automatically from the latest collected pricing data.
 
-**3,519 model offerings** · **154 providers** · **2,371 distinct model names**  
-**Prices:** USD per 1 million tokens · **Catalog generated:** 2026-10-28 12:51 UTC
+**3,643 model offerings** · **159 providers** · **2,384 distinct model names**  
+**Prices:** USD per 1 million tokens · **Catalog generated:** 2026-10-29 12:58 UTC
 
 [**Download JSON**](prices.json) · [**Download CSV**](prices.csv) · [**Browse providers**](#providers)
 
@@ -22,65 +22,66 @@ curl -L -o prices.csv https://raw.githubusercontent.com/jessejones/ai-model-pric
 
 ## Providers
 
-Browse the complete pricing tables for **154 providers**. Provider names are normalized for easier discovery; different billing platforms may remain separate.
+Browse the complete pricing tables for **159 providers**. Provider names are normalized for easier discovery; different billing platforms may remain separate.
 
 <details>
-<summary>View provider index (154)</summary>
+<summary>View provider index (159)</summary>
 
 | Provider | Provider | Provider |
 | --- | --- | --- |
 | [abliteration](#abliteration) (4) | [ai21](#ai21) (12) | [aiand](#aiand) (13) |
 | [aihubmix](#aihubmix) (72) | [aion-labs](#aion-labs) (6) | [amazon](#amazon) (5) |
-| [amazon_nova](#amazon_nova) (4) | [anthracite-org](#anthracite-org) (1) | [anthropic](#anthropic) (42) |
-| [anyscale](#anyscale) (12) | [azure](#azure) (139) | [azure_ai](#azure_ai) (135) |
-| [azure_text](#azure_text) (3) | [baseten](#baseten) (34) | [bedrock](#bedrock) (121) |
+| [amazon_nova](#amazon_nova) (4) | [anthracite-org](#anthracite-org) (1) | [anthropic](#anthropic) (32) |
+| [anyscale](#anyscale) (12) | [azure](#azure) (140) | [azure_ai](#azure_ai) (136) |
+| [azure_text](#azure_text) (3) | [baseten](#baseten) (34) | [bedrock](#bedrock) (123) |
 | [bedrock_converse](#bedrock_converse) (233) | [bedrock_mantle](#bedrock_mantle) (33) | [bespoke](#bespoke) (3) |
-| [bytedance](#bytedance) (1) | [bytedance-seed](#bytedance-seed) (6) | [cerebras](#cerebras) (9) |
-| [cloudflare](#cloudflare) (34) | [codestral](#codestral) (2) | [cognition](#cognition) (3) |
-| [cognitivecomputations](#cognitivecomputations) (1) | [cohere](#cohere) (25) | [coralbricks](#coralbricks) (6) |
-| [crusoe](#crusoe) (7) | [darkbloom](#darkbloom) (2) | [dashscope](#dashscope) (27) |
-| [databricks](#databricks) (60) | [deepinfra](#deepinfra) (136) | [deepseek](#deepseek) (23) |
-| [dots-studio](#dots-studio) (1) | [elorian](#elorian) (1) | [fal_ai](#fal_ai) (1) |
-| [fireworks_ai](#fireworks_ai) (302) | [fireworks_ai-embedding-models](#fireworks_ai-embedding-models) (7) | [friendliai](#friendliai) (7) |
-| [gemini](#gemini) (66) | [gigachat](#gigachat) (7) | [github_copilot](#github_copilot) (33) |
-| [gmi](#gmi) (16) | [google](#google) (43) | [gradient_ai](#gradient_ai) (10) |
-| [groq](#groq) (7) | [gryphe](#gryphe) (1) | [hyperbolic](#hyperbolic) (16) |
-| [ibm-granite](#ibm-granite) (1) | [inception](#inception) (3) | [inclusionai](#inclusionai) (3) |
-| [inference-net](#inference-net) (2) | [inferenceapis](#inferenceapis) (24) | [jina_ai](#jina_ai) (1) |
-| [lambda_ai](#lambda_ai) (20) | [laya](#laya) (3) | [lemonade](#lemonade) (5) |
-| [libertai](#libertai) (12) | [liquid](#liquid) (3) | [llamagate](#llamagate) (16) |
-| [mancer](#mancer) (1) | [meituan](#meituan) (1) | [meta](#meta) (9) |
-| [meta-llama](#meta-llama) (8) | [microsoft](#microsoft) (1) | [microsoft_365_copilot](#microsoft_365_copilot) (1) |
-| [minimax](#minimax) (11) | [mistral](#mistral) (75) | [moondream](#moondream) (2) |
-| [moonshotai](#moonshotai) (21) | [morph](#morph) (10) | [nace](#nace) (4) |
-| [nebius](#nebius) (61) | [nex-agi](#nex-agi) (2) | [nlp_cloud](#nlp_cloud) (2) |
-| [nousresearch](#nousresearch) (3) | [novita](#novita) (134) | [nscale](#nscale) (14) |
-| [nvidia](#nvidia) (11) | [nvidia_nim](#nvidia_nim) (2) | [oci](#oci) (50) |
-| [ollama](#ollama) (29) | [openai](#openai) (220) | [opencode_go](#opencode_go) (30) |
-| [openinfer](#openinfer) (3) | [openrouter](#openrouter) (1) | [ovhcloud](#ovhcloud) (15) |
+| [bigmodel](#bigmodel) (3) | [bytedance](#bytedance) (1) | [bytedance-seed](#bytedance-seed) (6) |
+| [cerebras](#cerebras) (9) | [cloudflare](#cloudflare) (34) | [codestral](#codestral) (2) |
+| [cognition](#cognition) (3) | [cognitivecomputations](#cognitivecomputations) (1) | [cohere](#cohere) (25) |
+| [coralbricks](#coralbricks) (6) | [crusoe](#crusoe) (7) | [darkbloom](#darkbloom) (2) |
+| [dashscope](#dashscope) (27) | [databricks](#databricks) (84) | [deepinfra](#deepinfra) (136) |
+| [deepseek](#deepseek) (23) | [dots-studio](#dots-studio) (1) | [elorian](#elorian) (1) |
+| [fal_ai](#fal_ai) (1) | [fireworks_ai](#fireworks_ai) (307) | [fireworks_ai-embedding-models](#fireworks_ai-embedding-models) (7) |
+| [friendliai](#friendliai) (7) | [gemini](#gemini) (66) | [gigachat](#gigachat) (7) |
+| [github_copilot](#github_copilot) (33) | [gmi](#gmi) (16) | [google](#google) (43) |
+| [gradient_ai](#gradient_ai) (10) | [groq](#groq) (7) | [gryphe](#gryphe) (1) |
+| [hyperbolic](#hyperbolic) (16) | [ibm-granite](#ibm-granite) (1) | [inception](#inception) (3) |
+| [inclusionai](#inclusionai) (3) | [inference-net](#inference-net) (2) | [inferenceapis](#inferenceapis) (24) |
+| [jina_ai](#jina_ai) (1) | [kyma](#kyma) (83) | [lambda_ai](#lambda_ai) (20) |
+| [laya](#laya) (3) | [lemonade](#lemonade) (5) | [libertai](#libertai) (12) |
+| [liquid](#liquid) (2) | [llamagate](#llamagate) (16) | [mancer](#mancer) (1) |
+| [meituan](#meituan) (1) | [meta](#meta) (9) | [meta-llama](#meta-llama) (8) |
+| [microsoft](#microsoft) (1) | [microsoft_365_copilot](#microsoft_365_copilot) (1) | [minimax](#minimax) (11) |
+| [mistral](#mistral) (76) | [moondream](#moondream) (2) | [moonshotai](#moonshotai) (22) |
+| [morph](#morph) (10) | [nace](#nace) (4) | [nebius](#nebius) (61) |
+| [nex-agi](#nex-agi) (2) | [nlp_cloud](#nlp_cloud) (2) | [nousresearch](#nousresearch) (3) |
+| [novita](#novita) (134) | [nscale](#nscale) (14) | [nvidia](#nvidia) (11) |
+| [nvidia_nim](#nvidia_nim) (2) | [oci](#oci) (50) | [ollama](#ollama) (29) |
+| [openai](#openai) (196) | [opencode_go](#opencode_go) (30) | [openinfer](#openinfer) (3) |
+| [openrouter](#openrouter) (1) | [ovhcloud](#ovhcloud) (15) | [particle-ai](#particle-ai) (1) |
 | [perceptron](#perceptron) (2) | [perplexity](#perplexity) (86) | [pinstripes](#pinstripes) (6) |
 | [poolside](#poolside) (4) | [prism](#prism) (2) | [prism-ml](#prism-ml) (2) |
-| [publicai](#publicai) (9) | [qwen](#qwen) (43) | [qwen_ai_platform](#qwen_ai_platform) (27) |
+| [publicai](#publicai) (9) | [qwen](#qwen) (42) | [qwen_ai_platform](#qwen_ai_platform) (27) |
 | [qwencloud](#qwencloud) (25) | [recursive](#recursive) (1) | [reflection](#reflection) (1) |
 | [refuseless](#refuseless) (5) | [rekaai](#rekaai) (2) | [relace](#relace) (2) |
 | [replicate](#replicate) (40) | [sagemaker](#sagemaker) (6) | [sail](#sail) (12) |
-| [sakana](#sakana) (4) | [sambanova](#sambanova) (8) | [sao10k](#sao10k) (2) |
+| [sakana](#sakana) (3) | [sambanova](#sambanova) (8) | [sao10k](#sao10k) (2) |
 | [sarvam](#sarvam) (1) | [scaledown](#scaledown) (5) | [scaleway](#scaleway) (15) |
 | [scx-ai](#scx-ai) (5) | [snowflake](#snowflake) (21) | [stepfun](#stepfun) (3) |
-| [strands_decider](#strands_decider) (1) | [tencent](#tencent) (20) | [tensormesh](#tensormesh) (10) |
-| [text-completion-codestral](#text-completion-codestral) (2) | [text-completion-inception](#text-completion-inception) (1) | [text-completion-openai](#text-completion-openai) (6) |
-| [thedrummer](#thedrummer) (3) | [thinkingmachines](#thinkingmachines) (4) | [together_ai](#together_ai) (93) |
-| [typesafe](#typesafe) (4) | [unbiased](#unbiased) (2) | [undi95](#undi95) (1) |
-| [upstage](#upstage) (3) | [v0](#v0) (3) | [vercel_ai_gateway](#vercel_ai_gateway) (97) |
-| [vertex_ai](#vertex_ai) (50) | [vertex_ai-ai21_models](#vertex_ai-ai21_models) (5) | [vertex_ai-anthropic_models](#vertex_ai-anthropic_models) (38) |
-| [vertex_ai-deepseek_models](#vertex_ai-deepseek_models) (4) | [vertex_ai-embedding-models](#vertex_ai-embedding-models) (10) | [vertex_ai-language-models](#vertex_ai-language-models) (32) |
-| [vertex_ai-llama_models](#vertex_ai-llama_models) (12) | [vertex_ai-minimax_models](#vertex_ai-minimax_models) (1) | [vertex_ai-mistral_models](#vertex_ai-mistral_models) (15) |
-| [vertex_ai-moonshot_models](#vertex_ai-moonshot_models) (1) | [vertex_ai-openai_models](#vertex_ai-openai_models) (3) | [vertex_ai-qwen_models](#vertex_ai-qwen_models) (4) |
-| [vertex_ai-text-models](#vertex_ai-text-models) (2) | [vertex_ai-zai_models](#vertex_ai-zai_models) (3) | [volcengine](#volcengine) (12) |
-| [voyage](#voyage) (31) | [wandb](#wandb) (33) | [watsonx](#watsonx) (30) |
-| [writer](#writer) (1) | [xai](#xai) (52) | [xiaomi](#xiaomi) (5) |
-| [xiaomi_mimo](#xiaomi_mimo) (2) | [xingchen-agi](#xingchen-agi) (1) | [zai](#zai) (36) |
-| [~unbiased](#unbiased) (1) |  |  |
+| [strands_decider](#strands_decider) (1) | [streamlake](#streamlake) (26) | [tencent](#tencent) (20) |
+| [tensormesh](#tensormesh) (10) | [text-completion-codestral](#text-completion-codestral) (2) | [text-completion-inception](#text-completion-inception) (1) |
+| [text-completion-openai](#text-completion-openai) (6) | [thedrummer](#thedrummer) (3) | [thinkingmachines](#thinkingmachines) (4) |
+| [together_ai](#together_ai) (93) | [typesafe](#typesafe) (4) | [unbiased](#unbiased) (2) |
+| [undi95](#undi95) (1) | [upstage](#upstage) (3) | [v0](#v0) (3) |
+| [vercel_ai_gateway](#vercel_ai_gateway) (97) | [vertex_ai](#vertex_ai) (50) | [vertex_ai-ai21_models](#vertex_ai-ai21_models) (5) |
+| [vertex_ai-anthropic_models](#vertex_ai-anthropic_models) (38) | [vertex_ai-deepseek_models](#vertex_ai-deepseek_models) (4) | [vertex_ai-embedding-models](#vertex_ai-embedding-models) (10) |
+| [vertex_ai-language-models](#vertex_ai-language-models) (32) | [vertex_ai-llama_models](#vertex_ai-llama_models) (12) | [vertex_ai-minimax_models](#vertex_ai-minimax_models) (1) |
+| [vertex_ai-mistral_models](#vertex_ai-mistral_models) (15) | [vertex_ai-moonshot_models](#vertex_ai-moonshot_models) (1) | [vertex_ai-openai_models](#vertex_ai-openai_models) (3) |
+| [vertex_ai-qwen_models](#vertex_ai-qwen_models) (4) | [vertex_ai-text-models](#vertex_ai-text-models) (2) | [vertex_ai-zai_models](#vertex_ai-zai_models) (3) |
+| [volcengine](#volcengine) (12) | [voyage](#voyage) (31) | [wandb](#wandb) (33) |
+| [watsonx](#watsonx) (30) | [writer](#writer) (1) | [xai](#xai) (52) |
+| [xiaomi](#xiaomi) (5) | [xiaomi_mimo](#xiaomi_mimo) (2) | [xingchen-agi](#xingchen-agi) (1) |
+| [zai](#zai) (36) | [zerogpu](#zerogpu) (13) | [~unbiased](#unbiased) (1) |
 
 </details>
 
@@ -249,24 +250,14 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 
 | Model | Input | Output | Cached input | Context |
 | --- | ---: | ---: | ---: | ---: |
-| claude fable 5 (batch) | $5.00 | $25.00 | $0.50 | 1M |
 | claude fable 5.1 (batch) | $5.00 | $25.00 | $0.12 | 1M |
 | claude fable latest | $10.00 | $50.00 | $0.25 | 1M |
-| claude haiku 4.5 (batch) | $0.50 | $2.50 | $0.05 | 200K |
 | claude haiku 5.5 (batch) | $0.05 | $0.25 | $0.005 | 1M |
 | claude haiku latest | $0.10 | $0.50 | $0.01 | 1M |
 | claude opus 4.1 | $15.00 | $75.00 | $1.50 | 200K |
-| claude opus 4.1 (batch) | $7.50 | $37.50 | $0.75 | 200K |
-| claude opus 4.5 (batch) | $2.50 | $12.50 | $0.25 | 200K |
-| claude opus 4.6 (batch) | $2.50 | $12.50 | $0.25 | 1M |
-| claude opus 4.7 (batch) | $2.50 | $12.50 | $0.25 | 1M |
-| claude opus 4.8 (batch) | $2.50 | $12.50 | $0.25 | 1M |
 | claude opus 5 (batch) | $2.50 | $12.50 | $0.25 | 1M |
 | claude opus 5.5 (batch) | $2.00 | $10.00 | $0.10 | 1M |
 | claude opus latest | $4.00 | $20.00 | $0.20 | 1M |
-| claude sonnet 4.5 (batch) | $1.50 | $7.50 | $0.15 | 1M |
-| claude sonnet 4.6 (batch) | $1.50 | $7.50 | $0.15 | 1M |
-| claude sonnet 5 (batch) | $1.00 | $5.00 | $0.10 | 1M |
 | claude sonnet 5.5 (batch) | $1.00 | $5.00 | $0.05 | 1M |
 | claude sonnet latest | $2.00 | $10.00 | $0.10 | 1M |
 | claude-fable-5 | $10.00 | $50.00 | $1.00 | 1M |
@@ -405,6 +396,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | gpt-6-sol-2026-09-22 | $2.00 | $10.00 | $0.20 | 922K |
 | gpt-6.1-sol | $2.40 | $12.00 | $0.12 | 922K |
 | gpt-6.1-sol-2026-09-29 | $2.00 | $10.00 | $0.10 | 922K |
+| gpt-6.1-terra | $1.20 | $6.00 | $0.06 | 922K |
 | gpt-35-turbo | $0.50 | $1.50 | — | 4.1K |
 | gpt-35-turbo-16k | $3.00 | $4.00 | — | 16.39K |
 | gpt-35-turbo-16k-0613 | $3.00 | $4.00 | — | 16.39K |
@@ -471,7 +463,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | claude-sonnet-4-5 | $3.00 | $15.00 | $0.30 | 200K |
 | claude-sonnet-4-6 | $3.00 | $15.00 | $0.30 | 1M |
 | claude-sonnet-5 | $2.00 | $10.00 | $0.20 | 1M |
-| claude-sonnet-5-5 | $2.00 | $10.00 | $0.20 | 1M |
+| claude-sonnet-5-5 | $2.00 | $10.00 | $0.10 | 1M |
 | codestral-2501 | $0.30 | $0.90 | — | 256K |
 | codex-mini | $1.50 | $6.00 | $0.38 | 200K |
 | cohere-command-a | $2.50 | $10.00 | — | 131.07K |
@@ -530,6 +522,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | gpt-6-luna | $0.10 | $0.50 | $0.01 | 922K |
 | gpt-6-sol | $2.00 | $10.00 | $0.20 | 922K |
 | gpt-6.1-sol | $2.00 | $10.00 | $0.10 | 922K |
+| gpt-6.1-terra | $1.00 | $5.00 | $0.05 | 922K |
 | gpt-chat-latest | $5.00 | $30.00 | $0.50 | 128K |
 | gpt-image-2 | $5.00 | — | $1.25 | — |
 | gpt-oss-120b | $0.15 | $0.60 | — | 131.07K |
@@ -605,8 +598,8 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 
 | Model | Input | Output | Cached input | Context |
 | --- | ---: | ---: | ---: | ---: |
-| baseten-elephant-9b-latest | $0.00 | $0.00 | — | 16.38K |
-| baseten-mammoth-27b-latest | $0.00 | $0.00 | — | 16.38K |
+| baseten-elephant-9b-latest | $0.04 | $0.00 | — | 16.38K |
+| baseten-mammoth-27b-latest | $0.10 | $0.00 | — | 16.38K |
 | beam-1.0 | $0.40 | $1.20 | $0.04 | 1.05M |
 | deepseek-v3-0324 | $0.77 | $0.77 | — | — |
 | deepseek-v3.1 | $0.50 | $1.50 | — | — |
@@ -734,6 +727,8 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | mistral.mistral-large-2407-v1:0 | $2.00 | $6.00 | — | 128K |
 | mistral.mistral-small-2402-v1:0 | $1.00 | $3.00 | — | 32K |
 | mistral.mixtral-8x7b-instruct-v0:1 | $0.59 | $0.91 | — | 32K |
+| mistral.voxtral-mini-3b-2507 | $0.05 | $0.05 | — | 32.77K |
+| mistral.voxtral-small-24b-2507 | $0.12 | $0.36 | — | 32.77K |
 | moonshotai.kimi-k2-thinking | $0.73 | $3.03 | — | 262.14K |
 | moonshotai.kimi-k2.5 | $0.72 | $3.60 | — | 262.14K |
 | nvidia.nemotron-nano-3-30b | $0.07 | $0.29 | — | 262.14K |
@@ -1050,6 +1045,14 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | nimble | $0.00 | $0.00 | — | 8.19K |
 | nimble-latest | $0.00 | $0.00 | — | 8.19K |
 
+## bigmodel
+
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| glm-5.3 | $1.14 | $4.00 | $0.29 | 1M |
+| glm-5.3-flash | $0.11 | $0.40 | $0.03 | 1M |
+| glm-5.3-flashx | $0.29 | $1.00 | $0.08 | 1M |
+
 ## bytedance
 
 | Model | Input | Output | Cached input | Context |
@@ -1242,6 +1245,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | databricks-claude-fable-5 | $10.00 | $50.00 | $1.00 | 1M |
 | databricks-claude-fable-5-1 | $10.00 | $50.00 | $0.25 | 1M |
 | databricks-claude-haiku-4-5 | $1.00 | $5.00 | $0.10 | 200K |
+| databricks-claude-haiku-5-5 | $0.10 | $0.50 | $0.01 | 1M |
 | databricks-claude-opus-4 | $15.00 | $75.00 | $1.50 | 200K |
 | databricks-claude-opus-4-1 | $15.00 | $75.00 | $1.50 | 200K |
 | databricks-claude-opus-4-5 | $5.00 | $25.00 | $0.50 | 200K |
@@ -1254,18 +1258,28 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | databricks-claude-sonnet-4-1 | $3.00 | $15.00 | $0.30 | 200K |
 | databricks-claude-sonnet-4-5 | $3.00 | $15.00 | $0.30 | 200K |
 | databricks-claude-sonnet-4-6 | $3.00 | $15.00 | $0.30 | 1M |
-| databricks-claude-sonnet-5 | $3.00 | $15.00 | $0.30 | 1M |
+| databricks-claude-sonnet-5 | $2.00 | $10.00 | $0.20 | 1M |
+| databricks-claude-sonnet-5-5 | $2.00 | $10.00 | $0.10 | 1M |
+| databricks-deepseek-v4-1-flash | $0.30 | $1.20 | $0.03 | 1M |
+| databricks-deepseek-v4-1-flash-1017 | $0.30 | $1.20 | $0.007 | 1M |
 | databricks-deepseek-v4-flash-0731 | $0.14 | $0.28 | $0.03 | 1M |
 | databricks-deepseek-v4-pro-0813 | $1.32 | $3.96 | $0.13 | 1M |
 | databricks-gemini-2-5-flash | $0.30 | $2.50 | $0.03 | 1.05M |
+| databricks-gemini-2-5-flash-lite | $0.13 | $0.50 | $0.01 | 1.05M |
 | databricks-gemini-2-5-pro | $1.25 | $10.00 | $0.12 | 1.05M |
+| databricks-gemini-3-1-flash-image | $0.63 | $3.75 | $0.63 | 131.07K |
 | databricks-gemini-3-1-flash-lite | $0.31 | $1.88 | $0.03 | 1.05M |
+| databricks-gemini-3-1-flash-lite-image | $0.31 | $1.88 | $0.31 | 65.54K |
 | databricks-gemini-3-1-pro | $2.50 | $15.00 | $0.25 | 1.05M |
 | databricks-gemini-3-5-flash | $1.88 | $11.25 | $0.19 | 1.05M |
 | databricks-gemini-3-5-flash-lite | $0.37 | $3.13 | $0.04 | 1.05M |
-| databricks-gemini-3-6-flash | $1.88 | $9.38 | $0.19 | 1.05M |
+| databricks-gemini-3-6-flash | $0.75 | $3.75 | $0.07 | 1.05M |
+| databricks-gemini-3-7-flash | $0.75 | $3.75 | $0.07 | 1.05M |
+| databricks-gemini-3-8-flash | $0.75 | $3.75 | $0.07 | 1.05M |
 | databricks-gemini-3-flash | $0.63 | $3.75 | $0.06 | 1.05M |
 | databricks-gemini-3-pro | $2.50 | $15.00 | $0.25 | 1.05M |
+| databricks-gemini-3-pro-image | $2.50 | $15.00 | $2.50 | 65.54K |
+| databricks-gemini-4-argon | $2.50 | $12.50 | $0.13 | 1.05M |
 | databricks-gemma-3-12b | $0.15 | $0.50 | $0.15 | 128K |
 | databricks-glm-5-2 | $1.40 | $4.40 | $0.26 | 1M |
 | databricks-glm-5-3 | $1.40 | $4.40 | $0.26 | 1.05M |
@@ -1277,18 +1291,30 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | databricks-gpt-5-4 | $2.50 | $15.00 | $0.25 | 922K |
 | databricks-gpt-5-4-mini | $0.75 | $4.50 | $0.07 | 272K |
 | databricks-gpt-5-4-nano | $0.20 | $1.25 | $0.02 | 272K |
+| databricks-gpt-5-4-pro | $30.00 | $180.00 | $30.00 | 922K |
 | databricks-gpt-5-5 | $5.00 | $30.00 | $0.50 | 922K |
 | databricks-gpt-5-5-pro | $30.00 | $180.00 | $30.00 | 922K |
-| databricks-gpt-5-6-luna | $1.00 | $6.00 | $0.10 | 922K |
+| databricks-gpt-5-6-luna | $0.20 | $1.20 | $0.02 | 922K |
 | databricks-gpt-5-6-sol | $4.00 | $20.00 | $0.40 | 922K |
-| databricks-gpt-5-6-terra | $2.50 | $15.00 | $0.25 | 922K |
+| databricks-gpt-5-6-terra | $2.00 | $12.00 | $0.20 | 922K |
 | databricks-gpt-5-mini | $0.25 | $2.00 | $0.02 | 272K |
 | databricks-gpt-5-nano | $0.05 | $0.40 | $0.00497 | 272K |
+| databricks-gpt-6-1-sol | $2.00 | $10.00 | $0.10 | 922K |
+| databricks-gpt-6-1-terra | $1.00 | $5.00 | $0.05 | 922K |
+| databricks-gpt-6-astra | $10.00 | $50.00 | $1.00 | 922K |
+| databricks-gpt-6-luna | $0.10 | $0.50 | $0.01 | 922K |
+| databricks-gpt-6-sol | $2.00 | $10.00 | $0.20 | 922K |
+| databricks-gpt-image-1 | $5.00 | — | $1.25 | — |
+| databricks-gpt-image-1-5 | $5.00 | $10.00 | $1.25 | — |
+| databricks-gpt-image-1-mini | $2.00 | — | $0.20 | — |
+| databricks-gpt-image-2 | $5.00 | — | $1.25 | — |
 | databricks-gpt-oss-20b | $0.07 | $0.30 | $0.07 | 131.07K |
 | databricks-gpt-oss-120b | $0.15 | $0.60 | $0.15 | 131.07K |
 | databricks-grok-4-6 | $2.50 | $7.50 | $0.63 | 500K |
+| databricks-grok-4-7 | $2.50 | $7.50 | $0.63 | 500K |
 | databricks-gte-large-en | $0.13 | $0.00 | $0.13 | 8.19K |
 | databricks-inkling | $1.00 | $4.05 | $0.17 | 1M |
+| databricks-kimi-k2-7 | $0.95 | $4.00 | $0.19 | 262.14K |
 | databricks-kimi-k3 | $3.00 | $15.00 | $0.30 | 1M |
 | databricks-llama-4-maverick | $0.50 | $1.50 | $0.50 | 128K |
 | databricks-meta-llama-3-1-8b-instruct | $0.15 | $0.45 | $0.15 | 200K |
@@ -1297,6 +1323,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | databricks-qwen3-embedding-0-6b | $0.02 | $0.00 | $0.02 | 32.77K |
 | databricks-qwen3-next-80b-a3b-instruct | $0.15 | $1.20 | $0.15 | — |
 | databricks-qwen35-122b-a10b | $0.22 | $2.20 | $0.22 | 262.14K |
+| databricks-typesafeai-jev-1-14-0 | $0.04 | $0.00 | $0.04 | — |
 
 ## deepinfra
 
@@ -1443,17 +1470,17 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 
 | Model | Input | Output | Cached input | Context |
 | --- | ---: | ---: | ---: | ---: |
-| deepseek flash latest | $0.01 | $1.80 | $0.01 | 1.05M |
-| deepseek pro latest | $0.25 | $8.00 | $0.25 | 1.05M |
+| deepseek flash latest | $0.03 | $1.80 | $0.03 | 1.05M |
+| deepseek pro latest | $0.10 | $8.00 | $0.10 | 1.05M |
 | deepseek v3 0324 | $0.29 | $1.14 | $0.11 | 163.84K |
 | deepseek v3.1 | $0.25 | $0.95 | $0.13 | 163.84K |
 | deepseek v3.1 terminus | $0.27 | $1.00 | — | 163.84K |
 | deepseek v3.2 exp | $0.27 | $0.41 | — | 163.84K |
 | deepseek v4 flash 0731 | $0.12 | $0.24 | $0.02 | 1.05M |
-| deepseek v4 flash latest | $0.05 | $0.16 | $0.03 | 1.05M |
-| deepseek v4 pro 0813 | $0.66 | $1.98 | $0.02 | 1.05M |
-| deepseek v4.1 flash | $0.14 | $0.42 | $0.0042 | 1.05M |
-| deepseek v4.1 flash 1017 | $0.15 | $0.60 | $0.003 | 1.05M |
+| deepseek v4 flash latest | $0.06 | $0.17 | $0.001806 | 1.05M |
+| deepseek v4 pro 0813 | $0.10 | $8.00 | $0.10 | 1.05M |
+| deepseek v4.1 flash | $0.04 | $0.50 | $0.006 | 1.05M |
+| deepseek v4.1 flash 1017 | $0.03 | $1.80 | $0.03 | 1.05M |
 | deepseek v4.1 flash (batch) | $0.05 | $0.15 | $0.004 | 1.05M |
 | deepseek-chat | $0.28 | $0.42 | $0.03 | 131.07K |
 | deepseek-coder | $0.14 | $0.28 | $0.01 | 128K |
@@ -1545,7 +1572,9 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | deepseek-v4-pro-0813 | $1.32 | $3.96 | $0.04 | 1.05M |
 | deepseek-v4p1-flash | $0.30 | $1.20 | $0.006 | 1.05M |
 | deepseek-v4p1-flash-1017 | $0.30 | $1.20 | $0.006 | 1.05M |
+| deepseek-v4p1-flash-1017-spot | $0.21 | $0.84 | $0.0042 | 1.05M |
 | deepseek-v4p1-flash-1017-us | $0.45 | $1.80 | $0.009 | 1.05M |
+| deepseek-v4p1-flash-spot | $0.21 | $0.84 | $0.0042 | 1.05M |
 | deepseek-v4p1-flash-us | $0.45 | $1.80 | $0.009 | 1.05M |
 | devstral-small-2505 | $0.90 | $0.90 | — | 131.07K |
 | dobby-mini-unhinged-plus-llama-3-1-8b | $0.20 | $0.20 | — | 131.07K |
@@ -1595,6 +1624,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | glm-5p3-fast | $2.10 | $6.60 | $0.39 | 1.05M |
 | glm-5p3-flash | $0.15 | $0.50 | $0.03 | 1.05M |
 | glm-5p3-flash-us | $0.22 | $0.75 | $0.04 | 1.05M |
+| glm-5p3-spot | $0.98 | $3.08 | $0.18 | 1.05M |
 | glm-5p3-us | $2.10 | $6.60 | $0.39 | 1.05M |
 | gpt-oss-20b | $0.07 | $0.30 | $0.04 | 131.07K |
 | gpt-oss-120b | $0.15 | $0.60 | $0.02 | 131.07K |
@@ -1619,6 +1649,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | kimi-k2p7-code-fast | $1.90 | $8.00 | $0.38 | 262.14K |
 | kimi-k3 | $3.00 | $15.00 | $0.30 | 1.05M |
 | kimi-k3-fast | $4.50 | $22.50 | $0.45 | 1.05M |
+| kimi-k3-spot | $2.10 | $10.50 | $0.21 | 1.05M |
 | kimi-k3-us | $4.50 | $22.50 | $0.45 | 1.05M |
 | llama4-maverick-instruct-basic | $0.22 | $0.88 | — | 131.07K |
 | llama4-scout-instruct-basic | $0.15 | $0.60 | — | 131.07K |
@@ -1776,6 +1807,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | rolm-ocr | $0.20 | $0.20 | — | 128K |
 | rune | $0.04 | $0.00 | $0.0084 | 262.14K |
 | snorkel-mistral-7b-pairrm-dpo | $0.20 | $0.20 | — | 32.77K |
+| spot-deepseek-v4-flash | $0.10 | $0.21 | $0.02 | 1.05M |
 | ssd-1b | $0.00013 | $0.00013 | — | 4.1K |
 | stable-diffusion-xl-1024-v1-0 | $0.00013 | $0.00013 | — | 4.1K |
 | stablecode-3b | $0.10 | $0.10 | — | 4.1K |
@@ -1982,7 +2014,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | gemini 3.6 flash (batch) | $0.38 | $1.88 | $0.04 | 1.05M |
 | gemini 3.7 flash | $0.75 | $3.75 | $0.08 | 1.05M |
 | gemini 3.7 flash (batch) | $0.38 | $1.88 | $0.04 | 1.05M |
-| gemini 3.8 flash | $0.82 | $4.12 | $0.08 | 1.05M |
+| gemini 3.8 flash | $0.75 | $3.75 | $0.08 | 1.05M |
 | gemini 3.8 flash (batch) | $0.38 | $1.88 | $0.04 | 1.05M |
 | gemini 4 argon | $2.00 | $10.00 | $0.10 | 1.05M |
 | gemini 4 argon (batch) | $1.00 | $5.00 | $0.05 | 1.05M |
@@ -2064,7 +2096,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 
 | Model | Input | Output | Cached input | Context |
 | --- | ---: | ---: | ---: | ---: |
-| ibm: granite 4.2 8b | $0.06 | $0.25 | $0.02 | 131.07K |
+| ibm: granite 4.2 8b | $0.06 | $0.15 | $0.02 | 131.07K |
 
 ## inception
 
@@ -2123,6 +2155,94 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | Model | Input | Output | Cached input | Context |
 | --- | ---: | ---: | ---: | ---: |
 | jina-reranker-v2-base-multilingual | $0.05 | $0.00 | — | 1.02K |
+
+## kyma
+
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| claude-fable-5 | $13.50 | $67.50 | — | 1M |
+| claude-fable-5.1 | $13.50 | $67.50 | — | 1M |
+| claude-haiku-4-5 | $1.35 | $6.75 | $0.14 | 200K |
+| claude-haiku-5.5 | $0.14 | $0.68 | $0.01 | 1M |
+| claude-opus-4-7 | $6.75 | $33.75 | $0.68 | 1M |
+| claude-opus-5 | $6.75 | $33.75 | $0.68 | 1M |
+| claude-opus-5.5 | $5.40 | $27.00 | $0.27 | 1M |
+| claude-sonnet-4-6 | $4.05 | $20.25 | $0.40 | 1M |
+| claude-sonnet-5 | $2.70 | $13.50 | $0.27 | 1M |
+| claude-sonnet-5.5 | $2.70 | $13.50 | $0.14 | 1M |
+| deepseek-r1 | $0.74 | $2.96 | — | 64K |
+| deepseek-v3 | $0.52 | $0.76 | — | 160K |
+| deepseek-v4-flash | $0.12 | $0.25 | $0.02 | 1M |
+| deepseek-v4-flash-vision-exp | $0.39 | $1.17 | — | 1.05M |
+| deepseek-v4.1-flash | $0.27 | $0.81 | — | 1.05M |
+| gemini-3-flash | $0.68 | $4.05 | $0.07 | 1.05M |
+| gemini-3.1-pro | $2.70 | $16.20 | $0.27 | 1.05M |
+| gemini-3.5-flash | $2.02 | $12.15 | $0.20 | 1.05M |
+| gemini-3.5-flash-lite | $0.40 | $3.38 | $0.04 | 1.05M |
+| gemini-3.6-flash | $1.01 | $5.06 | $0.10 | 1.05M |
+| gemini-3.7-flash | $2.03 | $10.13 | $0.10 | 1.05M |
+| gemini-3.8-flash | $2.03 | $10.13 | — | 1.05M |
+| gemini-4-argon | $5.40 | $27.00 | $0.27 | 1.05M |
+| gemma-4-31b | $0.16 | $0.47 | $0.16 | 128K |
+| glm-4.5-air | $0.18 | $1.18 | $0.03 | 131.07K |
+| glm-4.7-flash | $0.08 | $0.54 | $0.01 | 203K |
+| glm-5.1 | $1.89 | $5.94 | $0.28 | 203K |
+| glm-5.2 | $0.90 | $3.08 | $0.30 | 1M |
+| glm-5.3 | $1.18 | $3.70 | — | 1.31M |
+| glm-5.3-flash | $0.17 | $0.57 | — | 1.31M |
+| gpt-5.6-luna | $0.29 | $1.77 | $0.03 | 1.05M |
+| gpt-5.6-luna-pro | $0.27 | $1.62 | $0.03 | 1.05M |
+| gpt-5.6-sol | $5.40 | $27.00 | $0.68 | 1.05M |
+| gpt-5.6-sol-pro | $5.40 | $27.00 | $0.68 | 1.05M |
+| gpt-5.6-terra | $2.70 | $16.20 | $0.27 | 1.05M |
+| gpt-5.6-terra-pro | $2.70 | $16.20 | $0.27 | 1.05M |
+| gpt-6-astra | $13.50 | $67.50 | $1.35 | 1.05M |
+| gpt-6-luna | $0.16 | $0.82 | $0.01 | 1.05M |
+| gpt-6.1-sol | $2.70 | $13.50 | $0.14 | 1.05M |
+| gpt-oss-120b | $0.05 | $0.23 | — | 128K |
+| grok-4.3 | $1.92 | $3.84 | $0.27 | 1M |
+| grok-4.5 | $2.73 | $8.19 | — | 500K |
+| grok-4.6 | $2.76 | $8.27 | — | 500K |
+| grok-4.7 | $2.16 | $6.48 | $0.54 | 500K |
+| grok-4.20 | $1.76 | $3.53 | — | 2M |
+| grok-4.20-multi-agent | $1.77 | $3.53 | — | 2M |
+| grok-build | $1.39 | $2.78 | $0.27 | 256K |
+| hy3 | $0.16 | $0.66 | — | 262.14K |
+| hy4-preview | $1.13 | $3.38 | — | 1.05M |
+| kimi-k2.6 | $0.59 | $2.76 | — | 262.14K |
+| kimi-k2.7-code | $1.01 | $4.77 | — | 262.14K |
+| kimi-k3 | $3.05 | $15.26 | $0.40 | 1.05M |
+| kimi-k3.1-pro | $2.70 | $13.50 | $0.27 | 1.05M |
+| llama-3.3-70b | $0.14 | $0.43 | — | 128K |
+| llama-4-maverick | $0.33 | $1.34 | — | 1.05M |
+| mimo-v2.5 | $0.19 | $0.37 | — | 1.05M |
+| mimo-v2.6-flash | $0.19 | $0.38 | — | 1.05M |
+| mimo-v2.6-pro | $0.58 | $1.17 | — | 1.05M |
+| minimax-m2.5 | $0.42 | $1.68 | — | 196.61K |
+| minimax-m2.7 | $0.40 | $1.62 | — | 204.8K |
+| minimax-m3 | $0.40 | $1.58 | $0.08 | 1.05M |
+| minimax-m3.1-flash | $0.20 | $0.81 | $0.02 | 1.05M |
+| muse-glimmer-30b | $0.46 | $1.82 | — | 131.07K |
+| muse-spark-1.1 | $1.54 | $5.24 | — | 1.05M |
+| muse-spark-1.2 | $1.77 | $6.02 | — | 1.05M |
+| muse-spark-1.3 | $1.69 | $5.74 | — | 1.05M |
+| muse-spark-open | $1.69 | $5.74 | — | 1.05M |
+| muse-wonder | $5.40 | $27.00 | — | 1.05M |
+| nemotron-3-ultra-550b | $0.68 | $3.38 | $0.14 | 1M |
+| nemotron-3.5-super-vl | $0.08 | $0.47 | $0.01 | 1.05M |
+| qwen3.7-flash | $0.04 | $0.19 | $0.0081 | 1M |
+| qwen3.8-27b | $0.38 | $2.73 | — | 1M |
+| qwen3.8-flash | $0.20 | $0.64 | — | 1M |
+| qwen-3-32b | $0.11 | $0.38 | — | 32.77K |
+| qwen-3-coder | $0.35 | $1.61 | $0.14 | 131.07K |
+| qwen-3.6-plus | $0.44 | $2.63 | — | 1M |
+| qwen-3.7-max | $2.07 | $6.21 | $0.17 | 1M |
+| qwen-3.7-plus | $0.43 | $1.73 | $0.09 | 1M |
+| qwen-3.8-max | $2.23 | $6.68 | $0.28 | 1M |
+| sonar | $1.35 | $1.35 | — | 127.07K |
+| sonar-pro | $4.05 | $20.25 | — | 200K |
+| step-3.7-flash | $0.22 | $1.28 | $0.05 | 256K |
+| step-5-preview | $1.35 | $3.64 | $0.14 | 1.05M |
 
 ## lambda_ai
 
@@ -2188,7 +2308,6 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 
 | Model | Input | Output | Cached input | Context |
 | --- | ---: | ---: | ---: | ---: |
-| liquidai: lfm2.5-2.6b | $0.35 | $0.50 | $0.04 | 128K |
 | liquidai: lfm2.5-2.6b (free) | $0.00 | $0.00 | — | 65.54K |
 | liquidai: lfm2.5-24b-a2b | $0.05 | $0.70 | $0.02 | 128K |
 
@@ -2243,13 +2362,13 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 
 | Model | Input | Output | Cached input | Context |
 | --- | ---: | ---: | ---: | ---: |
-| meta: llama 3.1 8b instruct | $0.02 | $0.04 | — | 131.07K |
+| meta: llama 3.1 8b instruct | $0.05 | $0.08 | $0.02 | 131.07K |
 | meta: llama 3.1 70b instruct | $0.40 | $0.40 | — | 131.07K |
 | meta: llama 3.2 1b instruct | $0.03 | $0.20 | — | 60K |
 | meta: llama 3.2 3b instruct | $0.05 | $0.33 | — | 131.07K |
 | meta: llama 3.3 70b instruct | $0.10 | $0.32 | — | 131.07K |
 | meta: llama 4 maverick | $0.19 | $0.65 | $0.05 | 524.29K |
-| meta: llama 4 scout | $0.10 | $0.30 | — | 1.31M |
+| meta: llama 4 scout | $0.10 | $0.30 | — | 327.68K |
 | meta: llama guard 4 12b | $0.18 | $0.18 | — | 163.84K |
 
 ## microsoft
@@ -2290,6 +2409,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | codestral-embed-2505 | $0.15 | — | $0.02 | 8.19K |
 | codestral-latest | $0.30 | $0.90 | $0.03 | 128K |
 | codestral-mamba-latest | $0.25 | $0.25 | $0.02 | 256K |
+| deepseek-v4-1-flash-1017 | $0.30 | $1.20 | $0.007 | 1.05M |
 | devstral 2 2512 | $0.40 | $2.00 | $0.04 | 262.14K |
 | devstral-latest | $0.40 | $2.00 | $0.04 | 256K |
 | devstral-medium-latest | $0.40 | $2.00 | $0.04 | 256K |
@@ -2330,8 +2450,8 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | mistral-embed | $0.10 | — | — | 8.19K |
 | mistral-embed-2312 | $0.10 | — | — | 8.19K |
 | mistral-large-3 | $0.50 | $1.50 | $0.05 | 262.14K |
-| mistral-large-4 | $0.68 | $2.09 | $0.07 | 1.05M |
-| mistral-large-4-0 | $0.68 | $2.09 | $0.07 | 1.05M |
+| mistral-large-4 | $1.36 | $4.18 | $0.14 | 1.05M |
+| mistral-large-4-0 | $1.36 | $4.18 | $0.14 | 1.05M |
 | mistral-large-2512 | $0.50 | $1.50 | $0.05 | 262.14K |
 | mistral-large-latest | $0.50 | $1.50 | $0.05 | 262.14K |
 | mistral-medium | $1.50 | $7.50 | $0.15 | 262.14K |
@@ -2377,14 +2497,15 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | kimi k2.5 | $0.50 | $2.50 | $0.15 | 262.14K |
 | kimi k2.6 | $0.65 | $3.41 | $0.15 | 262.14K |
 | kimi k2.7 code | $0.56 | $3.10 | $0.15 | 262.14K |
-| kimi k3 | $0.17 | $20.00 | $0.16 | 1.05M |
+| kimi k3 | $0.24 | $10.80 | $0.21 | 1.05M |
 | kimi k3 (batch) | $2.28 | $11.40 | $0.23 | 1.05M |
 | kimi k3.1 pro | $2.00 | $10.00 | $0.20 | 1.05M |
-| kimi latest | $0.16 | $8.94 | $0.16 | 1.05M |
+| kimi latest | $0.18 | $9.34 | $0.18 | 1.05M |
 | kimi-k2.5 | $0.60 | $3.00 | $0.10 | 262.14K |
 | kimi-k2.6 | $0.95 | $4.00 | $0.16 | 262.14K |
 | kimi-k2.7-code | $0.95 | $4.00 | $0.19 | 262.14K |
 | kimi-k3 | $3.00 | $15.00 | $0.30 | 1.05M |
+| kimi-k3.1-pro | $2.00 | $10.00 | $0.20 | 1.05M |
 | moonshot-v1-8k | $0.20 | $2.00 | — | 8.19K |
 | moonshot-v1-8k-vision-preview | $0.20 | $2.00 | — | 8.19K |
 | moonshot-v1-32k | $1.00 | $3.00 | — | 32.77K |
@@ -2669,7 +2790,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | --- | ---: | ---: | ---: | ---: |
 | nemotron 3 nano 30b a3b | $0.06 | $0.24 | $0.01 | 262.14K |
 | nemotron 3 nano omni (free) | $0.00 | $0.00 | — | 256K |
-| nemotron 3 super | $0.30 | $2.40 | $0.15 | 262.14K |
+| nemotron 3 super | $0.30 | $2.40 | $0.15 | 1.05M |
 | nemotron 3 ultra | $0.60 | $2.40 | $0.12 | 262.14K |
 | nemotron 3 ultra (free) | $0.00 | $0.00 | — | 1M |
 | nemotron 3.5 content safety | $0.20 | $0.20 | — | 131.07K |
@@ -2809,29 +2930,23 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | gpt-3.5-turbo-0125 | $0.50 | $1.50 | — | 16.39K |
 | gpt-3.5-turbo-1106 | $1.00 | $2.00 | — | 16.39K |
 | gpt-4 | $30.00 | $60.00 | — | 8.19K |
-| gpt-4 turbo (batch) | $5.00 | $15.00 | — | 128K |
 | gpt-4-0613 | $30.00 | $60.00 | — | 8.19K |
 | gpt-4-1106-preview | $10.00 | $30.00 | — | 128K |
 | gpt-4-turbo | $10.00 | $30.00 | — | 128K |
 | gpt-4-turbo-2024-04-09 | $10.00 | $30.00 | — | 128K |
 | gpt-4.1 | $2.00 | $8.00 | $0.50 | 1.05M |
-| gpt-4.1 (batch) | $1.00 | $4.00 | $0.25 | 1.05M |
-| gpt-4.1 mini (batch) | $0.20 | $0.80 | $0.05 | 1.05M |
-| gpt-4.1 nano (batch) | $0.05 | $0.20 | $0.01 | 1.05M |
 | gpt-4.1-2025-04-14 | $2.00 | $8.00 | $0.50 | 1.05M |
 | gpt-4.1-mini | $0.40 | $1.60 | $0.10 | 1.05M |
 | gpt-4.1-mini-2025-04-14 | $0.40 | $1.60 | $0.10 | 1.05M |
 | gpt-4.1-nano | $0.10 | $0.40 | $0.02 | 1.05M |
 | gpt-4.1-nano-2025-04-14 | $0.10 | $0.40 | $0.02 | 1.05M |
 | gpt-4o | $2.50 | $10.00 | $1.25 | 128K |
-| gpt-4o (batch) | $1.25 | $5.00 | $0.62 | 128K |
 | gpt-4o-2024-05-13 | $5.00 | $15.00 | — | 128K |
 | gpt-4o-2024-08-06 | $2.50 | $10.00 | $1.25 | 128K |
 | gpt-4o-2024-11-20 | $2.50 | $10.00 | $1.25 | 128K |
 | gpt-4o-audio-preview-2024-12-17 | $2.50 | $10.00 | — | 128K |
 | gpt-4o-audio-preview-2025-06-03 | $2.50 | $10.00 | — | 128K |
 | gpt-4o-mini | $0.15 | $0.60 | $0.08 | 128K |
-| gpt-4o-mini (batch) | $0.08 | $0.30 | $0.04 | 128K |
 | gpt-4o-mini-2024-07-18 | $0.15 | $0.60 | $0.08 | 128K |
 | gpt-4o-mini-audio-preview-2024-12-17 | $0.15 | $0.60 | — | 128K |
 | gpt-4o-mini-realtime-preview-2024-12-17 | $0.60 | $2.40 | $0.30 | 128K |
@@ -2848,12 +2963,9 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | gpt-4o-transcribe | $2.50 | $10.00 | — | 16K |
 | gpt-4o-transcribe-diarize | $2.50 | $10.00 | — | 16K |
 | gpt-5 | $1.25 | $10.00 | $0.12 | 272K |
-| gpt-5 (batch) | $0.62 | $5.00 | $0.06 | 400K |
 | gpt-5 image | $10.00 | $10.00 | $1.25 | 400K |
 | gpt-5 image mini | $2.50 | $2.00 | $0.25 | 400K |
-| gpt-5 mini (batch) | $0.12 | $1.00 | $0.01 | 400K |
 | gpt-5 nano (batch) | $0.02 | $0.20 | $0.0025 | 400K |
-| gpt-5 pro (batch) | $7.50 | $60.00 | — | 400K |
 | gpt-5-2025-08-07 | $1.25 | $10.00 | $0.12 | 272K |
 | gpt-5-chat | $1.25 | $10.00 | $0.12 | 128K |
 | gpt-5-chat-latest | $1.25 | $10.00 | $0.12 | 128K |
@@ -2867,16 +2979,12 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | gpt-5-search-api | $1.25 | $10.00 | $0.12 | 272K |
 | gpt-5-search-api-2025-10-14 | $1.25 | $10.00 | $0.12 | 272K |
 | gpt-5.1 | $1.25 | $10.00 | $0.12 | 272K |
-| gpt-5.1 (batch) | $0.62 | $5.00 | $0.06 | 400K |
 | gpt-5.1-2025-11-13 | $1.25 | $10.00 | $0.12 | 272K |
 | gpt-5.1-chat-latest | $1.25 | $10.00 | $0.12 | 128K |
 | gpt-5.1-codex | $1.25 | $10.00 | $0.12 | 400K |
 | gpt-5.1-codex-max | $1.25 | $10.00 | $0.12 | 400K |
 | gpt-5.1-codex-mini | $0.25 | $2.00 | $0.02 | 400K |
 | gpt-5.2 | $1.75 | $14.00 | $0.18 | 272K |
-| gpt-5.2 (batch) | $0.88 | $7.00 | $0.09 | 400K |
-| gpt-5.2 chat | $1.75 | $14.00 | $0.18 | 128K |
-| gpt-5.2 pro (batch) | $10.50 | $84.00 | — | 400K |
 | gpt-5.2-2025-12-11 | $1.75 | $14.00 | $0.18 | 272K |
 | gpt-5.2-chat-latest | $1.75 | $14.00 | $0.18 | 128K |
 | gpt-5.2-codex | $1.75 | $14.00 | $0.18 | 272K |
@@ -2885,11 +2993,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | gpt-5.3-chat-latest | $1.75 | $14.00 | $0.18 | 128K |
 | gpt-5.3-codex | $1.75 | $14.00 | $0.18 | 272K |
 | gpt-5.4 | $2.50 | $15.00 | $0.25 | 1.05M |
-| gpt-5.4 (batch) | $1.25 | $7.50 | $0.12 | 1.05M |
 | gpt-5.4 image 2 | $8.00 | $15.00 | $2.00 | 272K |
-| gpt-5.4 mini (batch) | $0.38 | $2.25 | $0.04 | 400K |
-| gpt-5.4 nano (batch) | $0.10 | $0.62 | $0.01 | 400K |
-| gpt-5.4 pro (batch) | $15.00 | $90.00 | — | 1.05M |
 | gpt-5.4-2026-03-05 | $2.50 | $15.00 | $0.25 | 1.05M |
 | gpt-5.4-mini | $0.75 | $4.50 | $0.08 | 272K |
 | gpt-5.4-mini-2026-03-17 | $0.75 | $4.50 | $0.08 | 272K |
@@ -2898,8 +3002,6 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | gpt-5.4-pro | $30.00 | $180.00 | — | 1.05M |
 | gpt-5.4-pro-2026-03-05 | $30.00 | $180.00 | — | 1.05M |
 | gpt-5.5 | $5.00 | $30.00 | $0.50 | 1.05M |
-| gpt-5.5 (batch) | $2.50 | $15.00 | $0.25 | 1.05M |
-| gpt-5.5 pro (batch) | $15.00 | $90.00 | — | 1.05M |
 | gpt-5.5-2026-04-23 | $5.00 | $30.00 | $0.50 | 1.05M |
 | gpt-5.5-cyber | $12.50 | $75.00 | $1.25 | — |
 | gpt-5.5-cyber-preview | $12.50 | $75.00 | $1.25 | — |
@@ -2977,9 +3079,6 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | o1-pro | $150.00 | $600.00 | — | 200K |
 | o1-pro-2025-03-19 | $150.00 | $600.00 | — | 200K |
 | o3 | $2.00 | $8.00 | $0.50 | 200K |
-| o3 (batch) | $1.00 | $4.00 | $0.25 | 200K |
-| o3 mini (batch) | $0.55 | $2.20 | $0.28 | 200K |
-| o3 mini high | $1.10 | $4.40 | $0.55 | 200K |
 | o3-2025-04-16 | $2.00 | $8.00 | $0.50 | 200K |
 | o3-deep-research | $10.00 | $40.00 | $2.50 | 200K |
 | o3-deep-research-2025-06-26 | $10.00 | $40.00 | $2.50 | 200K |
@@ -2987,8 +3086,6 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | o3-mini-2025-01-31 | $1.10 | $4.40 | $0.55 | 200K |
 | o3-pro | $20.00 | $80.00 | — | 200K |
 | o3-pro-2025-06-10 | $20.00 | $80.00 | — | 200K |
-| o4 mini (batch) | $0.55 | $2.20 | $0.14 | 200K |
-| o4 mini high | $1.10 | $4.40 | $0.28 | 200K |
 | o4-mini | $1.10 | $4.40 | $0.28 | 200K |
 | o4-mini-2025-04-16 | $1.10 | $4.40 | $0.28 | 200K |
 | o4-mini-deep-research | $2.00 | $8.00 | $0.50 | 200K |
@@ -3068,6 +3165,12 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | qwen2.5-coder-32b-instruct | $0.87 | $0.87 | — | 32K |
 | qwen2.5-vl-72b-instruct | $0.91 | $0.91 | — | 32K |
 | qwen3-32b | $0.08 | $0.23 | — | 32K |
+
+## particle-ai
+
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| particle ai: particle-1 | $0.25 | $1.00 | $0.03 | 1.05M |
 
 ## perceptron
 
@@ -3234,7 +3337,6 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | qwen3 coder flash | $0.20 | $0.98 | $0.04 | 1M |
 | qwen3 coder next | $0.12 | $0.80 | $0.07 | 262.14K |
 | qwen3 next 80b a3b instruct | $0.09 | $1.10 | — | 262.14K |
-| qwen3 next 80b a3b thinking | $0.15 | $1.20 | — | 262.14K |
 | qwen3 vl 8b instruct | $0.25 | $0.75 | $0.12 | 262.14K |
 | qwen3 vl 30b a3b instruct | $0.15 | $0.60 | — | 262.14K |
 | qwen3 vl 30b a3b thinking | $0.29 | $1.00 | — | 262.14K |
@@ -3341,10 +3443,10 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 
 | Model | Input | Output | Cached input | Context |
 | --- | ---: | ---: | ---: | ---: |
-| deepseek-v4.1-flash-abliterated | $0.22 | $0.75 | $0.04 | 1.05M |
+| deepseek-v4.1-flash-abliterated | $0.14 | $0.50 | $0.04 | 1.05M |
 | deepseek-v4.1-flash-fast | $0.05 | $0.15 | $0.003 | 1.05M |
-| glm-5.3-abliterated | $1.25 | $2.25 | $0.25 | 1.05M |
-| glm-5.3-flash-abliterated | $0.25 | $0.80 | $0.15 | 1.05M |
+| glm-5.3-abliterated | $1.00 | $2.00 | $0.15 | 1.05M |
+| glm-5.3-flash-abliterated | $0.12 | $0.50 | $0.04 | 1.05M |
 | minimax-m3.1-flash | $0.05 | $0.25 | $0.002 | 1.05M |
 
 ## rekaai
@@ -3441,7 +3543,6 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | fugu max | $2.00 | $6.00 | $0.25 | 1M |
 | fugu ultra | $5.00 | $30.00 | $0.50 | 1M |
 | fugu ultra v2 | $5.00 | $30.00 | $0.50 | 1M |
-| sakana namazu | $0.95 | $4.00 | $0.15 | 262.14K |
 
 ## sambanova
 
@@ -3541,13 +3642,44 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | --- | ---: | ---: | ---: | ---: |
 | step 3.5 flash | $0.10 | $0.30 | — | 262.14K |
 | step 3.7 flash | $0.20 | $1.15 | $0.04 | 262.14K |
-| step 5 preview | $1.00 | $2.70 | $0.10 | 1.05M |
+| step 5 preview | $1.00 | $2.70 | $0.10 | 1M |
 
 ## strands_decider
 
 | Model | Input | Output | Cached input | Context |
 | --- | ---: | ---: | ---: | ---: |
 | strands-decider-2b-hobson-v19 | $0.00 | $0.00 | — | — |
+
+## streamlake
+
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-r1 | $0.57 | $2.29 | $0.23 | 98.3K |
+| deepseek-v3 | $0.29 | $1.14 | $0.11 | 56K |
+| deepseek-v3.1 | $0.57 | $1.71 | $0.23 | 98.3K |
+| deepseek-v4-flash | $0.14 | $0.28 | $0.03 | 1.05M |
+| deepseek-v4-flash-0731 | $0.44 | $1.32 | $0.01 | 1.05M |
+| deepseek-v4-pro | $1.74 | $3.48 | $0.14 | 1.05M |
+| deepseek-v4-pro-0813 | $1.32 | $3.96 | $0.04 | 1.05M |
+| deepseek-v4.1-flash-1017 | $0.30 | $1.20 | $0.006 | 1.05M |
+| deepseek-v4.1-flash-260910 | $0.30 | $1.20 | $0.006 | 1.05M |
+| glm-5 | $1.00 | $3.20 | $0.20 | 202.75K |
+| glm-5.1 | $1.40 | $4.40 | $0.26 | 202.75K |
+| glm-5.2 | $1.40 | $4.40 | $0.26 | 1.05M |
+| glm-5.3 | $1.40 | $4.40 | $0.26 | 1.05M |
+| glm-5.3-flash | $0.15 | $0.50 | $0.03 | 1.05M |
+| kimi-k2-instruct-0905 | $0.57 | $2.29 | $0.14 | 224K |
+| kimi-k2.6 | $0.95 | $4.00 | $0.16 | 262.14K |
+| kimi-k2.7-code | $0.95 | $4.00 | $0.19 | 262.14K |
+| mimo-v2.6-flash | $0.14 | $0.28 | $0.0028 | — |
+| mimo-v2.6-pro | $0.44 | $0.87 | $0.0036 | — |
+| minimax-m2.5 | $0.30 | $1.20 | $0.03 | 196.61K |
+| minimax-m3 | $0.60 | $2.40 | $0.12 | 1M |
+| qwen3.5-397b-a17b | $0.60 | $3.60 | $0.12 | 258.05K |
+| qwen3.6-27b | $0.60 | $3.60 | — | 229.38K |
+| qwen3.6-35b-a3b | $0.38 | $2.25 | — | 229.38K |
+| qwen3.8-2.4t-a95b | $2.00 | $6.00 | $0.25 | 983.62K |
+| qwen3.8-27b | $0.50 | $3.00 | $0.10 | 983.62K |
 
 ## tencent
 
@@ -3710,7 +3842,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | qwen3.5-9b | $0.17 | $0.25 | — | 262.14K |
 | qwen3.5-397b-a17b | $0.60 | $3.60 | $0.35 | 262.14K |
 | qwen3.6-plus | $0.50 | $3.00 | — | 1M |
-| qwen3.7-max | $1.50 | $4.50 | $0.30 | 1M |
+| qwen3.7-max | $2.50 | $7.50 | $0.50 | 1M |
 | qwen3.7-plus | $0.32 | $1.28 | — | 1M |
 | qwen3.8-2.4t-a95b | $2.00 | $6.00 | $0.25 | 1.01M |
 | qwen3.8-flash | $0.15 | $0.47 | — | 1M |
@@ -4201,7 +4333,7 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | minimax-m3 | $0.23 | $0.96 | $0.05 | 262K |
 | nvidia-nemotron-3-ultra-550b-a55b | $0.50 | $2.15 | $0.10 | 262K |
 | nvidia-nemotron-3.5-lightning-30b-a3b | $0.07 | $0.20 | $0.04 | 262K |
-| nvidia-nemotron-3.5-super-vl-120b-a12b | $0.15 | $0.75 | $0.02 | 1.05M |
+| nvidia-nemotron-3.5-super-vl-120b-a12b | $0.25 | $1.50 | $0.05 | 1.05M |
 | qwen3-14b-instruct | $0.05 | $0.22 | — | 32.8K |
 | qwen3-30b-a3b-instruct-2507 | $0.10 | $0.30 | — | 262K |
 | qwen3.5-35b-a3b | $0.25 | $1.25 | — | 262K |
@@ -4353,23 +4485,41 @@ Sorted alphabetically by provider and model. **Input**, **Output**, and **Cached
 | z.ai: glm 4.5 | $0.60 | $2.20 | $0.11 | 131.07K |
 | z.ai: glm 4.5 air | $0.13 | $0.85 | $0.02 | 131.07K |
 | z.ai: glm 4.5v | $0.60 | $1.80 | $0.11 | 65.54K |
-| z.ai: glm 4.6 | $0.55 | $2.20 | $0.11 | 204.8K |
+| z.ai: glm 4.6 | $0.50 | $2.00 | $0.10 | 204.8K |
 | z.ai: glm 4.6v | $0.30 | $0.90 | $0.05 | 131.07K |
 | z.ai: glm 4.7 | $0.54 | $1.98 | $0.10 | 204.8K |
 | z.ai: glm 4.7 flash | $0.06 | $0.40 | — | 200K |
 | z.ai: glm 5 | $1.00 | $3.20 | $0.20 | 204.8K |
 | z.ai: glm 5 turbo | $1.20 | $4.00 | $0.24 | 202.75K |
 | z.ai: glm 5.1 | $1.40 | $4.40 | $0.26 | 204.8K |
-| z.ai: glm 5.2 | $0.01 | $7.00 | $0.01 | 1.05M |
+| z.ai: glm 5.2 | $0.006 | $7.00 | $0.005 | 1.05M |
 | z.ai: glm 5.3 | $0.07 | $1.40 | $0.07 | 1.05M |
 | z.ai: glm 5.3 (batch) | $0.45 | $2.00 | $0.10 | 1.05M |
-| z.ai: glm 5.3 flash | $0.15 | $0.50 | $0.03 | 1.05M |
+| z.ai: glm 5.3 flash | $0.05 | $0.07 | $0.03 | 1.05M |
 | z.ai: glm 5.3 flash (batch) | $0.05 | $0.18 | $0.01 | 1.05M |
 | z.ai: glm 5.3 flashx | $0.37 | $1.25 | $0.09 | 1.05M |
 | z.ai: glm 5.3 prime | $2.80 | $8.80 | $0.56 | 1M |
 | z.ai: glm 5v turbo | $1.20 | $4.00 | $0.24 | 202.75K |
-| z.ai: glm flash latest | $0.02 | $0.13 | $0.02 | 1.05M |
+| z.ai: glm flash latest | $0.05 | $0.07 | $0.03 | 1.05M |
 | z.ai: glm latest | $0.07 | $1.40 | $0.07 | 1.05M |
+
+## zerogpu
+
+| Model | Input | Output | Cached input | Context |
+| --- | ---: | ---: | ---: | ---: |
+| deepseek-v4.1-flash | $0.30 | $1.20 | $0.003 | 1.05M |
+| glm-5.3-flash | $0.10 | $0.35 | $0.02 | 1.05M |
+| gpt-4.1-mini | $0.40 | $1.60 | $0.10 | 1.05M |
+| gpt-5.4-nano | $0.20 | $1.25 | $0.02 | 272K |
+| gpt-5.6-luna | $0.20 | $1.20 | $0.20 | 272K |
+| gpt-6-luna | $0.10 | $0.50 | $0.01 | 272K |
+| gpt-oss-120b | $0.15 | $0.60 | $0.03 | 128K |
+| lfm2.5-1.2b-instruct | $0.02 | $0.05 | — | 32.77K |
+| lfm2.5-1.2b-thinking | $0.02 | $0.05 | — | 32.77K |
+| llama-3.1-8b-instruct-fast | $0.15 | $0.28 | $0.02 | 131.07K |
+| llama-3.2-3b-instruct-fast | $0.05 | $0.30 | $0.02 | 131.07K |
+| qwen3-30b-a3b-fp8 | $0.10 | $0.45 | $0.05 | 32.77K |
+| qwen3.6-35b-a3b | $0.20 | $1.50 | $0.20 | 262.14K |
 
 ## ~unbiased
 
